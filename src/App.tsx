@@ -11,16 +11,13 @@ import { ProcessSection } from './components/ProcessSection';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { ContactCTA } from './components/ContactCTA';
 import { ContactSection } from './components/ContactSection';
-import { EnquiryForm } from './components/EnquiryForm';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   const [introCompleted, setIntroCompleted] = useState(false);
-  const [prefilledService, setPrefilledService] = useState('');
-  const [prefilledOffer, setPrefilledOffer] = useState('');
 
-  const scrollToEnquiry = () => {
-    const el = document.getElementById('enquiry-form-section');
+  const scrollToContact = () => {
+    const el = document.getElementById('contact');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -33,16 +30,12 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleEnquireService = (serviceName: string) => {
-    setPrefilledService(serviceName);
-    setPrefilledOffer('');
-    scrollToEnquiry();
+  const handleEnquireService = () => {
+    scrollToContact();
   };
 
-  const handleSelectOffer = (offerTitle: string) => {
-    setPrefilledOffer(offerTitle);
-    setPrefilledService('');
-    scrollToEnquiry();
+  const handleSelectOffer = () => {
+    scrollToContact();
   };
 
   const handleExploreWork = () => {
@@ -60,13 +53,13 @@ export const App: React.FC = () => {
       )}
 
       {/* Global Navigation */}
-      <Navbar onOpenQuote={scrollToEnquiry} />
+      <Navbar onOpenQuote={scrollToContact} />
 
       {/* Main Architectural Experience */}
       <main>
         {/* 01. Hero Section */}
         <HeroSection
-          onOpenConsultation={scrollToEnquiry}
+          onOpenConsultation={scrollToContact}
           onExploreWork={handleExploreWork}
         />
 
@@ -92,19 +85,13 @@ export const App: React.FC = () => {
         <WhyChooseUs />
 
         {/* 09. Final Closing Call To Action */}
-        <ContactCTA onDiscussProject={scrollToEnquiry} />
+        <ContactCTA onDiscussProject={scrollToContact} />
 
         {/* 10. Structured Contact Directory (Residential & Commercial) */}
         <ContactSection />
-
-        {/* 11. Functional Consultation Enquiry Form */}
-        <EnquiryForm
-          prefilledService={prefilledService}
-          prefilledOffer={prefilledOffer}
-        />
       </main>
 
-      {/* 12. Refined Luxury Black Footer */}
+      {/* 11. Refined Luxury Black Footer */}
       <Footer />
     </div>
   );
