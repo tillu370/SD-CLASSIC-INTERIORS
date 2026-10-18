@@ -70,14 +70,14 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
 ];
 
 export const PortfolioGallery: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [withTransition, setWithTransition] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
   const [lightboxProject, setLightboxProject] = useState<CarouselSlide | null>(null);
   const touchStartXRef = useRef<number | null>(null);
 
   // 4 projects per page slide
   const itemsPerPage = 4;
-  const totalPages = Math.ceil(CAROUSEL_PROJECTS.length / itemsPerPage);
 
   // Group projects into slide pages
   const pages: CarouselSlide[][] = [];
@@ -85,29 +85,68 @@ export const PortfolioGallery: React.FC = () => {
     pages.push(CAROUSEL_PROJECTS.slice(i, i + itemsPerPage));
   }
 
-  const handlePrev = () => {
-    setCurrentPage((prev) => (prev > 0 ? prev - 1 : totalPages - 1));
-  };
+  // Extended pages for seamless continuous forward loop
+  const extendedPages = pages.length > 1 ? [...pages, pages[0]] : pages;
 
   const handleNext = () => {
-    setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : 0));
+    setWithTransition(true);
+    setSlideIndex((prev) => {
+      if (prev >= extendedPages.length - 1) {
+        return 1;
+      }
+      return prev + 1;
+    });
   };
 
-  // Subtle auto-sliding every 6s when not hovering or inspecting
+  const handlePrev = () => {
+    setWithTransition(true);
+    setSlideIndex((prev) => {
+      if (prev <= 0) {
+        return pages.length - 1;
+      }
+      return prev - 1;
+    });
+  };
+
+  // When transition ends at the duplicate clone, seamlessly reset to index 0 without transition
+  const handleTransitionEnd = () => {
+    if (slideIndex >= pages.length) {
+      setWithTransition(false);
+      setSlideIndex(0);
+    }
+  };
+
+  // Re-enable smooth transition immediately after silent reset
   useEffect(() => {
-    if (isHovered || lightboxProject !== null) return;
+    if (!withTransition) {
+      const raf = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setWithTransition(true);
+        });
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [withTransition]);
+
+  // Automatic slide: smoothly advances every 3.5 seconds
+  useEffect(() => {
+    if (isPaused || lightboxProject !== null) return;
+
     const interval = setInterval(() => {
       handleNext();
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isHovered, lightboxProject, totalPages]);
+    }, 3500);
 
-  // Touch swipe support for smooth side sliding on mobile & tablets
+    return () => clearInterval(interval);
+  }, [isPaused, lightboxProject, slideIndex]);
+
+  // Touch swipe support for mobile & tablet users
   const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
     touchStartXRef.current = e.targetTouches[0].clientX;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
+    setIsPaused(false);
     if (touchStartXRef.current === null) return;
     const touchEndX = e.changedTouches[0].clientX;
     const deltaX = touchStartXRef.current - touchEndX;
@@ -118,6 +157,9 @@ export const PortfolioGallery: React.FC = () => {
     }
     touchStartXRef.current = null;
   };
+
+  // Active dot index mapped modulo totalPages
+  const activeDotIndex = slideIndex % pages.length;
 
   return (
     <section
@@ -172,16 +214,16 @@ export const PortfolioGallery: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Cards Carousel Row with Side Sliding Animation & Controls */}
-        <div
-          className="relative group"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        {/* 4 Cards Carousel Row with Seamless Automatic Side Sliding & Controls */}
+        <div className="relative group">
           {/* Left Arrow Button */}
           <button
-            onClick={handlePrev}
-            className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn"
+            onClick={() => {
+              setIsPaused(true);
+              handlePrev();
+              setTimeout(() => setIsPaused(false), 2000);
+            }}
+            className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn cursor-pointer"
             aria-label="Previous projects slide"
           >
             <ChevronLeft className="w-5 h-5 stroke-[2] transition-transform duration-300 group-hover/btn:-translate-x-0.5" />
@@ -193,20 +235,27 @@ export const PortfolioGallery: React.FC = () => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {/* Sliding Track with GPU acceleration & buttery smooth cubic-bezier curve */}
+            {/* Sliding Track with GPU acceleration & continuous seamless translation */}
             <div
-              className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
-              style={{ transform: `translateX(-${currentPage * 100}%)` }}
+              className={`flex will-change-transform ${
+                withTransition
+                  ? 'transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]'
+                  : ''
+              }`}
+              style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+              onTransitionEnd={handleTransitionEnd}
             >
-              {pages.map((pageProjects, pageIdx) => (
+              {extendedPages.map((pageProjects, pageIdx) => (
                 <div
                   key={pageIdx}
                   className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 px-0.5"
                 >
-                  {pageProjects.map((proj) => (
+                  {pageProjects.map((proj, projIdx) => (
                     <div
-                      key={proj.id}
+                      key={`${proj.id}-${pageIdx}-${projIdx}`}
                       onClick={() => setLightboxProject(proj)}
+                      onMouseEnter={() => setIsPaused(true)}
+                      onMouseLeave={() => setIsPaused(false)}
                       className="group/card relative cursor-pointer overflow-hidden bg-black aspect-[16/15] sm:aspect-[4/3] lg:aspect-[16/15] border border-black/20 shadow-md hover:shadow-2xl transition-all duration-500"
                       role="button"
                       tabIndex={0}
@@ -249,8 +298,12 @@ export const PortfolioGallery: React.FC = () => {
 
           {/* Right Arrow Button */}
           <button
-            onClick={handleNext}
-            className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn"
+            onClick={() => {
+              setIsPaused(true);
+              handleNext();
+              setTimeout(() => setIsPaused(false), 2000);
+            }}
+            className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn cursor-pointer"
             aria-label="Next projects slide"
           >
             <ChevronRight className="w-5 h-5 stroke-[2] transition-transform duration-300 group-hover/btn:translate-x-0.5" />
@@ -259,12 +312,17 @@ export const PortfolioGallery: React.FC = () => {
 
         {/* Carousel Pagination Dots */}
         <div className="flex items-center justify-center space-x-2.5 mt-8">
-          {Array.from({ length: totalPages }).map((_, idx) => (
+          {pages.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => setCurrentPage(idx)}
-              className={`transition-all duration-500 rounded-full ${
-                currentPage === idx
+              onClick={() => {
+                setWithTransition(true);
+                setSlideIndex(idx);
+                setIsPaused(true);
+                setTimeout(() => setIsPaused(false), 2500);
+              }}
+              className={`transition-all duration-500 rounded-full cursor-pointer ${
+                activeDotIndex === idx
                   ? 'w-7 h-2 bg-black shadow-sm'
                   : 'w-2 h-2 bg-black/25 hover:bg-black/50'
               }`}
