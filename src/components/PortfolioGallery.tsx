@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X, ArrowRight, Eye } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 
@@ -71,16 +71,19 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
 
 export const PortfolioGallery: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const [lightboxProject, setLightboxProject] = useState<CarouselSlide | null>(null);
+  const touchStartXRef = useRef<number | null>(null);
 
-  // Show 4 projects per page
+  // 4 projects per page slide
   const itemsPerPage = 4;
   const totalPages = Math.ceil(CAROUSEL_PROJECTS.length / itemsPerPage);
 
-  const displayedProjects = CAROUSEL_PROJECTS.slice(
-    currentPage * itemsPerPage,
-    currentPage * itemsPerPage + itemsPerPage
-  );
+  // Group projects into slide pages
+  const pages: CarouselSlide[][] = [];
+  for (let i = 0; i < CAROUSEL_PROJECTS.length; i += itemsPerPage) {
+    pages.push(CAROUSEL_PROJECTS.slice(i, i + itemsPerPage));
+  }
 
   const handlePrev = () => {
     setCurrentPage((prev) => (prev > 0 ? prev - 1 : totalPages - 1));
@@ -90,10 +93,36 @@ export const PortfolioGallery: React.FC = () => {
     setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : 0));
   };
 
+  // Subtle auto-sliding every 6s when not hovering or inspecting
+  useEffect(() => {
+    if (isHovered || lightboxProject !== null) return;
+    const interval = setInterval(() => {
+      handleNext();
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isHovered, lightboxProject, totalPages]);
+
+  // Touch swipe support for smooth side sliding on mobile & tablets
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchStartXRef.current - touchEndX;
+    if (deltaX > 40) {
+      handleNext();
+    } else if (deltaX < -40) {
+      handlePrev();
+    }
+    touchStartXRef.current = null;
+  };
+
   return (
     <section
       id="portfolio"
-      className="py-24 sm:py-28 bg-[#F4F4F2] text-pure-black relative overflow-hidden"
+      className="py-24 sm:py-28 bg-[#F4F4F2] text-pure-black relative overflow-hidden select-none"
       aria-label="Our Projects - Spaces We've Transformed"
     >
       {/* Background Subtle Texture */}
@@ -143,79 +172,101 @@ export const PortfolioGallery: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Cards Carousel Row with Side Navigation Controls */}
-        <div className="relative group">
+        {/* 4 Cards Carousel Row with Side Sliding Animation & Controls */}
+        <div
+          className="relative group"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           {/* Left Arrow Button */}
           <button
             onClick={handlePrev}
-            className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black"
+            className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn"
             aria-label="Previous projects slide"
           >
-            <ChevronLeft className="w-5 h-5 stroke-[2]" />
+            <ChevronLeft className="w-5 h-5 stroke-[2] transition-transform duration-300 group-hover/btn:-translate-x-0.5" />
           </button>
 
-          {/* 4 Cards Grid matching reference layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {displayedProjects.map((proj) => (
-              <div
-                key={proj.id}
-                onClick={() => setLightboxProject(proj)}
-                className="group/card relative cursor-pointer overflow-hidden bg-black aspect-[16/15] sm:aspect-[4/3] lg:aspect-[16/15] border border-black/20 shadow-md hover:shadow-xl transition-all duration-400"
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    setLightboxProject(proj);
-                  }
-                }}
-                aria-label={`View ${proj.title}`}
-              >
-                {/* Image */}
-                <img
-                  src={proj.image}
-                  alt={proj.title}
-                  className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.04] transition-transform duration-700 ease-out motion-reduce:transition-none group-hover/card:scale-108"
-                  loading="lazy"
-                />
+          {/* Sliding Track Viewport */}
+          <div
+            className="overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* Sliding Track with GPU acceleration & buttery smooth cubic-bezier curve */}
+            <div
+              className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+              style={{ transform: `translateX(-${currentPage * 100}%)` }}
+            >
+              {pages.map((pageProjects, pageIdx) => (
+                <div
+                  key={pageIdx}
+                  className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 px-0.5"
+                >
+                  {pageProjects.map((proj) => (
+                    <div
+                      key={proj.id}
+                      onClick={() => setLightboxProject(proj)}
+                      className="group/card relative cursor-pointer overflow-hidden bg-black aspect-[16/15] sm:aspect-[4/3] lg:aspect-[16/15] border border-black/20 shadow-md hover:shadow-2xl transition-all duration-500"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          setLightboxProject(proj);
+                        }
+                      }}
+                      aria-label={`View ${proj.title}`}
+                    >
+                      {/* Image */}
+                      <img
+                        src={proj.image}
+                        alt={proj.title}
+                        className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.04] transition-transform duration-700 ease-out group-hover/card:scale-110"
+                        loading="lazy"
+                        draggable={false}
+                      />
 
-                {/* Subtle dark vignette on hover */}
-                <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/30 transition-colors duration-400" />
+                      {/* Subtle dark vignette on hover */}
+                      <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/30 transition-colors duration-400" />
 
-                {/* Eye Icon Hover Indicator */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="w-10 h-10 rounded-full bg-black/80 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white">
-                    <Eye className="w-4 h-4" />
-                  </div>
+                      {/* Eye Icon Hover Indicator */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-300 pointer-events-none transform group-hover/card:scale-100 scale-75">
+                        <div className="w-11 h-11 rounded-full bg-black/80 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-xl">
+                          <Eye className="w-4 h-4" />
+                        </div>
+                      </div>
+
+                      {/* Category tag */}
+                      <div className="absolute bottom-3 left-3 z-10 bg-black/80 backdrop-blur-sm text-white px-2.5 py-1 text-[9px] font-mono tracking-widest uppercase border border-white/10 shadow-sm transition-transform duration-300 group-hover/card:translate-y-[-2px]">
+                        {proj.category}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-
-                {/* Category tag */}
-                <div className="absolute bottom-3 left-3 z-10 bg-black/75 backdrop-blur-sm text-white px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
-                  {proj.category}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Right Arrow Button */}
           <button
             onClick={handleNext}
-            className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black"
+            className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-2xl hover:bg-neutral-800 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black group/btn"
             aria-label="Next projects slide"
           >
-            <ChevronRight className="w-5 h-5 stroke-[2]" />
+            <ChevronRight className="w-5 h-5 stroke-[2] transition-transform duration-300 group-hover/btn:translate-x-0.5" />
           </button>
         </div>
 
         {/* Carousel Pagination Dots */}
-        <div className="flex items-center justify-center space-x-2 mt-8">
+        <div className="flex items-center justify-center space-x-2.5 mt-8">
           {Array.from({ length: totalPages }).map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentPage(idx)}
-              className={`transition-all duration-300 rounded-full ${
+              className={`transition-all duration-500 rounded-full ${
                 currentPage === idx
-                  ? 'w-6 h-2 bg-black'
-                  : 'w-2 h-2 bg-black/30 hover:bg-black/60'
+                  ? 'w-7 h-2 bg-black shadow-sm'
+                  : 'w-2 h-2 bg-black/25 hover:bg-black/50'
               }`}
               aria-label={`Go to slide page ${idx + 1}`}
             />
