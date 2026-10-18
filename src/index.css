@@ -92,3 +92,33 @@
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.12);
 }
+
+/* Unlimited infinite continuous scroll marquee */
+@keyframes infiniteMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-infinite-marquee {
+  display: flex;
+  width: max-content;
+  animation: infiniteMarquee 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-infinite-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars cleanly */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
