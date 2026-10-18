@@ -281,65 +281,6 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Embedded Map Section: Studio Location with Clean White Background */}
-        <div className="border border-[#E2E2DF] bg-white shadow-sm overflow-hidden">
-          <div className="p-4 sm:p-5 bg-white border-b border-[#E2E2DF] flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-7 h-7 rounded-full bg-pure-black flex items-center justify-center text-white">
-                <MapPin className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-xs sm:text-sm font-mono tracking-widest uppercase text-pure-black font-semibold">
-                Studio Location · Pendurthi, Visakhapatnam
-              </span>
-            </div>
-            <a
-              href={BRAND_INFO.residential.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] font-mono uppercase tracking-widest text-mid-grey hover:text-pure-black font-medium transition-colors"
-            >
-              Open Full View ↗
-            </a>
-          </div>
-
-          <div className="relative aspect-[21/9] sm:aspect-[24/8] w-full bg-[#FAFAF8]">
-            <iframe
-              title="SD Classic Interiors Studio Location - Pendurthi, Visakhapatnam"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.8!2d83.2001!3d17.8286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3959!2sPendurthi%2C%20Visakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0, filter: 'contrast(102%) brightness(98%)' }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-
-          {/* Map Footer Bar with Studio Address and Direct Navigation Action */}
-          <div className="p-4 sm:p-5 bg-white border-t border-[#E2E2DF] flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="flex items-start sm:items-center space-x-2.5 text-xs font-mono text-graphite">
-              <MapPin className="w-4 h-4 text-pure-black shrink-0 mt-0.5 sm:mt-0" />
-              <span>
-                #17-61/2, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173
-              </span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-[11px] font-mono text-mid-grey uppercase hidden sm:inline-block">
-                Mon – Sat: 9:30 AM – 8:30 PM
-              </span>
-              <a
-                href={BRAND_INFO.residential.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-pure-black text-white text-[11px] font-mono tracking-wider hover:bg-graphite transition-colors uppercase font-medium"
-              >
-                <span>Get Directions</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
