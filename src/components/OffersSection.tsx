@@ -116,7 +116,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
                 }
               }}
               aria-label={`Enquire for ${pkg.offerKey}`}
-              className="group relative cursor-pointer overflow-hidden bg-[#0a0a0a] aspect-[4/5] focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+              className="group relative cursor-pointer overflow-hidden bg-[#0a0a0a] aspect-[4/5] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
             >
               {/* Full-bleed photograph */}
               <img

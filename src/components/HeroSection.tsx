@@ -116,7 +116,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Solid White Rectangular Button */}
             <button
               onClick={onExploreWork}
-              className="group inline-flex items-center justify-center space-x-3 px-7 py-3.5 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold transition-all duration-300 hover:bg-light-grey focus:outline-none focus:ring-1 focus:ring-white rounded-none shadow-lg"
+              className="group inline-flex items-center justify-center space-x-3 px-7 py-3.5 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold transition-all duration-300 hover:bg-light-grey hover:-translate-y-0.5 focus:outline-none focus:ring-1 focus:ring-white rounded-none shadow-lg hover:shadow-[0_18px_40px_-10px_rgba(255,255,255,0.25)] motion-reduce:hover:translate-y-0"
               id="hero-explore-work-btn"
             >
               <span>EXPLORE OUR WORK</span>
@@ -126,7 +126,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Outlined 1px White Rectangular Button */}
             <button
               onClick={onOpenConsultation}
-              className="inline-flex items-center justify-center space-x-2 px-7 py-3.5 border border-white/60 text-white font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:border-white hover:bg-white/10 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
+              className="inline-flex items-center justify-center space-x-2 px-7 py-3.5 border border-white/60 text-white font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:border-white hover:bg-white/10 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(0,0,0,0.5)] focus:outline-none focus:ring-1 focus:ring-white rounded-none motion-reduce:hover:translate-y-0"
               id="hero-book-consultation-btn"
             >
               <span>BOOK A CONSULTATION</span>

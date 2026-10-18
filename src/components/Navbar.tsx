@@ -140,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             <div className="hidden md:flex items-center space-x-4">
               <button
                 onClick={onOpenQuote}
-                className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.22em] uppercase px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
+                className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.22em] uppercase px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black hover:shadow-[0_12px_30px_-8px_rgba(255,255,255,0.3)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
                 id="nav-get-quote-btn"
               >
                 <span>GET A QUOTE</span>

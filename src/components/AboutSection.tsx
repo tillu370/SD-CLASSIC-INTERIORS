@@ -77,7 +77,7 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Exact Armchair in Fluted Room Photo */}
           <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full aspect-[4/5] overflow-hidden bg-black border border-white/10 shadow-2xl">
+            <div className="relative w-full aspect-[4/5] overflow-hidden bg-black border border-white/10 shadow-[0_35px_80px_-20px_rgba(0,0,0,0.8)] transition-shadow duration-500 hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.9)]">
               <img
                 src="/images/projects/about_armchair_exact.jpg"
                 alt="SD Classic Interiors - Contemporary Armchair in Fluted Room"
@@ -121,9 +121,9 @@ export const AboutSection: React.FC = () => {
               {COMMITMENTS.map((item) => (
                 <div
                   key={item.title}
-                  className="group/item bg-[#050505] p-4 flex items-center space-x-3 hover:bg-[#0d0d0d] transition-colors duration-300 cursor-default"
+                  className="group/item relative bg-[#050505] p-4 flex items-center space-x-3 hover:bg-[#0d0d0d] hover:z-10 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] transition-all duration-300 cursor-default"
                 >
-                  <div className="w-8 h-8 border border-white/20 bg-white/5 flex items-center justify-center flex-shrink-0 text-white group-hover/item:border-white/50 transition-colors">
+                  <div className="w-8 h-8 border border-white/20 bg-white/5 flex items-center justify-center flex-shrink-0 text-white group-hover/item:border-white/50 group-hover/item:scale-110 transition-all duration-300">
                     {item.icon}
                   </div>
                   <span className="text-[11px] sm:text-xs font-sans font-normal text-light-grey/90 group-hover/item:text-white transition-colors leading-snug">

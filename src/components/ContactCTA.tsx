@@ -45,7 +45,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onDiscussProject }) => {
             {/* Primary CTA: Call Now */}
             <a
               href={`tel:${BRAND_INFO.residential.phone}`}
-              className="inline-flex items-center justify-center space-x-3 px-7 py-4 bg-white text-pure-black font-sans text-xs tracking-[0.22em] uppercase font-semibold hover:bg-light-grey hover:-translate-y-0.5 transition-all duration-300 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              className="inline-flex items-center justify-center space-x-3 px-7 py-4 bg-white text-pure-black font-sans text-xs tracking-[0.22em] uppercase font-semibold shadow-lg hover:bg-light-grey hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-10px_rgba(255,255,255,0.3)] transition-all duration-300 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               id="cta-call-btn"
             >
               <Phone className="w-4 h-4" />
@@ -59,7 +59,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onDiscussProject }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center space-x-3 px-7 py-4 border border-white/40 text-white font-sans text-xs tracking-[0.22em] uppercase hover:border-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center space-x-3 px-7 py-4 border border-white/40 text-white font-sans text-xs tracking-[0.22em] uppercase hover:border-white hover:bg-white/10 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] transition-all duration-300 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               id="cta-whatsapp-btn"
             >
               <MessageSquare className="w-4 h-4" />

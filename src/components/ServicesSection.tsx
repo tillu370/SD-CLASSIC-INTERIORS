@@ -223,7 +223,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
         }
       }}
       aria-label={`View ${service.title}`}
-      className="group relative cursor-pointer overflow-hidden bg-[#0d0d0d] aspect-[4/3] focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+      className="group relative cursor-pointer overflow-hidden bg-[#0d0d0d] aspect-[4/3] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
     >
       {/* Background photograph — primary focus */}
       <img
@@ -321,7 +321,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
           aria-modal="true"
         >
           <div
-            className="bg-[#111111] border border-white/20 max-w-xl w-full max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200"
+            className="bg-[#111111] border border-white/20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)] max-w-xl w-full max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -375,7 +375,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
                     setActiveModalService(null);
                     onEnquireService(svc);
                   }}
-                  className="flex-1 py-3.5 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold text-center hover:bg-light-grey transition-colors"
+                  className="flex-1 py-3.5 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold text-center hover:bg-light-grey hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-8px_rgba(255,255,255,0.25)] transition-all duration-300"
                 >
                   ENQUIRE FOR THIS SERVICE →
                 </button>
