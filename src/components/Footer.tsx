@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="flex items-center space-x-4 text-center lg:text-left">
-              <div className="w-12 h-12 rounded-full bg-white/5 border border-white/15 flex items-center justify-center shrink-0 hidden sm:flex">
+              <div className="w-12 h-12 rounded-full bg-white/5 border border-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] flex items-center justify-center shrink-0 hidden sm:flex">
                 <Sparkles className="w-6 h-6 text-amber-300" />
               </div>
               <div>
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.residential.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 shadow-lg rounded-sm"
+                className="inline-flex items-center space-x-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-500 hover:-translate-y-0.5 text-white text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 shadow-[0_15px_35px_-10px_rgba(16,185,129,0.4)] hover:shadow-[0_20px_45px_-10px_rgba(16,185,129,0.55)] rounded-sm"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>WhatsApp Consultation</span>
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={`tel:${BRAND_INFO.residential.phone}`}
-                className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-pure-black hover:bg-light-grey text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 shadow-lg rounded-sm"
+                className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-pure-black hover:bg-light-grey hover:-translate-y-0.5 text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 shadow-[0_15px_35px_-10px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_45px_-10px_rgba(255,255,255,0.35)] rounded-sm"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call {BRAND_INFO.residential.phoneFormatted}</span>
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Identity (lg: 4 cols) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
             <div className="flex items-center space-x-3 mb-5">
-              <div className="w-11 h-11 rounded-sm bg-white/5 border border-white/15 p-2 flex items-center justify-center">
+              <div className="w-11 h-11 rounded-sm bg-white/5 border border-white/15 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.6)] p-2 flex items-center justify-center">
                 <img
                   src="/images/brand/logo_white_transparent.png"
                   alt="SD Classic Interiors Logo"
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white hover:text-black hover:bg-white transition-all duration-300"
+                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white hover:text-black hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(255,255,255,0.35)] transition-all duration-300"
                 aria-label="SD Classic Interiors Instagram"
                 title="SD Classic Interiors Instagram"
               >
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.decora.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-pink-400 hover:text-white hover:bg-pink-600 transition-all duration-300"
+                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-pink-400 hover:text-white hover:bg-pink-600 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(219,39,119,0.5)] transition-all duration-300"
                 aria-label="DECORA Instagram (@decoravizag)"
                 title="DECORA Instagram (@decoravizag)"
               >
@@ -155,7 +155,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.residential.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all duration-300"
+                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(16,185,129,0.5)] transition-all duration-300"
                 aria-label="WhatsApp Channel"
                 title="WhatsApp Channel"
               >
@@ -166,7 +166,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.social.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white hover:text-black hover:bg-white transition-all duration-300"
+                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white hover:text-black hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(255,255,255,0.35)] transition-all duration-300"
                 aria-label="Official Website"
                 title="Official Website"
               >
@@ -319,20 +319,20 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Quality Standards & Craft Highlights Strip */}
-        <div className="py-8 grid grid-cols-2 md:grid-cols-4 gap-4 border-b border-white/10 text-center">
-          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase">
+        <div className="py-8 grid grid-cols-2 md:grid-cols-4 gap-3 border-b border-white/10 text-center">
+          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>100% Quality Assured</span>
           </div>
-          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase">
+          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
             <span>German Precision Edging</span>
           </div>
-          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase">
+          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Building2 className="w-4 h-4 text-blue-400 shrink-0" />
             <span>Turnkey Project Delivery</span>
           </div>
-          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase">
+          <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Home className="w-4 h-4 text-purple-400 shrink-0" />
             <span>Zero-Surprise Transparent BOQ</span>
           </div>
@@ -350,7 +350,7 @@ export const Footer: React.FC = () => {
             {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center space-x-2 py-2 px-3.5 border border-white/15 bg-white/5 text-light-grey hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 font-medium rounded-sm cursor-pointer group"
+              className="inline-flex items-center space-x-2 py-2 px-3.5 border border-white/15 bg-white/5 text-light-grey hover:text-white hover:border-white hover:bg-white/10 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-8px_rgba(255,255,255,0.2)] transition-all duration-300 font-medium rounded-sm cursor-pointer group"
               aria-label="Back to top"
             >
               <span className="text-[10px] font-mono tracking-widest uppercase">BACK TO TOP</span>
