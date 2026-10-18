@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, X, ArrowRight, Eye, Play, Pause } from 'lucide-react';
+import { X, ArrowRight, Eye } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 
 interface CarouselSlide {
@@ -84,8 +84,6 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
 ];
 
 export const PortfolioGallery: React.FC = () => {
-  const [isReversed, setIsReversed] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
   const [lightboxProject, setLightboxProject] = useState<CarouselSlide | null>(null);
 
   // Duplicate for seamless 100% infinite marquee loop
@@ -154,8 +152,7 @@ export const PortfolioGallery: React.FC = () => {
           <div
             className="animate-infinite-marquee flex items-center space-x-3.5 sm:space-x-5 will-change-transform"
             style={{
-              animationDirection: isReversed ? 'reverse' : 'normal',
-              animationPlayState: isPaused || lightboxProject !== null ? 'paused' : 'running',
+              animationPlayState: lightboxProject !== null ? 'paused' : 'running',
               animationDuration: '52s',
             }}
           >
@@ -198,58 +195,6 @@ export const PortfolioGallery: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Editorial Controls & Infinite Status Bar */}
-        <div className="flex items-center justify-between max-w-3xl mx-auto px-2 mt-8 pt-4 border-t border-black/10">
-          {/* Reverse Direction */}
-          <button
-            onClick={() => setIsReversed(true)}
-            className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-mono tracking-wider uppercase transition-all duration-300 cursor-pointer ${
-              isReversed
-                ? 'bg-black text-white shadow-md'
-                : 'bg-black/5 text-graphite hover:bg-black/10'
-            }`}
-            aria-label="Scroll in reverse direction"
-          >
-            <ChevronLeft className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Reverse</span>
-          </button>
-
-          {/* Infinite Stream Indicator */}
-          <div className="flex items-center space-x-2 text-[10px] sm:text-[11px] font-mono tracking-[0.18em] uppercase text-graphite/75 select-none">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Unlimited Scroll · Hover To Pause</span>
-          </div>
-
-          {/* Pause / Play Toggle & Forward Direction */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setIsPaused((prev) => !prev)}
-              className={`p-2 rounded-full transition-all duration-300 cursor-pointer ${
-                isPaused
-                  ? 'bg-black text-white shadow-md'
-                  : 'bg-black/5 text-graphite hover:bg-black/10'
-              }`}
-              aria-label={isPaused ? "Resume scroll" : "Pause scroll"}
-              title={isPaused ? "Play" : "Pause"}
-            >
-              {isPaused ? <Play className="w-3 h-3 fill-current" /> : <Pause className="w-3 h-3 fill-current" />}
-            </button>
-
-            <button
-              onClick={() => setIsReversed(false)}
-              className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-mono tracking-wider uppercase transition-all duration-300 cursor-pointer ${
-                !isReversed
-                  ? 'bg-black text-white shadow-md'
-                  : 'bg-black/5 text-graphite hover:bg-black/10'
-              }`}
-              aria-label="Scroll in forward direction"
-            >
-              <span className="hidden sm:inline">Forward</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
           </div>
         </div>
       </div>
