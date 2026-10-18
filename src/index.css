@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --pure-black: #000000;
+    --rich-black: #080808;
+    --charcoal: #171717;
+    --graphite: #303030;
+    --mid-grey: #858585;
+    --light-grey: #D8D8D8;
+    --off-white: #F5F5F3;
+    --pure-white: #FFFFFF;
+  }
+
+  html {
+    background-color: #080808;
+    color: #F5F5F3;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #080808;
+    color: #F5F5F3;
+  }
+
+  /* Custom refined monochrome scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #858585;
+  }
+}
+
+/* Luxury architectural typography styles */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle line grid pattern for architectural feel */
+.architectural-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.architectural-grid-light {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* Door opening 3D perspective wrapper */
+.perspective-container {
+  perspective: 1800px;
+  perspective-origin: center center;
+}
+
+/* Fine 1px borders */
+.border-fine {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.border-fine-dark {
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.12);
+}
