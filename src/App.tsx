@@ -8,7 +8,6 @@ import { OffersSection } from './components/OffersSection';
 import { PortfolioGallery } from './components/PortfolioGallery';
 import { AboutSection } from './components/AboutSection';
 import { ProcessSection } from './components/ProcessSection';
-import { WhyChooseUs } from './components/WhyChooseUs';
 import { ContactCTA } from './components/ContactCTA';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -81,10 +80,7 @@ export const App: React.FC = () => {
         {/* 07. Methodology & Process */}
         <ProcessSection />
 
-        {/* 08. Credibility Standards */}
-        <WhyChooseUs />
-
-        {/* 09. Final Closing Call To Action */}
+        {/* 08. Final Closing Call To Action */}
         <ContactCTA onDiscussProject={scrollToContact} />
 
         {/* 10. Structured Contact Directory (Residential & Commercial) */}
