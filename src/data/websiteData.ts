@@ -68,6 +68,18 @@ export const BRAND_INFO = {
     gstin: "37AAAFS9667J1Z9",
     location: "Chinnamushidiwada, Visakhapatnam - 530051, Andhra Pradesh, India."
   },
+  decora: {
+    brand: "DECORA",
+    tagline: "Wall | Window | Floor | Decor",
+    unitOf: "A Unit of SD CLASSIC INTERIORS",
+    phone: "9676164499",
+    phoneFormatted: "+91 96761 64499",
+    whatsappUrl: "https://wa.me/919676164499",
+    instagram: "https://www.instagram.com/decoravizag/",
+    instagramHandle: "@decoravizag",
+    services: ["Wallpapers", "Blinds", "Curtains", "Floorings"],
+    location: "Visakhapatnam, Andhra Pradesh, India."
+  },
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
     website: "https://sdclassicinteriors.com"
