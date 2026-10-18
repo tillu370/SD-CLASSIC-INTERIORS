@@ -85,11 +85,12 @@ export const ContactSection: React.FC = () => {
         {/* Three Specialized Divisions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mb-16">
           {/* DIVISION 1: Residential — SD Classic Interiors */}
-          <div className="bg-white border border-[#E2E2DF] shadow-sm hover:shadow-lg hover:border-pure-black/50 hover:-translate-y-1 transition-all duration-400 p-7 sm:p-8 flex flex-col justify-between rounded-sm">
+          <div className="group relative overflow-hidden bg-white border border-[#E2E2DF] shadow-[0_10px_35px_-18px_rgba(0,0,0,0.25)] hover:shadow-[0_35px_70px_-20px_rgba(0,0,0,0.3)] hover:border-pure-black/50 hover:-translate-y-1.5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] p-7 sm:p-8 flex flex-col justify-between rounded-sm">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-pure-black to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
             <div>
               <div className="flex items-center justify-between border-b border-[#EBEBE8] pb-5 mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-sm shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-[0_10px_25px_-8px_rgba(0,0,0,0.5)] shrink-0 transition-transform duration-300 group-hover:scale-110">
                     <Home className="w-5 h-5" />
                   </div>
                   <div>
@@ -201,11 +202,12 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* DIVISION 2: Commercial — SD Constructions & Infra */}
-          <div className="bg-white border border-[#E2E2DF] shadow-sm hover:shadow-lg hover:border-pure-black/50 hover:-translate-y-1 transition-all duration-400 p-7 sm:p-8 flex flex-col justify-between rounded-sm">
+          <div className="group relative overflow-hidden bg-white border border-[#E2E2DF] shadow-[0_10px_35px_-18px_rgba(0,0,0,0.25)] hover:shadow-[0_35px_70px_-20px_rgba(0,0,0,0.3)] hover:border-pure-black/50 hover:-translate-y-1.5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] p-7 sm:p-8 flex flex-col justify-between rounded-sm">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-pure-black to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
             <div>
               <div className="flex items-center justify-between border-b border-[#EBEBE8] pb-5 mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-sm shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-[0_10px_25px_-8px_rgba(0,0,0,0.5)] shrink-0 transition-transform duration-300 group-hover:scale-110">
                     <Building2 className="w-5 h-5" />
                   </div>
                   <div>
@@ -296,16 +298,17 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* DIVISION 3: DECORA — Wall | Window | Floor | Decor */}
-          <div className="bg-white border-2 border-black/80 shadow-md hover:shadow-xl hover:border-black hover:-translate-y-1 transition-all duration-400 p-7 sm:p-8 flex flex-col justify-between rounded-sm relative">
+          <div className="group relative overflow-hidden bg-white border-2 border-black/80 shadow-[0_15px_45px_-18px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)] hover:border-black hover:-translate-y-1.5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] p-7 sm:p-8 flex flex-col justify-between rounded-sm">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-pure-black to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
             {/* Featured Badge */}
-            <div className="absolute -top-3 right-5 bg-black text-white text-[9px] font-mono tracking-widest uppercase px-2.5 py-0.5 shadow-md">
+            <div className="absolute -top-3 right-5 bg-black text-white text-[9px] font-mono tracking-widest uppercase px-2.5 py-0.5 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)]">
               Specialized Unit
             </div>
 
             <div>
               <div className="flex items-center justify-between border-b border-[#EBEBE8] pb-5 mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-sm shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-[0_10px_25px_-8px_rgba(0,0,0,0.5)] shrink-0 transition-transform duration-300 group-hover:scale-110">
                     <Sparkles className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
