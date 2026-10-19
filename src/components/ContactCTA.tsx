@@ -28,7 +28,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onDiscussProject }) => {
         <div className="max-w-3xl">
           <div className="flex items-center space-x-3 mb-6">
             <span className="text-xs font-mono tracking-[0.25em] uppercase text-mid-grey">
-              09 / GET IN TOUCH
+              07 / GET IN TOUCH
             </span>
             <div className="w-12 h-[1px] bg-white/20" />
           </div>

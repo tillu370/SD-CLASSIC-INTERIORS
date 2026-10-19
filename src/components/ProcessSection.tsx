@@ -174,7 +174,7 @@ export const ProcessSection: React.FC = () => {
                     </span>
                     {phase.deliverables.map((item, idx) => (
                       <div key={idx} className="flex items-start space-x-2 text-xs font-sans text-pure-black/90">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-pure-black/75 shrink-0 mt-0.5" />
                         <span className="leading-tight">{item}</span>
                       </div>
                     ))}

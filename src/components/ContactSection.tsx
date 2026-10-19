@@ -62,7 +62,7 @@ export const ContactSection: React.FC = () => {
         className="absolute top-12 right-6 sm:right-12 text-7xl sm:text-9xl font-serif text-black/[0.04] select-none pointer-events-none font-bold"
         aria-hidden="true"
       >
-        09
+        08
       </div>
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,7 +143,7 @@ export const ContactSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-sm font-sans text-graphite hover:text-pure-black transition-colors font-medium"
                   >
-                    <MessageSquare className="w-4 h-4 text-emerald-600" />
+                    <MessageSquare className="w-4 h-4 text-pure-black" />
                     <span>Chat on WhatsApp</span>
                     <ExternalLink className="w-3 h-3 text-mid-grey" />
                   </a>
@@ -309,7 +309,7 @@ export const ContactSection: React.FC = () => {
               <div className="flex items-center justify-between border-b border-[#EBEBE8] pb-5 mb-6">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-full bg-pure-black flex items-center justify-center text-white shadow-[0_10px_25px_-8px_rgba(0,0,0,0.5)] shrink-0 transition-transform duration-300 group-hover:scale-110">
-                    <Sparkles className="w-5 h-5 text-amber-300" />
+                    <Sparkles className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block font-medium">
@@ -359,9 +359,9 @@ export const ContactSection: React.FC = () => {
                       href={BRAND_INFO.decora.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-xs font-sans text-emerald-700 hover:text-emerald-800 transition-colors font-semibold"
+                      className="inline-flex items-center space-x-2 text-xs font-sans text-graphite hover:text-pure-black transition-colors font-medium"
                     >
-                      <MessageSquare className="w-3.5 h-3.5" />
+                      <MessageSquare className="w-3.5 h-3.5 text-pure-black" />
                       <span>wa.me/919676164499</span>
                     </a>
                   </div>
@@ -378,7 +378,7 @@ export const ContactSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-sm font-sans text-graphite hover:text-pure-black transition-colors font-medium"
                   >
-                    <InstagramIcon className="w-4 h-4 text-pink-600" />
+                    <InstagramIcon className="w-4 h-4 text-pure-black" />
                     <span>{BRAND_INFO.decora.instagramHandle}</span>
                     <ExternalLink className="w-3 h-3 text-mid-grey" />
                   </a>
