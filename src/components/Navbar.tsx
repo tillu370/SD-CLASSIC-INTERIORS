@@ -24,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       }
 
       // Active section spy
-      const sections = ['home', 'expertise', 'services', 'offers', 'portfolio', 'about', 'contact'];
+      const sections = ['home', 'expertise', 'services', 'offers', 'portfolio', 'about', 'reviews', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -59,6 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
     { name: 'Services', href: '#services', id: 'services' },
     { name: 'Projects', href: '#portfolio', id: 'portfolio' },
     { name: 'Offers', href: '#offers', id: 'offers' },
+    { name: 'Reviews', href: '#reviews', id: 'reviews' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
