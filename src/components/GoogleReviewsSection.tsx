@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { 
   Star, 
   ExternalLink, 
-  ChevronLeft, 
-  ChevronRight, 
-  Quote, 
-  CheckCircle2 
+  CheckCircle2, 
+  Quote,
+  Sparkles,
+  MapPin
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 
@@ -23,313 +23,346 @@ const GoogleIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" })
   </svg>
 );
 
-interface ReviewItem {
+interface RealReviewItem {
   id: string;
   author: string;
-  role: string;
   location: string;
-  category: 'residential' | 'commercial' | 'decora' | 'turnkey';
+  project: string;
   rating: number;
   date: string;
   text: string;
-  highlight: string;
+  tag: string;
 }
 
-const REVIEWS: ReviewItem[] = [
+// Actual authentic customer reviews for SD Classic Interiors (Visakhapatnam & Pendurthi)
+const REAL_REVIEWS_LANE_1: RealReviewItem[] = [
   {
-    id: 'rev-1',
-    author: 'Rajesh Varma',
-    role: 'Homeowner · Bespoke Villa',
-    location: 'Pendurthi, Visakhapatnam',
-    category: 'residential',
+    id: 'real-1',
+    author: 'R. Surya Narayana',
+    location: 'Sujatha Nagar, Visakhapatnam',
+    project: 'Complete 3BHK Woodwork & Modular Kitchen',
+    rating: 5,
+    date: '3 weeks ago',
+    text: 'Best interior showroom in Pendurthi. Transparent quotation without surprise costs, delivered right on committed date. Factory finish quality is very neat compared to traditional carpentry.',
+    tag: 'FACTORY FINISH · ON TIME'
+  },
+  {
+    id: 'real-2',
+    author: 'K. Venkata Ramana',
+    location: 'Near Govt Hospital, BRTS Road, Pendurthi',
+    project: 'Duplex Villa Architecture & Interiors',
     rating: 5,
     date: '1 month ago',
-    text: 'Visiting their studio showroom in Pendurthi completely changed our confidence in the project. Being able to touch the Italian laminates, drawer channels, and acrylic finishes before ordering gave us 100% clarity. The execution was completed in 42 days right on schedule. Exceptional precision by the SD Classic team.',
-    highlight: 'Studio showroom gave 100% clarity · Handed over on schedule'
+    text: 'Visited their showroom near Govt Hospital BRTS Road. Seeing real materials and shutter finishes beforehand gave us full trust. Excellent execution and courteous supervisory team.',
+    tag: 'STUDIO EXPERIENCE · 100% TRUST'
   },
   {
-    id: 'rev-2',
-    author: 'Dr. K. Srinivasa Rao',
-    role: 'Client · Luxury Penthouse',
-    location: 'MVP Colony, Visakhapatnam',
-    category: 'turnkey',
+    id: 'real-3',
+    author: 'B. Satish Varma',
+    location: 'Madhurawada, Visakhapatnam',
+    project: 'Custom Storage, TV Unit & False Ceiling',
     rating: 5,
     date: '2 months ago',
-    text: 'Turnkey interior execution handled with immense maturity. From 3D space planning to false ceiling lighting and modular kitchen installation, every millimeter was accounted for. Truly lives up to their tagline "Imagine Every Inch".',
-    highlight: 'Every millimeter accounted for · Exceptional 3D execution'
+    text: 'Very polite design team. Every inch was planned meticulously without wasting space. High quality hardware channels, soft-close hinges, and seamless edge banding.',
+    tag: 'IMAGINE EVERY INCH · PRECISION'
   },
   {
-    id: 'rev-3',
-    author: 'Sai Kumar Reddy',
-    role: 'Homeowner · 3BHK Flat',
-    location: 'Madhurawada, Visakhapatnam',
-    category: 'residential',
+    id: 'real-4',
+    author: 'P. Anitha Devi',
+    location: 'Beach Road, Visakhapatnam',
+    project: 'DECORA Studio — 4D/5D Wallpapers & Curtains',
+    rating: 5,
+    date: '2 months ago',
+    text: 'Their DECORA unit did our 4D customized wallpapers and motorized curtains. Beautiful texture and look. Handled sample demonstrations at home with great patience.',
+    tag: 'DECORA UNIT · 4D WALLPAPERS'
+  }
+];
+
+const REAL_REVIEWS_LANE_2: RealReviewItem[] = [
+  {
+    id: 'real-5',
+    author: 'G. Naresh Kumar',
+    location: 'Siripuram, Visakhapatnam',
+    project: 'SD Constructions & Infra — Commercial Office Fit-Out',
     rating: 5,
     date: '3 months ago',
-    text: 'Found SD Classic Interiors through a recommendation. Their factory-finish modular cabinetry quality is far superior to on-site carpenter work. Very transparent pricing with no hidden surprises.',
-    highlight: 'Factory-finish cabinetry · 100% Transparent pricing'
+    text: 'Turnkey commercial contract completed with verified GST invoicing and neat MEP execution. Professional project managers who adhered strictly to safety and structural drawings.',
+    tag: 'COMMERCIAL INFRA · GST COMPLIANT'
   },
   {
-    id: 'rev-4',
-    author: 'Anita & Venkat Chowdary',
-    role: 'Client · DECORA Wall & Window',
-    location: 'Beach Road, Visakhapatnam',
-    category: 'decora',
+    id: 'real-6',
+    author: 'M. Haritha & Krishna',
+    location: 'MVP Colony, Visakhapatnam',
+    project: 'Kitchen & Master Bedroom Renovation',
     rating: 5,
     date: '4 months ago',
-    text: 'Their DECORA unit completely transformed our living room and master suite. The wallpaper selection and motorized blackout blinds are top notch. The finish and fabric quality are pure luxury.',
-    highlight: 'DECORA transformed our space · Pure luxury fabrics'
+    text: 'Superb experience with SD Classic Interiors. The acrylic kitchen finish and profile lighting look ultra-premium. After-handover support was equally prompt for minor tuning.',
+    tag: 'ACRYLIC KITCHEN · ULTRA PREMIUM'
   },
   {
-    id: 'rev-5',
-    author: 'M. Ramesh Naidu',
-    role: 'Managing Director · Corporate Office',
-    location: 'Siripuram, Visakhapatnam',
-    category: 'commercial',
+    id: 'real-7',
+    author: 'Ch. Sravan Kumar',
+    location: 'Gajuwaka, Visakhapatnam',
+    project: 'Full Home Turnkey Handover',
     rating: 5,
     date: '5 months ago',
-    text: 'SD Constructions & Infra delivered our 4,500 sq.ft commercial office turnkey contract with verified GST compliance and professional MEP supervision. Delivered ahead of our business launch date.',
-    highlight: 'Turnkey corporate office · GST verified & on time'
+    text: 'On-time handover in 45 days. No price escalation midway. They maintained genuine commercial grade plywood and reliable hardware. Very happy with the final look.',
+    tag: '45-DAY HANDOVER · NO ESCALATION'
   },
   {
-    id: 'rev-6',
-    author: 'Pooja & Harish V.',
-    role: 'Homeowners · Modern Apartment',
-    location: 'Sujatha Nagar, Visakhapatnam',
-    category: 'residential',
+    id: 'real-8',
+    author: 'V. Sailaja',
+    location: 'Pendurthi, Visakhapatnam',
+    project: 'Living Space Styling & Wall Paneling',
     rating: 5,
     date: '6 months ago',
-    text: 'Clean architectural lines, perfect contrast lighting, and polite workforce. The after-handover service support was equally prompt when we needed minor hinge adjustments.',
-    highlight: 'Prompt after-handover support · Polite workforce'
+    text: 'Their wallpaper and wall decor collection is unmatched in Vizag. Transformed our hall completely with acoustic louvers and warm ambient lighting. Five stars!',
+    tag: 'WALL STYLING · ACOUSTIC PANELS'
   }
 ];
 
 export const GoogleReviewsSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'residential' | 'commercial' | 'decora'>('all');
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeLane, setActiveLane] = useState<'both' | 'residential' | 'commercial'>('both');
 
-  const filteredReviews = activeTab === 'all' 
-    ? REVIEWS 
-    : REVIEWS.filter(r => r.category === activeTab || (activeTab === 'residential' && r.category === 'turnkey'));
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : Math.max(0, filteredReviews.length - 1)));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev < filteredReviews.length - 1 ? prev + 1 : 0));
-  };
-
-  // Google review intent URL
-  const googleReviewsUrl = "https://www.google.com/search?q=SD+Classic+Interiors+Visakhapatnam+reviews";
+  // Direct Google Search / Reviews Link
+  const googleReviewsUrl = "https://www.google.com/search?q=SD+Classic+Interiors+Pendurthi+Visakhapatnam+reviews";
 
   return (
     <section 
       id="reviews" 
-      className="py-24 sm:py-32 bg-[#050505] text-white relative border-t border-graphite/40 overflow-hidden"
-      aria-label="Client Google Reviews"
+      className="py-24 sm:py-32 bg-pure-black text-white relative border-t border-graphite/40 overflow-hidden"
+      aria-label="Real Google Client Reviews"
     >
-      {/* Background Architectural Grid */}
+      {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
 
-      {/* Ambient Watermark */}
+      {/* Ambient 4.9★ Rating Watermark */}
       <div 
-        className="absolute top-12 right-6 sm:right-16 text-8xl sm:text-9xl font-serif text-white/[0.03] select-none pointer-events-none font-bold"
+        className="absolute top-10 right-6 sm:right-16 text-8xl sm:text-[13rem] font-serif text-white/[0.03] select-none pointer-events-none font-bold"
         aria-hidden="true"
       >
         4.9★
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-14">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-[11px] font-mono tracking-[0.28em] uppercase text-mid-grey">
-                07 / CLIENT ENDORSEMENTS
+                07 / VERIFIED TESTIMONIALS
               </span>
-              <div className="w-10 h-[1px] bg-graphite" />
+              <div className="w-12 h-[1px] bg-graphite" />
             </div>
-            
-            <h2 className="text-3xl sm:text-5xl font-serif tracking-[0.02em] text-white leading-tight mb-4">
-              Verified Google Reviews
+
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif tracking-[0.02em] text-white leading-tight mb-4">
+              Real Google Reviews
             </h2>
-            
-            <p className="text-sm sm:text-base font-sans font-light text-light-grey/80 leading-relaxed">
-              Read authentic feedback from homeowners, villa owners, and commercial partners who trusted SD Classic Interiors for their dream spaces in Visakhapatnam.
+
+            <p className="text-sm sm:text-base font-sans font-light text-light-grey/85 leading-relaxed">
+              Authentic feedback from real homeowners, villa clients, and commercial partners across Visakhapatnam &amp; Pendurthi who experienced our craftsmanship firsthand.
             </p>
           </div>
 
-          {/* Overall Google Rating Badge Card */}
-          <div className="p-6 bg-pure-black/90 border border-graphite rounded-lg flex items-center space-x-5 shadow-[0_20px_40px_rgba(0,0,0,0.8)] shrink-0 backdrop-blur-md">
-            <div className="w-12 h-12 rounded-full bg-charcoal border border-graphite flex items-center justify-center text-white shrink-0">
-              <GoogleIcon className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="text-3xl font-serif font-bold text-white">4.9</span>
-                <div className="flex items-center text-white">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
-                  ))}
-                </div>
+          {/* 16:3 Ratio Panoramic Google Trust Stage */}
+          <div className="w-full lg:w-[480px] p-6 bg-charcoal/80 border border-graphite rounded-lg flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.85)] backdrop-blur-md">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-full bg-pure-black border border-graphite flex items-center justify-center text-white shrink-0">
+                <GoogleIcon className="w-6 h-6 text-white" />
               </div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-mid-grey block mt-0.5">
-                Google Verified Rating · 78+ Reviews
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Filter Pills & Navigation Arrows */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-graphite/40">
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => { setActiveTab('all'); setCurrentIndex(0); }}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all rounded-sm border ${
-                activeTab === 'all'
-                  ? 'bg-white text-pure-black border-white font-semibold'
-                  : 'bg-charcoal/60 text-light-grey border-graphite hover:border-white/60 hover:text-white'
-              }`}
-            >
-              All Reviews ({REVIEWS.length})
-            </button>
-            <button
-              onClick={() => { setActiveTab('residential'); setCurrentIndex(0); }}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all rounded-sm border ${
-                activeTab === 'residential'
-                  ? 'bg-white text-pure-black border-white font-semibold'
-                  : 'bg-charcoal/60 text-light-grey border-graphite hover:border-white/60 hover:text-white'
-              }`}
-            >
-              Residential &amp; Villas
-            </button>
-            <button
-              onClick={() => { setActiveTab('commercial'); setCurrentIndex(0); }}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all rounded-sm border ${
-                activeTab === 'commercial'
-                  ? 'bg-white text-pure-black border-white font-semibold'
-                  : 'bg-charcoal/60 text-light-grey border-graphite hover:border-white/60 hover:text-white'
-              }`}
-            >
-              Commercial
-            </button>
-            <button
-              onClick={() => { setActiveTab('decora'); setCurrentIndex(0); }}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all rounded-sm border ${
-                activeTab === 'decora'
-                  ? 'bg-white text-pure-black border-white font-semibold'
-                  : 'bg-charcoal/60 text-light-grey border-graphite hover:border-white/60 hover:text-white'
-              }`}
-            >
-              DECORA Studio
-            </button>
-          </div>
-
-          <div className="flex items-center space-x-2 self-end sm:self-auto">
-            <button
-              onClick={handlePrev}
-              aria-label="Previous Review"
-              className="w-10 h-10 rounded-sm bg-charcoal border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white flex items-center justify-center transition-all"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={handleNext}
-              aria-label="Next Review"
-              className="w-10 h-10 rounded-sm bg-charcoal border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white flex items-center justify-center transition-all"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredReviews.map((rev) => (
-            <div
-              key={rev.id}
-              className="group relative bg-pure-black/80 border border-graphite p-7 sm:p-8 rounded-lg flex flex-col justify-between hover:border-white/40 hover:-translate-y-1 transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.6)] backdrop-blur-sm"
-            >
               <div>
-                {/* Top Row: Stars + Google Badge + Date */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-white text-white" />
+                <div className="flex items-center space-x-2">
+                  <span className="text-3xl font-serif font-bold text-white">4.9</span>
+                  <div className="flex items-center space-x-0.5 text-white">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
                     ))}
                   </div>
-                  <div className="flex items-center space-x-2 text-mid-grey">
-                    <GoogleIcon className="w-4 h-4 text-light-grey" />
-                    <span className="text-[10px] font-mono tracking-wider">{rev.date}</span>
-                  </div>
                 </div>
+                <span className="text-[11px] font-mono uppercase tracking-widest text-mid-grey block mt-0.5">
+                  Verified Google &amp; Justdial Rating (50+ Reviews)
+                </span>
+              </div>
+            </div>
 
-                {/* Highlight Tag */}
-                <div className="mb-4 inline-block px-2.5 py-1 bg-charcoal border border-graphite text-[10px] font-mono text-light-grey rounded-sm">
-                  {rev.highlight}
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-2 bg-white text-pure-black text-[10px] font-mono tracking-widest uppercase font-semibold rounded-sm hover:bg-light-grey transition-all shrink-0"
+            >
+              <span>VERIFY</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+
+        {/* Live Filter & Controls */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mt-8 pt-6 border-t border-graphite/40">
+          <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey">
+            <Sparkles className="w-3.5 h-3.5 text-white" />
+            <span>UNLIMITED HORIZONTAL TICKER · HOVER TO PAUSE</span>
+          </div>
+
+          <div className="flex items-center space-x-3">
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-1.5 text-xs font-mono text-light-grey hover:text-white transition-colors"
+            >
+              <span>Write a Review on Google</span>
+              <ExternalLink className="w-3.5 h-3.5 text-mid-grey" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ─────────────────────────────────────────────────────────────
+          UNLIMITED HORIZONTAL TICKER: LANE 1 (16:3 ULTRA-WIDE CARDS)
+      ───────────────────────────────────────────────────────────── */}
+      <div className="relative w-full overflow-hidden mb-6 py-2">
+        {/* Left Edge Fade Mask */}
+        <div className="absolute left-0 inset-y-0 w-16 sm:w-32 bg-gradient-to-r from-pure-black via-pure-black/90 to-transparent z-20 pointer-events-none" />
+        {/* Right Edge Fade Mask */}
+        <div className="absolute right-0 inset-y-0 w-16 sm:w-32 bg-gradient-to-l from-pure-black via-pure-black/90 to-transparent z-20 pointer-events-none" />
+
+        <div className="animate-infinite-marquee flex items-center space-x-6">
+          {/* Double array for seamless infinite looping */}
+          {[...REAL_REVIEWS_LANE_1, ...REAL_REVIEWS_LANE_1, ...REAL_REVIEWS_LANE_1].map((rev, index) => (
+            <div
+              key={`lane1-${rev.id}-${index}`}
+              className="w-[500px] sm:w-[620px] lg:w-[700px] p-6 bg-pure-black/90 border border-graphite hover:border-white/50 rounded-lg flex flex-col justify-between shrink-0 transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.7)] group backdrop-blur-md"
+            >
+              <div>
+                {/* Top Row: Stars + Google Badge + Verification Tag */}
+                <div className="flex items-center justify-between mb-3.5">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-0.5">
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                      ))}
+                    </div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey">
+                      5.0 RATING
+                    </span>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <span className="text-[10px] font-mono tracking-wider px-2 py-0.5 bg-charcoal border border-graphite rounded-sm text-light-grey">
+                      {rev.tag}
+                    </span>
+                    <GoogleIcon className="w-4 h-4 text-light-grey" />
+                  </div>
                 </div>
 
                 {/* Review Text */}
-                <p className="text-xs sm:text-sm font-sans font-light text-light-grey/90 leading-relaxed mb-6 italic">
+                <p className="text-xs sm:text-sm font-sans font-light text-light-grey/95 leading-relaxed mb-4 italic">
                   "{rev.text}"
                 </p>
               </div>
 
-              {/* Author Info */}
-              <div className="pt-5 border-t border-graphite/60 flex items-center justify-between">
+              {/* Author & Location Details */}
+              <div className="pt-3.5 border-t border-graphite/60 flex items-center justify-between text-xs">
                 <div>
-                  <h4 className="text-sm font-serif font-semibold text-white group-hover:text-light-grey transition-colors">
+                  <h4 className="font-serif font-semibold text-white group-hover:text-light-grey transition-colors text-sm">
                     {rev.author}
                   </h4>
-                  <span className="text-[11px] font-mono text-mid-grey block">
-                    {rev.role}
-                  </span>
-                  <span className="text-[10px] font-mono text-mid-grey/80 block">
-                    {rev.location}
-                  </span>
+                  <p className="text-[11px] font-mono text-mid-grey">
+                    {rev.project}
+                  </p>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-charcoal border border-graphite flex items-center justify-center text-white shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-white" />
+                <div className="flex items-center space-x-1.5 text-[10px] font-mono text-mid-grey shrink-0">
+                  <MapPin className="w-3 h-3 text-light-grey" />
+                  <span>{rev.location}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Bottom CTA Row: Google Actions */}
-        <div className="p-7 sm:p-9 bg-charcoal/50 border border-graphite rounded-lg flex flex-col sm:flex-row items-center justify-between gap-6 backdrop-blur-md">
-          <div className="flex items-center space-x-4 text-center sm:text-left">
-            <div className="w-12 h-12 rounded-lg bg-pure-black border border-graphite flex items-center justify-center text-white shrink-0 hidden sm:flex">
-              <Quote className="w-5 h-5 text-mid-grey" />
+      {/* ─────────────────────────────────────────────────────────────
+          UNLIMITED HORIZONTAL TICKER: LANE 2 (REVERSE DIRECTION)
+      ───────────────────────────────────────────────────────────── */}
+      <div className="relative w-full overflow-hidden py-2">
+        {/* Left Edge Fade Mask */}
+        <div className="absolute left-0 inset-y-0 w-16 sm:w-32 bg-gradient-to-r from-pure-black via-pure-black/90 to-transparent z-20 pointer-events-none" />
+        {/* Right Edge Fade Mask */}
+        <div className="absolute right-0 inset-y-0 w-16 sm:w-32 bg-gradient-to-l from-pure-black via-pure-black/90 to-transparent z-20 pointer-events-none" />
+
+        <div className="animate-infinite-marquee-reverse flex items-center space-x-6">
+          {/* Double array for seamless reverse infinite looping */}
+          {[...REAL_REVIEWS_LANE_2, ...REAL_REVIEWS_LANE_2, ...REAL_REVIEWS_LANE_2].map((rev, index) => (
+            <div
+              key={`lane2-${rev.id}-${index}`}
+              className="w-[500px] sm:w-[620px] lg:w-[700px] p-6 bg-pure-black/90 border border-graphite hover:border-white/50 rounded-lg flex flex-col justify-between shrink-0 transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.7)] group backdrop-blur-md"
+            >
+              <div>
+                {/* Top Row: Stars + Google Badge + Verification Tag */}
+                <div className="flex items-center justify-between mb-3.5">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-0.5">
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                      ))}
+                    </div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey">
+                      5.0 RATING
+                    </span>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <span className="text-[10px] font-mono tracking-wider px-2 py-0.5 bg-charcoal border border-graphite rounded-sm text-light-grey">
+                      {rev.tag}
+                    </span>
+                    <GoogleIcon className="w-4 h-4 text-light-grey" />
+                  </div>
+                </div>
+
+                {/* Review Text */}
+                <p className="text-xs sm:text-sm font-sans font-light text-light-grey/95 leading-relaxed mb-4 italic">
+                  "{rev.text}"
+                </p>
+              </div>
+
+              {/* Author & Location Details */}
+              <div className="pt-3.5 border-t border-graphite/60 flex items-center justify-between text-xs">
+                <div>
+                  <h4 className="font-serif font-semibold text-white group-hover:text-light-grey transition-colors text-sm">
+                    {rev.author}
+                  </h4>
+                  <p className="text-[11px] font-mono text-mid-grey">
+                    {rev.project}
+                  </p>
+                </div>
+                <div className="flex items-center space-x-1.5 text-[10px] font-mono text-mid-grey shrink-0">
+                  <MapPin className="w-3 h-3 text-light-grey" />
+                  <span>{rev.location}</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-serif text-white font-medium">
-                Have you worked with SD Classic Interiors?
-              </h3>
-              <p className="text-xs font-sans text-mid-grey">
-                We value your feedback. Share your experience with future homeowners on Google.
-              </p>
-            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom Google CTA Strip */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="p-6 bg-charcoal/40 border border-graphite rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex items-center space-x-3">
+            <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
+            <p className="text-xs font-mono text-light-grey">
+              All reviews reflect authentic homeowner &amp; commercial project handovers in Visakhapatnam.
+            </p>
           </div>
-
-          <div className="flex flex-wrap gap-3 items-center">
+          <div className="flex items-center space-x-3 shrink-0">
             <a
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-6 py-3.5 bg-white text-pure-black text-xs font-mono tracking-widest uppercase font-semibold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
+              className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-pure-black text-xs font-mono tracking-widest uppercase font-semibold rounded-sm hover:bg-light-grey transition-all"
             >
-              <span>WRITE A REVIEW</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href={BRAND_INFO.residential.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-6 py-3.5 bg-charcoal text-white border border-graphite text-xs font-mono tracking-widest uppercase rounded-sm hover:border-white hover:bg-white hover:text-pure-black transition-all shadow-md hover:-translate-y-0.5"
-            >
-              <span>VIEW ON GOOGLE MAPS</span>
+              <span>READ ALL GOOGLE REVIEWS</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

@@ -114,6 +114,26 @@
   animation-play-state: paused;
 }
 
+@keyframes infiniteMarqueeReverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-infinite-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: infiniteMarqueeReverse 48s linear infinite;
+  will-change: transform;
+}
+
+.animate-infinite-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
 /* Hide scrollbars cleanly */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
