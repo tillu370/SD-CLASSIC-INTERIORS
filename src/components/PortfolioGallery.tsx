@@ -113,45 +113,43 @@ export const PortfolioGallery: React.FC = () => {
       {/* Full-Screen Tilted 3D Cylindrical Grid Hero */}
       <TiltedGridHero
         images={images}
-        speed={4}
+        speed={7.5}
         tileHeight={42}
         aspectRatio={16 / 10}
         gap={6}
-        axis={56}
+        axis={58}
         curve={80}
         fade={12}
         className="relative w-full h-screen min-h-[700px] flex flex-col justify-between"
       >
-        {/* Header Overlay (Clean, Original Text, No Clutter) */}
-        <div className="relative z-10 w-full pt-16 sm:pt-20 px-6 sm:px-10 lg:px-16 pointer-events-auto">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:items-end justify-between gap-6">
-            <div className="text-center sm:text-left">
-              {/* Eyebrow: —— OUR PROJECTS —— */}
-              <div className="flex items-center justify-center sm:justify-start space-x-3 mb-3">
-                <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
-                <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
-                  OUR PROJECTS
-                </span>
-                <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
-              </div>
-
-              {/* Headline: Spaces We’ve Transformed */}
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-[0.02em] text-white leading-tight mb-2">
-                Spaces We’ve Transformed
-              </h2>
-
-              {/* Subtitle */}
-              <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-xl">
-                A glimpse of our recent residential and commercial projects.
-              </p>
+        {/* Header Overlay (Centered Clean Text) */}
+        <div className="relative z-10 w-full pt-16 sm:pt-24 px-6 sm:px-10 pointer-events-auto text-center">
+          <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
+            {/* Eyebrow: —— OUR PROJECTS —— */}
+            <div className="flex items-center justify-center space-x-3 mb-3">
+              <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
+              <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
+                OUR PROJECTS
+              </span>
+              <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
             </div>
+
+            {/* Headline: Spaces We’ve Transformed */}
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-[0.02em] text-white leading-tight mb-3">
+              Spaces We’ve Transformed
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-xl mx-auto mb-4">
+              A glimpse of our recent residential and commercial projects.
+            </p>
 
             {/* View All Projects Action */}
             <a
               href={BRAND_INFO.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white shrink-0"
+              className="inline-flex items-center space-x-2 text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white"
             >
               <span>VIEW ALL PROJECTS</span>
               <ArrowRight className="w-3.5 h-3.5" />
