@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Star, 
   ExternalLink, 
   CheckCircle2, 
-  Quote,
   Sparkles,
   MapPin
 } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
 
 // Google 'G' Icon in Luxury Monochrome
 const GoogleIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
@@ -122,7 +120,6 @@ const REAL_REVIEWS_LANE_2: RealReviewItem[] = [
 ];
 
 export const GoogleReviewsSection: React.FC = () => {
-  const [activeLane, setActiveLane] = useState<'both' | 'residential' | 'commercial'>('both');
 
   // Direct Google Search / Reviews Link
   const googleReviewsUrl = "https://www.google.com/search?q=SD+Classic+Interiors+Pendurthi+Visakhapatnam+reviews";
