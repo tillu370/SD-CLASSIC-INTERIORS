@@ -67,7 +67,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
   return (
     <section
       id="offers"
-      className="py-24 sm:py-32 bg-[#080808] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-14 sm:py-32 bg-[#080808] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="Special Offers - Exclusive Interior Packages"
     >
       {/* Background Subtle Architectural Grid */}
@@ -80,7 +80,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header exactly matching user reference image */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-18">
           {/* Eyebrow: —— SPECIAL OFFERS —— */}
           <div className="flex items-center justify-center space-x-3 mb-3">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />

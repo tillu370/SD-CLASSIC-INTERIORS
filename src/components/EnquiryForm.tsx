@@ -136,7 +136,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
   return (
     <section
       id="enquiry-form-section"
-      className="py-24 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-14 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="Consultation Enquiry Form"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -5,7 +5,7 @@ import { BRAND_FEATURES } from '../data/websiteData';
 export const WhyChooseUs: React.FC = () => {
   return (
     <section
-      className="py-24 sm:py-28 bg-[#080808] text-white border-t border-graphite/40 relative overflow-hidden"
+      className="py-14 sm:py-28 bg-[#080808] text-white border-t border-graphite/40 relative overflow-hidden"
       aria-label="Quality & Craftsmanship"
     >
       {/* Background Subtle Architectural Grid */}
@@ -18,7 +18,7 @@ export const WhyChooseUs: React.FC = () => {
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Header matching reference */}
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-20">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-mid-grey">

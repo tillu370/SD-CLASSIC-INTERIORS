@@ -62,7 +62,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-24 sm:py-28 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-14 sm:py-28 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="About SD Classic Interiors"
     >
       {/* Background Subtle Architectural Grid */}

@@ -260,7 +260,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
   return (
     <section
       id="services"
-      className="py-24 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-14 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="What We Do - Complete Services"
     >
       {/* Background subtle architectural grid */}
@@ -268,7 +268,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header as requested by user */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-20">
           {/* Eyebrow: —— 03 / WHAT WE DO —— */}
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />

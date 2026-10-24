@@ -86,7 +86,7 @@ export const ProcessSection: React.FC = () => {
   return (
     <section
       id="process"
-      className="py-24 sm:py-32 bg-[#F4F4F2] text-pure-black relative overflow-hidden select-none border-t border-black/10"
+      className="py-14 sm:py-32 bg-[#F4F4F2] text-pure-black relative overflow-hidden select-none border-t border-black/10"
       aria-label="Our Structured Execution Process"
     >
       {/* Background Architectural Grid Pattern */}
@@ -99,7 +99,7 @@ export const ProcessSection: React.FC = () => {
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-3xl mb-14 sm:mb-18">
+        <div className="max-w-3xl mb-8 sm:mb-18">
           <div className="flex items-center space-x-3 mb-3">
             <div className="w-8 sm:w-12 h-[1px] bg-graphite/40" />
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">

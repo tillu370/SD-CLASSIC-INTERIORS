@@ -9,7 +9,7 @@ interface ContactCTAProps {
 export const ContactCTA: React.FC<ContactCTAProps> = ({ onDiscussProject }) => {
   return (
     <section
-      className="relative py-28 sm:py-36 bg-[#000000] text-white overflow-hidden border-t border-graphite/40"
+      className="relative py-16 sm:py-36 bg-[#000000] text-white overflow-hidden border-t border-graphite/40"
       aria-label="Closing Call to Action"
     >
       {/* Background Architectural Image */}

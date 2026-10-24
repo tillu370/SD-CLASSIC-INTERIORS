@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
       {/* ─────────────────────────────────────────────────────────────
           SECTION DIRECTORY HEADER & MONOCHROME DIVISION SELECTOR
       ───────────────────────────────────────────────────────────── */}
-      <section className="relative pt-28 pb-16 bg-pure-black border-t border-graphite/40 border-b border-graphite/40">
+      <section className="relative pt-20 pb-12 sm:pt-28 sm:pb-16 bg-pure-black border-t border-graphite/40 border-b border-graphite/40">
         <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center space-x-3 mb-4 px-4 py-1.5 rounded-full border border-graphite/60 bg-charcoal/40">
@@ -120,7 +120,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-residential"
-        className="relative min-h-screen py-24 sm:py-32 flex items-center border-b border-graphite/40"
+        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center border-b border-graphite/40"
         aria-label="Division 01: Residential Interiors"
       >
         {/* Clearly Visible Architectural Background Image */}
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-4xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
+              <h3 className="text-3xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
                 SD CLASSIC<br />INTERIORS
               </h3>
 
@@ -322,7 +322,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-commercial"
-        className="relative min-h-screen py-24 sm:py-32 flex items-center border-b border-graphite/40"
+        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center border-b border-graphite/40"
         aria-label="Division 02: Commercial Construction & Infrastructure"
       >
         {/* Clearly Visible Architectural Corporate Background Image */}
@@ -359,7 +359,7 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-4xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
+              <h3 className="text-3xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
                 SD CONSTRUCTIONS<br />&amp; INFRA
               </h3>
 
@@ -525,7 +525,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-decora"
-        className="relative min-h-screen py-24 sm:py-32 flex items-center"
+        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center"
         aria-label="Division 03: DECORA Studio"
       >
         {/* Clearly Visible Boutique Decor Studio Background Image */}
@@ -563,7 +563,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-5xl sm:text-7xl font-serif tracking-[0.05em] text-white leading-none mb-2">
+                <h3 className="text-4xl sm:text-7xl font-serif tracking-[0.05em] text-white leading-none mb-2">
                   DECORA
                 </h3>
                 <p className="text-sm sm:text-base font-mono tracking-widest text-light-grey uppercase">

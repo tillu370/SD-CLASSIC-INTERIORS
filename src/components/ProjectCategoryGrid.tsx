@@ -135,7 +135,7 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
   return (
     <section
       id="expertise"
-      className="py-24 sm:py-28 lg:py-32 bg-[#F5F4F1] text-[#111111] relative overflow-hidden"
+      className="py-14 sm:py-28 lg:py-32 bg-[#F5F4F1] text-[#111111] relative overflow-hidden"
       aria-label="Our Services - Complete Interior Solutions"
     >
       {/* Large decorative section number — strictly background, never competes with heading */}
@@ -145,7 +145,7 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-20">
           <div className="flex items-center justify-center space-x-3 mb-5">
             <div className="w-8 sm:w-10 h-[1px] bg-[#DEDEDA]" />
             <span className="text-[11px] font-sans font-medium tracking-[0.3em] uppercase text-[#777777]">

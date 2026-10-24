@@ -127,7 +127,7 @@ export const GoogleReviewsSection: React.FC = () => {
   return (
     <section 
       id="reviews" 
-      className="py-24 sm:py-32 bg-pure-black text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-14 sm:py-32 bg-pure-black text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="Real Google Client Reviews"
     >
       {/* Background Architectural Grid Pattern */}

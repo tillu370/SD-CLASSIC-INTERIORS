@@ -108,7 +108,7 @@ export const PortfolioGallery: React.FC = () => {
   return (
     <section
       id="portfolio"
-      className="relative w-full min-h-screen bg-pure-black text-white overflow-hidden border-t border-graphite/40 flex flex-col justify-center"
+      className="relative w-full sm:min-h-screen bg-pure-black text-white overflow-hidden border-t border-graphite/40 flex flex-col justify-center py-16 sm:py-0"
       aria-label="Our Projects - Spaces We've Transformed"
     >
       {/* Background Architectural Grid Pattern */}
