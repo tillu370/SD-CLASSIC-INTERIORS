@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { TiltedGridHero } from '@/components/ui/tilted-grid-hero';
 import { BRAND_INFO } from '../data/websiteData';
@@ -88,6 +88,18 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
 export const PortfolioGallery: React.FC = () => {
   const [lightboxProject, setLightboxProject] = useState<CarouselSlide | null>(null);
 
+  // The 3D cylindrical band needs a wider-than-tall container to read well;
+  // on narrow phone viewports it collapses into a thin sliver with a large
+  // empty gap, so it gets shorter, flatter geometry there instead.
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 639px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
   const images = CAROUSEL_PROJECTS.map((p) => ({
     src: p.image,
     alt: p.title,
@@ -113,14 +125,14 @@ export const PortfolioGallery: React.FC = () => {
       {/* Full-Screen Tilted 3D Cylindrical Grid Hero */}
       <TiltedGridHero
         images={images}
-        speed={7.5}
-        tileHeight={42}
-        aspectRatio={16 / 10}
+        speed={isMobile ? 5.5 : 7.5}
+        tileHeight={isMobile ? 70 : 42}
+        aspectRatio={isMobile ? 4 / 3 : 16 / 10}
         gap={6}
-        axis={58}
-        curve={80}
-        fade={12}
-        className="relative w-full h-screen min-h-[700px] flex flex-col justify-between"
+        axis={isMobile ? 48 : 58}
+        curve={isMobile ? 45 : 80}
+        fade={isMobile ? 6 : 12}
+        className="relative w-full h-[560px] sm:h-screen min-h-[480px] sm:min-h-[700px] flex flex-col justify-between"
       >
         {/* Header Overlay (Centered Clean Text) */}
         <div className="relative z-10 w-full pt-16 sm:pt-24 px-6 sm:px-10 pointer-events-auto text-center">
