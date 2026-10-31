@@ -54,15 +54,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About Us', href: '#about', id: 'about' },
-    { name: 'Our Process', href: '#process', id: 'process' },
-    { name: 'Decor Solutions', href: '#decor', id: 'decor' },
-    { name: 'Our Services', href: '#services', id: 'services' },
-    { name: 'Projects', href: '#portfolio', id: 'portfolio' },
-    { name: 'Client Reviews', href: '#reviews', id: 'reviews' },
-    { name: 'Offers', href: '#offers', id: 'offers' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Home', short: 'Home', href: '#home', id: 'home' },
+    { name: 'About Us', short: 'About', href: '#about', id: 'about' },
+    { name: 'Our Process', short: 'Process', href: '#process', id: 'process' },
+    { name: 'Decor Solutions', short: 'Decor', href: '#decor', id: 'decor' },
+    { name: 'Our Services', short: 'Services', href: '#services', id: 'services' },
+    { name: 'Projects', short: 'Projects', href: '#portfolio', id: 'portfolio' },
+    { name: 'Client Reviews', short: 'Reviews', href: '#reviews', id: 'reviews' },
+    { name: 'Offers', short: 'Offers', href: '#offers', id: 'offers' },
+    { name: 'Contact', short: 'Contact', href: '#contact', id: 'contact' },
   ];
 
   const handleLinkClick = (href: string) => {
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                 e.preventDefault();
                 handleLinkClick('#home');
               }}
-              className="flex items-center space-x-3 group focus:outline-none min-h-[44px]"
+              className="flex items-center space-x-3 group focus:outline-none min-h-[44px] shrink-0"
               aria-label="SD Classic Interiors - Back to top"
             >
               <div className="w-9 h-9 sm:w-10 sm:h-10 relative flex-shrink-0">
@@ -112,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden xl:flex items-center space-x-5 2xl:space-x-8" aria-label="Main Navigation">
+            <nav className="hidden xl:flex items-center space-x-5 2xl:space-x-8 mx-6 2xl:mx-10 whitespace-nowrap" aria-label="Main Navigation">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                       isActive ? 'text-white font-medium' : 'text-mid-grey hover:text-white'
                     }`}
                   >
-                    <span>{link.name}</span>
+                    <span>{link.short}</span>
                     {/* Fine underline active indicator */}
                     <span
                       className={`absolute bottom-0 left-0 h-[1px] bg-white transition-all duration-300 ${
@@ -140,13 +140,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             </nav>
 
             {/* Right Action Button: GET A QUOTE → */}
-            <div className="hidden xl:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4 shrink-0">
               <button
                 onClick={onOpenQuote}
                 className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.18em] uppercase px-4 2xl:px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black hover:shadow-[0_12px_30px_-8px_rgba(255,255,255,0.3)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
                 id="nav-get-quote-btn"
               >
-                <span>GET A QUOTE</span>
+                <span><span className="2xl:hidden">QUOTE</span><span className="hidden 2xl:inline">GET A QUOTE</span></span>
                 <span className="text-sm font-normal transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
             </div>
