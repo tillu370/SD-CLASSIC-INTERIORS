@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative min-h-[82vh] sm:min-h-screen w-full flex items-center overflow-hidden bg-[#080808]"
+      className="relative min-h-[64vh] sm:min-h-screen w-full flex items-center overflow-hidden bg-[#080808]"
       aria-label="Hero Section"
     >
       {/* Background Architectural Living Room Image with Diagonal Window Light */}
@@ -58,7 +58,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Hero Content Container - Positioned to the Left matching user reference image */}
-      <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-28 pb-16 flex items-center min-h-[72svh] sm:min-h-[85svh] lg:min-h-screen">
+      <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-24 pb-10 flex items-center min-h-[60svh] sm:min-h-[85svh] lg:min-h-screen">
         <div className="max-w-xl lg:max-w-2xl text-left">
           {/* Eyebrow: INTERIORS · DESIGN · EXECUTION */}
           <motion.div
@@ -67,8 +67,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mb-3 flex items-center space-x-3"
           >
-            <span className="text-[11px] sm:text-xs font-sans tracking-[0.3em] uppercase text-light-grey font-medium">
-              INTERIORS &nbsp;·&nbsp; DESIGN &nbsp;·&nbsp; EXECUTION
+            <span className="text-[11px] sm:text-xs font-sans tracking-[0.18em] sm:tracking-[0.3em] uppercase text-light-grey font-medium">
+              INTERIORS · DESIGN · EXECUTION
             </span>
           </motion.div>
 
@@ -89,11 +89,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.75, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center space-x-4 mb-6"
           >
-            <div className="w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
-            <p className="text-xl sm:text-2xl md:text-3xl font-serif italic tracking-[0.08em] text-light-grey font-normal">
+            <div className="hidden min-[420px]:block w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
+            <p className="text-lg min-[420px]:text-xl sm:text-2xl md:text-3xl font-serif italic whitespace-nowrap tracking-[0.06em] sm:tracking-[0.08em] text-light-grey font-normal">
               Imagine Every Inch
             </p>
-            <div className="w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
+            <div className="hidden min-[420px]:block w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
           </motion.div>
 
           {/* Supporting Copy: 3 Lines Left-Aligned */}
@@ -101,7 +101,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.6 }}
-            className="text-sm sm:text-base md:text-lg font-sans font-light text-light-grey/90 leading-relaxed mb-8 max-w-lg tracking-wide"
+            className="text-sm sm:text-base md:text-lg font-sans font-light text-light-grey/90 leading-relaxed mb-6 max-w-lg tracking-wide"
           >
             Transforming spaces into timeless experiences with thoughtful design, premium materials and precise execution.
           </motion.p>

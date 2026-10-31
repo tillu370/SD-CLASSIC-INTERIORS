@@ -105,37 +105,8 @@ export const PortfolioGallery: React.FC = () => {
     alt: p.title,
   }));
 
-  return (
-    <section
-      id="portfolio"
-      className="relative w-full sm:min-h-screen bg-pure-black text-white overflow-hidden border-t border-graphite/40 flex flex-col justify-center py-16 sm:py-0"
-      aria-label="Our Projects - Spaces We've Transformed"
-    >
-      {/* Background Architectural Grid Pattern */}
-      <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
-
-      {/* Ambient Watermark '05' */}
-      <div 
-        className="absolute top-10 right-8 sm:right-16 text-8xl sm:text-[14rem] font-serif font-light text-white/[0.03] select-none pointer-events-none leading-none font-bold"
-        aria-hidden="true"
-      >
-        05
-      </div>
-
-      {/* Full-Screen Tilted 3D Cylindrical Grid Hero */}
-      <TiltedGridHero
-        images={images}
-        speed={isMobile ? 5.5 : 7.5}
-        tileHeight={isMobile ? 70 : 42}
-        aspectRatio={isMobile ? 4 / 3 : 16 / 10}
-        gap={6}
-        axis={isMobile ? 48 : 58}
-        curve={isMobile ? 45 : 80}
-        fade={isMobile ? 6 : 12}
-        className="relative w-full h-[560px] sm:h-screen min-h-[480px] sm:min-h-[700px] flex flex-col justify-between"
-      >
-        {/* Header Overlay (Centered Clean Text) */}
-        <div className="relative z-10 w-full pt-16 sm:pt-24 px-6 sm:px-10 pointer-events-auto text-center">
+  const header = (
+        <div className="relative z-10 w-full pt-14 pb-8 sm:pt-24 sm:pb-0 px-6 sm:px-10 pointer-events-auto text-center">
           <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
             {/* Eyebrow: —— OUR PROJECTS —— */}
             <div className="flex items-center justify-center space-x-3 mb-3">
@@ -168,6 +139,40 @@ export const PortfolioGallery: React.FC = () => {
             </a>
           </div>
         </div>
+  );
+
+  return (
+    <section
+      id="portfolio"
+      className="relative w-full sm:min-h-screen bg-pure-black text-white overflow-hidden border-t border-graphite/40 flex flex-col justify-center pb-12 sm:py-0"
+      aria-label="Our Projects - Spaces We've Transformed"
+    >
+      {/* Background Architectural Grid Pattern */}
+      <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
+
+      {/* Ambient Watermark '07' */}
+      <div
+        className="absolute top-10 right-8 sm:right-16 text-8xl sm:text-[14rem] font-serif font-light text-white/[0.03] select-none pointer-events-none leading-none font-bold"
+        aria-hidden="true"
+      >
+        07
+      </div>
+
+      {isMobile && header}
+
+      {/* Tilted 3D Cylindrical Grid Hero */}
+      <TiltedGridHero
+        images={images}
+        speed={isMobile ? 5.5 : 7.5}
+        tileHeight={isMobile ? 64 : 42}
+        aspectRatio={isMobile ? 4 / 3 : 16 / 10}
+        gap={6}
+        axis={isMobile ? 48 : 58}
+        curve={isMobile ? 45 : 80}
+        fade={isMobile ? 6 : 12}
+        className="relative w-full h-[290px] sm:h-screen sm:min-h-[700px] flex flex-col justify-between"
+      >
+        {!isMobile && header}
 
         {/* Bottom Clean Vignette Spacer */}
         <div className="relative z-10 pb-8 sm:pb-12 text-center pointer-events-none" />

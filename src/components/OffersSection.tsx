@@ -67,21 +67,21 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
   return (
     <section
       id="offers"
-      className="py-14 sm:py-32 bg-[#080808] text-white relative border-t border-graphite/40 overflow-hidden"
-      aria-label="Special Offers - Exclusive Interior Packages"
+      className="py-10 sm:py-32 bg-[#080808] text-white relative border-t border-graphite/40 overflow-hidden"
+      aria-label="Special Offers - Interior Packages"
     >
       {/* Background Subtle Architectural Grid */}
       <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
-      {/* Large Watermark '04' in Top-Right Corner matching reference */}
+      {/* Large Watermark '09' in Top-Right Corner matching reference */}
       <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-white/[0.04] select-none pointer-events-none leading-none">
-        04
+        09
       </div>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header exactly matching user reference image */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-18">
-          {/* Eyebrow: —— SPECIAL OFFERS —— */}
+          {/* Eyebrow: —— OFFERS —— */}
           <div className="flex items-center justify-center space-x-3 mb-3">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
@@ -90,14 +90,14 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
 
-          {/* Main Headline: Exclusive Interior Packages */}
+          {/* Main Headline: Interior Packages */}
           <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-serif font-normal tracking-[0.02em] text-white mb-3 leading-tight">
-            Exclusive Interior Packages
+            Interior Packages
           </h2>
 
           {/* Subtitle */}
           <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/80 leading-relaxed max-w-xl mx-auto">
-            Beautiful spaces. Better value. Limited period offers.
+            Tailored solutions for every space and budget. Enquire for details.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
                 }
               }}
               aria-label={`Enquire for ${pkg.offerKey}`}
-              className="group relative cursor-pointer overflow-hidden bg-[#0a0a0a] aspect-[4/5] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+              className="group relative cursor-pointer overflow-hidden bg-[#0a0a0a] aspect-[16/10] sm:aspect-[4/5] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
             >
               {/* Full-bleed photograph */}
               <img

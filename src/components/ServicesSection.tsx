@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, X, CheckCircle2, MessageSquare } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 
@@ -199,6 +199,20 @@ const SERVICE_ITEMS: ServiceCardDetail[] = [
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireService }) => {
   const [activeModalService, setActiveModalService] = useState<ServiceCardDetail | null>(null);
 
+  useEffect(() => {
+    if (!activeModalService) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveModalService(null);
+    };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [activeModalService]);
+
   // Group services by discipline in catalogue order, preserving first-seen group order
   const groups: { name: string; items: ServiceCardDetail[] }[] = [];
   for (const item of SERVICE_ITEMS) {
@@ -242,8 +256,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
       </span>
 
       {/* Title + arrow */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3.5 sm:p-4">
-        <h3 className="text-sm sm:text-base font-serif font-normal text-white leading-[1.15] tracking-[0.01em] transition-colors duration-400 motion-reduce:transition-none group-hover:text-white/90">
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-2.5 sm:p-4">
+        <h3 className="text-[13px] sm:text-base font-serif font-normal text-white leading-[1.15] tracking-[0.01em] transition-colors duration-400 motion-reduce:transition-none group-hover:text-white/90">
           <span className="block">{service.line1}</span>
           {service.line2 && <span className="block">{service.line2}</span>}
         </h3>
@@ -260,7 +274,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
   return (
     <section
       id="services"
-      className="py-14 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="py-10 sm:py-32 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="What We Do - Complete Services"
     >
       {/* Background subtle architectural grid */}
@@ -268,12 +282,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header as requested by user */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-20">
-          {/* Eyebrow: —— 03 / WHAT WE DO —— */}
+        <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-20">
+          {/* Eyebrow: —— 06 / WHAT WE DO —— */}
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-mid-grey">
-              03 / WHAT WE DO
+              06 / WHAT WE DO
             </span>
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
@@ -289,14 +303,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
             Every detail matters. Explore our interior design, material, furniture and turnkey execution solutions curated under one roof.
           </p>
 
-          {/* Centered Badge: 18+ SPECIALIZED DISCIPLINES */}
+          {/* Centered Badge: 16+ SPECIALIZED DISCIPLINES */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-white/5 border border-white/15 text-[10px] font-mono tracking-[0.25em] uppercase text-light-grey">
-            <span>18+ SPECIALIZED DISCIPLINES</span>
+            <span>16 Specialized Disciplines</span>
           </div>
         </div>
 
         {/* Services grouped by discipline, each on a consistent 4-column editorial grid */}
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-8 sm:space-y-16">
           {groups.map((g) => (
             <div key={g.name}>
               <div className="flex items-center gap-4 mb-5 sm:mb-6">
@@ -305,7 +319,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
                 </h3>
                 <div className="flex-1 h-[1px] bg-white/10" />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
                 {g.items.map(renderCard)}
               </div>
             </div>
@@ -317,6 +331,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
       {activeModalService && (
         <div
           className="fixed inset-0 z-50 bg-pure-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+          onClick={() => setActiveModalService(null)}
           role="dialog"
           aria-modal="true"
         >
@@ -327,7 +342,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
             {/* Close Button */}
             <button
               onClick={() => setActiveModalService(null)}
-              className="absolute top-4 right-4 z-10 w-9 h-9 bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+              className="absolute top-3 right-3 z-10 w-11 h-11 bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
               aria-label="Close service details"
             >
               <X className="w-5 h-5" />
@@ -344,7 +359,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
             </div>
 
             {/* Modal Content */}
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-8">
               <h3 className="text-2xl font-serif text-white mb-2">
                 {activeModalService.title}
               </h3>

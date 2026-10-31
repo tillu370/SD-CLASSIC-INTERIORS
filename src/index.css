@@ -142,3 +142,46 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ── Mobile usability: readable text, 44px touch targets ── */
+@media (max-width: 767px) {
+  .text-\[9px\],
+  .text-\[10px\] {
+    font-size: 11px;
+  }
+
+  footer a,
+  footer button,
+  #contact a,
+  #contact button,
+  #reviews a,
+  #portfolio a {
+    min-height: 44px;
+  }
+
+  footer li > a,
+  footer p > a,
+  #contact a:not([class*="justify-center"]),
+  #reviews a,
+  #portfolio a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  footer a[aria-label] {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  #contact button {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}

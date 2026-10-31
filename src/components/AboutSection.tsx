@@ -1,6 +1,10 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { BRAND_INFO } from '../data/websiteData';
+import { Reveal } from './ui/Reveal';
 
-// Custom line icons matching reference image
+// ── Monochrome line icons ─────────────────────────────────────────
 const HighEndFinishesIcon = () => (
   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <path d="M6 7V5a3 3 0 016 0v2" />
@@ -49,90 +53,257 @@ const QualityAssuredIcon = () => (
   </svg>
 );
 
-const COMMITMENTS = [
-  { title: "High End Finishes", icon: <HighEndFinishesIcon /> },
-  { title: "Affordable Prices", icon: <AffordablePricesIcon /> },
-  { title: "Customized Designs", icon: <CustomizedDesignsIcon /> },
-  { title: "Warranty on Workmanship", icon: <WarrantyIcon /> },
-  { title: "Customer Satisfaction", icon: <SatisfactionIcon /> },
-  { title: "100% Quality Assured", icon: <QualityAssuredIcon /> },
+const FEATURES = [
+  { number: "01", title: "High-End Finishes", icon: <HighEndFinishesIcon /> },
+  { number: "02", title: "Affordable Prices", icon: <AffordablePricesIcon /> },
+  { number: "03", title: "Customized Designs", icon: <CustomizedDesignsIcon /> },
+  { number: "04", title: "Warranty on Workmanship", icon: <WarrantyIcon /> },
+  { number: "05", title: "Customer Satisfaction", icon: <SatisfactionIcon /> },
+  { number: "06", title: "Quality Assured", icon: <QualityAssuredIcon /> },
+];
+
+const STATS = [
+  { label: "Established", value: BRAND_INFO.founded },
+  { label: "Location", value: "Visakhapatnam" },
+  { label: "Expertise", value: "Residential & Commercial" },
 ];
 
 export const AboutSection: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section
       id="about"
-      className="py-14 sm:py-28 bg-[#000000] text-white relative border-t border-graphite/40 overflow-hidden"
+      className="bg-[#080808] text-[#F5F3EF] relative border-t border-[#292929] overflow-hidden"
       aria-label="About SD Classic Interiors"
     >
       {/* Background Subtle Architectural Grid */}
       <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
-      {/* Large Watermark '06' in Top-Right Corner matching reference */}
-      <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-white/[0.05] select-none pointer-events-none leading-none">
-        06
-      </div>
+      {/* ───────────────────────────────────────────────────────────
+          SECTION ONE — THE BRAND STORY
+      ─────────────────────────────────────────────────────────── */}
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10 py-10 sm:py-14 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[45%_1fr] gap-6 lg:gap-12 items-center">
+          {/* Left: Hero Photograph */}
+          <motion.div
+            initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 1.04, clipPath: 'inset(4% round 2px)' }}
+            whileInView={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, clipPath: 'inset(0% round 2px)' }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-black border border-[#292929] shadow-[0_35px_90px_-25px_rgba(0,0,0,0.85)]"
+          >
+            <img
+              src="/images/projects/about_armchair_exact.jpg"
+              alt="Contemporary armchair in a fluted, warmly lit living room designed by SD Classic Interiors"
+              className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.06]"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          </motion.div>
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Exact Armchair in Fluted Room Photo */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full aspect-[4/5] overflow-hidden bg-black border border-white/10 shadow-[0_35px_80px_-20px_rgba(0,0,0,0.8)] transition-shadow duration-500 hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.9)]">
-              <img
-                src="/images/projects/about_armchair_exact.jpg"
-                alt="SD Classic Interiors - Contemporary Armchair in Fluted Room"
-                className="w-full h-full object-cover filter brightness-[0.88] contrast-[1.08] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none hover:scale-[1.03]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-            </div>
-          </div>
+          {/* Right: Brand Introduction */}
+          <Reveal delay={0.15}>
+            <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#A5A5A5] font-medium mb-3 block">
+              About Us / Est. {BRAND_INFO.founded}
+            </span>
 
-          {/* Right Column: Narrative Brand Story */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Eyebrow: ← ABOUT US */}
-            <div className="flex items-center space-x-2.5 mb-3">
-              <span className="text-light-grey text-xs">←</span>
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-light-grey font-medium">
-                ABOUT US
-              </span>
-            </div>
-
-            {/* Headline: SD CLASSIC INTERIORS */}
-            <h2 className="text-2xl sm:text-4xl font-serif tracking-[0.03em] text-white mb-6 uppercase">
-              SD CLASSIC INTERIORS
+            <h2 className="text-[clamp(2.25rem,4vw,3.5rem)] font-serif font-normal tracking-[0.01em] text-[#F5F3EF] leading-[1.08] mb-2 sm:mb-4">
+              SD Classic Interiors
             </h2>
 
-            {/* Exact Paragraphs matching reference image */}
-            <div className="space-y-4 text-xs sm:text-sm font-sans font-light text-light-grey/85 leading-relaxed mb-10 max-w-xl">
-              <p>
-                In 2019, we founded SD Classic Interiors with a vision to provide comprehensive interior solutions under one roof. Our showroom in Visakhapatnam was the only one of its kind, offering a real-time display of major interior products.
-              </p>
-              <p>
-                Additionally, we had a studio apartment where clients could visit and experience the products and designs firsthand.
-              </p>
-              <p>
-                We focus on creating designs that meet our clients’ budget while ensuring the highest quality and complete satisfaction.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7] max-w-xl mb-4 sm:mb-6">
+              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution studio, bringing concept, 3D visualization, material selection and final execution together under one roof.
+            </p>
 
-            {/* 6 Commitments as a compact hairline-grid row */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/10 border border-white/10">
-              {COMMITMENTS.map((item) => (
-                <div
-                  key={item.title}
-                  className="group/item relative bg-[#050505] p-4 flex items-center space-x-3 hover:bg-[#0d0d0d] hover:z-10 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] transition-all duration-300 cursor-default"
-                >
-                  <div className="w-8 h-8 border border-white/20 bg-white/5 flex items-center justify-center flex-shrink-0 text-white group-hover/item:border-white/50 group-hover/item:scale-110 transition-all duration-300">
-                    {item.icon}
-                  </div>
-                  <span className="text-[11px] sm:text-xs font-sans font-normal text-light-grey/90 group-hover/item:text-white transition-colors leading-snug">
-                    {item.title}
+            {/* Compact Brand Metrics */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-[#292929]">
+              {STATS.map((stat) => (
+                <div key={stat.label} className="py-3 pr-4 border-b sm:border-b-0 sm:border-r border-[#292929] last:border-0 flex sm:block items-baseline justify-between sm:justify-start gap-4">
+                  <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#A5A5A5] block mb-1">
+                    {stat.label}
+                  </span>
+                  <span className="text-sm sm:text-base font-serif text-[#F5F3EF]">
+                    {stat.value}
                   </span>
                 </div>
               ))}
             </div>
+          </Reveal>
+        </div>
+      </div>
+
+      {/* ───────────────────────────────────────────────────────────
+          BRAND PROMISE — PREMIUM FEATURE STRIP
+      ─────────────────────────────────────────────────────────── */}
+      <div className="border-t border-[#292929] bg-[#111111]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-6 sm:py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 border-t border-l border-[#292929]">
+            {FEATURES.map((feat) => (
+              <div
+                key={feat.title}
+                className="group relative p-3 sm:p-5 border-r border-b border-[#292929] flex items-center gap-2.5 sm:gap-3 transition-colors duration-300 hover:bg-[#161616]"
+              >
+                <div className="flex items-center justify-between gap-2 shrink-0">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 shrink-0 border border-[#292929] bg-white/[0.03] flex items-center justify-center text-white group-hover:border-[#D5D2CC]/60 transition-colors duration-300">
+                    {feat.icon}
+                  </div>
+                  <span className="hidden sm:inline text-[10px] font-sans tracking-widest text-[#A5A5A5]">
+                    {feat.number}
+                  </span>
+                </div>
+                <span className="min-w-0 text-[13px] sm:text-[15px] font-sans font-medium text-[#F5F3EF]/90 group-hover:text-[#F5F3EF] transition-colors duration-300 leading-tight">
+                  {feat.title}
+                </span>
+              </div>
+            ))}
           </div>
+        </div>
+      </div>
+
+      {/* ───────────────────────────────────────────────────────────
+          SECTION TWO — OUR VISION & MISSION
+      ─────────────────────────────────────────────────────────── */}
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-8 sm:py-12 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+          <Reveal>
+            <div className="relative h-full bg-[#0c0c0c] border border-[#292929] p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
+              <span
+                className="absolute -top-4 right-4 text-[5rem] sm:text-[9rem] font-serif font-light text-white/[0.04] select-none pointer-events-none leading-none"
+                aria-hidden="true"
+              >
+                01
+              </span>
+              <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#A5A5A5] font-medium mb-2 block">
+                Our Vision
+              </span>
+              <h3 className="relative text-xl sm:text-2xl font-serif text-[#F5F3EF] mb-2 leading-tight">
+                Spaces That Inspire.
+              </h3>
+              <p className="relative text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7] max-w-md">
+                To create thoughtfully designed interiors and architectural environments that combine timeless aesthetics, functionality and exceptional craftsmanship.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="relative h-full bg-[#0c0c0c] border border-[#292929] p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
+              <span
+                className="absolute -top-4 right-4 text-[5rem] sm:text-[9rem] font-serif font-light text-white/[0.04] select-none pointer-events-none leading-none"
+                aria-hidden="true"
+              >
+                02
+              </span>
+              <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#A5A5A5] font-medium mb-2 block">
+                Our Mission
+              </span>
+              <h3 className="relative text-xl sm:text-2xl font-serif text-[#F5F3EF] mb-2 leading-tight">
+                Design With Purpose.
+              </h3>
+              <p className="relative text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7] max-w-md">
+                To deliver comprehensive interior solutions through creative design, carefully selected materials, transparent execution and a commitment to every client's vision.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+
+      {/* ───────────────────────────────────────────────────────────
+          SECTION THREE — TWO BUSINESS DIVISIONS
+      ─────────────────────────────────────────────────────────── */}
+      <div className="border-t border-[#292929] bg-[#111111]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-8 sm:py-12 relative z-10">
+          <Reveal className="mb-5 sm:mb-8 max-w-2xl">
+            <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#A5A5A5] font-medium block mb-3">
+              Business Directory
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif text-[#F5F3EF] leading-tight">
+              Two Divisions, One Standard of Craft.
+            </h3>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+            {/* Division 01 — Residential */}
+            <Reveal>
+              <a
+                href="#division-residential"
+                className="group block h-full bg-[#080808] border border-[#292929] p-5 sm:p-7 transition-colors duration-300 hover:border-[#D5D2CC]/40 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111]"
+              >
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#A5A5A5] font-medium block mb-3">
+                  Division 01 · Residential Interiors
+                </span>
+                <h4 className="text-lg sm:text-xl font-serif text-[#F5F3EF] mb-2">
+                  {BRAND_INFO.residential.company}
+                </h4>
+                <p className="text-xs sm:text-sm font-sans font-light text-[#A5A5A5] leading-[1.6] mb-4 max-w-sm">
+                  Residential interior design, modular kitchens, customized furniture, complete home interiors and turnkey execution.
+                </p>
+
+                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#A5A5A5] border-t border-[#292929] pt-4 mb-4">
+                  <p className="leading-relaxed">{BRAND_INFO.residential.address}</p>
+                  <p>{BRAND_INFO.residential.phoneFormatted}</p>
+                  <p className="break-all">{BRAND_INFO.residential.email}</p>
+                </div>
+
+                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#F5F3EF]">
+                  <span>Explore Residential Interiors</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </a>
+            </Reveal>
+
+            {/* Division 02 — Commercial & Infra */}
+            <Reveal delay={0.1}>
+              <a
+                href="#division-commercial"
+                className="group block h-full bg-[#080808] border border-[#292929] p-5 sm:p-7 transition-colors duration-300 hover:border-[#D5D2CC]/40 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111]"
+              >
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#A5A5A5] font-medium block mb-3">
+                  Division 02 · Commercial &amp; Infrastructure
+                </span>
+                <h4 className="text-lg sm:text-xl font-serif text-[#F5F3EF] mb-2">
+                  {BRAND_INFO.commercial.company}
+                </h4>
+                <p className="text-xs sm:text-sm font-sans font-light text-[#A5A5A5] leading-[1.6] mb-4 max-w-sm">
+                  Commercial construction, civil works, structural alterations and infrastructure execution.
+                </p>
+
+                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#A5A5A5] border-t border-[#292929] pt-4 mb-4">
+                  <p>GSTIN: {BRAND_INFO.commercial.gstin}</p>
+                  <p className="break-all">{BRAND_INFO.commercial.email}</p>
+                  <p className="leading-relaxed">{BRAND_INFO.commercial.location}</p>
+                </div>
+
+                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#F5F3EF]">
+                  <span>Explore Civil &amp; Infrastructure</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </a>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+
+      {/* ───────────────────────────────────────────────────────────
+          SECTION FOUR — BRAND STATEMENT
+      ─────────────────────────────────────────────────────────── */}
+      <div className="relative py-10 sm:py-14 border-t border-[#292929]">
+        <div className="max-w-[1000px] mx-auto px-5 sm:px-8 lg:px-12 text-center relative z-10">
+          <Reveal>
+            <h3 className="text-[clamp(1.75rem,4vw,3rem)] font-serif italic text-[#F5F3EF] leading-[1.1] mb-3">
+              Imagine Every Inch.
+            </h3>
+            <p className="text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7] max-w-xl mx-auto mb-5 sm:mb-6">
+              Thoughtfully designed spaces. Carefully selected materials. Exceptional attention to detail.
+            </p>
+            <a
+              href="#contact"
+              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#D5D2CC]/60 text-[#F5F3EF] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:border-[#D5D2CC] hover:bg-white/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+            >
+              <span>Discuss Your Project</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </Reveal>
         </div>
       </div>
     </section>

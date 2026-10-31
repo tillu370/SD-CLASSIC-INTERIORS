@@ -85,7 +85,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
     }}
     aria-label={`View details for ${cat.title}`}
     className={`group relative cursor-pointer overflow-hidden bg-[#111111] shadow-[0_6px_20px_-8px_rgba(0,0,0,0.25)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-15px_rgba(0,0,0,0.45)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#111111] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F4F1] ${
-      featured ? 'min-h-[360px] sm:min-h-[420px] lg:min-h-full' : 'min-h-[220px] sm:min-h-[240px]'
+      featured ? 'min-h-[220px] sm:min-h-[420px] lg:min-h-full' : 'min-h-[140px] sm:min-h-[240px]'
     } ${className}`}
   >
     {/* Photograph — primary visual focus */}
@@ -101,7 +101,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
 
     {/* Service index number */}
     <span
-      className={`absolute top-5 left-5 sm:top-6 sm:left-6 font-sans text-white/70 tracking-[0.2em] uppercase ${
+      className={`absolute top-3 left-3 sm:top-6 sm:left-6 font-sans text-white/70 tracking-[0.2em] uppercase ${
         featured ? 'text-xs' : 'text-[11px]'
       }`}
     >
@@ -109,10 +109,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
     </span>
 
     {/* Title + arrow */}
-    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-6 lg:p-7">
+    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-3 sm:p-6 lg:p-7">
       <h3
         className={`font-serif font-normal text-white leading-[1.12] tracking-[0.01em] transition-colors duration-400 motion-reduce:transition-none group-hover:text-white/90 ${
-          featured ? 'text-2xl sm:text-3xl lg:text-[2.1rem]' : 'text-lg sm:text-xl'
+          featured ? 'text-2xl sm:text-3xl lg:text-[2.1rem]' : 'text-sm sm:text-xl'
         }`}
       >
         <span className="block">{cat.line1}</span>
@@ -135,48 +135,48 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
   return (
     <section
       id="expertise"
-      className="py-14 sm:py-28 lg:py-32 bg-[#F5F4F1] text-[#111111] relative overflow-hidden"
+      className="py-10 sm:py-28 lg:py-32 bg-[#F5F4F1] text-[#111111] relative overflow-hidden"
       aria-label="Our Services - Complete Interior Solutions"
     >
       {/* Large decorative section number — strictly background, never competes with heading */}
       <div className="absolute top-8 right-6 sm:top-10 sm:right-12 text-7xl sm:text-9xl lg:text-[11rem] font-serif font-light text-[#111111]/[0.05] select-none pointer-events-none leading-none">
-        02
+        03
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-7 sm:mb-20">
           <div className="flex items-center justify-center space-x-3 mb-5">
             <div className="w-8 sm:w-10 h-[1px] bg-[#DEDEDA]" />
             <span className="text-[11px] font-sans font-medium tracking-[0.3em] uppercase text-[#777777]">
-              Our Services
+              Our Projects
             </span>
             <div className="w-8 sm:w-10 h-[1px] bg-[#DEDEDA]" />
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-[3.4rem] font-serif font-normal tracking-[0.01em] text-[#111111] mb-4 leading-[1.1]">
-            Complete Interior Solutions
+            Explore By Project Type
           </h2>
 
           <p className="text-sm sm:text-[15px] font-sans font-normal text-[#777777] leading-relaxed max-w-md mx-auto">
-            From concept to completion, we create spaces that reflect your lifestyle and vision.
+            From concept to completion, browse the kind of space you're planning to transform.
           </p>
         </div>
 
         {/* Row 1 — asymmetric editorial layout: one featured card + two stacked cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 mb-5 sm:mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-6 mb-2.5 sm:mb-6">
           <ServiceCard cat={residential} onSelectCategory={onSelectCategory} featured />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-1 gap-2.5 sm:gap-6">
             <ServiceCard cat={commercial} onSelectCategory={onSelectCategory} />
             <ServiceCard cat={turnkey} onSelectCategory={onSelectCategory} />
           </div>
         </div>
 
         {/* Row 2 — three balanced, consistent-height cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
           <ServiceCard cat={visualizations} onSelectCategory={onSelectCategory} />
           <ServiceCard cat={renovation} onSelectCategory={onSelectCategory} />
-          <ServiceCard cat={civil} onSelectCategory={onSelectCategory} />
+          <ServiceCard cat={civil} onSelectCategory={onSelectCategory} className="col-span-2 lg:col-span-1" />
         </div>
       </div>
     </section>

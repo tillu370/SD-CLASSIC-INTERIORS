@@ -37,12 +37,14 @@ export const Footer: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Categories', href: '#services' },
-    { name: 'Services Brochure', href: '#services' },
-    { name: 'Special Offers', href: '#offers' },
-    { name: 'Portfolio Gallery', href: '#portfolio' },
-    { name: 'About Studio', href: '#about' },
-    { name: 'Contact Studios', href: '#contact' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Our Process', href: '#process' },
+    { name: 'Decor Solutions', href: '#decor' },
+    { name: 'Our Services', href: '#services' },
+    { name: 'Projects', href: '#portfolio' },
+    { name: 'Client Reviews', href: '#reviews' },
+    { name: 'Offers', href: '#offers' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -52,7 +54,7 @@ export const Footer: React.FC = () => {
 
       {/* Top Pre-Footer Signature Banner */}
       <div className="border-b border-white/10 bg-[#080808]/80 backdrop-blur-md relative z-10">
-        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="flex items-center space-x-4 text-center lg:text-left">
               <div className="w-12 h-12 rounded-full bg-white/5 border border-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] flex items-center justify-center shrink-0 hidden sm:flex">
@@ -60,10 +62,10 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-serif text-white tracking-wide">
-                  Ready to Transform Your Living or Commercial Space?
+                  Planning a New Space?
                 </h3>
                 <p className="text-xs sm:text-sm font-sans text-light-grey/70 mt-1">
-                  Connect directly with our architects & interior design specialists across Visakhapatnam.
+                  Speak with our design team in Visakhapatnam.
                 </p>
               </div>
             </div>
@@ -76,7 +78,7 @@ export const Footer: React.FC = () => {
                 className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 bg-white/5 hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] rounded-sm"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp Consultation</span>
+                <span>WhatsApp Us</span>
               </a>
 
               <a
@@ -92,8 +94,8 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Main 5-Column Grid */}
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-20 pb-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-7 lg:gap-8 pb-8 sm:pb-16 border-b border-white/10">
           
           {/* Col 1: Brand & Identity (lg: 4 cols) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
@@ -113,17 +115,17 @@ export const Footer: React.FC = () => {
                   SD CLASSIC
                 </span>
                 <span className="text-[10px] font-mono tracking-[0.28em] text-light-grey/60 uppercase block">
-                  Interiors & Infrastructure
+                  Interiors
                 </span>
               </div>
             </div>
 
-            <p className="font-serif italic text-white/90 text-base mb-4 tracking-wider">
+            <p className="font-serif italic text-white/90 text-base mb-3 sm:mb-4 tracking-wider">
               “Imagine Every Inch”
             </p>
 
-            <p className="text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
-              Premier turnkey interior architecture, custom luxury modular systems, high-precision civil engineering, and designer wall & soft-furnishing decor (DECORA) across Visakhapatnam and Coastal Andhra Pradesh.
+            <p className="hidden sm:block text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
+              Interior design and execution for residential and commercial spaces, with DECORA for wallpapers, blinds, curtains and flooring. Based in Visakhapatnam.
             </p>
 
             {/* Social Channels */}
@@ -179,7 +181,7 @@ export const Footer: React.FC = () => {
             <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-white/90 font-semibold block mb-5 pb-2 border-b border-white/10">
               Quick Navigation
             </span>
-            <ul className="space-y-2.5">
+            <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-1 md:space-y-2.5 md:gap-y-0">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -195,7 +197,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 3: Residential Studio (lg: 2 cols) */}
-          <div className="lg:col-span-2">
+          <div className="hidden md:block lg:col-span-2">
             <div className="flex items-center space-x-2 mb-5 pb-2 border-b border-white/10">
               <Home className="w-3.5 h-3.5 text-white/70" />
               <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-white/90 font-semibold block">
@@ -230,7 +232,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 4: Commercial & Infra (lg: 2 cols) */}
-          <div className="lg:col-span-2">
+          <div className="hidden md:block lg:col-span-2">
             <div className="flex items-center space-x-2 mb-5 pb-2 border-b border-white/10">
               <Building2 className="w-3.5 h-3.5 text-white/70" />
               <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-white/90 font-semibold block">
@@ -255,13 +257,13 @@ export const Footer: React.FC = () => {
                 </a>
               </p>
               <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
-                Civil Tenders · MEP · Turnkey Commercial
+                Commercial · Civil · Infrastructure
               </p>
             </div>
           </div>
 
           {/* Col 5: DECORA Studio (lg: 2 cols) */}
-          <div className="lg:col-span-2">
+          <div className="hidden md:block lg:col-span-2">
             <div className="flex items-center space-x-2 mb-5 pb-2 border-b border-white/10">
               <Sparkles className="w-3.5 h-3.5 text-white/70" />
               <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-white/90 font-bold block">
@@ -318,14 +320,14 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Quality Standards & Craft Highlights Strip */}
-        <div className="py-8 grid grid-cols-2 md:grid-cols-4 gap-3 border-b border-white/10 text-center">
+        <div className="hidden md:grid py-8 grid-cols-4 gap-3 border-b border-white/10 text-center">
           <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <ShieldCheck className="w-4 h-4 text-white/70 shrink-0" />
             <span>100% Quality Assured</span>
           </div>
           <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Sparkles className="w-4 h-4 text-white/70 shrink-0" />
-            <span>German Precision Edging</span>
+            <span>Professional Execution</span>
           </div>
           <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Building2 className="w-4 h-4 text-white/70 shrink-0" />
@@ -333,7 +335,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center justify-center space-x-2 text-[11px] font-mono tracking-wider text-light-grey/80 uppercase py-3 px-2 border border-white/0 hover:border-white/10 hover:bg-white/[0.03] rounded-sm transition-all duration-300">
             <Home className="w-4 h-4 text-white/70 shrink-0" />
-            <span>Zero-Surprise Transparent BOQ</span>
+            <span>Clear Communication</span>
           </div>
         </div>
 
@@ -343,7 +345,7 @@ export const Footer: React.FC = () => {
 
           <div className="flex items-center space-x-6">
             <span className="text-[11px] font-mono tracking-widest text-light-grey/50 hidden md:inline font-medium uppercase">
-              Architectural Excellence · Visakhapatnam, AP
+              Visakhapatnam, Andhra Pradesh
             </span>
 
             {/* Back to Top */}

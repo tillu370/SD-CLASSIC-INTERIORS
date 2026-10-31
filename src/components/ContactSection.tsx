@@ -68,28 +68,28 @@ export const ContactSection: React.FC = () => {
       {/* ─────────────────────────────────────────────────────────────
           SECTION DIRECTORY HEADER & MONOCHROME DIVISION SELECTOR
       ───────────────────────────────────────────────────────────── */}
-      <section className="relative pt-20 pb-12 sm:pt-28 sm:pb-16 bg-pure-black border-t border-graphite/40 border-b border-graphite/40">
+      <section className="relative pt-8 pb-6 sm:pt-12 sm:pb-8 bg-pure-black border-t border-graphite/40 border-b border-graphite/40">
         <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center space-x-3 mb-4 px-4 py-1.5 rounded-full border border-graphite/60 bg-charcoal/40">
+          <div className="inline-flex items-center space-x-3 mb-2 px-3 py-1 rounded-full border border-graphite/60 bg-charcoal/40">
             <span className="text-[11px] font-mono tracking-[0.28em] uppercase text-light-grey">
-              DIRECTORY · SPECIALIZED DIVISIONS
+              CONTACT
             </span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif tracking-[0.02em] text-white mb-4">
-            Connect With Our Studios
+          <h2 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white mb-2">
+            Get in Touch
           </h2>
           
-          <p className="text-sm sm:text-base font-sans font-light text-light-grey/80 leading-relaxed max-w-2xl mx-auto mb-10">
-            Choose between our residential interior design showroom, our commercial construction division, or our specialized soft furnishings &amp; wall decor studio (DECORA).
+          <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-2xl mx-auto mb-4 sm:mb-6">
+            Reach our residential interiors showroom, our commercial &amp; infrastructure division, or DECORA, our décor unit.
           </p>
 
           {/* Clean Monochrome Navigation Pills */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto">
             <button
               onClick={() => scrollToDivision('division-residential')}
-              className="inline-flex items-center space-x-2.5 px-6 py-3 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
+              className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Home className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
               <span>01 · Residential</span>
@@ -97,7 +97,7 @@ export const ContactSection: React.FC = () => {
             </button>
             <button
               onClick={() => scrollToDivision('division-commercial')}
-              className="inline-flex items-center space-x-2.5 px-6 py-3 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
+              className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Building2 className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
               <span>02 · Commercial &amp; Infra</span>
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
             </button>
             <button
               onClick={() => scrollToDivision('division-decora')}
-              className="inline-flex items-center space-x-2.5 px-6 py-3 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
+              className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Sparkles className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
               <span>03 · DECORA Studio</span>
@@ -120,7 +120,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-residential"
-        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center border-b border-graphite/40"
+        className="relative py-6 sm:py-10 flex items-center border-b border-graphite/40"
         aria-label="Division 01: Residential Interiors"
       >
         {/* Clearly Visible Architectural Background Image */}
@@ -138,26 +138,26 @@ export const ContactSection: React.FC = () => {
 
         {/* Ambient Division Watermark */}
         <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 text-8xl sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
+          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
           aria-hidden="true"
         >
           01
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
             {/* Left Column: Division Identity */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center space-x-3">
+            <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
                   DIVISION 01 · RESIDENTIAL
                 </span>
                 <span className="text-[11px] font-mono tracking-widest uppercase text-mid-grey">
-                  EST. 2019
+                  EST. 2020
                 </span>
               </div>
 
-              <h3 className="text-3xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
+              <h3 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white leading-tight">
                 SD CLASSIC<br />INTERIORS
               </h3>
 
@@ -167,19 +167,19 @@ export const ContactSection: React.FC = () => {
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                Experience bespoke Italian finishes, engineered woodwork, and architectural living firsthand. Visit our flagship studio showroom in Pendurthi, Visakhapatnam to touch, feel and customize your dream residence.
+              <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
+                Visit our showroom in Pendurthi, Visakhapatnam to experience materials, textures and finishes in person, with personalised guidance from our team.
               </p>
 
               {/* Monochrome Badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">PROJECTS</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">100+ Handed Over</span>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Interiors &amp; Turnkey</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">STUDIO</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Material Experience</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Experience Centre</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
@@ -196,32 +196,32 @@ export const ContactSection: React.FC = () => {
 
             {/* Right Column: Monochrome Luxury Console */}
             <div className="lg:col-span-6">
-              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-7 sm:p-9 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-5 mb-6">
+              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
+                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
                       <Home className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        SHOWROOM DIRECTORY
+                        SHOWROOM
                       </span>
                       <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        Residential Studio Desk
+                        Residential Interiors
                       </h4>
                     </div>
                   </div>
                   <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Open For Visits
+                    Showroom
                   </span>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Primary Call & WhatsApp: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <a
                       href={`tel:${BRAND_INFO.residential.phone}`}
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
                       <span>CALL {BRAND_INFO.residential.phone}</span>
@@ -232,31 +232,17 @@ export const ContactSection: React.FC = () => {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>WHATSAPP STUDIO</span>
                     </a>
                   </div>
 
-                  {/* Direct Line */}
-                  <div className="pt-1">
-                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Direct Showroom Line
-                    </span>
-                    <a
-                      href={`tel:${BRAND_INFO.residential.phone}`}
-                      className="inline-flex items-center space-x-2 text-base font-serif text-white hover:text-light-grey transition-colors"
-                    >
-                      <Phone className="w-4 h-4 text-mid-grey" />
-                      <span>{BRAND_INFO.residential.phoneFormatted}</span>
-                    </a>
-                  </div>
-
                   {/* Email */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Official Email
+                      Email
                     </span>
                     <a
                       href={`mailto:${BRAND_INFO.residential.email}`}
@@ -305,12 +291,6 @@ export const ContactSection: React.FC = () => {
                     </a>
                   </div>
                 </div>
-
-                {/* Console Footnote */}
-                <div className="pt-6 mt-6 border-t border-graphite/60 flex items-center justify-between text-[11px] font-mono text-mid-grey">
-                  <span>SD CLASSIC INTERIORS</span>
-                  <span>PENDURTHI SHOWROOM</span>
-                </div>
               </div>
             </div>
           </div>
@@ -322,7 +302,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-commercial"
-        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center border-b border-graphite/40"
+        className="relative py-6 sm:py-10 flex items-center border-b border-graphite/40"
         aria-label="Division 02: Commercial Construction & Infrastructure"
       >
         {/* Clearly Visible Architectural Corporate Background Image */}
@@ -340,17 +320,17 @@ export const ContactSection: React.FC = () => {
 
         {/* Ambient Division Watermark */}
         <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 text-8xl sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
+          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
           aria-hidden="true"
         >
           02
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
             {/* Left Column: Division Identity */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center space-x-3">
+            <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
                   DIVISION 02 · COMMERCIAL &amp; INFRA
                 </span>
@@ -359,18 +339,18 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-3xl sm:text-6xl font-serif tracking-[0.02em] text-white leading-tight">
+              <h3 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white leading-tight">
                 SD CONSTRUCTIONS<br />&amp; INFRA
               </h3>
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  Corporate Fit-Outs · Turnkey Commercial Contracts · Structural Execution · MEP Works
+                  Commercial · Civil · Infrastructure
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                Our heavy commercial and infrastructure division delivers comprehensive turnkey execution for corporate offices, retail hubs, commercial complexes, and architectural alterations across Visakhapatnam and coastal Andhra Pradesh.
+              <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
+                Commercial construction, civil works, structural alterations and infrastructure execution.
               </p>
 
               {/* Verified GSTIN Banner: Strict Monochrome */}
@@ -379,7 +359,7 @@ export const ContactSection: React.FC = () => {
                   <ShieldCheck className="w-5 h-5 text-white shrink-0" />
                   <div>
                     <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                      VERIFIED GOVERNMENT REGISTRATION
+                      GST REGISTRATION
                     </span>
                     <span className="text-sm sm:text-base font-mono font-semibold text-white tracking-wider">
                       GSTIN : {BRAND_INFO.commercial.gstin}
@@ -395,49 +375,49 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Core Commercial Capabilities */}
-              <div className="grid grid-cols-2 gap-3 pt-1">
+              <div className="hidden sm:grid grid-cols-2 gap-3 pt-1">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALTY</span>
-                  <span className="text-xs sm:text-sm font-sans text-white font-medium">Turnkey Commercial Execution</span>
+                  <span className="text-xs sm:text-sm font-sans text-white font-medium">Commercial &amp; Civil Works</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">COMPLIANCE</span>
-                  <span className="text-xs sm:text-sm font-sans text-white font-medium">GST Registered &amp; Verified</span>
+                  <span className="text-xs sm:text-sm font-sans text-white font-medium">GST Registered</span>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Monochrome Corporate Console */}
             <div className="lg:col-span-6">
-              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-7 sm:p-9 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-5 mb-6">
+              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
+                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
                       <Building2 className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        CORPORATE CONTACT
+                        CORPORATE
                       </span>
                       <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        Commercial &amp; Tender Desk
+                        Commercial &amp; Infrastructure
                       </h4>
                     </div>
                   </div>
                   <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Turnkey Division
+                    Commercial
                   </span>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Action Buttons: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <a
                       href={`mailto:${BRAND_INFO.commercial.email}?subject=Commercial%20Project%20Enquiry`}
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Mail className="w-4 h-4" />
-                      <span>EMAIL TENDER DESK</span>
+                      <span>EMAIL US</span>
                     </a>
                     <a
                       href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
@@ -445,7 +425,7 @@ export const ContactSection: React.FC = () => {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>WHATSAPP INFRA</span>
@@ -465,7 +445,7 @@ export const ContactSection: React.FC = () => {
                   {/* Commercial Email */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Commercial &amp; Tender Email
+                      Email
                     </span>
                     <a
                       href={`mailto:${BRAND_INFO.commercial.email}`}
@@ -508,12 +488,6 @@ export const ContactSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
-                {/* Console Footnote */}
-                <div className="pt-6 mt-6 border-t border-graphite/60 flex items-center justify-between text-[11px] font-mono text-mid-grey">
-                  <span>SD CONSTRUCTIONS &amp; INFRA</span>
-                  <span>GSTIN VERIFIED</span>
-                </div>
               </div>
             </div>
           </div>
@@ -525,7 +499,7 @@ export const ContactSection: React.FC = () => {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="division-decora"
-        className="relative sm:min-h-screen py-16 sm:py-32 flex items-center"
+        className="relative py-6 sm:py-10 flex items-center"
         aria-label="Division 03: DECORA Studio"
       >
         {/* Clearly Visible Boutique Decor Studio Background Image */}
@@ -543,27 +517,27 @@ export const ContactSection: React.FC = () => {
 
         {/* Ambient Division Watermark */}
         <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 text-8xl sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
+          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
           aria-hidden="true"
         >
           03
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
             {/* Left Column: Division Identity */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center space-x-3">
+            <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
-                  DIVISION 03 · SPECIALIZED DECOR
+                  DIVISION 03 · DÉCOR
                 </span>
                 <span className="text-[11px] font-mono tracking-widest uppercase text-mid-grey">
-                  STUDIO UNIT
+                  A UNIT OF SD CLASSIC
                 </span>
               </div>
 
               <div>
-                <h3 className="text-4xl sm:text-7xl font-serif tracking-[0.05em] text-white leading-none mb-2">
+                <h3 className="text-3xl sm:text-5xl font-serif tracking-[0.05em] text-white leading-none mb-2">
                   DECORA
                 </h3>
                 <p className="text-sm sm:text-base font-mono tracking-widest text-light-grey uppercase">
@@ -576,18 +550,18 @@ export const ContactSection: React.FC = () => {
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  "The Art Of Beautiful Spaces" — Curated soft furnishings, wallpapers &amp; architectural surfaces
+                  The Art of Beautiful Details.
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                DECORA is our specialized boutique studio dedicated to sensory soft furnishings. From imported wallpapers and custom motorized blinds to luxury linen drapery and acoustic wooden floorings, we complete every millimeter of interior spaces.
+              <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
+                DECORA brings together wallpapers and custom wallpapers, window blinds, curtains and fabrics, flooring solutions and decorative finishes, with guidance from selection through installation.
               </p>
 
               {/* Specialization Tags in Monochrome */}
               <div className="space-y-2 pt-1">
                 <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                  SPECIALIZED PORTFOLIO
+                  COLLECTIONS
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {BRAND_INFO.decora.services.map((item) => (
@@ -598,44 +572,38 @@ export const ContactSection: React.FC = () => {
                       {item}
                     </span>
                   ))}
-                  <span className="text-xs font-mono tracking-wide bg-charcoal/80 text-light-grey px-3 py-1 rounded-sm border border-graphite">
-                    Acoustic Panels
-                  </span>
-                  <span className="text-xs font-mono tracking-wide bg-charcoal/80 text-light-grey px-3 py-1 rounded-sm border border-graphite">
-                    Motorized Blinds
-                  </span>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Monochrome DECORA Console */}
             <div className="lg:col-span-6">
-              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-7 sm:p-9 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-5 mb-6">
+              <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
+                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
                       <Sparkles className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        DECOR BOUTIQUE DIRECTORY
+                        DÉCOR UNIT
                       </span>
                       <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        DECORA Studio Helpline
+                        DECORA Contact
                       </h4>
                     </div>
                   </div>
                   <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Soft Furnishings
+                    Décor
                   </span>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Action Buttons: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <a
                       href={`tel:${BRAND_INFO.decora.phone}`}
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
                       <span>CALL {BRAND_INFO.decora.phone}</span>
@@ -644,31 +612,17 @@ export const ContactSection: React.FC = () => {
                       href={BRAND_INFO.decora.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-2 px-5 py-4 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>WHATSAPP DECORA</span>
                     </a>
                   </div>
 
-                  {/* Direct Helpline */}
-                  <div className="pt-1">
-                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Direct Decor Helpline
-                    </span>
-                    <a
-                      href={`tel:${BRAND_INFO.decora.phone}`}
-                      className="inline-flex items-center space-x-2 text-base font-serif text-white hover:text-light-grey transition-colors"
-                    >
-                      <Phone className="w-4 h-4 text-mid-grey" />
-                      <span>{BRAND_INFO.decora.phoneFormatted}</span>
-                    </a>
-                  </div>
-
                   {/* Official Instagram (Monochrome Icon) */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Official Instagram Gallery
+                      Instagram
                     </span>
                     <a
                       href={BRAND_INFO.decora.instagram}
@@ -686,7 +640,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase">
-                        Studio City
+                        Location
                       </span>
                       <button
                         onClick={() => copyToClipboard(BRAND_INFO.decora.location, 'decora')}
@@ -713,12 +667,6 @@ export const ContactSection: React.FC = () => {
                       <span>Pendurthi &amp; Visakhapatnam, Andhra Pradesh</span>
                     </span>
                   </div>
-                </div>
-
-                {/* Console Footnote */}
-                <div className="pt-6 mt-6 border-t border-graphite/60 flex items-center justify-between text-[11px] font-mono text-mid-grey">
-                  <span>DECORA STUDIO</span>
-                  <span>WALL · WINDOW · FLOOR</span>
                 </div>
               </div>
             </div>

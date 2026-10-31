@@ -52,7 +52,7 @@ export const BRAND_INFO = {
   name: "SD CLASSIC INTERIORS",
   shortName: "SD Classic",
   tagline: "Imagine Every Inch",
-  founded: "2019",
+  founded: "2020",
   residential: {
     company: "SD Classic Interiors",
     phone: "9676179499",

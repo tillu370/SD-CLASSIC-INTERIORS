@@ -4,6 +4,8 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { ProjectCategoryGrid } from './components/ProjectCategoryGrid';
 import { ServicesSection } from './components/ServicesSection';
+import { ProcessSection } from './components/ProcessSection';
+import { DecorSolutionsSection } from './components/DecorSolutionsSection';
 import { OffersSection } from './components/OffersSection';
 import { PortfolioGallery } from './components/PortfolioGallery';
 import { AboutSection } from './components/AboutSection';
@@ -61,25 +63,31 @@ export const App: React.FC = () => {
           onExploreWork={handleExploreWork}
         />
 
-        {/* 02. Project Categories (Bright Off-White) */}
-        <ProjectCategoryGrid onSelectCategory={handleSelectCategory} />
-
-        {/* 03. Complete Brochure Services */}
-        <ServicesSection onEnquireService={handleEnquireService} />
-
-        {/* 04. Special Offers & Packages */}
-        <OffersSection onSelectOffer={handleSelectOffer} />
-
-        {/* 05. Selected Work Portfolio Gallery with Lightbox */}
-        <PortfolioGallery />
-
-        {/* 06. About SD Classic Interiors */}
+        {/* 02. About SD Classic Interiors */}
         <AboutSection />
 
-        {/* 07. Verified Google Client Reviews (Social Proof Bridge) */}
+        {/* 03. Project Categories (Bright Off-White) */}
+        <ProjectCategoryGrid onSelectCategory={handleSelectCategory} />
+
+        {/* 04. Our Process & Methodology */}
+        <ProcessSection />
+
+        {/* 05. Decor Solutions - DECORA */}
+        <DecorSolutionsSection />
+
+        {/* 06. Complete Brochure Services */}
+        <ServicesSection onEnquireService={handleEnquireService} />
+
+        {/* 07. Selected Work Portfolio Gallery with Lightbox */}
+        <PortfolioGallery />
+
+        {/* 08. Verified Google Client Reviews (Social Proof Bridge) */}
         <GoogleReviewsSection />
 
-        {/* 08. Structured Contact Directory (Residential, Commercial & DECORA) */}
+        {/* 09. Special Offers & Packages */}
+        <OffersSection onSelectOffer={handleSelectOffer} />
+
+        {/* 10. Structured Contact Directory (Residential, Commercial & DECORA) */}
         <ContactSection />
       </main>
 

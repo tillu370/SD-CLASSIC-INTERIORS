@@ -138,7 +138,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
               <div className="flex items-center justify-center space-x-3 text-mid-grey">
                 <div className="w-8 h-[1px] bg-graphite" />
                 <p className="text-[10px] sm:text-xs font-mono tracking-[0.32em] uppercase text-light-grey/80">
-                  IMAGINE EVERY INCH · EST. 2019
+                  IMAGINE EVERY INCH · EST. 2020
                 </p>
                 <div className="w-8 h-[1px] bg-graphite" />
               </div>

@@ -24,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       }
 
       // Active section spy
-      const sections = ['home', 'expertise', 'services', 'offers', 'portfolio', 'about', 'reviews', 'contact'];
+      const sections = ['home', 'about', 'expertise', 'process', 'decor', 'services', 'portfolio', 'reviews', 'offers', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -55,11 +55,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
 
   const navLinks = [
     { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Services', href: '#services', id: 'services' },
+    { name: 'About Us', href: '#about', id: 'about' },
+    { name: 'Our Process', href: '#process', id: 'process' },
+    { name: 'Decor Solutions', href: '#decor', id: 'decor' },
+    { name: 'Our Services', href: '#services', id: 'services' },
     { name: 'Projects', href: '#portfolio', id: 'portfolio' },
+    { name: 'Client Reviews', href: '#reviews', id: 'reviews' },
     { name: 'Offers', href: '#offers', id: 'offers' },
-    { name: 'Reviews', href: '#reviews', id: 'reviews' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -89,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                 e.preventDefault();
                 handleLinkClick('#home');
               }}
-              className="flex items-center space-x-3 group focus:outline-none"
+              className="flex items-center space-x-3 group focus:outline-none min-h-[44px]"
               aria-label="SD Classic Interiors - Back to top"
             >
               <div className="w-9 h-9 sm:w-10 sm:h-10 relative flex-shrink-0">
@@ -103,14 +105,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                 />
               </div>
               <div className="flex items-center">
-                <span className="font-serif tracking-[0.16em] text-sm sm:text-base font-normal text-white group-hover:text-light-grey transition-colors uppercase">
+                <span className="font-serif tracking-[0.12em] sm:tracking-[0.16em] text-[11px] min-[380px]:text-sm sm:text-base font-normal text-white group-hover:text-light-grey transition-colors uppercase whitespace-nowrap">
                   SD CLASSIC INTERIORS
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-8 lg:space-x-10" aria-label="Main Navigation">
+            <nav className="hidden xl:flex items-center space-x-5 2xl:space-x-8" aria-label="Main Navigation">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
@@ -121,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                       e.preventDefault();
                       handleLinkClick(link.href);
                     }}
-                    className={`group relative text-xs tracking-[0.2em] uppercase font-sans py-1 transition-colors duration-300 ${
+                    className={`group relative text-xs tracking-[0.14em] 2xl:tracking-[0.2em] uppercase font-sans py-1 transition-colors duration-300 ${
                       isActive ? 'text-white font-medium' : 'text-mid-grey hover:text-white'
                     }`}
                   >
@@ -138,10 +140,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             </nav>
 
             {/* Right Action Button: GET A QUOTE → */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4">
               <button
                 onClick={onOpenQuote}
-                className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.22em] uppercase px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black hover:shadow-[0_12px_30px_-8px_rgba(255,255,255,0.3)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
+                className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.18em] uppercase px-4 2xl:px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black hover:shadow-[0_12px_30px_-8px_rgba(255,255,255,0.3)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
                 id="nav-get-quote-btn"
               >
                 <span>GET A QUOTE</span>
@@ -150,16 +152,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             </div>
 
             {/* Mobile Menu Toggle Button */}
-            <div className="flex md:hidden items-center space-x-3">
+            <div className="flex xl:hidden items-center space-x-3">
               <button
                 onClick={onOpenQuote}
-                className="text-[11px] tracking-widest uppercase px-3 py-1.5 border border-white/30 text-white"
+                className="hidden min-[400px]:inline-flex items-center text-[11px] tracking-widest uppercase px-3.5 min-h-[44px] border border-white/30 text-white"
               >
                 QUOTE
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-light-grey hover:text-white focus:outline-none"
+                className="w-11 h-11 flex items-center justify-center text-light-grey hover:text-white focus:outline-none"
                 aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
                 aria-expanded={mobileMenuOpen}
               >
@@ -181,7 +183,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       {/* Full-Screen Mobile Navigation Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-50 bg-[#080808]/98 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-10 md:hidden animate-in fade-in duration-300"
+          className="fixed inset-0 z-50 bg-[#080808]/98 backdrop-blur-xl flex flex-col justify-between gap-4 p-6 sm:p-10 overflow-y-auto xl:hidden animate-in fade-in duration-300 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]"
           role="dialog"
           aria-modal="true"
         >
@@ -205,7 +207,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-col space-y-5 my-auto" aria-label="Mobile Navigation">
+          <nav className="flex flex-col space-y-1 my-auto" aria-label="Mobile Navigation">
             {navLinks.map((link, index) => {
               const isActive = activeSection === link.id;
               return (
@@ -216,13 +218,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                     e.preventDefault();
                     handleLinkClick(link.href);
                   }}
-                  className="group flex items-center justify-between py-2 border-b border-graphite/20"
+                  className="group flex items-center justify-between min-h-[48px] py-1.5 border-b border-graphite/20"
                 >
                   <span className="text-xs font-mono tracking-widest text-mid-grey group-hover:text-white">
                     0{index + 1}
                   </span>
                   <span
-                    className={`font-serif text-2xl tracking-[0.15em] transition-colors ${
+                    className={`font-serif text-xl sm:text-2xl tracking-[0.12em] transition-colors ${
                       isActive ? 'text-white italic' : 'text-light-grey group-hover:text-white'
                     }`}
                   >
