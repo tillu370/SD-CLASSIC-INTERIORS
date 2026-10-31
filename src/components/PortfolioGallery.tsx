@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { TiltedGridHero } from '@/components/ui/tilted-grid-hero';
-import { BRAND_INFO } from '../data/websiteData';
+import { PROJECTS } from '../data/projectsData';
 
 interface CarouselSlide {
   id: string;
@@ -100,10 +100,10 @@ export const PortfolioGallery: React.FC = () => {
     return () => mq.removeEventListener('change', update);
   }, []);
 
-  const images = CAROUSEL_PROJECTS.map((p) => ({
-    src: p.image,
-    alt: p.title,
-  }));
+  const images = [
+    ...PROJECTS.map((p) => ({ src: p.cover, alt: `${p.title} – 3D render` })),
+    ...CAROUSEL_PROJECTS.map((p) => ({ src: p.image, alt: p.title })),
+  ];
 
   const header = (
         <div className="relative z-10 w-full pt-14 pb-8 sm:pt-24 sm:pb-0 px-6 sm:px-10 pointer-events-auto text-center">
@@ -129,10 +129,8 @@ export const PortfolioGallery: React.FC = () => {
 
             {/* View All Projects Action */}
             <a
-              href={BRAND_INFO.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white"
+              href="#/projects/residential"
+              className="inline-flex items-center space-x-2 min-h-[44px] text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white"
             >
               <span>VIEW ALL PROJECTS</span>
               <ArrowRight className="w-3.5 h-3.5" />

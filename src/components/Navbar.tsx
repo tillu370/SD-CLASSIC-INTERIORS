@@ -4,9 +4,10 @@ import { BRAND_INFO } from '../data/websiteData';
 
 interface NavbarProps {
   onOpenQuote: () => void;
+  onProjectsPage?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -70,6 +71,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.hash = href;
     }
   };
 
@@ -114,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             {/* Desktop Navigation Links */}
             <nav className="hidden xl:flex items-center space-x-5 2xl:space-x-8 mx-6 2xl:mx-10 whitespace-nowrap" aria-label="Main Navigation">
               {navLinks.map((link) => {
-                const isActive = activeSection === link.id;
+                const isActive = (onProjectsPage ? 'portfolio' : activeSection) === link.id;
                 return (
                   <a
                     key={link.name}
@@ -209,7 +212,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           {/* Navigation Links */}
           <nav className="flex flex-col space-y-1 my-auto" aria-label="Mobile Navigation">
             {navLinks.map((link, index) => {
-              const isActive = activeSection === link.id;
+              const isActive = (onProjectsPage ? 'portfolio' : activeSection) === link.id;
               return (
                 <a
                   key={link.name}

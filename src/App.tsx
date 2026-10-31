@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SplashScreen } from './components/SplashScreen';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
@@ -12,22 +12,34 @@ import { AboutSection } from './components/AboutSection';
 import { GoogleReviewsSection } from './components/GoogleReviewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { ProjectsPage } from './components/ProjectsPages';
+import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
 
 export const App: React.FC = () => {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => parseHash(window.location.hash).name === 'home');
+  const route = useHashRoute();
+
+  // Returning home from a project page: the target section only exists after the
+  // home view has rendered, so scroll to the hash anchor once it does.
+  useEffect(() => {
+    if (route.name !== 'home') return;
+    const id = window.location.hash.replace('#', '');
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) requestAnimationFrame(() => el.scrollIntoView());
+  }, [route.name]);
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.hash = '#contact';
     }
   };
 
-  const handleSelectCategory = () => {
-    const el = document.getElementById('services');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleSelectCategory = (categoryId: string) => {
+    window.location.hash = categoryPath(categoryId);
   };
 
   const handleEnquireService = () => {
@@ -53,9 +65,13 @@ export const App: React.FC = () => {
       )}
 
       {/* Global Navigation */}
-      <Navbar onOpenQuote={scrollToContact} />
+      <Navbar onOpenQuote={scrollToContact} onProjectsPage={route.name !== 'home'} />
 
-      {/* Main Architectural Experience */}
+      {route.name !== 'home' ? (
+        <main>
+          <ProjectsPage route={route} />
+        </main>
+      ) : (
       <main>
         {/* 01. Hero Section */}
         <HeroSection
@@ -90,6 +106,7 @@ export const App: React.FC = () => {
         {/* 10. Structured Contact Directory (Residential, Commercial & DECORA) */}
         <ContactSection />
       </main>
+      )}
 
       {/* 09. Refined Luxury Black Footer */}
       <Footer />
