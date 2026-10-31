@@ -100,13 +100,13 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Identity (lg: 4 cols) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
             <div className="flex items-center space-x-3 mb-5">
-              <div className="w-11 h-11 rounded-sm bg-white/5 border border-white/15 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.6)] p-2 flex items-center justify-center">
+              <div className="w-12 h-12 flex-shrink-0">
                 <img
-                  src="/images/brand/logo_white_transparent.png"
-                  alt="SD Classic Interiors Logo"
-                  className="w-full h-full object-contain filter brightness-100"
+                  src="/images/logo1_trimmed.png"
+                  alt="SD Classic Interiors monogram"
+                  className="w-full h-full object-contain"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/brand/monogram_black.png';
+                    (e.target as HTMLImageElement).src = '/favicon.svg';
                   }}
                 />
               </div>
