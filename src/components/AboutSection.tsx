@@ -78,7 +78,7 @@ export const AboutSection: React.FC = () => {
       aria-label="About SD Classic Interiors"
     >
       {/* Background Subtle Architectural Grid */}
-      <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 architectural-grid-light opacity-40 pointer-events-none" />
 
       {/* ───────────────────────────────────────────────────────────
           SECTION ONE — THE BRAND STORY
