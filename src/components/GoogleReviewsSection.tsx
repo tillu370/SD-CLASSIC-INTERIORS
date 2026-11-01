@@ -105,63 +105,63 @@ export const GoogleReviewsSection: React.FC = () => {
   return (
     <section
       id="reviews"
-      className="py-8 sm:py-12 lg:py-14 bg-[#080808] text-[#F5F3EF] relative border-t border-[#292929] overflow-hidden"
+      className="py-8 sm:py-12 lg:py-14 bg-[#F4F4F2] text-[#111111] relative border-t border-black/10 overflow-hidden"
       aria-label="Client Reviews"
     >
-      <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
+      <div className="absolute inset-0 architectural-grid-light opacity-40 pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10 mb-4 sm:mb-6">
         <Reveal className="max-w-2xl">
-          <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#A5A5A5] font-medium block mb-1.5 sm:mb-2">
+          <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#5A5A5A] font-medium block mb-1.5 sm:mb-2">
             Client Reviews
           </span>
           <h2 className="text-[1.4rem] sm:text-[clamp(1.6rem,3vw,2.25rem)] font-serif font-normal leading-[1.1] mb-1 sm:mb-2">
             What Our Clients Say
           </h2>
-          <p className="text-xs sm:text-sm font-sans font-light text-[#A5A5A5] leading-[1.6]">
+          <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6]">
             Feedback from homeowners and commercial clients across Visakhapatnam.
           </p>
         </Reveal>
       </div>
 
       <div className="relative w-full overflow-hidden mb-2 sm:mb-3 py-1">
-        <div className="absolute left-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-r from-[#080808] to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-l from-[#080808] to-transparent z-20 pointer-events-none" />
+        <div className="absolute left-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-r from-[#F4F4F2] to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-l from-[#F4F4F2] to-transparent z-20 pointer-events-none" />
         <div className="animate-infinite-marquee motion-reduce:animate-none flex items-center space-x-3 sm:space-x-4">
           {[...REAL_REVIEWS_LANE_1, ...REAL_REVIEWS_LANE_1, ...REAL_REVIEWS_LANE_1].map((rev, index) => (
             <div
               key={`lane1-${rev.id}-${index}`}
-              className="w-[260px] sm:w-[420px] lg:w-[480px] p-3 sm:p-4 bg-[#080808]/90 border border-[#292929] hover:border-white/50 rounded-lg flex flex-col justify-between shrink-0 transition-colors duration-300 group"
+              className="w-[260px] sm:w-[420px] lg:w-[480px] p-3 sm:p-4 bg-white border border-black/10 hover:border-black/30 rounded-lg flex flex-col justify-between shrink-0 transition-colors duration-300 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-2 gap-2">
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center space-x-0.5">
                       {[...Array(rev.rating)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white text-white" />
+                        <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#111111] text-[#111111]" />
                       ))}
                     </div>
-                    <span className="hidden sm:inline text-[10px] font-mono tracking-widest text-mid-grey">
+                    <span className="hidden sm:inline text-[10px] font-mono tracking-widest text-[#5A5A5A]">
                       5.0 RATING
                     </span>
                   </div>
-                  <span className="hidden sm:inline text-[10px] font-mono tracking-wider px-2 py-0.5 bg-charcoal border border-graphite rounded-sm text-light-grey">
+                  <span className="hidden sm:inline text-[10px] font-mono tracking-wider px-2 py-0.5 bg-black/[0.03] border border-black/10 rounded-sm text-[#555555]">
                     {rev.tag}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm font-sans font-light text-light-grey/95 leading-relaxed mb-2 sm:mb-3 italic whitespace-normal line-clamp-3 sm:line-clamp-3">
+                <p className="text-xs sm:text-sm font-sans font-light text-[#333333]/90 leading-relaxed mb-2 sm:mb-3 italic whitespace-normal line-clamp-3 sm:line-clamp-3">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-graphite/60 flex items-center justify-between gap-3 text-xs">
+              <div className="pt-2 border-t border-black/10 flex items-center justify-between gap-3 text-xs">
                 <div className="min-w-0">
-                  <h4 className="font-serif font-semibold text-white text-sm truncate">{rev.author}</h4>
-                  <p className="text-[11px] font-mono text-mid-grey truncate">{rev.project}</p>
+                  <h4 className="font-serif font-semibold text-[#111111] text-sm truncate">{rev.author}</h4>
+                  <p className="text-[11px] font-mono text-[#5A5A5A] truncate">{rev.project}</p>
                 </div>
-                <div className="hidden sm:flex items-center space-x-1.5 text-[10px] font-mono text-mid-grey shrink-0">
-                  <MapPin className="w-3 h-3 text-light-grey" />
+                <div className="hidden sm:flex items-center space-x-1.5 text-[10px] font-mono text-[#5A5A5A] shrink-0">
+                  <MapPin className="w-3 h-3 text-[#5A5A5A]" />
                   <span>{rev.location}</span>
                 </div>
               </div>
@@ -171,43 +171,43 @@ export const GoogleReviewsSection: React.FC = () => {
       </div>
 
       <div className="relative w-full overflow-hidden py-1">
-        <div className="absolute left-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-r from-[#080808] to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-l from-[#080808] to-transparent z-20 pointer-events-none" />
+        <div className="absolute left-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-r from-[#F4F4F2] to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 inset-y-0 w-10 sm:w-32 bg-gradient-to-l from-[#F4F4F2] to-transparent z-20 pointer-events-none" />
         <div className="animate-infinite-marquee-reverse motion-reduce:animate-none flex items-center space-x-3 sm:space-x-4">
           {[...REAL_REVIEWS_LANE_2, ...REAL_REVIEWS_LANE_2, ...REAL_REVIEWS_LANE_2].map((rev, index) => (
             <div
               key={`lane2-${rev.id}-${index}`}
-              className="w-[260px] sm:w-[420px] lg:w-[480px] p-3 sm:p-4 bg-[#080808]/90 border border-[#292929] hover:border-white/50 rounded-lg flex flex-col justify-between shrink-0 transition-colors duration-300 group"
+              className="w-[260px] sm:w-[420px] lg:w-[480px] p-3 sm:p-4 bg-white border border-black/10 hover:border-black/30 rounded-lg flex flex-col justify-between shrink-0 transition-colors duration-300 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-2 gap-2">
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center space-x-0.5">
                       {[...Array(rev.rating)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white text-white" />
+                        <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#111111] text-[#111111]" />
                       ))}
                     </div>
-                    <span className="hidden sm:inline text-[10px] font-mono tracking-widest text-mid-grey">
+                    <span className="hidden sm:inline text-[10px] font-mono tracking-widest text-[#5A5A5A]">
                       5.0 RATING
                     </span>
                   </div>
-                  <span className="hidden sm:inline text-[10px] font-mono tracking-wider px-2 py-0.5 bg-charcoal border border-graphite rounded-sm text-light-grey">
+                  <span className="hidden sm:inline text-[10px] font-mono tracking-wider px-2 py-0.5 bg-black/[0.03] border border-black/10 rounded-sm text-[#555555]">
                     {rev.tag}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm font-sans font-light text-light-grey/95 leading-relaxed mb-2 sm:mb-3 italic whitespace-normal line-clamp-3 sm:line-clamp-3">
+                <p className="text-xs sm:text-sm font-sans font-light text-[#333333]/90 leading-relaxed mb-2 sm:mb-3 italic whitespace-normal line-clamp-3 sm:line-clamp-3">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-graphite/60 flex items-center justify-between gap-3 text-xs">
+              <div className="pt-2 border-t border-black/10 flex items-center justify-between gap-3 text-xs">
                 <div className="min-w-0">
-                  <h4 className="font-serif font-semibold text-white text-sm truncate">{rev.author}</h4>
-                  <p className="text-[11px] font-mono text-mid-grey truncate">{rev.project}</p>
+                  <h4 className="font-serif font-semibold text-[#111111] text-sm truncate">{rev.author}</h4>
+                  <p className="text-[11px] font-mono text-[#5A5A5A] truncate">{rev.project}</p>
                 </div>
-                <div className="hidden sm:flex items-center space-x-1.5 text-[10px] font-mono text-mid-grey shrink-0">
-                  <MapPin className="w-3 h-3 text-light-grey" />
+                <div className="hidden sm:flex items-center space-x-1.5 text-[10px] font-mono text-[#5A5A5A] shrink-0">
+                  <MapPin className="w-3 h-3 text-[#5A5A5A]" />
                   <span>{rev.location}</span>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export const GoogleReviewsSection: React.FC = () => {
           href={googleReviewsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center space-x-2 text-xs font-sans tracking-[0.18em] uppercase text-[#F5F3EF] hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+          className="group inline-flex items-center space-x-2 text-xs font-sans tracking-[0.18em] uppercase text-[#111111] hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
         >
           <span>Find Us on Google</span>
           <ExternalLink className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

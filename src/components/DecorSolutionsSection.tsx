@@ -48,14 +48,14 @@ export const DecorSolutionsSection: React.FC = () => {
   return (
     <section
       id="decor"
-      className="py-10 sm:py-32 bg-[#F4F4F2] text-pure-black relative overflow-hidden border-t border-black/10"
+      className="py-10 sm:py-32 bg-[#080808] text-white relative overflow-hidden border-t border-graphite/40"
       aria-label="Decor Solutions - DECORA"
     >
       {/* Background Architectural Grid Pattern */}
-      <div className="absolute inset-0 architectural-grid-light opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
       {/* Watermark */}
-      <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-black/[0.05] select-none pointer-events-none leading-none">
+      <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-white/[0.05] select-none pointer-events-none leading-none">
         05
       </div>
 
@@ -63,20 +63,20 @@ export const DecorSolutionsSection: React.FC = () => {
         {/* Editorial Header */}
         <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-16">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="w-8 sm:w-12 h-[1px] bg-black/20" />
+            <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
               DECOR SOLUTIONS · {BRAND_INFO.decora.unitOf}
             </span>
-            <div className="w-8 sm:w-12 h-[1px] bg-black/20" />
+            <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold tracking-[0.1em] text-pure-black mb-3">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold tracking-[0.1em] text-white mb-3">
             DECORA
           </h2>
-          <p className="font-serif italic text-graphite/80 text-base sm:text-lg mb-4">
+          <p className="font-serif italic text-light-grey/80 text-base sm:text-lg mb-4">
             The Art of Beautiful Details.
           </p>
-          <p className="text-xs sm:text-sm font-sans font-normal text-graphite/85 leading-relaxed max-w-xl mx-auto line-clamp-4 sm:line-clamp-none">
+          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto line-clamp-4 sm:line-clamp-none">
             Every beautiful space is defined by its details. At DECORA, we bring together thoughtfully selected décor collections that add style, character and individuality to your interiors. From elegant wallpapers and refined window treatments to contemporary flooring and decorative finishes, we help you find the right elements to complete your space.
           </p>
         </div>
@@ -87,14 +87,14 @@ export const DecorSolutionsSection: React.FC = () => {
             <h3 className="text-[11px] sm:text-xs font-mono tracking-[0.25em] uppercase text-mid-grey whitespace-nowrap">
               EXPLORE THE DECORA COLLECTION
             </h3>
-            <div className="flex-1 h-[1px] bg-black/10" />
+            <div className="flex-1 h-[1px] bg-white/10" />
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
             {DECORA_COLLECTIONS.map((item, idx) => (
               <div
                 key={item.title}
-                className="group relative bg-white border border-[#E2E2DF] shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 transition-all duration-400 hover:border-black/40 hover:shadow-md hover:-translate-y-1"
+                className="group relative bg-[#0c0c0c] border border-white/10 shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 transition-all duration-400 hover:border-white/30 hover:shadow-md hover:-translate-y-1"
               >
                 <div className={`relative overflow-hidden ${idx === DECORA_COLLECTIONS.length - 1 ? 'aspect-[2/1] sm:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                   <img
@@ -108,7 +108,7 @@ export const DecorSolutionsSection: React.FC = () => {
                     {item.title}
                   </h4>
                 </div>
-                <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-graphite/80 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed line-clamp-3 sm:line-clamp-none">
                   {item.description}
                 </p>
               </div>
@@ -119,20 +119,20 @@ export const DecorSolutionsSection: React.FC = () => {
         {/* More Than Just Decor */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 mb-8 sm:mb-20">
           <div className="lg:col-span-5">
-            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-pure-black mb-3">
+            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-3">
               More Than Just Décor
             </h3>
-            <p className="text-xs sm:text-sm font-sans text-graphite/85 leading-relaxed">
+            <p className="text-xs sm:text-sm font-sans text-light-grey/85 leading-relaxed">
               At DECORA, we believe choosing the right materials is just as important as choosing the right design.
             </p>
           </div>
-          <div className="lg:col-span-7 grid grid-cols-2 gap-px bg-black/10 border border-black/10">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-px bg-white/10 border border-white/10">
             {VALUE_PILLARS.map((item) => (
-              <div key={item.title} className="bg-white p-3 sm:p-5 hover:bg-[#FAFAF8] transition-colors duration-300 last:col-span-2 sm:last:col-span-1">
-                <h4 className="text-[11px] sm:text-sm font-sans font-bold uppercase tracking-wider text-pure-black mb-1">
+              <div key={item.title} className="bg-[#0c0c0c] p-3 sm:p-5 hover:bg-[#161616] transition-colors duration-300 last:col-span-2 sm:last:col-span-1">
+                <h4 className="text-[11px] sm:text-sm font-sans font-bold uppercase tracking-wider text-white mb-1">
                   {item.title}
                 </h4>
-                <p className="text-[11px] sm:text-xs font-sans text-graphite/75 leading-snug sm:leading-relaxed">
+                <p className="text-[11px] sm:text-xs font-sans text-light-grey/75 leading-snug sm:leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -141,15 +141,15 @@ export const DecorSolutionsSection: React.FC = () => {
         </div>
 
         {/* Experience DECORA Banner */}
-        <div className="p-4 sm:p-8 bg-white border border-[#E2E2DF] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5 rounded-sm">
+        <div className="p-4 sm:p-8 bg-[#0c0c0c] border border-white/10 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5 rounded-sm">
           <div>
             <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-1">
               EXPERIENCE DECORA
             </span>
-            <h4 className="text-sm sm:text-base font-serif font-semibold text-pure-black">
+            <h4 className="text-sm sm:text-base font-serif font-semibold text-white">
               See It. Feel It. Choose It.
             </h4>
-            <p className="text-xs font-sans text-graphite/80 mt-1 max-w-md">
+            <p className="text-xs font-sans text-light-grey/80 mt-1 max-w-md">
               Explore our showroom and experience our collections beyond the screen, with guidance from our team to help you make the right choice.
             </p>
           </div>
@@ -158,7 +158,7 @@ export const DecorSolutionsSection: React.FC = () => {
               href={BRAND_INFO.decora.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-5 py-3 border border-black/20 text-pure-black text-xs font-mono tracking-wider uppercase font-semibold hover:bg-black hover:text-white transition-all duration-300"
+              className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
             >
               <span>Explore Our Collections</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -167,7 +167,7 @@ export const DecorSolutionsSection: React.FC = () => {
               href={BRAND_INFO.decora.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-5 py-3 bg-pure-black text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-graphite transition-all duration-300"
+              className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-black text-xs font-mono tracking-wider uppercase font-semibold hover:bg-light-grey transition-all duration-300"
             >
               <span>Visit Our Showroom</span>
             </a>
