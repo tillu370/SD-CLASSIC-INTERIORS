@@ -1,65 +1,18 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Gem, IndianRupee, PenTool, ShieldCheck, Smile, BadgeCheck } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 import { Reveal } from './ui/Reveal';
 
-// ── Monochrome line icons ─────────────────────────────────────────
-const HighEndFinishesIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 7V5a3 3 0 016 0v2" />
-    <rect x="3" y="7" width="18" height="14" rx="1" />
-    <path d="M10 11h4" />
-  </svg>
-);
-
-const AffordablePricesIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 6h6M9 10h6M9 6v12M12 10a4 4 0 014 4c0 2-2 3-5 3" />
-    <line x1="12" y1="17" x2="16" y2="21" />
-  </svg>
-);
-
-const CustomizedDesignsIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="6" cy="6" r="3" />
-    <circle cx="6" cy="18" r="3" />
-    <line x1="20" y1="4" x2="8.12" y2="15.88" />
-    <line x1="14.47" y1="14.48" x2="20" y2="20" />
-    <line x1="8.12" y1="8.12" x2="12" y2="12" />
-  </svg>
-);
-
-const WarrantyIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    <circle cx="12" cy="11" r="2.5" />
-  </svg>
-);
-
-const SatisfactionIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 4c-1.5 2-2.5 4-2.5 6 0 2 1.5 3.5 2.5 3.5s2.5-1.5 2.5-3.5c0-2-1-4-2.5-6z" />
-    <path d="M6 13c1.5-.8 3-.8 4.5 0-.8-1.5-.8-3 0-4.5-1.5.8-2.5 2.5-4.5 4.5z" />
-    <path d="M18 13c-1.5-.8-3-.8-4.5 0 .8-1.5.8-3 0-4.5 1.5.8 2.5 2.5 4.5 4.5z" />
-  </svg>
-);
-
-const QualityAssuredIcon = () => (
-  <svg className="w-5 h-5 text-[#111111]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="8.5" r="5.5" />
-    <path d="M9.5 8.5l1.5 1.5 3.5-3.5" />
-    <path d="M8.5 13L7 20l5-2.5 5 2.5-1.5-7" />
-  </svg>
-);
+const FEATURE_ICON_CLASS = "w-5 h-5 text-[#111111]";
 
 const FEATURES = [
-  { number: "01", title: "High-End Finishes", icon: <HighEndFinishesIcon /> },
-  { number: "02", title: "Affordable Prices", icon: <AffordablePricesIcon /> },
-  { number: "03", title: "Customized Designs", icon: <CustomizedDesignsIcon /> },
-  { number: "04", title: "Warranty on Workmanship", icon: <WarrantyIcon /> },
-  { number: "05", title: "Customer Satisfaction", icon: <SatisfactionIcon /> },
-  { number: "06", title: "Quality Assured", icon: <QualityAssuredIcon /> },
+  { number: "01", title: "High-End Finishes", icon: <Gem className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "02", title: "Affordable Prices", icon: <IndianRupee className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "03", title: "Customized Designs", icon: <PenTool className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "04", title: "Warranty on Workmanship", icon: <ShieldCheck className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "05", title: "Customer Satisfaction", icon: <Smile className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "06", title: "Quality Assured", icon: <BadgeCheck className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
 ];
 
 const STATS = [
