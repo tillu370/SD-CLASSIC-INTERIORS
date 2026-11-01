@@ -76,7 +76,7 @@ export const DecorSolutionsSection: React.FC = () => {
           <p className="font-serif italic text-light-grey/80 text-base sm:text-lg mb-4">
             The Art of Beautiful Details.
           </p>
-          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto line-clamp-4 sm:line-clamp-none">
+          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto">
             Every beautiful space is defined by its details. At DECORA, we bring together thoughtfully selected décor collections that add style, character and individuality to your interiors. From elegant wallpapers and refined window treatments to contemporary flooring and decorative finishes, we help you find the right elements to complete your space.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const DecorSolutionsSection: React.FC = () => {
                     {item.title}
                   </h4>
                 </div>
-                <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
                   {item.description}
                 </p>
               </div>
