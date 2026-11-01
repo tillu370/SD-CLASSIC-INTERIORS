@@ -12,6 +12,7 @@ import { AboutSection } from './components/AboutSection';
 import { GoogleReviewsSection } from './components/GoogleReviewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ProjectsPage } from './components/ProjectsPages';
 import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
 
@@ -110,6 +111,9 @@ export const App: React.FC = () => {
 
       {/* 09. Refined Luxury Black Footer */}
       <Footer />
+
+      {/* Persistent WhatsApp Quick-Contact */}
+      <FloatingWhatsApp />
     </div>
   );
 };
