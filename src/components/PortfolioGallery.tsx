@@ -67,20 +67,6 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
     category: "Living Spaces",
     image: "/images/projects/project_armchair_shadows.jpg",
     description: "High-contrast architectural shadows highlighting textural boucle upholstery."
-  },
-  {
-    id: "proj-turnkey-living",
-    title: "Turnkey Open Architectural Living & Dining Pavilion",
-    category: "Turnkey Interiors",
-    image: "/images/projects/living_dining_turnkey.jpg",
-    description: "Seamless open plan living and dining layout with warm timber ceiling accents and bespoke lighting."
-  },
-  {
-    id: "proj-ambient-suite",
-    title: "Acoustic Master Suite with Ambient Linear Illumination",
-    category: "Bedrooms",
-    image: "/images/projects/bedroom_ambient_lighting.jpg",
-    description: "Dark luxury bedroom suite with architectural fluted panels and subtle cove lighting."
   }
 ];
 
