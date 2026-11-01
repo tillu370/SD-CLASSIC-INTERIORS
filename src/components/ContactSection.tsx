@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  MessageSquare, 
-  Copy, 
-  Check, 
-  ExternalLink, 
-  Building2, 
+import React from 'react';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  ExternalLink,
+  Building2,
   Home,
   Sparkles,
   Clock,
@@ -34,28 +32,6 @@ const MonochromeInstagramIcon: React.FC<{ className?: string }> = ({ className =
 );
 
 export const ContactSection: React.FC = () => {
-  const [copiedResAddress, setCopiedResAddress] = useState(false);
-  const [copiedCommAddress, setCopiedCommAddress] = useState(false);
-  const [copiedDecoraLocation, setCopiedDecoraLocation] = useState(false);
-  const [copiedGstin, setCopiedGstin] = useState(false);
-
-  const copyToClipboard = (text: string, type: 'res' | 'comm' | 'decora' | 'gstin') => {
-    navigator.clipboard.writeText(text);
-    if (type === 'res') {
-      setCopiedResAddress(true);
-      setTimeout(() => setCopiedResAddress(false), 2200);
-    } else if (type === 'comm') {
-      setCopiedCommAddress(true);
-      setTimeout(() => setCopiedCommAddress(false), 2200);
-    } else if (type === 'decora') {
-      setCopiedDecoraLocation(true);
-      setTimeout(() => setCopiedDecoraLocation(false), 2200);
-    } else if (type === 'gstin') {
-      setCopiedGstin(true);
-      setTimeout(() => setCopiedGstin(false), 2200);
-    }
-  };
-
   const scrollToDivision = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -255,27 +231,9 @@ export const ContactSection: React.FC = () => {
 
                   {/* Showroom Address */}
                   <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase">
-                        Showroom Address
-                      </span>
-                      <button
-                        onClick={() => copyToClipboard(BRAND_INFO.residential.address, 'res')}
-                        className="inline-flex items-center space-x-1 text-[10px] font-mono text-mid-grey hover:text-white transition-colors cursor-pointer px-2 py-0.5 bg-charcoal border border-graphite rounded-sm"
-                      >
-                        {copiedResAddress ? (
-                          <>
-                            <Check className="w-3 h-3 text-white" />
-                            <span className="text-white font-semibold">COPIED</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-3 h-3" />
-                            <span>COPY ADDRESS</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
+                      Showroom Address
+                    </span>
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.residential.address}
                     </p>
@@ -366,12 +324,6 @@ export const ContactSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <button
-                  onClick={() => copyToClipboard(BRAND_INFO.commercial.gstin, 'gstin')}
-                  className="px-3 py-1 text-[10px] font-mono uppercase bg-charcoal hover:bg-white hover:text-pure-black text-white border border-graphite rounded-sm transition-all"
-                >
-                  {copiedGstin ? 'COPIED' : 'COPY'}
-                </button>
               </div>
 
               {/* Core Commercial Capabilities */}
@@ -458,27 +410,9 @@ export const ContactSection: React.FC = () => {
 
                   {/* Operational Location */}
                   <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase">
-                        Operational Headquarters
-                      </span>
-                      <button
-                        onClick={() => copyToClipboard(BRAND_INFO.commercial.location, 'comm')}
-                        className="inline-flex items-center space-x-1 text-[10px] font-mono text-mid-grey hover:text-white transition-colors cursor-pointer px-2 py-0.5 bg-charcoal border border-graphite rounded-sm"
-                      >
-                        {copiedCommAddress ? (
-                          <>
-                            <Check className="w-3 h-3 text-white" />
-                            <span className="text-white font-semibold">COPIED</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-3 h-3" />
-                            <span>COPY LOCATION</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
+                      Operational Headquarters
+                    </span>
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.commercial.location}
                     </p>
@@ -638,27 +572,9 @@ export const ContactSection: React.FC = () => {
 
                   {/* Location */}
                   <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase">
-                        Location
-                      </span>
-                      <button
-                        onClick={() => copyToClipboard(BRAND_INFO.decora.location, 'decora')}
-                        className="inline-flex items-center space-x-1 text-[10px] font-mono text-mid-grey hover:text-white transition-colors cursor-pointer px-2 py-0.5 bg-charcoal border border-graphite rounded-sm"
-                      >
-                        {copiedDecoraLocation ? (
-                          <>
-                            <Check className="w-3 h-3 text-white" />
-                            <span className="text-white font-semibold">COPIED</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-3 h-3" />
-                            <span>COPY LOCATION</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
+                      Location
+                    </span>
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.decora.location}
                     </p>
