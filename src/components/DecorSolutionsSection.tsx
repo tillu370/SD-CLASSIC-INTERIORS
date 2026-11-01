@@ -99,7 +99,7 @@ export const DecorSolutionsSection: React.FC = () => {
                 <div className={`relative overflow-hidden ${idx === DECORA_COLLECTIONS.length - 1 ? 'aspect-[2/1] sm:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt=""
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     loading="lazy"
                   />

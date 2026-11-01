@@ -91,7 +91,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
     {/* Photograph — primary visual focus */}
     <img
       src={cat.photoUrl}
-      alt={cat.title}
+      alt=""
       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none group-hover:scale-[1.03]"
       loading="lazy"
     />

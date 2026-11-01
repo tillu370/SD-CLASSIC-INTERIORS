@@ -242,7 +242,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
       {/* Background photograph — primary focus */}
       <img
         src={service.image}
-        alt={service.title}
+        alt=""
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none group-hover:scale-[1.03]"
         loading="lazy"
       />
