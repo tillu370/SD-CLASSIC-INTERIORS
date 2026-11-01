@@ -1,4 +1,5 @@
 import React from 'react';
+import { Download, FileText } from 'lucide-react';
 import { Reveal } from './ui/Reveal';
 
 interface ProcessStep {
@@ -75,6 +76,32 @@ export const ProcessSection: React.FC = () => {
             </li>
           ))}
         </ol>
+
+        <Reveal className="mt-6 sm:mt-10">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 sm:p-6 border border-[#D9D9D5] bg-white">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 shrink-0 border border-[#D9D9D5] bg-[#F4F4F2] flex items-center justify-center text-[#111111]">
+                <FileText className="w-4 h-4" strokeWidth={1.6} />
+              </div>
+              <div>
+                <h4 className="text-sm sm:text-base font-serif text-[#111111]">
+                  Project Process &amp; Client Information Guide
+                </h4>
+                <p className="text-[11px] sm:text-xs font-sans text-[#777777]">
+                  A detailed walkthrough of how we work, from first call to handover.
+                </p>
+              </div>
+            </div>
+            <a
+              href="/downloads/SD-Classic-Project-Process-Client-Guide.docx"
+              download="SD Classic Interiors - Project Process & Client Guide.docx"
+              className="shrink-0 inline-flex items-center justify-center space-x-2 px-5 py-3 border border-[#111111] text-[#111111] text-xs font-sans tracking-[0.15em] uppercase hover:bg-[#111111] hover:text-white transition-colors"
+            >
+              <Download className="w-3.5 h-3.5" strokeWidth={1.6} />
+              <span>Download Guide</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
