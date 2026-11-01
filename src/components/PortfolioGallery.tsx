@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { PROJECTS } from '../data/projectsData';
 
@@ -98,34 +98,10 @@ export const PortfolioGallery: React.FC = () => {
     ...CAROUSEL_PROJECTS,
   ];
 
-  // Three copies back-to-back so the strip can be scrolled indefinitely in
-  // either direction; once the scroll position drifts into the first or
-  // third copy, it's silently re-centred into the middle copy.
-  const loopSlides = [...slides, ...slides, ...slides];
-
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-
-    const setWidth = () => el.scrollWidth / 3;
-
-    // Start centred in the middle copy.
-    el.scrollLeft = setWidth();
-
-    const onScroll = () => {
-      const width = setWidth();
-      if (el.scrollLeft < width * 0.5) {
-        el.scrollLeft += width;
-      } else if (el.scrollLeft > width * 1.5) {
-        el.scrollLeft -= width;
-      }
-    };
-
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, [slides.length]);
+  // Exactly two copies back-to-back: the marquee animation translates the
+  // strip by -50% (one full copy's width) then jumps back to 0%, which
+  // reads as a seamless, automatic, never-ending loop.
+  const loopSlides = [...slides, ...slides];
 
   return (
     <section
@@ -176,17 +152,14 @@ export const PortfolioGallery: React.FC = () => {
         </div>
       </div>
 
-      {/* Normal horizontally-scrollable gallery strip — loops infinitely */}
-      <div
-        ref={scrollerRef}
-        className="relative z-10 w-full overflow-x-auto overscroll-x-contain snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-      >
-        <div className="flex gap-3 sm:gap-5 px-6 sm:px-10 pb-2">
+      {/* Automatic, infinitely-looping gallery marquee (pauses on hover) */}
+      <div className="relative z-10 w-full overflow-hidden">
+        <div className="animate-infinite-marquee gap-3 sm:gap-5 px-6 sm:px-10 pb-2" style={{ animationDuration: '60s' }}>
           {loopSlides.map((slide, i) => (
             <button
               key={`${slide.id}-${i}`}
               onClick={() => setLightboxProject(slide)}
-              className="group relative shrink-0 snap-start w-[240px] sm:w-[340px] lg:w-[380px] aspect-[4/5] overflow-hidden bg-[#111111] border border-graphite/40 hover:border-white/40 transition-colors text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group relative shrink-0 w-[240px] sm:w-[340px] lg:w-[380px] aspect-[4/5] overflow-hidden bg-[#111111] border border-graphite/40 hover:border-white/40 transition-colors text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label={`View ${slide.title}`}
             >
               <img
