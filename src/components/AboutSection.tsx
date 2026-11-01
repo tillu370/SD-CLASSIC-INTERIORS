@@ -250,7 +250,11 @@ export const AboutSection: React.FC = () => {
               Thoughtfully designed spaces. Carefully selected materials. Exceptional attention to detail.
             </p>
             <a
-              href="#contact"
+              href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+                'Hello SD Classic Interiors, I would like to discuss my project.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
             >
               <span>Discuss Your Project</span>

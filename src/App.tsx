@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ProjectsPage } from './components/ProjectsPages';
 import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
+import { openWhatsAppEnquiry } from './data/websiteData';
 
 export const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState(() => parseHash(window.location.hash).name === 'home');
@@ -30,25 +31,20 @@ export const App: React.FC = () => {
     if (el) requestAnimationFrame(() => el.scrollIntoView());
   }, [route.name]);
 
-  const scrollToContact = () => {
-    const el = document.getElementById('contact');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.hash = '#contact';
-    }
-  };
-
   const handleSelectCategory = (categoryId: string) => {
     window.location.hash = categoryPath(categoryId);
   };
 
-  const handleEnquireService = () => {
-    scrollToContact();
+  const handleOpenConsultation = () => {
+    openWhatsAppEnquiry('Hello SD Classic Interiors, I would like to book a consultation.');
   };
 
-  const handleSelectOffer = () => {
-    scrollToContact();
+  const handleEnquireService = (serviceName: string) => {
+    openWhatsAppEnquiry(`Hello SD Classic Interiors, I am interested in enquiry for: ${serviceName}.`);
+  };
+
+  const handleSelectOffer = (offerKey: string) => {
+    openWhatsAppEnquiry(`Hello SD Classic Interiors, I am interested in the ${offerKey}.`);
   };
 
   const handleExploreWork = () => {
@@ -66,7 +62,7 @@ export const App: React.FC = () => {
       )}
 
       {/* Global Navigation */}
-      <Navbar onOpenQuote={scrollToContact} onProjectsPage={route.name !== 'home'} />
+      <Navbar onOpenQuote={handleOpenConsultation} onProjectsPage={route.name !== 'home'} />
 
       {route.name !== 'home' ? (
         <main>
@@ -76,7 +72,7 @@ export const App: React.FC = () => {
       <main>
         {/* 01. Hero Section */}
         <HeroSection
-          onOpenConsultation={scrollToContact}
+          onOpenConsultation={handleOpenConsultation}
           onExploreWork={handleExploreWork}
         />
 

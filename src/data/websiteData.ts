@@ -86,6 +86,12 @@ export const BRAND_INFO = {
   }
 };
 
+// Opens WhatsApp with a pre-filled enquiry message instead of routing to the Contact section.
+export const openWhatsAppEnquiry = (message: string) => {
+  const url = `${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 export const PROJECT_CATEGORIES: ProjectCategory[] = [
   {
     id: "residential",

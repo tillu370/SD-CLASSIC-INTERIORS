@@ -6,6 +6,7 @@ interface DecorCollection {
   title: string;
   description: string;
   image: string;
+  badge?: string;
 }
 
 const DECORA_COLLECTIONS: DecorCollection[] = [
@@ -13,6 +14,7 @@ const DECORA_COLLECTIONS: DecorCollection[] = [
     title: "Wallpapers & Custom Wallpapers",
     description: "Give your walls a distinctive identity with an extensive selection of wallpaper designs, textures and patterns. Explore ready designs and customized creations that bring your ideas to life.",
     image: "/images/services/detail_3d_wallpapers.jpg",
+    badge: "Most Requested",
   },
   {
     title: "Window Blinds",
@@ -94,7 +96,11 @@ export const DecorSolutionsSection: React.FC = () => {
             {DECORA_COLLECTIONS.map((item, idx) => (
               <div
                 key={item.title}
-                className="group relative bg-[#0c0c0c] border border-white/10 shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 transition-all duration-400 hover:border-white/30 hover:shadow-md hover:-translate-y-1"
+                className={`group relative bg-[#0c0c0c] shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 transition-all duration-400 hover:shadow-md hover:-translate-y-1 ${
+                  item.badge
+                    ? 'border-2 border-[#B8A98C] shadow-[0_0_0_1px_rgba(184,169,140,0.25)]'
+                    : 'border border-white/10 hover:border-white/30'
+                }`}
               >
                 <div className={`relative overflow-hidden ${idx === DECORA_COLLECTIONS.length - 1 ? 'aspect-[2/1] sm:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                   <img
@@ -104,6 +110,11 @@ export const DecorSolutionsSection: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                  {item.badge && (
+                    <span className="absolute top-2 left-2 sm:top-3 sm:left-3 inline-flex items-center px-2 py-1 sm:px-2.5 sm:py-1 bg-[#B8A98C] text-[#111111] text-[9px] sm:text-[10px] font-sans font-bold tracking-[0.12em] uppercase rounded-sm">
+                      {item.badge}
+                    </span>
+                  )}
                   <h4 className="absolute bottom-2 left-3 right-3 sm:bottom-3 sm:left-4 sm:right-4 text-white text-[13px] sm:text-base font-serif leading-snug">
                     {item.title}
                   </h4>

@@ -11,6 +11,7 @@ import {
 } from '../data/projectsData';
 import { INSPIRATION } from '../data/inspirationData';
 import { categoryPath, projectPath, type Route } from '../lib/useHashRoute';
+import { BRAND_INFO } from '../data/websiteData';
 
 const thumbOf = (cover: string) => (cover.endsWith('.webp') ? cover.replace('.webp', '-t.webp') : cover);
 
@@ -188,7 +189,11 @@ const InspirationView: React.FC<{ page: CategoryPage }> = ({ page }) => {
           similar spaces, not completed SD Classic projects. Our own work for this category is being added.
         </p>
         <a
-          href="#contact"
+          href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+            'Hello SD Classic Interiors, I would like to discuss my space.'
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`shrink-0 inline-flex items-center space-x-2 px-5 min-h-[44px] border border-[#D5D2CC]/60 text-xs font-sans tracking-[0.16em] uppercase hover:border-[#D5D2CC] hover:bg-white/5 transition-colors ${focusRing}`}
         >
           <span>Discuss Your Space</span>
@@ -298,7 +303,11 @@ const CategoryView: React.FC<{ page: CategoryPage }> = ({ page }) => {
             We are preparing this collection. In the meantime, tell us about your space and we will share relevant work.
           </p>
           <a
-            href="#contact"
+            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+              'Hello SD Classic Interiors, I would like to discuss my project.'
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`inline-flex items-center space-x-2 px-7 min-h-[44px] border border-[#D5D2CC]/60 text-xs font-sans tracking-[0.2em] uppercase hover:border-[#D5D2CC] hover:bg-white/5 transition-colors ${focusRing}`}
           >
             <span>Discuss Your Project</span>
