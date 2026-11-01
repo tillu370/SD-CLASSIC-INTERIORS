@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
-import { TiltedGridHero } from '@/components/ui/tilted-grid-hero';
 import { PROJECTS } from '../data/projectsData';
 
 interface CarouselSlide {
@@ -88,61 +87,21 @@ const CAROUSEL_PROJECTS: CarouselSlide[] = [
 export const PortfolioGallery: React.FC = () => {
   const [lightboxProject, setLightboxProject] = useState<CarouselSlide | null>(null);
 
-  // The 3D cylindrical band needs a wider-than-tall container to read well;
-  // on narrow phone viewports it collapses into a thin sliver with a large
-  // empty gap, so it gets shorter, flatter geometry there instead.
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 639px)');
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, []);
-
-  const images = [
-    ...PROJECTS.map((p) => ({ src: p.cover, alt: `${p.title} – 3D render` })),
-    ...CAROUSEL_PROJECTS.map((p) => ({ src: p.image, alt: p.title })),
+  const slides: CarouselSlide[] = [
+    ...PROJECTS.map((p) => ({
+      id: p.slug,
+      title: p.title,
+      category: p.location,
+      image: p.cover,
+      description: `A completed residential project in ${p.location}.`,
+    })),
+    ...CAROUSEL_PROJECTS,
   ];
-
-  const header = (
-        <div className="relative z-10 w-full pt-14 pb-8 sm:pt-24 sm:pb-0 px-6 sm:px-10 pointer-events-auto text-center">
-          <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
-            {/* Eyebrow: —— OUR PROJECTS —— */}
-            <div className="flex items-center justify-center space-x-3 mb-3">
-              <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
-              <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
-                OUR PROJECTS
-              </span>
-              <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
-            </div>
-
-            {/* Headline: Spaces We’ve Transformed */}
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-[0.02em] text-white leading-tight mb-3">
-              Spaces We’ve Transformed
-            </h2>
-
-            {/* Subtitle */}
-            <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-xl mx-auto mb-4">
-              A glimpse of our recent residential and commercial projects.
-            </p>
-
-            {/* View All Projects Action */}
-            <a
-              href="#/projects/residential"
-              className="inline-flex items-center space-x-2 min-h-[44px] text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white"
-            >
-              <span>VIEW ALL PROJECTS</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-        </div>
-  );
 
   return (
     <section
       id="portfolio"
-      className="relative w-full sm:min-h-screen bg-pure-black text-white overflow-hidden border-t border-graphite/40 flex flex-col justify-center pb-12 sm:py-0"
+      className="relative w-full bg-pure-black text-white overflow-hidden border-t border-graphite/40 py-14 sm:py-24"
       aria-label="Our Projects - Spaces We've Transformed"
     >
       {/* Background Architectural Grid Pattern */}
@@ -156,25 +115,67 @@ export const PortfolioGallery: React.FC = () => {
         07
       </div>
 
-      {isMobile && header}
+      <div className="relative z-10 w-full px-6 sm:px-10 text-center mb-8 sm:mb-14">
+        <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
+          {/* Eyebrow: —— OUR PROJECTS —— */}
+          <div className="flex items-center justify-center space-x-3 mb-3">
+            <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
+            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
+              OUR PROJECTS
+            </span>
+            <div className="w-8 sm:w-12 h-[1px] bg-white/40" />
+          </div>
 
-      {/* Tilted 3D Cylindrical Grid Hero */}
-      <TiltedGridHero
-        images={images}
-        speed={isMobile ? 5.5 : 7.5}
-        tileHeight={isMobile ? 64 : 42}
-        aspectRatio={isMobile ? 4 / 3 : 16 / 10}
-        gap={6}
-        axis={isMobile ? 48 : 58}
-        curve={isMobile ? 45 : 80}
-        fade={isMobile ? 6 : 12}
-        className="relative w-full h-[290px] sm:h-screen sm:min-h-[700px] flex flex-col justify-between"
-      >
-        {!isMobile && header}
+          {/* Headline: Spaces We’ve Transformed */}
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-[0.02em] text-white leading-tight mb-3">
+            Spaces We’ve Transformed
+          </h2>
 
-        {/* Bottom Clean Vignette Spacer */}
-        <div className="relative z-10 pb-8 sm:pb-12 text-center pointer-events-none" />
-      </TiltedGridHero>
+          {/* Subtitle */}
+          <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-xl mx-auto mb-4">
+            A glimpse of our recent residential and commercial projects.
+          </p>
+
+          {/* View All Projects Action */}
+          <a
+            href="#/projects/residential"
+            className="inline-flex items-center space-x-2 min-h-[44px] text-xs font-mono font-medium tracking-[0.2em] uppercase text-light-grey hover:text-white transition-colors underline underline-offset-4 decoration-white/40 hover:decoration-white"
+          >
+            <span>VIEW ALL PROJECTS</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </div>
+
+      {/* Normal horizontally-scrollable gallery strip */}
+      <div className="relative z-10 w-full overflow-x-auto overscroll-x-contain snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-3 sm:gap-5 px-6 sm:px-10 pb-2">
+          {slides.map((slide) => (
+            <button
+              key={slide.id}
+              onClick={() => setLightboxProject(slide)}
+              className="group relative shrink-0 snap-start w-[240px] sm:w-[340px] lg:w-[380px] aspect-[4/5] overflow-hidden bg-[#111111] border border-graphite/40 hover:border-white/40 transition-colors text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              aria-label={`View ${slide.title}`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                loading="lazy"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-light-grey/80 block mb-1">
+                  {slide.category}
+                </span>
+                <h3 className="text-sm sm:text-base font-serif text-white leading-snug line-clamp-2">
+                  {slide.title}
+                </h3>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Lightbox Modal (for viewing full images) */}
       {lightboxProject && (
