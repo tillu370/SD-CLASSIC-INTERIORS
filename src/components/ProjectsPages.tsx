@@ -4,6 +4,8 @@ import { Reveal } from './ui/Reveal';
 import {
   CATEGORY_PAGES,
   PROJECTS,
+  galleryFull,
+  galleryThumb,
   renderSrc,
   renderThumb,
   type CategoryPage,
@@ -268,6 +270,54 @@ const InspirationView: React.FC<{ page: CategoryPage }> = ({ page }) => {
   );
 };
 
+// ─── Photo gallery (category showcase photos) ─────────────────────
+const PhotoGalleryView: React.FC<{ page: CategoryPage }> = ({ page }) => {
+  const count = page.galleryImages ?? 0;
+  const [lightbox, setLightbox] = useState<number | null>(null);
+  const nums = Array.from({ length: count }, (_, i) => i + 1);
+
+  if (count === 0) return null;
+
+  return (
+    <>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4">
+        {nums.map((n, i) => (
+          <button
+            key={n}
+            onClick={() => setLightbox(i)}
+            className={`group relative block overflow-hidden bg-black border border-[#292929] hover:border-[#D5D2CC]/50 transition-colors text-left ${focusRing}`}
+            aria-label={`Open ${page.title} photo ${n}`}
+          >
+            <img
+              src={galleryThumb(page.id, n)}
+              alt={`${page.title} – project photo ${n}`}
+              className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.04] motion-reduce:transition-none"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+        ))}
+      </div>
+
+      {lightbox !== null && (
+        <Lightbox
+          label={page.title}
+          items={nums.map((n) => ({
+            src: galleryFull(page.id, n),
+            alt: `${page.title} – project photo ${n}`,
+            caption: `${page.title} · ${n} of ${count}`,
+            w: 1448,
+            h: 1086,
+          }))}
+          index={lightbox}
+          onIndex={setLightbox}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </>
+  );
+};
+
 // ─── Category page (list of projects) ────────────────────────────
 const CategoryView: React.FC<{ page: CategoryPage }> = ({ page }) => {
   const projects = page.projectSlugs
@@ -294,7 +344,9 @@ const CategoryView: React.FC<{ page: CategoryPage }> = ({ page }) => {
         <p className="text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7]">{page.description}</p>
       </Reveal>
 
-      {projects.length === 0 && page.inspiration ? (
+      {page.galleryImages ? (
+        <PhotoGalleryView page={page} />
+      ) : projects.length === 0 && page.inspiration ? (
         <InspirationView page={page} />
       ) : projects.length === 0 ? (
         <div className="border border-[#292929] bg-[#0c0c0c] p-8 sm:p-12 text-center">

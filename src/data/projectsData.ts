@@ -33,7 +33,13 @@ export interface CategoryPage {
   sections: Array<'renders' | 'walkthrough' | 'completed'>;
   projectSlugs: string[];
   inspiration?: boolean;
+  galleryImages?: number;
 }
+
+export const galleryFull = (categoryId: string, n: number) =>
+  `/images/project-type/${categoryId}/${String(n).padStart(2, '0')}.webp`;
+export const galleryThumb = (categoryId: string, n: number) =>
+  `/images/project-type/${categoryId}/${String(n).padStart(2, '0')}-t.webp`;
 
 const PROJECT_META: Array<{ slug: string; title: string; location: string }> = [
   { slug: 'parawada-2bhk', title: 'Parawada 2BHK Residence', location: 'Parawada' },
@@ -92,24 +98,25 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
       'Realistic 3D renders and walkthroughs that let you experience a space before execution begins.',
     sections: ['renders', 'walkthrough'],
     projectSlugs: ALL_SLUGS,
+    galleryImages: 5,
   },
   commercial: {
     id: 'commercial',
-    inspiration: true,
     title: 'Commercial Interior Projects',
     eyebrow: 'Our Projects',
     description: 'Professional, functional interiors for offices and commercial spaces.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
+    galleryImages: 5,
   },
   turnkey: {
     id: 'turnkey',
-    inspiration: true,
     title: 'Turnkey Projects',
     eyebrow: 'Our Projects',
     description: 'Complete interiors managed under one roof, from design to handover.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
+    galleryImages: 5,
   },
   renovation: {
     id: 'renovation',
@@ -118,6 +125,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Existing spaces redesigned with improved layouts and upgraded finishes.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
+    galleryImages: 5,
   },
   civil: {
     id: 'civil',
@@ -126,5 +134,6 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Civil work coordinated alongside interior and renovation projects.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
+    galleryImages: 3,
   },
 };
