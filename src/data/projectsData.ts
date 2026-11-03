@@ -136,4 +136,14 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     projectSlugs: [],
     galleryImages: 3,
   },
+  decora: {
+    id: 'decora',
+    title: 'DECORA Collections',
+    eyebrow: 'DECORA · The Art of Beautiful Details',
+    description:
+      'Wallpapers, window treatments, flooring and decorative finishes from our DECORA showroom.',
+    sections: ['renders', 'walkthrough', 'completed'],
+    projectSlugs: [],
+    galleryImages: 23,
+  },
 };

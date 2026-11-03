@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
+import { categoryPath } from '../lib/useHashRoute';
 
 interface DecorCollection {
   title: string;
@@ -90,6 +91,13 @@ export const DecorSolutionsSection: React.FC = () => {
               EXPLORE THE DECORA COLLECTION
             </h3>
             <div className="flex-1 h-[1px] bg-white/10" />
+            <a
+              href={categoryPath('decora')}
+              className="shrink-0 inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-mono tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors whitespace-nowrap"
+            >
+              <span>View Full Gallery</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
