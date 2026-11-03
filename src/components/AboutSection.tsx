@@ -121,12 +121,6 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
           <Reveal>
             <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
-              <span
-                className="absolute -top-4 right-4 text-[5rem] sm:text-[9rem] font-serif font-light text-black/[0.04] select-none pointer-events-none leading-none"
-                aria-hidden="true"
-              >
-                01
-              </span>
               <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Vision
               </span>
@@ -141,12 +135,6 @@ export const AboutSection: React.FC = () => {
 
           <Reveal delay={0.1}>
             <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
-              <span
-                className="absolute -top-4 right-4 text-[5rem] sm:text-[9rem] font-serif font-light text-black/[0.04] select-none pointer-events-none leading-none"
-                aria-hidden="true"
-              >
-                02
-              </span>
               <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Mission
               </span>

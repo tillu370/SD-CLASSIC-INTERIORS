@@ -43,9 +43,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-black/40 pointer-events-none" />
       </div>
 
-      {/* Far Left Architectural Margin Indicator: 01 and vertical line */}
+      {/* Far Left Architectural Margin Indicator: vertical line */}
       <div className="hidden lg:flex absolute left-6 xl:left-10 top-1/2 -translate-y-1/2 z-20 flex-col items-center pointer-events-none">
-        <span className="text-[11px] font-mono tracking-widest text-light-grey mb-3">01</span>
         <div className="w-[1px] h-24 bg-gradient-to-b from-white/40 via-white/20 to-transparent" />
       </div>
 

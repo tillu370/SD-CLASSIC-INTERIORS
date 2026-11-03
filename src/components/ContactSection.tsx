@@ -112,13 +112,6 @@ export const ContactSection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
         </div>
 
-        {/* Ambient Division Watermark */}
-        <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
-          aria-hidden="true"
-        >
-          01
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
@@ -276,13 +269,6 @@ export const ContactSection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
         </div>
 
-        {/* Ambient Division Watermark */}
-        <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
-          aria-hidden="true"
-        >
-          02
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
@@ -449,13 +435,6 @@ export const ContactSection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
         </div>
 
-        {/* Ambient Division Watermark */}
-        <div 
-          className="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 hidden sm:block sm:text-[14rem] font-serif text-white/[0.06] select-none pointer-events-none font-bold"
-          aria-hidden="true"
-        >
-          03
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">

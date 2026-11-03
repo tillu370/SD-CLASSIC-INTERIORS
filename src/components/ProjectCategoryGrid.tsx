@@ -141,11 +141,6 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
       {/* Background Subtle Architectural Grid */}
       <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
-      {/* Large decorative section number — strictly background, never competes with heading */}
-      <div className="absolute top-8 right-6 sm:top-10 sm:right-12 text-7xl sm:text-9xl lg:text-[11rem] font-serif font-light text-white/[0.05] select-none pointer-events-none leading-none">
-        03
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
         <div className="text-center max-w-2xl mx-auto mb-7 sm:mb-20">

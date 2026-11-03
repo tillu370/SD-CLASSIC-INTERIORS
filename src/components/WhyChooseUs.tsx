@@ -11,10 +11,6 @@ export const WhyChooseUs: React.FC = () => {
       {/* Background Subtle Architectural Grid */}
       <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
-      {/* Large Watermark '06' in Top-Right Corner */}
-      <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-white/[0.04] select-none pointer-events-none leading-none">
-        06
-      </div>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Header matching reference */}

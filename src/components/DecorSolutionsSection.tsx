@@ -58,10 +58,6 @@ export const DecorSolutionsSection: React.FC = () => {
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
-      {/* Watermark */}
-      <div className="absolute top-8 right-8 sm:top-12 sm:right-16 text-6xl sm:text-8xl lg:text-9xl font-serif font-light text-white/[0.05] select-none pointer-events-none leading-none">
-        05
-      </div>
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}

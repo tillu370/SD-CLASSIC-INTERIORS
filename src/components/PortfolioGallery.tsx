@@ -98,13 +98,6 @@ export const PortfolioGallery: React.FC = () => {
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
 
-      {/* Ambient Watermark '07' */}
-      <div
-        className="absolute top-10 right-8 sm:right-16 text-8xl sm:text-[14rem] font-serif font-light text-white/[0.03] select-none pointer-events-none leading-none font-bold"
-        aria-hidden="true"
-      >
-        07
-      </div>
 
       <div className="relative z-10 w-full px-6 sm:px-10 text-center mb-8 sm:mb-14">
         <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
