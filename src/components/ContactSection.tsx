@@ -104,12 +104,13 @@ export const ContactSection: React.FC = () => {
           <img
             src="/images/divisions/division_residential.jpg"
             alt="SD Classic Interiors - Residential Living Showroom"
-            className="w-full h-full object-cover filter brightness-[0.78] contrast-[1.08]"
+            className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]"
             loading="lazy"
           />
           {/* Subtle directional gradient: dark on left for text readability, open and visible on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-pure-black via-pure-black/85 via-45% to-pure-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
+          <div className="absolute inset-0 bg-pure-black/40 lg:hidden" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-pure-black/80 via-pure-black/50 via-45% to-pure-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-pure-black/55 via-transparent to-pure-black/30" />
         </div>
 
 
@@ -261,12 +262,13 @@ export const ContactSection: React.FC = () => {
           <img
             src="/images/divisions/division_commercial.jpg"
             alt="SD Constructions & Infra - Commercial Architecture"
-            className="w-full h-full object-cover filter brightness-[0.78] contrast-[1.08]"
+            className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]"
             loading="lazy"
           />
           {/* Subtle directional gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-pure-black via-pure-black/85 via-45% to-pure-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
+          <div className="absolute inset-0 bg-pure-black/40 lg:hidden" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-pure-black/80 via-pure-black/50 via-45% to-pure-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-pure-black/55 via-transparent to-pure-black/30" />
         </div>
 
 
@@ -427,12 +429,13 @@ export const ContactSection: React.FC = () => {
           <img
             src="/images/divisions/division_decora.jpg"
             alt="DECORA - Wall, Window, Floor & Decor Showroom"
-            className="w-full h-full object-cover filter brightness-[0.78] contrast-[1.08]"
+            className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]"
             loading="lazy"
           />
           {/* Subtle directional gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-pure-black via-pure-black/85 via-45% to-pure-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-pure-black/60" />
+          <div className="absolute inset-0 bg-pure-black/40 lg:hidden" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-pure-black/80 via-pure-black/50 via-45% to-pure-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-pure-black/55 via-transparent to-pure-black/30" />
         </div>
 
 
