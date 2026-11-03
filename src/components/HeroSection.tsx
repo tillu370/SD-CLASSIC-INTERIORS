@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative min-h-[64vh] sm:min-h-screen w-full flex items-center overflow-hidden bg-[#080808]"
+      className="relative h-[100svh] sm:min-h-screen w-full flex items-center overflow-hidden bg-[#080808]"
       aria-label="Hero Section"
     >
       {/* Background Architectural Living Room Image with Diagonal Window Light */}
@@ -57,7 +57,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Hero Content Container - Positioned to the Left matching user reference image */}
-      <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-24 pb-10 flex items-center min-h-[60svh] sm:min-h-[85svh] lg:min-h-screen">
+      <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-20 sm:pt-24 pb-8 sm:pb-10 flex items-center">
         <div className="max-w-xl lg:max-w-2xl text-left">
           {/* Eyebrow: INTERIORS · DESIGN · EXECUTION */}
           <motion.div
