@@ -2,11 +2,12 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 import { categoryPath } from '../lib/useHashRoute';
+import { galleryThumb } from '../data/projectsData';
 
 interface DecorCollection {
   title: string;
   description: string;
-  image: string;
+  categoryId: string;
   badge?: string;
 }
 
@@ -14,28 +15,28 @@ const DECORA_COLLECTIONS: DecorCollection[] = [
   {
     title: "Wallpapers & Custom Wallpapers",
     description: "Give your walls a distinctive identity with an extensive selection of wallpaper designs, textures and patterns. Explore ready designs and customized creations that bring your ideas to life.",
-    image: "/images/services/detail_3d_wallpapers.jpg",
+    categoryId: "decora-wallpapers",
     badge: "Most Requested",
   },
   {
     title: "Window Blinds",
     description: "Create the perfect balance of light, privacy and style with window blinds designed to complement your interiors.",
-    image: "/images/services/detail_window_blinds.jpg",
+    categoryId: "decora-blinds",
   },
   {
     title: "Curtains & Fabrics",
     description: "Bring softness, elegance and warmth to your spaces with carefully selected curtain fabrics, colours and styles.",
-    image: "/images/services/detail_custom_curtains.jpg",
+    categoryId: "decora-curtains",
   },
   {
     title: "Flooring Solutions",
     description: "Set the foundation for beautiful interiors with flooring options that combine design, durability and everyday practicality. Explore vinyl, PVC, wooden and SPC flooring.",
-    image: "/images/services/detail_wooden_flooring.jpg",
+    categoryId: "decora-flooring",
   },
   {
     title: "Decorative Solutions",
     description: "Add the finishing touches that make a space feel complete. Discover decorative elements and finishes that enhance the overall character of your interiors.",
-    image: "/images/projects/carousel_foyer_credenza.jpg",
+    categoryId: "decora-decorative",
   },
 ];
 
@@ -102,9 +103,11 @@ export const DecorSolutionsSection: React.FC = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
             {DECORA_COLLECTIONS.map((item, idx) => (
-              <div
+              <a
                 key={item.title}
-                className={`group relative bg-[#0c0c0c] shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 transition-all duration-400 hover:shadow-md hover:-translate-y-1 ${
+                href={categoryPath(item.categoryId)}
+                aria-label={`Open ${item.title} in the DECORA gallery`}
+                className={`group relative block bg-[#0c0c0c] shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 cursor-pointer transition-all duration-400 hover:shadow-md hover:-translate-y-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] ${
                   item.badge
                     ? 'border-2 border-[#B8A98C] shadow-[0_0_0_1px_rgba(184,169,140,0.25)]'
                     : 'border border-white/10 hover:border-white/30'
@@ -112,7 +115,7 @@ export const DecorSolutionsSection: React.FC = () => {
               >
                 <div className={`relative overflow-hidden ${idx === DECORA_COLLECTIONS.length - 1 ? 'aspect-[2/1] sm:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                   <img
-                    src={item.image}
+                    src={galleryThumb(item.categoryId, 1)}
                     alt=""
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     loading="lazy"
@@ -130,7 +133,7 @@ export const DecorSolutionsSection: React.FC = () => {
                 <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
                   {item.description}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
