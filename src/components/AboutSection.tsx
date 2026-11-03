@@ -47,8 +47,8 @@ export const AboutSection: React.FC = () => {
             className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[#E8E6E1] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
           >
             <img
-              src="/images/projects/about_armchair_exact.jpg"
-              alt="Contemporary armchair in a fluted, warmly lit living room designed by SD Classic Interiors"
+              src="/images/brand/about_logo_plaque.webp"
+              alt="SD Classic Interiors gold monogram and wordmark on a dark wall, Imagine Every Inch"
               className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.06]"
               loading="lazy"
             />
