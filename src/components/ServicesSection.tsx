@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, X, CheckCircle2, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { ArrowRight, X, CheckCircle2, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
 
 interface ServicesSectionProps {
@@ -196,13 +196,41 @@ const SERVICE_ITEMS: ServiceCardDetail[] = [
   }
 ];
 
+const serviceGallery = (service: ServiceCardDetail): string[] => [
+  service.image,
+  `/images/services/gallery/${service.id}/02.jpg`,
+  `/images/services/gallery/${service.id}/03.jpg`,
+  `/images/services/gallery/${service.id}/04.jpg`,
+  `/images/services/gallery/${service.id}/05.jpg`,
+];
+
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireService }) => {
   const [activeModalService, setActiveModalService] = useState<ServiceCardDetail | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const gallery = activeModalService ? serviceGallery(activeModalService) : [];
+
+  const goLightbox = useCallback(
+    (delta: number) => {
+      setLightboxIndex((i) => (i === null ? null : (i + delta + gallery.length) % gallery.length));
+    },
+    [gallery.length]
+  );
 
   useEffect(() => {
     if (!activeModalService) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setActiveModalService(null);
+      if (e.key === 'Escape') {
+        if (lightboxIndex !== null) {
+          setLightboxIndex(null);
+        } else {
+          setActiveModalService(null);
+        }
+      }
+      if (lightboxIndex !== null) {
+        if (e.key === 'ArrowRight') goLightbox(1);
+        if (e.key === 'ArrowLeft') goLightbox(-1);
+      }
     };
     document.addEventListener('keydown', onKey);
     const prev = document.body.style.overflow;
@@ -211,7 +239,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = prev;
     };
-  }, [activeModalService]);
+  }, [activeModalService, lightboxIndex, goLightbox]);
+
+  const openModal = (service: ServiceCardDetail) => {
+    setActiveModalService(service);
+    setLightboxIndex(0);
+  };
+
+  const closeModal = () => {
+    setActiveModalService(null);
+    setLightboxIndex(null);
+  };
 
   // Group services by discipline in catalogue order, preserving first-seen group order
   const groups: { name: string; items: ServiceCardDetail[] }[] = [];
@@ -227,13 +265,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
   const renderCard = (service: ServiceCardDetail) => (
     <div
       key={service.id}
-      onClick={() => setActiveModalService(service)}
+      onClick={() => openModal(service)}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          setActiveModalService(service);
+          openModal(service);
         }
       }}
       aria-label={`View ${service.title}`}
@@ -331,7 +369,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
       {activeModalService && (
         <div
           className="fixed inset-0 z-50 bg-pure-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
-          onClick={() => setActiveModalService(null)}
+          onClick={closeModal}
           role="dialog"
           aria-modal="true"
         >
@@ -341,7 +379,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
           >
             {/* Close Button */}
             <button
-              onClick={() => setActiveModalService(null)}
+              onClick={closeModal}
               className="absolute top-3 right-3 z-10 w-11 h-11 bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
               aria-label="Close service details"
             >
@@ -349,13 +387,38 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
             </button>
 
             {/* Modal Image */}
-            <div className="relative aspect-[16/10] w-full bg-black overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setLightboxIndex(0)}
+              className="relative aspect-[16/10] w-full bg-black overflow-hidden block text-left"
+              aria-label={`Open ${activeModalService.title} photo gallery`}
+            >
               <img
-                src={activeModalService.image}
+                src={gallery[0]}
                 alt={activeModalService.title}
                 className="w-full h-full object-cover filter brightness-[0.88]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
+            </button>
+
+            {/* Gallery thumbnail strip — 5 photos per service */}
+            <div className="grid grid-cols-5 gap-[2px] bg-black">
+              {gallery.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  onClick={() => setLightboxIndex(i)}
+                  className="relative aspect-square overflow-hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                  aria-label={`View ${activeModalService.title} photo ${i + 1} of ${gallery.length}`}
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                  />
+                </button>
+              ))}
             </div>
 
             {/* Modal Content */}
@@ -387,7 +450,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
                 <button
                   onClick={() => {
                     const svc = activeModalService.title;
-                    setActiveModalService(null);
+                    closeModal();
                     onEnquireService(svc);
                   }}
                   className="flex-1 py-3.5 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold text-center hover:bg-light-grey hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-8px_rgba(255,255,255,0.25)] transition-all duration-300"
@@ -407,6 +470,65 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onEnquireServi
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Fullscreen photo gallery lightbox */}
+      {activeModalService && lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[60] bg-black/95 flex flex-col"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${activeModalService.title} gallery`}
+          onClick={() => setLightboxIndex(null)}
+        >
+          <div className="flex items-center justify-between px-4 sm:px-8 py-3" onClick={(e) => e.stopPropagation()}>
+            <span className="text-xs font-sans tracking-[0.18em] uppercase text-white/60">
+              {lightboxIndex + 1} / {gallery.length}
+            </span>
+            <button
+              onClick={() => setLightboxIndex(null)}
+              className="w-11 h-11 flex items-center justify-center border border-white/20 text-white hover:border-white transition-colors"
+              aria-label="Close gallery"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="relative flex-1 min-h-0 flex items-center justify-center px-2 sm:px-16">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightbox(-1);
+              }}
+              className="hidden sm:flex absolute left-4 w-11 h-11 items-center justify-center border border-white/20 bg-black/60 text-white hover:border-white transition-colors"
+              aria-label="Previous photo"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <img
+              key={gallery[lightboxIndex]}
+              src={gallery[lightboxIndex]}
+              alt={`${activeModalService.title} – photo ${lightboxIndex + 1}`}
+              className="max-h-full max-w-full object-contain select-none"
+              onClick={(e) => e.stopPropagation()}
+              draggable={false}
+            />
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightbox(1);
+              }}
+              className="hidden sm:flex absolute right-4 w-11 h-11 items-center justify-center border border-white/20 bg-black/60 text-white hover:border-white transition-colors"
+              aria-label="Next photo"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="px-4 sm:px-8 py-4 text-center" onClick={(e) => e.stopPropagation()}>
+            <p className="font-serif text-lg sm:text-xl text-white">{activeModalService.title}</p>
           </div>
         </div>
       )}
