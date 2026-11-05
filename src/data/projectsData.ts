@@ -134,7 +134,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Civil work coordinated alongside interior and renovation projects.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 3,
+    galleryImages: 5,
   },
   decora: {
     id: 'decora',
@@ -162,7 +162,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'The perfect balance of light, privacy and style, designed to complement your interiors.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 3,
+    galleryImages: 5,
   },
   'decora-curtains': {
     id: 'decora-curtains',
