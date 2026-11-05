@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, FileText } from 'lucide-react';
+import { Download, Eye, FileText } from 'lucide-react';
 import { Reveal } from './ui/Reveal';
 
 interface ProcessStep {
@@ -92,14 +92,23 @@ export const ProcessSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            <a
-              href="/downloads/SD-Classic-Project-Process-Client-Guide.docx"
-              download="SD Classic Interiors - Project Process & Client Guide.docx"
-              className="shrink-0 inline-flex items-center justify-center space-x-2 px-5 py-3 border border-[#111111] text-[#111111] text-xs font-sans tracking-[0.15em] uppercase hover:bg-[#111111] hover:text-white transition-colors"
-            >
-              <Download className="w-3.5 h-3.5" strokeWidth={1.6} />
-              <span>Download Guide</span>
-            </a>
+            <div className="shrink-0 flex flex-col xs:flex-row gap-2.5 w-full sm:w-auto">
+              <a
+                href="#/guide"
+                className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-[#111111] text-white text-xs font-sans tracking-[0.15em] uppercase border border-[#111111] hover:bg-transparent hover:text-[#111111] transition-colors"
+              >
+                <Eye className="w-3.5 h-3.5" strokeWidth={1.6} />
+                <span>View Guide</span>
+              </a>
+              <a
+                href="/downloads/SD-Classic-Project-Process-Client-Guide.docx"
+                download="SD Classic Interiors - Project Process & Client Guide.docx"
+                className="inline-flex items-center justify-center space-x-2 px-5 py-3 border border-[#111111] text-[#111111] text-xs font-sans tracking-[0.15em] uppercase hover:bg-[#111111] hover:text-white transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" strokeWidth={1.6} />
+                <span>Download Guide</span>
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>

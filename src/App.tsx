@@ -14,6 +14,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ProjectsPage } from './components/ProjectsPages';
+import { GuidePage } from './components/GuidePage';
 import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
 import { openWhatsAppEnquiry } from './data/websiteData';
 
@@ -64,7 +65,11 @@ export const App: React.FC = () => {
       {/* Global Navigation */}
       <Navbar onOpenQuote={handleOpenConsultation} onProjectsPage={route.name !== 'home'} />
 
-      {route.name !== 'home' ? (
+      {route.name === 'guide' ? (
+        <main>
+          <GuidePage />
+        </main>
+      ) : route.name !== 'home' ? (
         <main>
           <ProjectsPage route={route} />
         </main>

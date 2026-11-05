@@ -580,7 +580,7 @@ const ProjectView: React.FC<{ page: CategoryPage; project: ProjectItem }> = ({ p
 };
 
 // ─── Entry ───────────────────────────────────────────────────────
-export const ProjectsPage: React.FC<{ route: Exclude<Route, { name: 'home' }> }> = ({ route }) => {
+export const ProjectsPage: React.FC<{ route: Extract<Route, { name: 'category' | 'project' }> }> = ({ route }) => {
   const page = CATEGORY_PAGES[route.category];
   const project = route.name === 'project' ? PROJECTS.find((p) => p.slug === route.slug) : undefined;
 

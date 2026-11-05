@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 export type Route =
   | { name: 'home' }
   | { name: 'category'; category: string }
-  | { name: 'project'; category: string; slug: string };
+  | { name: 'project'; category: string; slug: string }
+  | { name: 'guide' };
 
 export function parseHash(hash: string): Route {
   const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean);
@@ -11,6 +12,7 @@ export function parseHash(hash: string): Route {
     if (parts[1] && parts[2]) return { name: 'project', category: parts[1], slug: parts[2] };
     if (parts[1]) return { name: 'category', category: parts[1] };
   }
+  if (hash.startsWith('#/') && parts[0] === 'guide') return { name: 'guide' };
   return { name: 'home' };
 }
 
