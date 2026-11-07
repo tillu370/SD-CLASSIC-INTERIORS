@@ -4,6 +4,7 @@ export type Route =
   | { name: 'home' }
   | { name: 'category'; category: string }
   | { name: 'project'; category: string; slug: string }
+  | { name: 'service'; id: string }
   | { name: 'guide' };
 
 export function parseHash(hash: string): Route {
@@ -11,6 +12,9 @@ export function parseHash(hash: string): Route {
   if (hash.startsWith('#/') && parts[0] === 'projects') {
     if (parts[1] && parts[2]) return { name: 'project', category: parts[1], slug: parts[2] };
     if (parts[1]) return { name: 'category', category: parts[1] };
+  }
+  if (hash.startsWith('#/') && parts[0] === 'services' && parts[1]) {
+    return { name: 'service', id: parts[1] };
   }
   if (hash.startsWith('#/') && parts[0] === 'guide') return { name: 'guide' };
   return { name: 'home' };
@@ -30,3 +34,4 @@ export function useHashRoute(): Route {
 
 export const categoryPath = (category: string) => `#/projects/${category}`;
 export const projectPath = (category: string, slug: string) => `#/projects/${category}/${slug}`;
+export const servicePath = (id: string) => `#/services/${id}`;

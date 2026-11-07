@@ -14,6 +14,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ProjectsPage } from './components/ProjectsPages';
+import { ServiceGalleryPage } from './components/ServiceGalleryPage';
 import { GuidePage } from './components/GuidePage';
 import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
 import { openWhatsAppEnquiry } from './data/websiteData';
@@ -69,6 +70,10 @@ export const App: React.FC = () => {
         <main>
           <GuidePage />
         </main>
+      ) : route.name === 'service' ? (
+        <main>
+          <ServiceGalleryPage route={route} onEnquireService={handleEnquireService} />
+        </main>
       ) : route.name !== 'home' ? (
         <main>
           <ProjectsPage route={route} />
@@ -94,7 +99,7 @@ export const App: React.FC = () => {
         <DecorSolutionsSection />
 
         {/* 06. Complete Brochure Services */}
-        <ServicesSection onEnquireService={handleEnquireService} />
+        <ServicesSection />
 
         {/* 07. Selected Work Portfolio Gallery with Lightbox */}
         <PortfolioGallery />

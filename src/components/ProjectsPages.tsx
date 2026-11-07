@@ -17,11 +17,11 @@ import { BRAND_INFO } from '../data/websiteData';
 
 const thumbOf = (cover: string) => (cover.endsWith('.webp') ? cover.replace('.webp', '-t.webp') : cover);
 
-const focusRing =
+export const focusRing =
   'focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]';
 
 // ─── Lightbox ────────────────────────────────────────────────────
-interface LightboxItem {
+export interface LightboxItem {
   src: string;
   alt: string;
   caption: string;
@@ -29,7 +29,7 @@ interface LightboxItem {
   h: number;
 }
 
-interface LightboxProps {
+export interface LightboxProps {
   label: string;
   items: LightboxItem[];
   index: number;
@@ -37,7 +37,7 @@ interface LightboxProps {
   onClose: () => void;
 }
 
-const Lightbox: React.FC<LightboxProps> = ({ label, items, index, onIndex, onClose }) => {
+export const Lightbox: React.FC<LightboxProps> = ({ label, items, index, onIndex, onClose }) => {
   const total = items.length;
   const touchX = useRef<number | null>(null);
   const current = items[index];
@@ -139,7 +139,7 @@ const Lightbox: React.FC<LightboxProps> = ({ label, items, index, onIndex, onClo
 };
 
 // ─── Shared bits ─────────────────────────────────────────────────
-const Breadcrumb: React.FC<{ items: Array<{ label: string; href?: string }> }> = ({ items }) => {
+export const Breadcrumb: React.FC<{ items: Array<{ label: string; href?: string }> }> = ({ items }) => {
   const parent = [...items].reverse().find((item) => item.href);
   return (
     <nav aria-label="Breadcrumb" className="mb-4 sm:mb-8">
