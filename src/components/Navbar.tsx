@@ -108,9 +108,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
                 />
               </div>
               <div className="flex items-center">
-                <span className="font-serif tracking-[0.12em] sm:tracking-[0.16em] text-[11px] min-[380px]:text-sm sm:text-base font-normal text-white group-hover:text-light-grey transition-colors uppercase whitespace-nowrap">
-                  SD CLASSIC INTERIORS
-                </span>
+                <img
+                  src="/images/logo_text_white.png"
+                  alt="SD Classic Interiors — Imagine Every Inch"
+                  className="h-7 min-[380px]:h-8 sm:h-9 w-auto group-hover:opacity-80 transition-opacity duration-300"
+                />
               </div>
             </a>
 

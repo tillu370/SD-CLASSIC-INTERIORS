@@ -110,19 +110,12 @@ export const Footer: React.FC = () => {
                   }}
                 />
               </div>
-              <div>
-                <span className="font-serif tracking-[0.2em] text-lg font-bold text-white block">
-                  SD CLASSIC
-                </span>
-                <span className="text-[10px] font-mono tracking-[0.28em] text-light-grey/60 uppercase block">
-                  Interiors
-                </span>
-              </div>
+              <img
+                src="/images/logo_text_white.png"
+                alt="SD Classic Interiors — Imagine Every Inch"
+                className="h-10 w-auto"
+              />
             </div>
-
-            <p className="font-serif italic text-white/90 text-base mb-3 sm:mb-4 tracking-wider">
-              “Imagine Every Inch”
-            </p>
 
             <p className="text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
               {BRAND_INFO.groupStatement}

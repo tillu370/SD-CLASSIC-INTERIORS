@@ -104,13 +104,13 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
                 revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif tracking-[0.22em] text-white uppercase font-light">
-                SD CLASSIC INTERIORS
+              <h1>
+                <img
+                  src="/images/logo_text_white.png"
+                  alt="SD Classic Interiors — Imagine Every Inch"
+                  className="w-full max-w-[360px] sm:max-w-[440px] h-auto mx-auto"
+                />
               </h1>
-
-              <p className="text-[10px] sm:text-xs font-mono tracking-[0.32em] uppercase text-light-grey/70">
-                Imagine Every Inch
-              </p>
 
               <p className="text-[10px] sm:text-xs font-sans font-light text-light-grey/60 leading-relaxed max-w-sm mx-auto pt-2 normal-case">
                 {BRAND_INFO.groupStatement}
