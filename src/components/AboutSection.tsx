@@ -7,10 +7,10 @@ import { Reveal } from './ui/Reveal';
 const FEATURE_ICON_CLASS = "w-5 h-5 text-[#111111]";
 
 const FEATURES = [
-  { number: "01", title: "High-End Finishes", icon: <Gem className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "01", title: "Premium Finishes", icon: <Gem className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
   { number: "02", title: "Affordable Prices", icon: <IndianRupee className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
   { number: "03", title: "Customized Designs", icon: <PenTool className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
-  { number: "04", title: "Warranty on Workmanship", icon: <ShieldCheck className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
+  { number: "04", title: "Workmanship Warranty", icon: <ShieldCheck className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
   { number: "05", title: "Customer Satisfaction", icon: <Smile className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
   { number: "06", title: "Quality Assured", icon: <BadgeCheck className={FEATURE_ICON_CLASS} strokeWidth={1.6} /> },
 ];
@@ -70,7 +70,7 @@ export const AboutSection: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mb-4 sm:mb-6">
-              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution studio, bringing concept, 3D visualization, material selection and final execution together under one roof.
+              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution company, bringing together creative concepts, in-house design expertise, 3D visualisation, material selection and quality craftsmanship to deliver complete interior solutions — all under one roof.
             </p>
 
             {/* Compact Brand Metrics */}
@@ -132,7 +132,7 @@ export const AboutSection: React.FC = () => {
                 Spaces That Inspire.
               </h3>
               <p className="relative text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-md">
-                To create thoughtfully designed interiors and architectural environments that combine timeless aesthetics, functionality and exceptional craftsmanship.
+                To become a trusted and respected name in the interior design industry by creating inspiring spaces through innovative thinking, thoughtful design and exceptional craftsmanship — transforming every client’s vision into spaces that reflect their lifestyle, aspirations and individuality.
               </p>
             </div>
           </Reveal>
@@ -146,7 +146,7 @@ export const AboutSection: React.FC = () => {
                 Design With Purpose.
               </h3>
               <p className="relative text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-md">
-                To deliver comprehensive interior solutions through creative design, carefully selected materials, transparent execution and a commitment to every client's vision.
+                From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.
               </p>
             </div>
           </Reveal>
@@ -160,7 +160,7 @@ export const AboutSection: React.FC = () => {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-8 sm:py-12 relative z-10">
           <Reveal className="mb-5 sm:mb-8 max-w-2xl">
             <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#5A5A5A] font-medium block mb-3">
-              Business Directory
+              Our Brands &amp; Associated Units
             </span>
             <h3 className="text-xl sm:text-2xl font-serif text-[#111111] leading-tight">
               Three Divisions, One Standard of Craft.
@@ -181,7 +181,7 @@ export const AboutSection: React.FC = () => {
                   {BRAND_INFO.residential.company}
                 </h4>
                 <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
-                  Residential interior design, modular kitchens, customized furniture, complete home interiors and turnkey execution.
+                  Specialising in residential interior design and execution, including complete home interiors, modular and semi-modular solutions, customized furniture and end-to-end interior services — from concept to completion.
                 </p>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
@@ -209,6 +209,9 @@ export const AboutSection: React.FC = () => {
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
                   {BRAND_INFO.commercial.company}
                 </h4>
+                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
+                  Specialising in commercial and corporate interior design and execution, along with construction and infrastructure works — delivering complete solutions from design to execution.
+                </p>
                 <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
                   <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.commercial.speciality}</p>
                   <p><span className="font-medium text-[#111111]">Services:</span> {BRAND_INFO.commercial.services}</p>
@@ -244,6 +247,9 @@ export const AboutSection: React.FC = () => {
                 />
                 <p className="text-[10px] font-mono tracking-[0.2em] text-[#5A5A5A] uppercase mb-2">
                   {BRAND_INFO.decora.floor}
+                </p>
+                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
+                  Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
                 </p>
                 <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
                   <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.decora.speciality}</p>
