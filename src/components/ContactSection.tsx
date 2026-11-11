@@ -291,12 +291,12 @@ export const ContactSection: React.FC = () => {
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  Commercial · Civil · Infrastructure
+                  Commercial · Corporate Interiors · Infrastructure Projects
                 </p>
               </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                Commercial construction, civil works, structural alterations and infrastructure execution.
+                End-to-end interiors and infrastructure solutions.
               </p>
 
               {/* Verified GSTIN Banner: Strict Monochrome */}
@@ -318,7 +318,7 @@ export const ContactSection: React.FC = () => {
               <div className="hidden sm:grid grid-cols-2 gap-3 pt-1">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALTY</span>
-                  <span className="text-xs sm:text-sm font-sans text-white font-medium">Commercial &amp; Civil Works</span>
+                  <span className="text-xs sm:text-sm font-sans text-white font-medium">Commercial &amp; Corporate Interiors</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">COMPLIANCE</span>
@@ -453,14 +453,13 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-5xl font-serif tracking-[0.05em] text-white leading-none mb-2">
-                  DECORA
-                </h3>
-                <p className="text-sm sm:text-base font-mono tracking-widest text-light-grey uppercase">
-                  Wall · Window · Floor · Decor
-                </p>
-                <p className="text-xs font-mono text-mid-grey uppercase tracking-widest mt-1">
-                  A Unit of SD CLASSIC INTERIORS
+                <img
+                  src="/images/20261111_220034.png"
+                  alt="DECORA — Wall, Window, Floor and Decor; a unit of SD Classic Interiors"
+                  className="w-40 h-28 object-cover object-center"
+                />
+                <p className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase">
+                  {BRAND_INFO.decora.floor}
                 </p>
               </div>
 
@@ -471,7 +470,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                DECORA brings together wallpapers and custom wallpapers, window blinds, curtains and fabrics, flooring solutions and decorative finishes, with guidance from selection through installation.
+                DECORA offers wallpapers, blinds, curtains and flooring, with guidance from selection through installation.
               </p>
 
               {/* Specialization Tags in Monochrome */}
@@ -504,9 +503,9 @@ export const ContactSection: React.FC = () => {
                       <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
                         DÉCOR UNIT
                       </span>
-                      <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        DECORA Contact
-                      </h4>
+                <h4 className="text-base sm:text-lg font-serif text-white font-medium">
+                  DECORA Contact
+                </h4>
                     </div>
                   </div>
                   <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
@@ -532,6 +531,19 @@ export const ContactSection: React.FC = () => {
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>WHATSAPP DECORA</span>
+                    </a>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
+                      Email
+                    </span>
+                    <a
+                      href={`mailto:${BRAND_INFO.decora.email}`}
+                      className="inline-flex items-center space-x-2 text-xs sm:text-sm font-sans text-light-grey hover:text-white transition-colors break-all"
+                    >
+                      <Mail className="w-4 h-4 text-mid-grey shrink-0" />
+                      <span>{BRAND_INFO.decora.email}</span>
                     </a>
                   </div>
 
@@ -562,7 +574,7 @@ export const ContactSection: React.FC = () => {
                     </p>
                     <span className="inline-flex items-center space-x-1.5 text-[11px] font-mono text-mid-grey">
                       <MapPin className="w-3.5 h-3.5 text-light-grey" />
-                      <span>Pendurthi &amp; Visakhapatnam, Andhra Pradesh</span>
+                      <span>Pendurthi, Visakhapatnam, Andhra Pradesh</span>
                     </span>
                   </div>
                 </div>

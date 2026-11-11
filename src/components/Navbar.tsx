@@ -99,9 +99,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
             >
               <div className="w-9 h-9 sm:w-10 sm:h-10 relative flex-shrink-0">
                 <img
-                  src="/images/logo1_trimmed.png"
+                  src="/images/20261111_220010.png"
                   alt="SD Monogram"
-                  className="w-full h-full object-contain filter brightness-100 group-hover:brightness-125 transition-all duration-300"
+                  className="w-full h-full object-contain group-hover:opacity-80 transition-all duration-300"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/favicon.svg';
                   }}
@@ -193,9 +193,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
           {/* Top Row with Logo & Close button */}
           <div className="flex items-center justify-between border-b border-graphite/40 pb-5">
             <img
-              src="/images/logo2_trimmed.png"
+              src="/images/20261111_220059.png"
               alt="SD Classic Interiors - Imagine Every Inch"
-              className="h-14 sm:h-16 w-auto object-contain"
+              className="w-60 h-20 object-cover object-center"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = '/favicon.svg';
               }}

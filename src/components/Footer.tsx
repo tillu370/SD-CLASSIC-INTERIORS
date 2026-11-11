@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3 mb-5">
               <div className="w-12 h-12 flex-shrink-0">
                 <img
-                  src="/images/logo1_trimmed.png"
+                  src="/images/20261111_220010.png"
                   alt="SD Classic Interiors monogram"
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -124,8 +124,8 @@ export const Footer: React.FC = () => {
               “Imagine Every Inch”
             </p>
 
-            <p className="hidden sm:block text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
-              Interior design and execution for residential and commercial spaces, with DECORA for wallpapers, blinds, curtains and flooring. Based in Visakhapatnam.
+            <p className="text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
+              {BRAND_INFO.groupStatement}
             </p>
 
             {/* Social Channels */}
@@ -257,7 +257,10 @@ export const Footer: React.FC = () => {
                 </a>
               </p>
               <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
-                Commercial · Civil · Infrastructure
+                {BRAND_INFO.commercial.speciality}
+              </p>
+              <p className="text-[10px] font-mono tracking-wide text-light-grey/50">
+                {BRAND_INFO.commercial.services}
               </p>
             </div>
           </div>
@@ -272,14 +275,16 @@ export const Footer: React.FC = () => {
             </div>
             <div className="space-y-3 text-xs font-sans text-light-grey/75">
               <div>
-                <p className="font-bold text-white font-serif text-sm tracking-wider">
-                  DECORA
+                <img
+                  src="/images/20261111_220034.png"
+                  alt="DECORA — Wall, Window, Floor and Decor"
+                  className="w-28 h-[78px] object-cover object-center"
+                />
+                <p className="text-[10px] text-light-grey/50 uppercase">
+                  {BRAND_INFO.decora.floor}
                 </p>
-                <p className="text-[10px] font-mono text-light-grey/60 uppercase">
-                  Wall | Window | Floor | Decor
-                </p>
-                <p className="text-[10px] text-light-grey/50">
-                  A Unit of SD Classic Interiors
+                <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
+                  {BRAND_INFO.decora.speciality}
                 </p>
               </div>
 
@@ -287,6 +292,18 @@ export const Footer: React.FC = () => {
                 <Phone className="w-3.5 h-3.5 text-white/50 shrink-0" />
                 <a href={`tel:${BRAND_INFO.decora.phone}`} className="hover:text-white transition-colors text-white font-mono">
                   {BRAND_INFO.decora.phoneFormatted}
+                </a>
+              </p>
+
+              <p className="flex items-start space-x-2 leading-relaxed">
+                <MapPin className="w-3.5 h-3.5 text-white/50 shrink-0 mt-0.5" />
+                <span>{BRAND_INFO.decora.location}</span>
+              </p>
+
+              <p className="flex items-center space-x-2">
+                <Mail className="w-3.5 h-3.5 text-white/50 shrink-0" />
+                <a href={`mailto:${BRAND_INFO.decora.email}`} className="hover:text-white transition-colors break-all">
+                  {BRAND_INFO.decora.email}
                 </a>
               </p>
 

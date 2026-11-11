@@ -18,7 +18,7 @@ const FEATURES = [
 const STATS = [
   { label: "Established", value: BRAND_INFO.founded },
   { label: "Location", value: "Visakhapatnam" },
-  { label: "Expertise", value: "Residential & Commercial" },
+  { label: "Expertise", value: "Residential · Commercial · Décor" },
 ];
 
 export const AboutSection: React.FC = () => {
@@ -61,8 +61,12 @@ export const AboutSection: React.FC = () => {
               About Us / Est. {BRAND_INFO.founded}
             </span>
 
-            <h2 className="text-[clamp(2.25rem,4vw,3.5rem)] font-serif font-normal tracking-[0.01em] text-[#111111] leading-[1.08] mb-2 sm:mb-4">
-              SD Classic Interiors
+            <h2 className="mb-2 sm:mb-4">
+              <img
+                src="/images/20261111_215105.png"
+                alt="SD Classic Interiors — Imagine Every Inch"
+                className="w-64 h-28 object-cover object-center"
+              />
             </h2>
 
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mb-4 sm:mb-6">
@@ -159,11 +163,11 @@ export const AboutSection: React.FC = () => {
               Business Directory
             </span>
             <h3 className="text-xl sm:text-2xl font-serif text-[#111111] leading-tight">
-              Two Divisions, One Standard of Craft.
+              Three Divisions, One Standard of Craft.
             </h3>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
             {/* Division 01 — Residential */}
             <Reveal>
               <a
@@ -200,14 +204,16 @@ export const AboutSection: React.FC = () => {
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
                 <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
-                  Division 02 · Commercial &amp; Infrastructure
+                  Division 02 · Commercial, Corporate &amp; Infrastructure
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
                   {BRAND_INFO.commercial.company}
                 </h4>
-                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
-                  Commercial construction, civil works, structural alterations and infrastructure execution.
-                </p>
+                <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
+                  <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.commercial.speciality}</p>
+                  <p><span className="font-medium text-[#111111]">Services:</span> {BRAND_INFO.commercial.services}</p>
+                  <p><span className="font-medium text-[#111111]">Location:</span> {BRAND_INFO.commercial.area}</p>
+                </div>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
                   <p>GSTIN: {BRAND_INFO.commercial.gstin}</p>
@@ -217,6 +223,42 @@ export const AboutSection: React.FC = () => {
 
                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
                   <span>Explore Civil &amp; Infrastructure</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </a>
+            </Reveal>
+
+            {/* Division 03 — DECORA */}
+            <Reveal delay={0.2}>
+              <a
+                href="#division-decora"
+                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+              >
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
+                  Division 03 · Décor Solutions
+                </span>
+                <img
+                  src="/images/20261111_215130.png"
+                  alt="DECORA — Wall, Window, Floor and Decor"
+                  className="w-36 h-[100px] object-cover object-center mb-2"
+                />
+                <p className="text-[10px] font-mono tracking-[0.2em] text-[#5A5A5A] uppercase mb-2">
+                  {BRAND_INFO.decora.floor}
+                </p>
+                <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
+                  <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.decora.speciality}</p>
+                  <p><span className="font-medium text-[#111111]">Services:</span> {BRAND_INFO.decora.services.join(', ')}</p>
+                  <p><span className="font-medium text-[#111111]">Location:</span> {BRAND_INFO.decora.area}</p>
+                </div>
+
+                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
+                  <p className="leading-relaxed">{BRAND_INFO.decora.location}</p>
+                  <p>{BRAND_INFO.decora.phoneFormatted}</p>
+                  <p className="break-all">{BRAND_INFO.decora.email}</p>
+                </div>
+
+                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                  <span>Explore DECORA Solutions</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
@@ -234,8 +276,8 @@ export const AboutSection: React.FC = () => {
             <h3 className="text-[clamp(1.75rem,4vw,3rem)] font-serif italic text-[#111111] leading-[1.1] mb-3">
               Imagine Every Inch.
             </h3>
-            <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mx-auto mb-5 sm:mb-6">
-              Thoughtfully designed spaces. Carefully selected materials. Exceptional attention to detail.
+            <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-3xl mx-auto mb-5 sm:mb-6">
+              {BRAND_INFO.groupStatement}
             </p>
             <a
               href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(

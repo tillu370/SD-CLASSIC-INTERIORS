@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { BRAND_INFO } from '../data/websiteData';
 
 interface SplashScreenProps {
   onFinish: () => void;
@@ -91,7 +92,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
               }`}
             >
               <img
-                src="/images/logo1_trimmed.png"
+                src="/images/20261111_220010.png"
                 alt="SD Classic Interiors"
                 className="w-full h-full object-contain"
               />
@@ -109,6 +110,10 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
 
               <p className="text-[10px] sm:text-xs font-mono tracking-[0.32em] uppercase text-light-grey/70">
                 Imagine Every Inch
+              </p>
+
+              <p className="text-[10px] sm:text-xs font-sans font-light text-light-grey/60 leading-relaxed max-w-sm mx-auto pt-2 normal-case">
+                {BRAND_INFO.groupStatement}
               </p>
             </div>
 

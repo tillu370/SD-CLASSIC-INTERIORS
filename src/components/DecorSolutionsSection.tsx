@@ -70,9 +70,11 @@ export const DecorSolutionsSection: React.FC = () => {
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold tracking-[0.1em] text-white mb-3">
-            DECORA
-          </h2>
+          <img
+            src="/images/20261111_220034.png"
+            alt="DECORA — Wall, Window, Floor and Decor"
+            className="w-44 h-[124px] object-cover object-center mx-auto mb-2"
+          />
           <p className="font-serif italic text-light-grey/80 text-base sm:text-lg mb-4">
             The Art of Beautiful Details.
           </p>

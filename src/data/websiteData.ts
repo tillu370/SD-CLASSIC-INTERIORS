@@ -66,20 +66,28 @@ export const BRAND_INFO = {
     company: "SD Constructions & Infra",
     email: "sdconinfra@gmail.com",
     gstin: "37AAAFS9667J1Z9",
-    location: "Chinnamushidiwada, Visakhapatnam - 530051, Andhra Pradesh, India."
+    location: "Chinnamushidiwada, Visakhapatnam - 530051, Andhra Pradesh, India.",
+    speciality: "Commercial, Corporate Interiors & Infrastructure Projects",
+    services: "End-to-end Interiors & Infrastructure Solutions",
+    area: "Chinnamushidiwada, Visakhapatnam"
   },
   decora: {
     brand: "DECORA",
     tagline: "Wall | Window | Floor | Decor",
     unitOf: "A Unit of SD CLASSIC INTERIORS",
-    phone: "9676164499",
-    phoneFormatted: "+91 96761 64499",
-    whatsappUrl: "https://wa.me/919676164499",
+    phone: "9676154499",
+    phoneFormatted: "+91 96761 54499",
+    whatsappUrl: "https://wa.me/919676154499",
+    email: "decoravizag@gmail.com",
     instagram: "https://www.instagram.com/decoravizag/",
     instagramHandle: "@decoravizag",
-    services: ["Wallpapers", "Blinds", "Curtains", "Floorings"],
-    location: "Visakhapatnam, Andhra Pradesh, India."
+    speciality: "Décor Products & Solutions",
+    services: ["Wallpapers", "Blinds", "Curtains", "Flooring"],
+    location: "Pendurthi, Visakhapatnam, Andhra Pradesh, India.",
+    area: "Pendurthi, Visakhapatnam",
+    floor: "Ground Floor"
   },
+  groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
     website: "https://sdclassicinteriors.com"
