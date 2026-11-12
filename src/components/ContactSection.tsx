@@ -482,23 +482,6 @@ export const ContactSection: React.FC = () => {
                     </a>
                   </div>
 
-                  {/* Official Instagram (Monochrome Icon) */}
-                  <div>
-                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Instagram
-                    </span>
-                    <a
-                      href={BRAND_INFO.decora.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-sm font-sans text-light-grey hover:text-white transition-colors"
-                    >
-                      <MonochromeInstagramIcon className="w-4 h-4 text-white" />
-                      <span className="font-mono text-white">{BRAND_INFO.decora.instagramHandle}</span>
-                      <ExternalLink className="w-3 h-3 text-mid-grey" />
-                    </a>
-                  </div>
-
                   {/* Location */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
