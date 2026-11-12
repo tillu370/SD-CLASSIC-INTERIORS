@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, withDescription } from '../data/websiteData';
 import { categoryPath } from '../lib/useHashRoute';
 import { galleryThumb } from '../data/projectsData';
 
@@ -184,6 +184,17 @@ export const DecorSolutionsSection: React.FC = () => {
               className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-black text-xs font-mono tracking-wider uppercase font-semibold hover:bg-light-grey transition-all duration-300"
             >
               <span>Visit Our Showroom</span>
+            </a>
+            <a
+              href={`${BRAND_INFO.decora.whatsappUrl}?text=${encodeURIComponent(
+                withDescription('Hello DECORA, I would like to book a home visit.')
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
+            >
+              <span>Book Your Home Visit</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
