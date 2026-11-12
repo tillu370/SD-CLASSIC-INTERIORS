@@ -122,9 +122,6 @@ export const ContactSection: React.FC = () => {
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
                   DIVISION 01 · RESIDENTIAL
                 </span>
-                <span className="text-[11px] font-mono tracking-widest uppercase text-mid-grey">
-                  EST. 2020
-                </span>
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white leading-tight">
