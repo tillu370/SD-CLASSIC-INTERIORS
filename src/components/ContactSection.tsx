@@ -330,6 +330,16 @@ export const ContactSection: React.FC = () => {
                     </p>
                   </div>
 
+                  {/* GSTIN */}
+                  <div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
+                      GSTIN
+                    </span>
+                    <p className="text-sm sm:text-base font-mono text-light-grey tracking-wider">
+                      {BRAND_INFO.commercial.gstin}
+                    </p>
+                  </div>
+
                   {/* Commercial Email */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
