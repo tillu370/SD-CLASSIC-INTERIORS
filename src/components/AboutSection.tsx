@@ -129,9 +129,6 @@ export const AboutSection: React.FC = () => {
               <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Vision
               </span>
-              <h3 className="relative text-2xl sm:text-3xl font-serif text-[#111111] mb-2 leading-tight">
-                Spaces That Inspire.
-              </h3>
               <p className="relative text-base sm:text-lg font-sans font-light text-[#5A5A5A] leading-[1.7]">
                 To become a trusted and respected name in the interior design industry by creating inspiring spaces through innovative thinking, thoughtful design and exceptional craftsmanship — transforming every client’s vision into spaces that reflect their lifestyle, aspirations and individuality.
               </p>
@@ -143,9 +140,6 @@ export const AboutSection: React.FC = () => {
               <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Mission
               </span>
-              <h3 className="relative text-2xl sm:text-3xl font-serif text-[#111111] mb-2 leading-tight">
-                Design With Purpose.
-              </h3>
               <p className="relative text-base sm:text-lg font-sans font-light text-[#5A5A5A] leading-[1.7]">
                 From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.
               </p>
