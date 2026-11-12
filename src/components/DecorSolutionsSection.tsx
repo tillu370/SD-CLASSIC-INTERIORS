@@ -178,15 +178,6 @@ export const DecorSolutionsSection: React.FC = () => {
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href={BRAND_INFO.decora.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
-            >
-              <span>Explore Our Collections</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-            <a
               href={BRAND_INFO.decora.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
