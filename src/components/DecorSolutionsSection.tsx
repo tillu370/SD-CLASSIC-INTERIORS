@@ -152,9 +152,6 @@ export const DecorSolutionsSection: React.FC = () => {
           <div className="lg:col-span-7 grid grid-cols-2 gap-px bg-white/10 border border-white/10">
             {VALUE_PILLARS.map((item) => (
               <div key={item.title} className="bg-[#0c0c0c] p-3 sm:p-5 hover:bg-[#161616] transition-colors duration-300 last:col-span-2 sm:last:col-span-1">
-                <span className="text-[10px] font-mono tracking-widest text-[#B8A98C] block mb-1">
-                  {item.number}
-                </span>
                 <h4 className="text-[11px] sm:text-sm font-sans font-bold uppercase tracking-wider text-white mb-1">
                   {item.title}
                 </h4>
