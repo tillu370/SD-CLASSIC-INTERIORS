@@ -123,7 +123,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
               <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-mid-grey">
                 {pkg.bhk} Package
               </span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-normal text-white mt-2 mb-4 leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-serif font-normal text-white mt-2 mb-4 leading-tight lining-nums">
                 {pkg.bhk} {pkg.label}
               </h3>
               <div className="flex items-baseline space-x-2 mb-6 pb-6 border-b border-white/10">
