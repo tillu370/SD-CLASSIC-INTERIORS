@@ -192,7 +192,7 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     title: "Aluminum Works",
     line1: "Aluminum",
     line2: "Works",
-    group: "Ceiling & Fabrication",
+    group: "Kitchens & Storage",
     image: "/images/services/detail_aluminum_works.jpg",
     features: ["Powder-coated Profile Sections", "Precision CNC Fabrication", "Corrosion & Weather Resistant", "Slim Sightline Framing"],
     description: "Custom aluminum fabrication including window and door frames, partitions, and architectural sections built for durability and a clean finish."
