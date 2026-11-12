@@ -88,7 +88,7 @@ export const ServicesSection: React.FC = () => {
 
           {/* Centered Badge: 16+ SPECIALIZED DISCIPLINES */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-white/[0.04] border border-graphite text-[10px] font-mono tracking-[0.25em] uppercase text-light-grey/80">
-            <span>16 Specialized Disciplines</span>
+            <span>18 Specialized Disciplines</span>
           </div>
         </div>
 

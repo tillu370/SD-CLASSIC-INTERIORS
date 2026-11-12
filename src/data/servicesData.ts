@@ -185,6 +185,28 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_fabrications.jpg",
     features: ["Precision Laser Cutting", "Powder-coated Matte Black Finish", "Toughened Architectural Glass", "Heavy-gauge Structural Steel"],
     description: "Structural steel frameworks, laser-cut CNC metal screens, glass railings, and bespoke architectural metalwork."
+  },
+  {
+    id: "aluminum-works",
+    number: "17",
+    title: "Aluminum Works",
+    line1: "Aluminum",
+    line2: "Works",
+    group: "Ceiling & Fabrication",
+    image: "/images/services/detail_aluminum_works.jpg",
+    features: ["Powder-coated Profile Sections", "Precision CNC Fabrication", "Corrosion & Weather Resistant", "Slim Sightline Framing"],
+    description: "Custom aluminum fabrication including window and door frames, partitions, and architectural sections built for durability and a clean finish."
+  },
+  {
+    id: "artistic-paints-putty-works",
+    number: "18",
+    title: "Artistic Paints and Putty Works",
+    line1: "Artistic Paints",
+    line2: "and Putty Works",
+    group: "Wall Finishes",
+    image: "/images/services/detail_artistic_paints_putty.jpg",
+    features: ["Hand-crafted Textured Finishes", "Designer Wall Art & Murals", "Decorative Stencil & Stucco Work", "Premium Durable Coatings"],
+    description: "Artistic wall finishes including textured stucco, decorative murals, stencil art and designer surface treatments for distinctive interiors."
   }
 ];
 
