@@ -45,6 +45,20 @@ const YoutubeIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }
   </svg>
 );
 
+const FacebookIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -133,6 +147,17 @@ export const Footer: React.FC = () => {
 
             {/* Social Channels */}
             <div className="flex items-center space-x-3">
+              <a
+                href={BRAND_INFO.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white/80 hover:text-black hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(255,255,255,0.35)] transition-all duration-300"
+                aria-label="SD Classic Interiors Facebook"
+                title="SD Classic Interiors Facebook"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+
               <a
                 href={BRAND_INFO.social.instagram}
                 target="_blank"

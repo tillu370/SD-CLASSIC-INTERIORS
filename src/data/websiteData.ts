@@ -92,6 +92,7 @@ export const BRAND_INFO = {
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
     youtube: "https://youtube.com/@sdclassicinteriors634?si=0oC1kzap9fVT16zP",
+    facebook: "https://www.facebook.com/share/1Eb8YQnc1H/",
     website: "https://sdclassicinteriors.com"
   }
 };
