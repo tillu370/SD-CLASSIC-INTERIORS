@@ -261,9 +261,11 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white leading-tight">
-                SD CONSTRUCTIONS<br />&amp; INFRA
-              </h3>
+              <img
+                src="/images/brand/sd-constructions-infra-wordmark.png"
+                alt="SD Constructions & Infra"
+                className="h-10 sm:h-14 w-auto object-contain object-left"
+              />
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
@@ -295,34 +297,15 @@ export const ContactSection: React.FC = () => {
             {/* Right Column: Monochrome Corporate Console */}
             <div className="lg:col-span-6">
               <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
-                      <Building2 className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        CORPORATE
-                      </span>
-                      <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        Commercial &amp; Infrastructure
-                      </h4>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Commercial
-                  </span>
-                </div>
-
                 <div className="space-y-3 sm:space-y-4">
                   {/* Action Buttons: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <a
-                      href={`mailto:${BRAND_INFO.commercial.email}?subject=Commercial%20Project%20Enquiry`}
+                      href={`tel:${BRAND_INFO.residential.phone}`}
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
-                      <Mail className="w-4 h-4" />
-                      <span>EMAIL US</span>
+                      <Phone className="w-4 h-4" />
+                      <span>CALL US</span>
                     </a>
                     <a
                       href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
@@ -364,7 +347,7 @@ export const ContactSection: React.FC = () => {
                   {/* Operational Location */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
-                      Operational Headquarters
+                      Operational Address
                     </span>
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.commercial.location}
