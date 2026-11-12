@@ -206,12 +206,6 @@ export const AboutSection: React.FC = () => {
                 <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
                   Specialising in commercial and corporate interior design and execution, along with construction and infrastructure works — delivering complete solutions from design to execution.
                 </p>
-                <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
-                  <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.commercial.speciality}</p>
-                  <p><span className="font-medium text-[#111111]">Services:</span> {BRAND_INFO.commercial.services}</p>
-                  <p><span className="font-medium text-[#111111]">Location:</span> {BRAND_INFO.commercial.area}</p>
-                </div>
-
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
                   <p className="break-all">{BRAND_INFO.commercial.email}</p>
                 </div>
@@ -232,22 +226,12 @@ export const AboutSection: React.FC = () => {
                 <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
                   Division 03 · Décor Solutions
                 </span>
-                <img
-                  src="/images/20261111_215130.png"
-                  alt="DECORA — Wall, Window, Floor and Decor"
-                  className="w-36 h-[100px] object-cover object-center mb-2"
-                />
-                <p className="text-[10px] font-mono tracking-[0.2em] text-[#5A5A5A] uppercase mb-2">
-                  {BRAND_INFO.decora.floor}
-                </p>
+                <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
+                  {BRAND_INFO.decora.brand}
+                </h4>
                 <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
                   Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
                 </p>
-                <div className="space-y-1 text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
-                  <p><span className="font-medium text-[#111111]">Speciality:</span> {BRAND_INFO.decora.speciality}</p>
-                  <p><span className="font-medium text-[#111111]">Services:</span> {BRAND_INFO.decora.services.join(', ')}</p>
-                  <p><span className="font-medium text-[#111111]">Location:</span> {BRAND_INFO.decora.area}</p>
-                </div>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
                   <p>{BRAND_INFO.decora.phoneFormatted}</p>
