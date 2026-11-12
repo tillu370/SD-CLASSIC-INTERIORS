@@ -66,7 +66,7 @@ export const ContactSection: React.FC = () => {
               className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Sparkles className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
-              <span>03 · DECORA Studio</span>
+              <span>03 · DECORA Solutions</span>
               <ChevronDown className="w-3 h-3 text-mid-grey group-hover:text-pure-black transition-colors" />
             </button>
           </div>
