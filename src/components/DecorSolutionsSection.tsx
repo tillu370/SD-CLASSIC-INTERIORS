@@ -84,6 +84,9 @@ export const DecorSolutionsSection: React.FC = () => {
           <p className="font-serif italic text-light-grey/80 text-base sm:text-lg mb-4">
             The Art of Beautiful Details.
           </p>
+          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto">
+            Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
+          </p>
         </div>
 
         {/* Explore the Collection */}
