@@ -126,13 +126,13 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
           <Reveal>
             <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
-              <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
+              <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Vision
               </span>
-              <h3 className="relative text-xl sm:text-2xl font-serif text-[#111111] mb-2 leading-tight">
+              <h3 className="relative text-2xl sm:text-3xl font-serif text-[#111111] mb-2 leading-tight">
                 Spaces That Inspire.
               </h3>
-              <p className="relative text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-md">
+              <p className="relative text-base sm:text-lg font-sans font-light text-[#5A5A5A] leading-[1.7]">
                 To become a trusted and respected name in the interior design industry by creating inspiring spaces through innovative thinking, thoughtful design and exceptional craftsmanship — transforming every client’s vision into spaces that reflect their lifestyle, aspirations and individuality.
               </p>
             </div>
@@ -140,13 +140,13 @@ export const AboutSection: React.FC = () => {
 
           <Reveal delay={0.1}>
             <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
-              <span className="relative text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
+              <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Mission
               </span>
-              <h3 className="relative text-xl sm:text-2xl font-serif text-[#111111] mb-2 leading-tight">
+              <h3 className="relative text-2xl sm:text-3xl font-serif text-[#111111] mb-2 leading-tight">
                 Design With Purpose.
               </h3>
-              <p className="relative text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-md">
+              <p className="relative text-base sm:text-lg font-sans font-light text-[#5A5A5A] leading-[1.7]">
                 From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.
               </p>
             </div>
