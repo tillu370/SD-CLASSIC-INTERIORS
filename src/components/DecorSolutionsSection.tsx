@@ -145,9 +145,6 @@ export const DecorSolutionsSection: React.FC = () => {
             <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] uppercase text-mid-grey block mb-3">
               More Than Just Décor
             </span>
-            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-3">
-              What Makes DECORA Different
-            </h3>
             <p className="text-xs sm:text-sm font-sans text-light-grey/85 leading-relaxed">
               Every detail makes a difference. We bring together carefully selected designs, materials and finishes to help you create spaces that reflect your style and personality.
             </p>
