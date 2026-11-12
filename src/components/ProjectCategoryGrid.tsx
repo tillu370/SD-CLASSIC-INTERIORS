@@ -84,7 +84,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
       }
     }}
     aria-label={`View details for ${cat.title}`}
-    className={`group relative cursor-pointer overflow-hidden bg-[#111111] shadow-[0_6px_20px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-15px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] ${
+    className={`group relative cursor-pointer overflow-hidden bg-[#111111] shadow-[0_6px_20px_-8px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-15px_rgba(0,0,0,0.6)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2] ${
       featured ? 'min-h-[220px] sm:min-h-[420px] lg:min-h-full' : 'min-h-[140px] sm:min-h-[240px]'
     } ${className}`}
   >
@@ -135,28 +135,28 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
   return (
     <section
       id="expertise"
-      className="py-10 sm:py-28 lg:py-32 bg-[#080808] text-white relative overflow-hidden border-t border-graphite/40"
+      className="py-10 sm:py-28 lg:py-32 bg-[#F4F4F2] text-[#111111] relative overflow-hidden border-t border-black/10"
       aria-label="Our Services - Complete Interior Solutions"
     >
       {/* Background Subtle Architectural Grid */}
-      <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 architectural-grid-light opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
         <div className="text-center max-w-2xl mx-auto mb-7 sm:mb-20">
           <div className="flex items-center justify-center space-x-3 mb-5">
-            <div className="w-8 sm:w-10 h-[1px] bg-white/20" />
-            <span className="text-[11px] font-sans font-medium tracking-[0.3em] uppercase text-mid-grey">
+            <div className="w-8 sm:w-10 h-[1px] bg-black/20" />
+            <span className="text-[11px] font-sans font-medium tracking-[0.3em] uppercase text-[#777777]">
               Our Projects
             </span>
-            <div className="w-8 sm:w-10 h-[1px] bg-white/20" />
+            <div className="w-8 sm:w-10 h-[1px] bg-black/20" />
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-[3.4rem] font-serif font-normal tracking-[0.01em] text-white mb-4 leading-[1.1]">
+          <h2 className="text-3xl sm:text-5xl lg:text-[3.4rem] font-serif font-normal tracking-[0.01em] text-[#111111] mb-4 leading-[1.1]">
             Explore By Project Type
           </h2>
 
-          <p className="text-sm sm:text-[15px] font-sans font-normal text-light-grey/80 leading-relaxed max-w-md mx-auto">
+          <p className="text-sm sm:text-[15px] font-sans font-normal text-[#555555] leading-relaxed max-w-md mx-auto">
             From concept to completion, browse the kind of space you're planning to transform.
           </p>
         </div>

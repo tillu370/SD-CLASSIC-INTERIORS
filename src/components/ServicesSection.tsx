@@ -20,7 +20,7 @@ export const ServicesSection: React.FC = () => {
       key={service.id}
       href={servicePath(service.id)}
       aria-label={`View ${service.title} photo gallery`}
-      className="group relative block cursor-pointer overflow-hidden bg-[#0d0d0d] aspect-[4/3] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.3)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
+      className="group relative block cursor-pointer overflow-hidden bg-[#0d0d0d] aspect-[4/3] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.3)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
     >
       {/* Background photograph — primary focus */}
       <img
@@ -57,37 +57,37 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-10 sm:py-32 bg-[#F4F4F2] text-[#111111] relative border-t border-black/10 overflow-hidden"
+      className="py-10 sm:py-32 bg-[#080808] text-white relative border-t border-graphite/40 overflow-hidden"
       aria-label="What We Do - Complete Services"
     >
       {/* Background subtle architectural grid */}
-      <div className="absolute inset-0 architectural-grid-light opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header as requested by user */}
         <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-20">
           {/* Eyebrow: —— 06 / WHAT WE DO —— */}
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="w-8 sm:w-12 h-[1px] bg-black/20" />
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-[#777777]">
+            <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-mid-grey">
               06 / WHAT WE DO
             </span>
-            <div className="w-8 sm:w-12 h-[1px] bg-black/20" />
+            <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
 
           {/* Heading: Designed With Purpose. Crafted With Precision. */}
-          <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-serif font-normal tracking-[0.03em] text-[#111111] mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-serif font-normal tracking-[0.03em] text-white mb-4 leading-tight">
             Designed With Purpose.<br />
             Crafted With Precision.
           </h2>
 
           {/* Centered Supporting Paragraph */}
-          <p className="text-xs sm:text-sm md:text-base font-sans font-light text-[#555555] leading-relaxed max-w-2xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm md:text-base font-sans font-light text-light-grey/85 leading-relaxed max-w-2xl mx-auto mb-6">
             Every detail matters. Explore our interior design, material, furniture and turnkey execution solutions curated under one roof.
           </p>
 
           {/* Centered Badge: 16+ SPECIALIZED DISCIPLINES */}
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-black/[0.03] border border-black/15 text-[10px] font-mono tracking-[0.25em] uppercase text-[#555555]">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-white/[0.04] border border-graphite text-[10px] font-mono tracking-[0.25em] uppercase text-light-grey/80">
             <span>16 Specialized Disciplines</span>
           </div>
         </div>
@@ -97,10 +97,10 @@ export const ServicesSection: React.FC = () => {
           {groups.map((g) => (
             <div key={g.name}>
               <div className="flex items-center gap-4 mb-5 sm:mb-6">
-                <h3 className="text-[11px] sm:text-xs font-mono tracking-[0.25em] uppercase text-[#777777] whitespace-nowrap">
+                <h3 className="text-[11px] sm:text-xs font-mono tracking-[0.25em] uppercase text-mid-grey whitespace-nowrap">
                   {g.name}
                 </h3>
-                <div className="flex-1 h-[1px] bg-black/10" />
+                <div className="flex-1 h-[1px] bg-white/10" />
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
                 {g.items.map(renderCard)}
