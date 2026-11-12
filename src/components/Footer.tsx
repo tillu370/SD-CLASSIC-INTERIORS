@@ -231,12 +231,15 @@ export const Footer: React.FC = () => {
               <p className="font-semibold text-white font-serif text-sm">
                 {BRAND_INFO.commercial.company}
               </p>
-              <div className="inline-block px-2 py-0.5 bg-white/5 border border-white/15 text-[10px] font-mono tracking-wider text-light-grey/80 font-medium">
-                GST: {BRAND_INFO.commercial.gstin}
-              </div>
               <p className="flex items-start space-x-2 leading-relaxed">
                 <MapPin className="w-3.5 h-3.5 text-white/50 shrink-0 mt-0.5" />
                 <span>{BRAND_INFO.commercial.location}</span>
+              </p>
+              <p className="flex items-center space-x-2">
+                <Phone className="w-3.5 h-3.5 text-white/50 shrink-0" />
+                <a href={`tel:${BRAND_INFO.residential.phone}`} className="hover:text-white transition-colors text-white font-mono">
+                  {BRAND_INFO.residential.phoneFormatted}
+                </a>
               </p>
               <p className="flex items-center space-x-2">
                 <Mail className="w-3.5 h-3.5 text-white/50 shrink-0" />
@@ -244,11 +247,9 @@ export const Footer: React.FC = () => {
                   {BRAND_INFO.commercial.email}
                 </a>
               </p>
-              <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
-                {BRAND_INFO.commercial.speciality}
-              </p>
-              <p className="text-[10px] font-mono tracking-wide text-light-grey/50">
-                {BRAND_INFO.commercial.services}
+              <p className="flex items-center space-x-2 text-[11px] font-mono text-light-grey/50 pt-1">
+                <Clock className="w-3 h-3 text-white/40 shrink-0" />
+                <span>Mon – Sun, 9:30 AM – 8:30 PM (Sunday by appointment)</span>
               </p>
             </div>
           </div>
@@ -262,56 +263,29 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <div className="space-y-3 text-xs font-sans text-light-grey/75">
-              <div>
-                <img
-                  src="/images/brand/decora-wordmark-white.png"
-                  alt="DECORA — Wall, Window, Floor and Decor"
-                  className="h-7 w-auto object-contain object-left"
-                />
-                <p className="text-[10px] text-light-grey/50 uppercase mt-1.5">
-                  {BRAND_INFO.decora.floor}
-                </p>
-                <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
-                  {BRAND_INFO.decora.speciality}
-                </p>
-              </div>
-
+              <p className="font-semibold text-white font-serif text-sm">
+                {BRAND_INFO.decora.brand}
+              </p>
+              <p className="flex items-start space-x-2 leading-relaxed">
+                <MapPin className="w-3.5 h-3.5 text-white/50 shrink-0 mt-0.5" />
+                <span>{BRAND_INFO.decora.location}</span>
+              </p>
               <p className="flex items-center space-x-2">
                 <Phone className="w-3.5 h-3.5 text-white/50 shrink-0" />
                 <a href={`tel:${BRAND_INFO.decora.phone}`} className="hover:text-white transition-colors text-white font-mono">
                   {BRAND_INFO.decora.phoneFormatted}
                 </a>
               </p>
-
-              <p className="flex items-start space-x-2 leading-relaxed">
-                <MapPin className="w-3.5 h-3.5 text-white/50 shrink-0 mt-0.5" />
-                <span>{BRAND_INFO.decora.location}</span>
-              </p>
-
               <p className="flex items-center space-x-2">
                 <Mail className="w-3.5 h-3.5 text-white/50 shrink-0" />
                 <a href={`mailto:${BRAND_INFO.decora.email}`} className="hover:text-white transition-colors break-all">
                   {BRAND_INFO.decora.email}
                 </a>
               </p>
-
-              <p className="flex items-center space-x-2">
-                <MessageSquare className="w-3.5 h-3.5 text-white/50 shrink-0" />
-                <a href={BRAND_INFO.decora.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white text-light-grey/90 transition-colors font-medium">
-                  Direct WhatsApp Chat
-                </a>
+              <p className="flex items-center space-x-2 text-[11px] font-mono text-light-grey/50 pt-1">
+                <Clock className="w-3 h-3 text-white/40 shrink-0" />
+                <span>Mon – Sun, 9:30 AM – 8:30 PM (Sunday by appointment)</span>
               </p>
-
-              <div className="flex flex-wrap gap-1 pt-1">
-                {BRAND_INFO.decora.services.map((item) => (
-                  <span
-                    key={item}
-                    className="text-[9px] font-mono px-1.5 py-0.5 bg-white/5 text-light-grey/70 border border-white/10"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 
