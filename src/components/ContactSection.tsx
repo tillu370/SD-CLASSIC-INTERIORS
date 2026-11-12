@@ -409,11 +409,11 @@ export const ContactSection: React.FC = () => {
 
               <div>
                 <img
-                  src="/images/20261111_220034.png"
-                  alt="DECORA — Wall, Window, Floor and Decor; a unit of SD Classic Interiors"
-                  className="w-40 h-28 object-cover object-center"
+                  src="/images/brand/decora-wordmark-white.png"
+                  alt="DECORA — Wall, Window, Floor and Decor"
+                  className="h-16 sm:h-20 w-auto object-contain object-left"
                 />
-                <p className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase">
+                <p className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase mt-1">
                   {BRAND_INFO.decora.floor}
                 </p>
               </div>
@@ -448,25 +448,6 @@ export const ContactSection: React.FC = () => {
             {/* Right Column: Monochrome DECORA Console */}
             <div className="lg:col-span-6">
               <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
-                      <Sparkles className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        DÉCOR UNIT
-                      </span>
-                <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                  DECORA Contact
-                </h4>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Décor
-                  </span>
-                </div>
-
                 <div className="space-y-3 sm:space-y-4">
                   {/* Action Buttons: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
