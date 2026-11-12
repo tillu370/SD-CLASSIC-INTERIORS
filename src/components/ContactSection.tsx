@@ -53,12 +53,23 @@ export const ContactSection: React.FC = () => {
             </span>
           </div>
           
-          <h2 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white mb-2">
+          <h2 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white mb-4">
             Get in Touch
           </h2>
-          
+
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+            {["Visit Our Showroom", "Book Your Home Visit", "Get Sample Video & 3D Design"].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center px-3 py-1.5 rounded-full border border-graphite/60 bg-charcoal/40 text-light-grey text-[10px] sm:text-[11px] font-mono tracking-widest uppercase"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
           <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-2xl mx-auto mb-4 sm:mb-6">
-            Reach our residential interiors showroom, our commercial &amp; infrastructure division, or DECORA, our décor unit.
+            Connect with our dedicated teams for residential interiors, commercial and infrastructure projects, and complete décor solutions.
           </p>
 
           {/* Clean Monochrome Navigation Pills */}
@@ -133,23 +144,23 @@ export const ContactSection: React.FC = () => {
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  "Imagine Every Inch" — Bespoke Villas, Luxury Apartments &amp; Modular Living
+                  Complete Home Interiors, Thoughtfully Designed
                 </p>
               </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                Visit our showroom in Pendurthi, Visakhapatnam to experience materials, textures and finishes in person, with personalised guidance from our team.
+                We provide end-to-end residential interior solutions, bringing together creative design, customised concepts, material selection and expert execution to transform houses into beautiful, functional homes.
               </p>
 
               {/* Monochrome Badges */}
               <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Interiors &amp; Turnkey</span>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALITY</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Residential Interiors</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">STUDIO</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Experience Centre</span>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Design &amp; Turnkey Execution</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
@@ -179,6 +190,9 @@ export const ContactSection: React.FC = () => {
                       <h4 className="text-base sm:text-lg font-serif text-white font-medium">
                         Residential Interiors
                       </h4>
+                      <span className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase block mt-0.5">
+                        1st Floor
+                      </span>
                     </div>
                   </div>
                   <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
@@ -296,7 +310,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                End-to-end interiors and infrastructure solutions.
+                We provide end-to-end commercial, corporate and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
               </p>
 
               {/* Verified GSTIN Banner: Strict Monochrome */}
@@ -470,7 +484,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                DECORA offers wallpapers, blinds, curtains and flooring, with guidance from selection through installation.
+                We offer thoughtfully selected décor solutions, including wallpapers, customised wallpapers, blinds, curtains and flooring, adding style and character to every space.
               </p>
 
               {/* Specialization Tags in Monochrome */}

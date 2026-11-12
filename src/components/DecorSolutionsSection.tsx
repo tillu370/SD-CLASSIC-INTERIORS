@@ -41,11 +41,12 @@ const DECORA_COLLECTIONS: DecorCollection[] = [
 ];
 
 const VALUE_PILLARS = [
-  { title: "Curated Collections", description: "A thoughtfully selected range of designs, materials and finishes." },
-  { title: "Personalized Selection", description: "Options that complement your taste, space and requirements." },
-  { title: "Expert Guidance", description: "Assistance in choosing the right products for your interiors." },
-  { title: "Customization", description: "Solutions tailored to your design preferences and project needs." },
-  { title: "Professional Support", description: "Guidance from product selection through installation." },
+  { number: "01", title: "Curated Collections", description: "A carefully selected range of designs, materials and finishes to suit different styles and spaces." },
+  { number: "02", title: "Personalized Recommendations", description: "Helping you choose the right products to complement your taste, space and requirements." },
+  { number: "03", title: "Expert Guidance", description: "Professional assistance to help you make the right choices for your interiors." },
+  { number: "04", title: "Customization", description: "Tailored solutions to match your design preferences and project requirements." },
+  { number: "05", title: "Complete Support", description: "Dedicated support from product selection to professional installation." },
+  { number: "06", title: "Doorstep Convenience", description: "Explore our samples and collections through convenient doorstep visits." },
 ];
 
 export const DecorSolutionsSection: React.FC = () => {
@@ -139,16 +140,22 @@ export const DecorSolutionsSection: React.FC = () => {
         {/* More Than Just Decor */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 mb-8 sm:mb-20">
           <div className="lg:col-span-5">
-            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-3">
+            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.25em] uppercase text-mid-grey block mb-3">
               More Than Just Décor
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-3">
+              What Makes DECORA Different
             </h3>
             <p className="text-xs sm:text-sm font-sans text-light-grey/85 leading-relaxed">
-              At DECORA, we believe choosing the right materials is just as important as choosing the right design.
+              Every detail makes a difference. We bring together carefully selected designs, materials and finishes to help you create spaces that reflect your style and personality.
             </p>
           </div>
           <div className="lg:col-span-7 grid grid-cols-2 gap-px bg-white/10 border border-white/10">
             {VALUE_PILLARS.map((item) => (
               <div key={item.title} className="bg-[#0c0c0c] p-3 sm:p-5 hover:bg-[#161616] transition-colors duration-300 last:col-span-2 sm:last:col-span-1">
+                <span className="text-[10px] font-mono tracking-widest text-[#B8A98C] block mb-1">
+                  {item.number}
+                </span>
                 <h4 className="text-[11px] sm:text-sm font-sans font-bold uppercase tracking-wider text-white mb-1">
                   {item.title}
                 </h4>

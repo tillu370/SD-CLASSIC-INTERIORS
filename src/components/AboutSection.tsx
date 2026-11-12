@@ -192,7 +192,7 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
-                  <span>Explore Residential Interiors</span>
+                  <span>Connect Residential Interiors</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
@@ -226,7 +226,7 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
-                  <span>Explore Civil &amp; Infrastructure</span>
+                  <span>Connect Civil &amp; Infrastructure</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
@@ -265,7 +265,7 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
-                  <span>Explore DECORA Solutions</span>
+                  <span>Connect DECORA Solutions</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
