@@ -38,9 +38,9 @@ export const Footer: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
+    { name: 'Our Services', href: '#services' },
     { name: 'Our Process', href: '#process' },
     { name: 'Decor Solutions', href: '#decor' },
-    { name: 'Our Services', href: '#services' },
     { name: 'Projects', href: '#portfolio' },
     { name: 'Client Reviews', href: '#reviews' },
     { name: 'Offers', href: '#offers' },

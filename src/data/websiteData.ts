@@ -87,6 +87,7 @@ export const BRAND_INFO = {
     area: "Pendurthi, Visakhapatnam",
     floor: "Ground Floor"
   },
+  description: "From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.",
   groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
@@ -95,8 +96,12 @@ export const BRAND_INFO = {
 };
 
 // Opens WhatsApp with a pre-filled enquiry message instead of routing to the Contact section.
+export const withDescription = (message: string) => `${message}
+
+${BRAND_INFO.description}`;
+
 export const openWhatsAppEnquiry = (message: string) => {
-  const url = `${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(message)}`;
+  const url = `${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(withDescription(message))}`;
   window.open(url, '_blank', 'noopener,noreferrer');
 };
 

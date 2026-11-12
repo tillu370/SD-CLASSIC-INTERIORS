@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Gem, IndianRupee, PenTool, ShieldCheck, Smile, BadgeCheck } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, withDescription } from '../data/websiteData';
 import { Reveal } from './ui/Reveal';
 
 const FEATURE_ICON_CLASS = "w-5 h-5 text-[#111111]";
@@ -46,13 +46,14 @@ export const AboutSection: React.FC = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[#E8E6E1] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
           >
-            <img
-              src="/images/brand/about_logo_plaque.webp"
-              alt="SD Classic Interiors gold monogram and wordmark on a dark wall, Imagine Every Inch"
-              className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.06]"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+            <div className="w-full h-full flex items-center justify-center p-10 sm:p-14">
+              <img
+                src="/images/20261111_214919.png"
+                alt="SD Classic Interiors monogram"
+                className="max-h-full max-w-[70%] w-auto h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
           </motion.div>
 
           {/* Right: Brand Introduction */}
@@ -63,9 +64,9 @@ export const AboutSection: React.FC = () => {
 
             <h2 className="mb-2 sm:mb-4">
               <img
-                src="/images/20261111_215105.png"
+                src="/images/logo_text_black.png"
                 alt="SD Classic Interiors — Imagine Every Inch"
-                className="w-64 h-28 object-cover object-center"
+                className="w-full max-w-[340px] sm:max-w-[420px] h-auto"
               />
             </h2>
 
@@ -287,7 +288,7 @@ export const AboutSection: React.FC = () => {
             </p>
             <a
               href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-                'Hello SD Classic Interiors, I would like to discuss my project.'
+                withDescription('Hello SD Classic Interiors, I would like to discuss my project.')
               )}`}
               target="_blank"
               rel="noopener noreferrer"

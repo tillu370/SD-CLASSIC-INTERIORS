@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, MessageSquare, ArrowRight } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, withDescription } from '../data/websiteData';
 
 interface ContactCTAProps {
   onDiscussProject: () => void;
@@ -55,7 +55,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onDiscussProject }) => {
             {/* Secondary CTA: WhatsApp */}
             <a
               href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-                'Hello SD Classic Interiors, I would like to enquire about your interior design & execution services.'
+                withDescription('Hello SD Classic Interiors, I would like to enquire about your interior design & execution services.')
               )}`}
               target="_blank"
               rel="noopener noreferrer"

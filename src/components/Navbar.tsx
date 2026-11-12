@@ -57,9 +57,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
   const navLinks = [
     { name: 'Home', short: 'Home', href: '#home', id: 'home' },
     { name: 'About Us', short: 'About', href: '#about', id: 'about' },
+    { name: 'Our Services', short: 'Services', href: '#services', id: 'services' },
     { name: 'Our Process', short: 'Process', href: '#process', id: 'process' },
     { name: 'Decor Solutions', short: 'Decor', href: '#decor', id: 'decor' },
-    { name: 'Our Services', short: 'Services', href: '#services', id: 'services' },
     { name: 'Projects', short: 'Projects', href: '#portfolio', id: 'portfolio' },
     { name: 'Client Reviews', short: 'Reviews', href: '#reviews', id: 'reviews' },
     { name: 'Offers', short: 'Offers', href: '#offers', id: 'offers' },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { BRAND_INFO } from '../data/websiteData';
 
 interface HeroSectionProps {
   onOpenConsultation: () => void;
@@ -48,18 +49,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="w-[1px] h-24 bg-gradient-to-b from-white/40 via-white/20 to-transparent" />
       </div>
 
-      {/* Far Right Architectural Vertical Label */}
-      <div className="hidden lg:flex absolute right-6 xl:right-10 bottom-16 z-20 items-center space-x-3 pointer-events-none origin-bottom-right rotate-90">
-        <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-light-grey/60">
-          DESIGN · EXECUTION
-        </span>
-        <div className="w-12 h-[1px] bg-white/30" />
-      </div>
-
       {/* Hero Content Container - Positioned to the Left matching user reference image */}
       <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-20 sm:pt-24 pb-8 sm:pb-10 flex items-center">
         <div className="max-w-xl lg:max-w-2xl text-left">
-          {/* Eyebrow: INTERIORS · DESIGN · EXECUTION */}
+          {/* Eyebrow: CONCEPT · DESIGN · EXECUTION */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -67,42 +60,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="mb-3 flex items-center space-x-3"
           >
             <span className="text-[11px] sm:text-xs font-sans tracking-[0.18em] sm:tracking-[0.3em] uppercase text-light-grey font-medium">
-              INTERIORS · DESIGN · EXECUTION
+              CONCEPT · DESIGN · EXECUTION
             </span>
           </motion.div>
 
-          {/* Main Headline: SD CLASSIC INTERIORS */}
+          {/* Brand text logo: SD Classic Interiors — Imagine Every Inch */}
           <motion.h1
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-serif font-normal tracking-[0.04em] text-white leading-[1.06] mb-2"
+            className="mb-6"
           >
-            SD CLASSIC INTERIORS
+            <img
+              src="/images/logo_text_white.png"
+              alt="SD Classic Interiors — Imagine Every Inch"
+              className="w-full max-w-[320px] sm:max-w-[460px] md:max-w-[560px] h-auto"
+            />
           </motion.h1>
-
-          {/* Tagline: —— Imagine Every Inch —— */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center space-x-4 mb-6"
-          >
-            <div className="hidden min-[420px]:block w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
-            <p className="text-lg min-[420px]:text-xl sm:text-2xl md:text-3xl font-serif italic whitespace-nowrap tracking-[0.06em] sm:tracking-[0.08em] text-light-grey font-normal">
-              Imagine Every Inch
-            </p>
-            <div className="hidden min-[420px]:block w-10 sm:w-16 h-[1px] bg-mid-grey/60" />
-          </motion.div>
 
           {/* Supporting Copy: 3 Lines Left-Aligned */}
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.6 }}
-            className="text-sm sm:text-base md:text-lg font-sans font-light text-light-grey/90 leading-relaxed mb-6 max-w-lg tracking-wide"
+            className="text-sm sm:text-base md:text-lg font-sans font-light text-light-grey/90 leading-relaxed mb-6 max-w-xl tracking-wide"
           >
-            Transforming spaces into timeless experiences with thoughtful design, premium materials and precise execution.
+            {BRAND_INFO.description}
           </motion.p>
 
           {/* Action Buttons: Solid White Button + Outlined White Button */}
