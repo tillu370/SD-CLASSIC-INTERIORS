@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
 
 interface SplashScreenProps {
   onFinish: () => void;
@@ -111,10 +110,6 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
                   className="w-full max-w-[360px] sm:max-w-[440px] h-auto mx-auto"
                 />
               </h1>
-
-              <p className="text-[10px] sm:text-xs font-sans font-light text-light-grey/60 leading-relaxed max-w-sm mx-auto pt-2 normal-case">
-                {BRAND_INFO.groupStatement}
-              </p>
             </div>
 
             {/* Loading Hairline */}
