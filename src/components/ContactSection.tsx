@@ -291,16 +291,6 @@ export const ContactSection: React.FC = () => {
                     </a>
                   </div>
 
-                  {/* Corporate Entity Name */}
-                  <div className="pt-1">
-                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      Corporate Entity
-                    </span>
-                    <p className="text-base font-serif text-white font-medium">
-                      {BRAND_INFO.commercial.company}
-                    </p>
-                  </div>
-
                   {/* GSTIN */}
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
@@ -378,16 +368,11 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <div>
-                <img
-                  src="/images/brand/decora-wordmark-white.png"
-                  alt="DECORA — Wall, Window, Floor and Decor"
-                  className="h-16 sm:h-20 w-auto object-contain object-left"
-                />
-                <p className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase mt-1">
-                  {BRAND_INFO.decora.floor}
-                </p>
-              </div>
+              <img
+                src="/images/brand/decora-wordmark-white.png"
+                alt="DECORA — Wall, Window, Floor and Decor"
+                className="h-16 sm:h-20 w-auto object-contain object-left"
+              />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
                 We offer thoughtfully selected décor solutions, including wallpapers, customised wallpapers, blinds, curtains and flooring, adding style and character to every space.
