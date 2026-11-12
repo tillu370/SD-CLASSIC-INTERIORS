@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Identity (lg: 4 cols) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
             <div className="flex items-center space-x-3 mb-5">
-              <div className="w-12 h-12 flex-shrink-0">
+              <div className="w-14 h-14 flex-shrink-0">
                 <img
                   src="/images/20261111_220010.png"
                   alt="SD Classic Interiors monogram"
@@ -110,11 +110,6 @@ export const Footer: React.FC = () => {
                   }}
                 />
               </div>
-              <img
-                src="/images/logo_text_white.png"
-                alt="SD Classic Interiors — Imagine Every Inch"
-                className="h-10 w-auto"
-              />
             </div>
 
             <p className="text-xs font-sans text-light-grey/75 leading-relaxed max-w-sm mb-6">
