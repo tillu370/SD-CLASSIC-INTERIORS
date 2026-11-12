@@ -114,9 +114,9 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
                 {pkg.bhk} {pkg.label}
               </h3>
               <div className="flex items-baseline space-x-2 mb-6 pb-6 border-b border-white/10">
-                <span className="text-lg font-sans text-light-grey/70">₹</span>
-                <span className="text-3xl sm:text-4xl font-serif text-white">{pkg.price}</span>
-                <span className="text-xs font-sans text-mid-grey">/-</span>
+                <span className="text-xl sm:text-2xl font-serif font-bold text-white">₹</span>
+                <span className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-wide">{pkg.price}</span>
+                <span className="text-sm font-sans text-mid-grey">/-</span>
               </div>
 
               <ul className="space-y-2.5 mb-8">
