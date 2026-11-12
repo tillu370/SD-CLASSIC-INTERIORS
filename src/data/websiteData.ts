@@ -83,7 +83,7 @@ export const BRAND_INFO = {
     instagramHandle: "@decoravizag",
     speciality: "Décor Products & Solutions",
     services: ["Wallpapers", "Blinds", "Curtains", "Flooring"],
-    location: "Pendurthi, Visakhapatnam, Andhra Pradesh, India.",
+    location: "#17-61/2, Ground Floor, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     area: "Pendurthi, Visakhapatnam",
     floor: "Ground Floor"
   },
