@@ -57,17 +57,6 @@ export const ContactSection: React.FC = () => {
             Get in Touch
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-5">
-            {["Visit Our Showroom", "Book Your Home Visit", "Get Sample Video & 3D Design"].map((item) => (
-              <span
-                key={item}
-                className="inline-flex items-center px-3 py-1.5 rounded-full border border-graphite/60 bg-charcoal/40 text-light-grey text-[10px] sm:text-[11px] font-mono tracking-widest uppercase"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
           <p className="text-xs sm:text-sm font-sans font-light text-light-grey/80 leading-relaxed max-w-2xl mx-auto mb-4 sm:mb-6">
             Connect with our dedicated teams for residential interiors, commercial and infrastructure projects, and complete décor solutions.
           </p>
