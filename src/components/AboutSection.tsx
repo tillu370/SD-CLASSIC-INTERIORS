@@ -270,11 +270,13 @@ export const AboutSection: React.FC = () => {
       <div className="relative py-10 sm:py-14 border-t border-black/10">
         <div className="max-w-[1000px] mx-auto px-5 sm:px-8 lg:px-12 text-center relative z-10">
           <Reveal>
-            <h3 className="text-[clamp(1.75rem,4vw,3rem)] font-serif italic text-[#111111] leading-[1.1] mb-3">
-              Imagine Every Inch.
-            </h3>
+            <img
+              src="/images/brand/imagine-every-inch.png"
+              alt="Imagine Every Inch"
+              className="h-auto w-full max-w-md mx-auto mb-3"
+            />
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-3xl mx-auto mb-5 sm:mb-6">
-              {BRAND_INFO.groupStatement}
+              Thoughtfully designed. Expertly crafted. Inspired by your vision.
             </p>
             <a
               href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
