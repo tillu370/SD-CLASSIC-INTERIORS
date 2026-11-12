@@ -13,10 +13,15 @@ interface DecorCollection {
 
 const DECORA_COLLECTIONS: DecorCollection[] = [
   {
-    title: "Wallpapers & Custom Wallpapers",
-    description: "Give your walls a distinctive identity with an extensive selection of wallpaper designs, textures and patterns. Explore ready designs and customized creations that bring your ideas to life.",
+    title: "Wallpapers",
+    description: "An extensive selection of ready wallpaper designs, textures and patterns to give your walls a distinctive identity.",
     categoryId: "decora-wallpapers",
     badge: "Most Requested",
+  },
+  {
+    title: "Customized Wallpapers",
+    description: "Fully customized wallpaper creations tailored to bring your own ideas and designs to life.",
+    categoryId: "decora-wallpapers",
   },
   {
     title: "Window Blinds",
@@ -24,8 +29,8 @@ const DECORA_COLLECTIONS: DecorCollection[] = [
     categoryId: "decora-blinds",
   },
   {
-    title: "Curtains & Fabrics",
-    description: "Bring softness, elegance and warmth to your spaces with carefully selected curtain fabrics, colours and styles.",
+    title: "Customized Curtains",
+    description: "Bring softness, elegance and warmth to your spaces with carefully selected, custom-made curtain fabrics, colours and styles.",
     categoryId: "decora-curtains",
   },
   {
@@ -65,8 +70,8 @@ export const DecorSolutionsSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-16">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
-            <span className="text-[10px] sm:text-[11px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
-              DECOR SOLUTIONS · {BRAND_INFO.decora.unitOf}
+            <span className="text-[8px] sm:text-[9px] font-mono font-medium tracking-[0.28em] uppercase text-mid-grey">
+              DECOR SOLUTIONS
             </span>
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
@@ -74,13 +79,10 @@ export const DecorSolutionsSection: React.FC = () => {
           <img
             src="/images/20261111_220034.png"
             alt="DECORA — Wall, Window, Floor and Decor"
-            className="w-44 h-[124px] object-cover object-center mx-auto mb-2"
+            className="w-64 h-[180px] sm:w-72 sm:h-[200px] object-cover object-center mx-auto mb-2"
           />
           <p className="font-serif italic text-light-grey/80 text-base sm:text-lg mb-4">
             The Art of Beautiful Details.
-          </p>
-          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto">
-            Every beautiful space is defined by its details. At DECORA, we bring together thoughtfully selected décor collections that add style, character and individuality to your interiors. From elegant wallpapers and refined window treatments to contemporary flooring and decorative finishes, we help you find the right elements to complete your space.
           </p>
         </div>
 
@@ -101,18 +103,18 @@ export const DecorSolutionsSection: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
-            {DECORA_COLLECTIONS.map((item, idx) => (
+            {DECORA_COLLECTIONS.map((item) => (
               <a
                 key={item.title}
                 href={categoryPath(item.categoryId)}
                 aria-label={`Open ${item.title} in the DECORA gallery`}
-                className={`group relative block bg-[#0c0c0c] shadow-sm overflow-hidden last:col-span-2 lg:last:col-span-1 cursor-pointer transition-all duration-400 hover:shadow-md hover:-translate-y-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] ${
+                className={`group relative block bg-[#0c0c0c] shadow-sm overflow-hidden cursor-pointer transition-all duration-400 hover:shadow-md hover:-translate-y-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] ${
                   item.badge
                     ? 'border-2 border-[#B8A98C] shadow-[0_0_0_1px_rgba(184,169,140,0.25)]'
                     : 'border border-white/10 hover:border-white/30'
                 }`}
               >
-                <div className={`relative overflow-hidden ${idx === DECORA_COLLECTIONS.length - 1 ? 'aspect-[2/1] sm:aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={galleryThumb(item.categoryId, 1)}
                     alt=""
