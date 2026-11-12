@@ -418,12 +418,6 @@ export const ContactSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="inline-block border-l-2 border-white pl-4 py-1">
-                <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  The Art of Beautiful Details.
-                </p>
-              </div>
-
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
                 We offer thoughtfully selected décor solutions, including wallpapers, customised wallpapers, blinds, curtains and flooring, adding style and character to every space.
               </p>
