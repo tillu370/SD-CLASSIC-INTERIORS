@@ -112,12 +112,6 @@ export const ContactSection: React.FC = () => {
                 className="h-16 sm:h-20 w-auto object-contain object-left"
               />
 
-              <div className="inline-block border-l-2 border-white pl-4 py-1">
-                <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  Complete Home Interiors, Thoughtfully Designed
-                </p>
-              </div>
-
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
                 We provide end-to-end residential interior solutions, bringing together creative design, customised concepts, material selection and expert execution to transform houses into beautiful, functional homes.
               </p>
@@ -249,12 +243,6 @@ export const ContactSection: React.FC = () => {
                 alt="SD Constructions & Infra"
                 className="h-16 sm:h-20 w-auto object-contain object-left"
               />
-
-              <div className="inline-block border-l-2 border-white pl-4 py-1">
-                <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
-                  Commercial · Corporate Interiors · Infrastructure Projects
-                </p>
-              </div>
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
                 We provide end-to-end commercial, corporate and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
