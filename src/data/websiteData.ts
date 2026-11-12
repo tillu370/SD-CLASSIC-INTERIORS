@@ -66,10 +66,10 @@ export const BRAND_INFO = {
     company: "SD Constructions & Infra",
     email: "sdconinfra@gmail.com",
     gstin: "37AAAFS9667J1Z9",
-    location: "Chinnamushidiwada, Visakhapatnam - 530051, Andhra Pradesh, India.",
+    location: "#17-61/2, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     speciality: "Commercial, Corporate Interiors & Infrastructure Projects",
     services: "End-to-end Interiors & Infrastructure Solutions",
-    area: "Chinnamushidiwada, Visakhapatnam"
+    area: "Pendurthi, Visakhapatnam"
   },
   decora: {
     brand: "DECORA",

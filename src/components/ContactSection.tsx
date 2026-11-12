@@ -260,7 +260,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Chinnamushidiwada, Visakhapatnam</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Visakhapatnam</span>
                 </div>
               </div>
             </div>
