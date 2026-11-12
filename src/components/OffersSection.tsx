@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
+import { BRAND_INFO, withDescription } from '../data/websiteData';
 
 interface OffersSectionProps {
   onSelectOffer: (offerTitle: string) => void;
@@ -95,9 +96,21 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
             Save Big on Home Interiors
           </h2>
 
-          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/80 leading-relaxed max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/80 leading-relaxed max-w-xl mx-auto mb-6">
             Our new budget packages for semi modular flats &amp; houses.
           </p>
+
+          <a
+            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 px-6 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
+          >
+            <span>Get Sample Video &amp; 3D Design</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         {/* Pricing Cards */}
