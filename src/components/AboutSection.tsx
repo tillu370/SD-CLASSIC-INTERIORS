@@ -17,8 +17,8 @@ const FEATURES = [
 
 const STATS = [
   { label: "Established", value: BRAND_INFO.founded },
-  { label: "Location", value: "Visakhapatnam" },
-  { label: "Expertise", value: "Residential · Commercial · Décor" },
+  { label: "Location", value: "Visakhapatnam, Andhra Pradesh" },
+  { label: "Expertise", value: "Residential and Commercial Interiors" },
 ];
 
 export const AboutSection: React.FC = () => {
