@@ -155,7 +155,7 @@ export const GuidePage: React.FC = () => {
             <br />
             SD Classic Interiors
             <br />
-            9676179499 · www.sdclassicinteriors.com
+            9676154499 · www.sdclassicinteriors.com
           </p>
         </Reveal>
 

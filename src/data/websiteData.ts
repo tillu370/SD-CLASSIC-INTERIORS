@@ -55,9 +55,9 @@ export const BRAND_INFO = {
   founded: "2020",
   residential: {
     company: "SD Classic Interiors",
-    phone: "9676179499",
-    phoneFormatted: "+91 96761 79499",
-    whatsappUrl: "https://wa.me/919676179499",
+    phone: "9676154499",
+    phoneFormatted: "+91 96761 54499",
+    whatsappUrl: "https://wa.me/919676154499",
     email: "sd.classicinteriors99@gmail.com",
     address: "#17-61/2, First Floor, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     googleMapsUrl: "https://maps.google.com/?q=Pendurthi,Visakhapatnam,531173"

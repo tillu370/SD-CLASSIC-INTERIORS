@@ -87,12 +87,12 @@
 - Minimalist typographic standards highlighting craft and transparency.
 
 ### 11. 09 / Closing CTA
-- Full-width high-contrast banner with direct telephone link (`9676179499`) and WhatsApp integration.
+- Full-width high-contrast banner with direct telephone link (`9676154499`) and WhatsApp integration.
 
 ### 12. 10 / Two Separate Business Divisions Directory
 - **Residential Division:**
   - Company: SD Classic Interiors
-  - Phone / WhatsApp: +91 9676179499
+  - Phone / WhatsApp: +91 9676154499
   - Email: `sd.classicinteriors99@gmail.com`
   - Address: `#17-61/2, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173`
 - **Commercial / Corporate Division:**
