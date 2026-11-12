@@ -180,7 +180,6 @@ export const AboutSection: React.FC = () => {
                 </p>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p className="leading-relaxed">{BRAND_INFO.residential.address}</p>
                   <p>{BRAND_INFO.residential.phoneFormatted}</p>
                   <p className="break-all">{BRAND_INFO.residential.email}</p>
                 </div>
@@ -214,9 +213,7 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p>GSTIN: {BRAND_INFO.commercial.gstin}</p>
                   <p className="break-all">{BRAND_INFO.commercial.email}</p>
-                  <p className="leading-relaxed">{BRAND_INFO.commercial.location}</p>
                 </div>
 
                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
@@ -253,7 +250,6 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p className="leading-relaxed">{BRAND_INFO.decora.location}</p>
                   <p>{BRAND_INFO.decora.phoneFormatted}</p>
                   <p className="break-all">{BRAND_INFO.decora.email}</p>
                 </div>
