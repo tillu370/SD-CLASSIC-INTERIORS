@@ -9,7 +9,6 @@ import {
   Home,
   Sparkles,
   Clock,
-  ShieldCheck,
   ChevronDown
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/websiteData';
@@ -120,13 +119,15 @@ export const ContactSection: React.FC = () => {
             <div className="lg:col-span-6 space-y-3 sm:space-y-4">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
-                  DIVISION 01 · RESIDENTIAL
+                  DIVISION 01 · RESIDENTIAL INTERIORS
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-4xl font-serif tracking-[0.02em] text-white leading-tight">
-                SD CLASSIC<br />INTERIORS
-              </h3>
+              <img
+                src="/images/brand/sd-classic-interiors-wordmark-white.png"
+                alt="SD Classic Interiors"
+                className="h-10 sm:h-14 w-auto object-contain object-left"
+              />
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
                 <p className="text-sm sm:text-base font-serif text-white italic tracking-wide">
@@ -150,7 +151,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Vizag</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Visakhapatnam</span>
                 </div>
               </div>
 
@@ -278,10 +279,7 @@ export const ContactSection: React.FC = () => {
             <div className="lg:col-span-6 space-y-3 sm:space-y-4">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
-                  DIVISION 02 · COMMERCIAL &amp; INFRA
-                </span>
-                <span className="text-[11px] font-mono tracking-widest uppercase text-mid-grey">
-                  CIVIL &amp; TURNKEY
+                  DIVISION 02 · COMMERCIAL &amp; INFRASTRUCTURE
                 </span>
               </div>
 
@@ -299,30 +297,19 @@ export const ContactSection: React.FC = () => {
                 We provide end-to-end commercial, corporate and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
               </p>
 
-              {/* Verified GSTIN Banner: Strict Monochrome */}
-              <div className="p-4 bg-pure-black/80 border border-graphite rounded-md flex items-center justify-between backdrop-blur-sm">
-                <div className="flex items-center space-x-3">
-                  <ShieldCheck className="w-5 h-5 text-white shrink-0" />
-                  <div>
-                    <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                      GST REGISTRATION
-                    </span>
-                    <span className="text-sm sm:text-base font-mono font-semibold text-white tracking-wider">
-                      GSTIN : {BRAND_INFO.commercial.gstin}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Core Commercial Capabilities */}
-              <div className="hidden sm:grid grid-cols-2 gap-3 pt-1">
+              {/* Monochrome Badges */}
+              <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALTY</span>
-                  <span className="text-xs sm:text-sm font-sans text-white font-medium">Commercial &amp; Corporate Interiors</span>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALITY</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Commercial, Corporate Interiors &amp; Infrastructure Projects</span>
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">COMPLIANCE</span>
-                  <span className="text-xs sm:text-sm font-sans text-white font-medium">GST Registered</span>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">End to End Interiors &amp; Infrastructure Solutions</span>
+                </div>
+                <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Chinnamushidiwada, Visakhapatnam</span>
                 </div>
               </div>
             </div>
@@ -445,10 +432,7 @@ export const ContactSection: React.FC = () => {
             <div className="lg:col-span-6 space-y-3 sm:space-y-4">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs font-mono tracking-[0.25em] uppercase text-white px-3.5 py-1 bg-charcoal/80 border border-graphite rounded-full">
-                  DIVISION 03 · DÉCOR
-                </span>
-                <span className="text-[11px] font-mono tracking-widest uppercase text-mid-grey">
-                  A UNIT OF SD CLASSIC
+                  DIVISION 03 · DÉCOR SOLUTIONS
                 </span>
               </div>
 
@@ -473,20 +457,19 @@ export const ContactSection: React.FC = () => {
                 We offer thoughtfully selected décor solutions, including wallpapers, customised wallpapers, blinds, curtains and flooring, adding style and character to every space.
               </p>
 
-              {/* Specialization Tags in Monochrome */}
-              <div className="space-y-2 pt-1">
-                <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                  COLLECTIONS
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {BRAND_INFO.decora.services.map((item) => (
-                    <span
-                      key={item}
-                      className="text-xs font-mono tracking-wide bg-charcoal/80 text-light-grey px-3 py-1 rounded-sm border border-graphite"
-                    >
-                      {item}
-                    </span>
-                  ))}
+              {/* Monochrome Badges */}
+              <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
+                <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALITY</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Décor Products &amp; Solutions</span>
+                </div>
+                <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Wallpapers, Blinds, Curtains &amp; Flooring</span>
+                </div>
+                <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Visakhapatnam</span>
                 </div>
               </div>
             </div>
