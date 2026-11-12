@@ -173,7 +173,7 @@ export const ContactSection: React.FC = () => {
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>CALL {BRAND_INFO.residential.phone}</span>
+                      <span>CALL US</span>
                     </a>
                     <a
                       href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
@@ -184,7 +184,7 @@ export const ContactSection: React.FC = () => {
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>WHATSAPP STUDIO</span>
+                      <span>WHATSAPP US</span>
                     </a>
                   </div>
 
@@ -333,7 +333,7 @@ export const ContactSection: React.FC = () => {
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>WHATSAPP INFRA</span>
+                      <span>WHATSAPP US</span>
                     </a>
                   </div>
 
@@ -482,7 +482,7 @@ export const ContactSection: React.FC = () => {
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>CALL {BRAND_INFO.decora.phone}</span>
+                      <span>CALL US</span>
                     </a>
                     <a
                       href={BRAND_INFO.decora.whatsappUrl}
@@ -491,7 +491,7 @@ export const ContactSection: React.FC = () => {
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>WHATSAPP DECORA</span>
+                      <span>WHATSAPP US</span>
                     </a>
                   </div>
 
