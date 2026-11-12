@@ -126,7 +126,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/sd-classic-interiors-wordmark-white.png"
                 alt="SD Classic Interiors"
-                className="h-10 sm:h-14 w-auto object-contain object-left"
+                className="h-16 sm:h-20 w-auto object-contain object-left"
               />
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
@@ -264,7 +264,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/sd-constructions-infra-wordmark.png"
                 alt="SD Constructions & Infra"
-                className="h-10 sm:h-14 w-auto object-contain object-left"
+                className="h-16 sm:h-20 w-auto object-contain object-left"
               />
 
               <div className="inline-block border-l-2 border-white pl-4 py-1">
