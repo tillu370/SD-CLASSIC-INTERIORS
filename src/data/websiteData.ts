@@ -91,6 +91,7 @@ export const BRAND_INFO = {
   groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
+    youtube: "https://youtube.com/@sdclassicinteriors634?si=0oC1kzap9fVT16zP",
     website: "https://sdclassicinteriors.com"
   }
 };
