@@ -437,6 +437,12 @@ export const ContactSection: React.FC = () => {
                   <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Visakhapatnam</span>
                 </div>
               </div>
+
+              {/* Showroom Hours */}
+              <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
+                <Clock className="w-4 h-4 text-light-grey" />
+                <span>Showroom Hours: Mon – Sun, 9:30 AM – 8:30 PM (Sunday by appointment)</span>
+              </div>
             </div>
 
             {/* Right Column: Monochrome DECORA Console */}
