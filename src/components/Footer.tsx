@@ -214,7 +214,7 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center space-x-2 text-[11px] font-mono text-light-grey/50 pt-1">
                 <Clock className="w-3 h-3 text-white/40 shrink-0" />
-                <span>Mon–Sat: 9:30 AM – 8:30 PM</span>
+                <span>Mon – Sun, 9:30 AM – 8:30 PM (Sunday by appointment)</span>
               </p>
             </div>
           </div>
@@ -264,11 +264,11 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-xs font-sans text-light-grey/75">
               <div>
                 <img
-                  src="/images/20261111_220034.png"
+                  src="/images/brand/decora-wordmark-white.png"
                   alt="DECORA — Wall, Window, Floor and Decor"
-                  className="w-28 h-[78px] object-cover object-center"
+                  className="h-7 w-auto object-contain object-left"
                 />
-                <p className="text-[10px] text-light-grey/50 uppercase">
+                <p className="text-[10px] text-light-grey/50 uppercase mt-1.5">
                   {BRAND_INFO.decora.floor}
                 </p>
                 <p className="text-[10px] font-mono tracking-wide text-light-grey/50 pt-1">
@@ -299,13 +299,6 @@ export const Footer: React.FC = () => {
                 <MessageSquare className="w-3.5 h-3.5 text-white/50 shrink-0" />
                 <a href={BRAND_INFO.decora.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white text-light-grey/90 transition-colors font-medium">
                   Direct WhatsApp Chat
-                </a>
-              </p>
-
-              <p className="flex items-center space-x-2">
-                <InstagramIcon className="w-3.5 h-3.5 text-white/50 shrink-0" />
-                <a href={BRAND_INFO.decora.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white text-light-grey/90 transition-colors font-medium">
-                  {BRAND_INFO.decora.instagramHandle}
                 </a>
               </p>
 
