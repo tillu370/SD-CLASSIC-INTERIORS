@@ -165,28 +165,6 @@ export const ContactSection: React.FC = () => {
             {/* Right Column: Monochrome Luxury Console */}
             <div className="lg:col-span-6">
               <div className="bg-pure-black/85 backdrop-blur-md border border-graphite p-4 sm:p-6 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.85)] hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between border-b border-graphite/60 pb-3 mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-md bg-charcoal border border-graphite flex items-center justify-center text-white">
-                      <Home className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block">
-                        SHOWROOM
-                      </span>
-                      <h4 className="text-base sm:text-lg font-serif text-white font-medium">
-                        Residential Interiors
-                      </h4>
-                      <span className="text-[10px] font-mono tracking-[0.25em] text-mid-grey uppercase block mt-0.5">
-                        1st Floor
-                      </span>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono tracking-widest text-light-grey border border-graphite bg-charcoal/60 px-2.5 py-1 rounded-sm uppercase">
-                    Showroom
-                  </span>
-                </div>
-
                 <div className="space-y-3 sm:space-y-4">
                   {/* Primary Call & WhatsApp: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
