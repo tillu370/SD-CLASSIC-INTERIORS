@@ -309,7 +309,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-5 pb-2 border-b border-white/10">
               <Sparkles className="w-3.5 h-3.5 text-white/70" />
               <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-white/90 font-bold block">
-                DECORA
+                DECORA Solutions
               </span>
             </div>
             <div className="space-y-3 text-xs font-sans text-light-grey/75">
