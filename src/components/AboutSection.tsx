@@ -169,7 +169,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-residential"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
                   Division 01 · Residential Interiors
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -192,7 +192,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-commercial"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
                   Division 02 · Commercial, Corporate &amp; Infrastructure
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -214,7 +214,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-decora"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3">
+                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
                   Division 03 · Décor Solutions
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">

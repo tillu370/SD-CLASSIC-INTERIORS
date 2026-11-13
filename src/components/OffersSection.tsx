@@ -143,6 +143,20 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
           ))}
         </div>
 
+        <div className="text-center mb-8 sm:mb-10">
+          <a
+            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black border border-white text-xs sm:text-sm font-mono tracking-wider uppercase font-bold shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <span>Get Sample Video &amp; 3D Design</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
         {/* Specifications Breakdown */}
         <div className="text-center mb-8 sm:mb-10">
           <h4 className="text-xl sm:text-2xl font-serif font-normal text-white mb-2">
@@ -168,20 +182,6 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mb-8 sm:mb-10">
-          <a
-            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black border border-white text-xs sm:text-sm font-mono tracking-wider uppercase font-bold shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-300"
-          >
-            <span>Get Sample Video &amp; 3D Design</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </div>
 
         <p className="text-center text-[10px] sm:text-[11px] font-sans text-mid-grey tracking-wide">

@@ -50,7 +50,7 @@ export const ContactSection: React.FC = () => {
               className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Home className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
-              <span>01 · Residential</span>
+              <span>01 · Residential Interiors</span>
               <ChevronDown className="w-3 h-3 text-mid-grey group-hover:text-pure-black transition-colors" />
             </button>
             <button
@@ -135,7 +135,7 @@ export const ContactSection: React.FC = () => {
               {/* Visiting Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sun, 10:00 AM – 8:00 PM (Sunday by appointment)</span>
+                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
               </div>
             </div>
 
@@ -248,6 +248,12 @@ export const ContactSection: React.FC = () => {
                 We provide end-to-end commercial, corporate and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
               </p>
 
+              {/* GSTIN */}
+              <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm max-w-xs">
+                <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">GSTIN</span>
+                <span className="text-sm sm:text-base font-mono text-white tracking-wider">{BRAND_INFO.commercial.gstin}</span>
+              </div>
+
               {/* Monochrome Badges */}
               <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
@@ -289,16 +295,6 @@ export const ContactSection: React.FC = () => {
                       <MessageSquare className="w-4 h-4" />
                       <span>WHATSAPP US</span>
                     </a>
-                  </div>
-
-                  {/* GSTIN */}
-                  <div>
-                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1">
-                      GSTIN
-                    </span>
-                    <p className="text-sm sm:text-base font-mono text-light-grey tracking-wider">
-                      {BRAND_INFO.commercial.gstin}
-                    </p>
                   </div>
 
                   {/* Commercial Email */}
@@ -369,8 +365,8 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <img
-                src="/images/brand/decora-wordmark-white.png"
-                alt="DECORA — Wall, Window, Floor and Decor"
+                src="/images/brand/decora-wordmark-only-white.png"
+                alt="DECORA"
                 className="h-16 sm:h-20 w-auto object-contain object-left"
               />
 
@@ -397,7 +393,7 @@ export const ContactSection: React.FC = () => {
               {/* Showroom Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sun, 10:00 AM – 8:00 PM (Sunday by appointment)</span>
+                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
               </div>
             </div>
 
