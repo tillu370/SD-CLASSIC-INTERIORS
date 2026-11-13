@@ -62,11 +62,16 @@ export const AboutSection: React.FC = () => {
               About Us / Esd. {BRAND_INFO.founded}
             </span>
 
-            <h2 className="mb-2 sm:mb-4">
+            <h2 className="mb-2 sm:mb-4 w-full max-w-[340px] sm:max-w-[420px]">
               <img
                 src="/images/logo_text_black_no_tagline.png"
                 alt="SD Classic Interiors"
-                className="w-full max-w-[340px] sm:max-w-[420px] h-auto"
+                className="w-full h-auto"
+              />
+              <img
+                src="/images/Imagine Every Inch Calligraphy.png"
+                alt="Imagine Every Inch"
+                className="block w-[52%] h-auto mx-auto mt-1.5"
               />
             </h2>
 
