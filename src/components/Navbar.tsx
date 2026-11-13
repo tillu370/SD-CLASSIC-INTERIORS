@@ -151,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
                 className="group relative inline-flex items-center space-x-2 text-xs tracking-[0.18em] uppercase px-4 2xl:px-5 py-2.5 border border-white/60 text-white hover:border-white hover:bg-white hover:text-pure-black hover:shadow-[0_12px_30px_-8px_rgba(255,255,255,0.3)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white rounded-none"
                 id="nav-get-quote-btn"
               >
-                <span><span className="2xl:hidden">QUOTE</span><span className="hidden 2xl:inline">GET A QUOTE</span></span>
+                <span>GET A QUOTE</span>
                 <span className="text-sm font-normal transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
             </div>
@@ -160,10 +160,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
             <div className="flex xl:hidden items-center space-x-3">
               <button
                 onClick={onOpenQuote}
-                className="inline-flex items-center whitespace-nowrap text-[10px] min-[400px]:text-[11px] tracking-widest uppercase px-3 min-[400px]:px-3.5 min-h-[44px] border border-white/30 text-white"
+                className="inline-flex items-center whitespace-nowrap text-[9px] min-[400px]:text-[10px] sm:text-[11px] tracking-widest uppercase px-2.5 min-[400px]:px-3 sm:px-3.5 min-h-[44px] border border-white/30 text-white"
               >
-                <span className="min-[480px]:hidden">QUOTE</span>
-                <span className="hidden min-[480px]:inline">GET A QUOTE</span>
+                <span>GET A QUOTE</span>
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
