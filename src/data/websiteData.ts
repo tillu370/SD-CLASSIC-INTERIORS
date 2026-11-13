@@ -70,10 +70,11 @@ export const BRAND_INFO = {
     email: "sdconinfra@gmail.com",
     gstin: "37AAAFS9667J1Z9",
     location: "Chinnamushidiwada, Visakhapatnam, Andhra Pradesh, India.",
+    operationalAddress: "#17-61/2, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     speciality: "Commercial, Corporate Interiors & Infrastructure Projects",
     services: "End-to-end Interiors & Infrastructure Solutions",
     area: "Chinnamushidiwada, Visakhapatnam",
-    googleMapsUrl: "https://maps.google.com/?q=Chinnamushidiwada,Visakhapatnam"
+    googleMapsUrl: "https://maps.google.com/?q=%2317-61%2F2%2C+Near+Govt+Hospital%2C+BRTS+Main+Road%2C+Pendurthi%2C+Visakhapatnam+-+531173"
   },
   decora: {
     brand: "DECORA",

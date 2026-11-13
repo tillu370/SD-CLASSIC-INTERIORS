@@ -173,7 +173,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-residential"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[400px]:text-[9px] lg:text-[11px] font-sans tracking-[0.03em] lg:tracking-[0.05em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 01 · Residential Interiors
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -196,7 +196,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-commercial"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[400px]:text-[9px] lg:text-[11px] font-sans tracking-[0.03em] lg:tracking-[0.05em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-[9px] md:text-[11px] lg:text-[12px] xl:text-[10px] 2xl:text-[11px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 02 · Commercial, Corporate &amp; Infrastructure
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -218,7 +218,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-decora"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[400px]:text-[9px] lg:text-[11px] font-sans tracking-[0.03em] lg:tracking-[0.05em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 03 · Décor Solutions
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">

@@ -242,7 +242,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/sd-constructions-infra-wordmark.png"
                 alt="SD Constructions & Infra"
-                className="h-10 sm:h-[50px] w-auto object-contain object-left"
+                className="h-8 sm:h-10 w-auto object-contain object-left"
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
@@ -267,7 +267,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Chinnamushidiwada, Visakhapatnam</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">{BRAND_INFO.commercial.location}</span>
                 </div>
               </div>
             </div>
@@ -319,7 +319,7 @@ export const ContactSection: React.FC = () => {
                       Operational Address
                     </span>
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
-                      {BRAND_INFO.commercial.location}
+                      {BRAND_INFO.commercial.operationalAddress}
                     </p>
                     <a
                       href={BRAND_INFO.commercial.googleMapsUrl}
@@ -375,7 +375,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/decora-wordmark-only-white.png"
                 alt="DECORA"
-                className="h-[34px] sm:h-[42px] w-auto object-contain object-left"
+                className="h-7 sm:h-8 w-auto object-contain object-left"
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
