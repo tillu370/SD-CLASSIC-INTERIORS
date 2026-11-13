@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
                 <img
                   src="/images/logo_text_white.png"
                   alt="SD Classic Interiors — Imagine Every Inch"
-                  className="h-7 min-[380px]:h-8 sm:h-9 w-auto group-hover:opacity-80 transition-opacity duration-300"
+                  className="h-6 min-[400px]:h-8 sm:h-9 w-auto group-hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
             </a>
@@ -160,9 +160,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
             <div className="flex xl:hidden items-center space-x-3">
               <button
                 onClick={onOpenQuote}
-                className="hidden min-[400px]:inline-flex items-center text-[11px] tracking-widest uppercase px-3.5 min-h-[44px] border border-white/30 text-white"
+                className="inline-flex items-center whitespace-nowrap text-[10px] min-[400px]:text-[11px] tracking-widest uppercase px-3 min-[400px]:px-3.5 min-h-[44px] border border-white/30 text-white"
               >
-                QUOTE
+                <span className="min-[480px]:hidden">QUOTE</span>
+                <span className="hidden min-[480px]:inline">GET A QUOTE</span>
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
