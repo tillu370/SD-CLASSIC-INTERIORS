@@ -256,7 +256,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Monochrome Badges */}
-              <div className="hidden sm:grid grid-cols-3 gap-3 pt-2">
+              <div className="hidden sm:grid grid-cols-2 gap-3 pt-2">
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SPECIALITY</span>
                   <span className="text-base sm:text-lg font-serif text-white font-semibold">Commercial, Corporate Interiors &amp; Infrastructure Projects</span>
@@ -265,15 +265,6 @@ export const ContactSection: React.FC = () => {
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">SERVICES</span>
                   <span className="text-base sm:text-lg font-serif text-white font-semibold">End to End Interiors &amp; Infrastructure Solutions</span>
                 </div>
-                <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">{BRAND_INFO.commercial.location}</span>
-                </div>
-              </div>
-
-              <div className="sm:hidden p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
-                <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                <span className="text-sm font-serif text-white font-semibold">{BRAND_INFO.commercial.location}</span>
               </div>
             </div>
 
@@ -319,6 +310,15 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   {/* Operational Location */}
+                  <div>
+                    <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
+                      Location
+                    </span>
+                    <p className="text-xs font-sans text-light-grey/90 leading-relaxed">
+                      {BRAND_INFO.commercial.location}
+                    </p>
+                  </div>
+
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-mid-grey uppercase block mb-1.5">
                       Operational Address
