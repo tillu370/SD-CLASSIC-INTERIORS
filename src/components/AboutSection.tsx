@@ -68,11 +68,6 @@ export const AboutSection: React.FC = () => {
                 alt="SD Classic Interiors"
                 className="w-full h-auto"
               />
-              <img
-                src="/images/Imagine Every Inch Calligraphy.png"
-                alt="Imagine Every Inch"
-                className="block w-[52%] h-auto mx-auto mt-1.5"
-              />
             </h2>
 
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mb-4 sm:mb-6">
