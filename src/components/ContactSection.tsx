@@ -135,7 +135,7 @@ export const ContactSection: React.FC = () => {
               {/* Visiting Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
+                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
               </div>
             </div>
 
@@ -393,7 +393,7 @@ export const ContactSection: React.FC = () => {
               {/* Showroom Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
+                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
               </div>
             </div>
 

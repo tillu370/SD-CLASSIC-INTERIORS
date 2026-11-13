@@ -44,13 +44,13 @@ export const AboutSection: React.FC = () => {
             whileInView={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, clipPath: 'inset(0% round 2px)' }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[#E8E6E1] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
+            className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[#0a0a0a] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
           >
             <div className="w-full h-full flex items-center justify-center p-10 sm:p-14">
               <img
                 src="/images/20261111_214919.png"
                 alt="SD Classic Interiors monogram"
-                className="max-h-full max-w-[70%] w-auto h-auto object-contain"
+                className="max-h-full max-w-[70%] w-auto h-auto object-contain invert"
                 loading="lazy"
               />
             </div>
@@ -169,7 +169,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-residential"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
+                <span className="text-[9px] font-sans tracking-[0.1em] sm:tracking-[0.08em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed lg:whitespace-nowrap">
                   Division 01 · Residential Interiors
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -192,7 +192,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-commercial"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
+                <span className="text-[9px] font-sans tracking-[0.1em] sm:tracking-[0.08em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed lg:whitespace-nowrap">
                   Division 02 · Commercial, Corporate &amp; Infrastructure
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
@@ -214,7 +214,7 @@ export const AboutSection: React.FC = () => {
                 href="#division-decora"
                 className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[10px] font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed [text-wrap:balance] sm:min-h-[2.5rem]">
+                <span className="text-[9px] font-sans tracking-[0.1em] sm:tracking-[0.08em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed lg:whitespace-nowrap">
                   Division 03 · Décor Solutions
                 </span>
                 <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">

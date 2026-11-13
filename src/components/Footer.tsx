@@ -265,7 +265,7 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center space-x-2 text-[11px] font-mono text-light-grey/50 pt-1">
                 <Clock className="w-3 h-3 text-white/40 shrink-0" />
-                <span>Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
+                <span>Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
               </p>
             </div>
           </div>
@@ -334,7 +334,7 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center space-x-2 text-[11px] font-mono text-light-grey/50 pt-1">
                 <Clock className="w-3 h-3 text-white/40 shrink-0" />
-                <span>Mon – Sat, 10:00 AM – 8:00 PM · Sunday By Appointment</span>
+                <span>Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
               </p>
             </div>
           </div>
