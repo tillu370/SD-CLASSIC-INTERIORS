@@ -241,7 +241,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/sd-constructions-infra-wordmark.png"
                 alt="SD Constructions & Infra"
-                className="h-16 sm:h-20 w-auto object-contain object-left"
+                className="h-10 sm:h-[50px] w-auto object-contain object-left"
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
@@ -319,10 +319,16 @@ export const ContactSection: React.FC = () => {
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.commercial.location}
                     </p>
-                    <span className="inline-flex items-center space-x-1.5 text-[11px] font-mono text-mid-grey">
+                    <a
+                      href={BRAND_INFO.commercial.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1.5 text-[11px] font-mono text-mid-grey hover:text-white transition-colors"
+                    >
                       <MapPin className="w-3.5 h-3.5 text-light-grey" />
-                      <span>Visakhapatnam, Andhra Pradesh</span>
-                    </span>
+                      <span>View on Google Maps</span>
+                      <ExternalLink className="w-3 h-3 text-mid-grey" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -367,7 +373,7 @@ export const ContactSection: React.FC = () => {
               <img
                 src="/images/brand/decora-wordmark-only-white.png"
                 alt="DECORA"
-                className="h-16 sm:h-20 w-auto object-contain object-left"
+                className="h-[34px] sm:h-[42px] w-auto object-contain object-left"
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
@@ -442,10 +448,16 @@ export const ContactSection: React.FC = () => {
                     <p className="text-xs font-sans text-light-grey/90 leading-relaxed mb-2.5">
                       {BRAND_INFO.decora.location}
                     </p>
-                    <span className="inline-flex items-center space-x-1.5 text-[11px] font-mono text-mid-grey">
+                    <a
+                      href={BRAND_INFO.decora.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1.5 text-[11px] font-mono text-mid-grey hover:text-white transition-colors"
+                    >
                       <MapPin className="w-3.5 h-3.5 text-light-grey" />
-                      <span>Pendurthi, Visakhapatnam, Andhra Pradesh</span>
-                    </span>
+                      <span>View on Google Maps</span>
+                      <ExternalLink className="w-3 h-3 text-mid-grey" />
+                    </a>
                   </div>
                 </div>
               </div>

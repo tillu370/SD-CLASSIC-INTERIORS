@@ -72,7 +72,8 @@ export const BRAND_INFO = {
     location: "Chinnamushidiwada, Visakhapatnam, Andhra Pradesh, India.",
     speciality: "Commercial, Corporate Interiors & Infrastructure Projects",
     services: "End-to-end Interiors & Infrastructure Solutions",
-    area: "Chinnamushidiwada, Visakhapatnam"
+    area: "Chinnamushidiwada, Visakhapatnam",
+    googleMapsUrl: "https://maps.google.com/?q=Chinnamushidiwada,Visakhapatnam"
   },
   decora: {
     brand: "DECORA",
@@ -88,7 +89,8 @@ export const BRAND_INFO = {
     services: ["Wallpapers", "Blinds", "Curtains", "Flooring"],
     location: "#17-61/2, Ground Floor, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     area: "Pendurthi, Visakhapatnam",
-    floor: "Ground Floor"
+    floor: "Ground Floor",
+    googleMapsUrl: "https://maps.google.com/?q=Pendurthi,Visakhapatnam,531173"
   },
   description: "From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.",
   groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
