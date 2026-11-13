@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Identity (lg: 4 cols) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
-            <div className="flex items-center space-x-3 mb-5">
+            <div className="flex items-center justify-center mb-5">
               <div className="w-28 h-28 flex-shrink-0">
                 <img
                   src="/images/20261111_220010.png"
