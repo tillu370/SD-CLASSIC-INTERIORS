@@ -59,7 +59,7 @@ export const AboutSection: React.FC = () => {
           {/* Right: Brand Introduction */}
           <Reveal delay={0.15}>
             <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#5A5A5A] font-medium mb-3 block">
-              About Us / Esd. {BRAND_INFO.founded}
+              About Us / Estb. {BRAND_INFO.founded}
             </span>
 
             <h2 className="mb-2 sm:mb-4 w-full max-w-[340px] sm:max-w-[420px]">
@@ -83,7 +83,7 @@ export const AboutSection: React.FC = () => {
                   </span>
                   <span
                     className={`font-serif text-[#111111] leading-snug ${
-                      stat.label === 'Established' ? 'text-lg sm:text-xl' : 'text-sm sm:text-base'
+                      stat.label === 'Established' ? 'text-2xl sm:text-3xl' : 'text-sm sm:text-base'
                     }`}
                   >
                     {stat.value}
