@@ -260,7 +260,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm col-span-2 sm:col-span-1">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
-                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Pendurthi, Visakhapatnam</span>
+                  <span className="text-base sm:text-lg font-serif text-white font-semibold">Chinnamushidiwada, Visakhapatnam</span>
                 </div>
               </div>
             </div>
@@ -272,14 +272,14 @@ export const ContactSection: React.FC = () => {
                   {/* Action Buttons: Clean Monochrome */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <a
-                      href={`tel:${BRAND_INFO.residential.phone}`}
+                      href={`tel:${BRAND_INFO.commercial.phone}`}
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-white text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-bold rounded-sm hover:bg-light-grey transition-all shadow-md hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
                       <span>CALL US</span>
                     </a>
                     <a
-                      href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+                      href={`${BRAND_INFO.commercial.whatsappUrl}?text=${encodeURIComponent(
                         'Hello SD Constructions & Infra, I would like to discuss a commercial project / turnkey construction.'
                       )}`}
                       target="_blank"

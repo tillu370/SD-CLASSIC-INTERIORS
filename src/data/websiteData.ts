@@ -55,21 +55,24 @@ export const BRAND_INFO = {
   founded: "2020",
   residential: {
     company: "SD Classic Interiors",
-    phone: "9676154499",
-    phoneFormatted: "+91 96761 54499",
-    whatsappUrl: "https://wa.me/919676154499",
+    phone: "9676179499",
+    phoneFormatted: "+91 96761 79499",
+    whatsappUrl: "https://wa.me/919676179499",
     email: "sd.classicinteriors99@gmail.com",
     address: "#17-61/2, First Floor, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     googleMapsUrl: "https://maps.google.com/?q=Pendurthi,Visakhapatnam,531173"
   },
   commercial: {
     company: "SD Constructions & Infra",
+    phone: "9676179499",
+    phoneFormatted: "+91 96761 79499",
+    whatsappUrl: "https://wa.me/919676179499",
     email: "sdconinfra@gmail.com",
     gstin: "37AAAFS9667J1Z9",
-    location: "#17-61/2, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
+    location: "Chinnamushidiwada, Visakhapatnam, Andhra Pradesh, India.",
     speciality: "Commercial, Corporate Interiors & Infrastructure Projects",
     services: "End-to-end Interiors & Infrastructure Solutions",
-    area: "Pendurthi, Visakhapatnam"
+    area: "Chinnamushidiwada, Visakhapatnam"
   },
   decora: {
     brand: "DECORA",

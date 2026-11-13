@@ -288,8 +288,8 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center space-x-2">
                 <Phone className="w-3.5 h-3.5 text-white/50 shrink-0" />
-                <a href={`tel:${BRAND_INFO.residential.phone}`} className="hover:text-white transition-colors text-white font-mono">
-                  {BRAND_INFO.residential.phoneFormatted}
+                <a href={`tel:${BRAND_INFO.commercial.phone}`} className="hover:text-white transition-colors text-white font-mono">
+                  {BRAND_INFO.commercial.phoneFormatted}
                 </a>
               </p>
               <p className="flex items-center space-x-2">
