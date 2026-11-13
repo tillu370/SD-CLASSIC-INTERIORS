@@ -59,13 +59,13 @@ export const AboutSection: React.FC = () => {
           {/* Right: Brand Introduction */}
           <Reveal delay={0.15}>
             <span className="text-[11px] font-sans tracking-[0.3em] uppercase text-[#5A5A5A] font-medium mb-3 block">
-              About Us / Est. {BRAND_INFO.founded}
+              About Us / Esd. {BRAND_INFO.founded}
             </span>
 
             <h2 className="mb-2 sm:mb-4">
               <img
-                src="/images/logo_text_black.png"
-                alt="SD Classic Interiors — Imagine Every Inch"
+                src="/images/logo_text_black_no_tagline.png"
+                alt="SD Classic Interiors"
                 className="w-full max-w-[340px] sm:max-w-[420px] h-auto"
               />
             </h2>
@@ -77,11 +77,11 @@ export const AboutSection: React.FC = () => {
             {/* Compact Brand Metrics */}
             <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-black/10">
               {STATS.map((stat) => (
-                <div key={stat.label} className="py-3 pr-4 border-b sm:border-b-0 sm:border-r border-black/10 last:border-0 flex sm:block items-baseline justify-between sm:justify-start gap-4">
+                <div key={stat.label} className="py-3 pr-4 sm:pl-5 sm:first:pl-0 border-b sm:border-b-0 sm:border-r border-black/10 last:border-0 flex sm:block items-baseline justify-between sm:justify-start gap-4">
                   <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#5A5A5A] block mb-1">
                     {stat.label}
                   </span>
-                  <span className="text-sm sm:text-base font-serif text-[#111111]">
+                  <span className="text-sm sm:text-base font-serif text-[#111111] leading-snug">
                     {stat.value}
                   </span>
                 </div>

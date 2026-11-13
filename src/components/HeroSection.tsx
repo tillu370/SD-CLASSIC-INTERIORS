@@ -52,12 +52,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Hero Content Container - Positioned to the Left matching user reference image */}
       <div className="relative z-10 w-full pl-6 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-28 pr-6 sm:pr-12 pt-20 sm:pt-24 pb-8 sm:pb-10 flex items-center">
         <div className="max-w-xl lg:max-w-2xl text-left">
+          {/* Logo block: eyebrow is centred over the logo width */}
+          <div className="w-full max-w-[320px] sm:max-w-[460px] md:max-w-[560px]">
           {/* Eyebrow: CONCEPT · DESIGN · EXECUTION */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="mb-3 flex items-center space-x-3"
+            className="mb-3 flex items-center justify-center"
           >
             <span className="text-[11px] sm:text-xs font-sans tracking-[0.18em] sm:tracking-[0.3em] uppercase text-light-grey font-medium">
               CONCEPT · DESIGN · EXECUTION
@@ -74,9 +76,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <img
               src="/images/logo_text_white.png"
               alt="SD Classic Interiors — Imagine Every Inch"
-              className="w-full max-w-[320px] sm:max-w-[460px] md:max-w-[560px] h-auto"
+              className="w-full h-auto"
             />
           </motion.h1>
+          </div>
 
           {/* Supporting Copy: 3 Lines Left-Aligned */}
           <motion.p
