@@ -96,21 +96,10 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
             Save Big on Home Interiors
           </h2>
 
-          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/80 leading-relaxed max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/80 leading-relaxed max-w-xl mx-auto">
             Our new budget packages for semi modular flats &amp; houses.
           </p>
 
-          <a
-            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-6 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
-          >
-            <span>Get Sample Video &amp; 3D Design</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </div>
 
         {/* Pricing Cards */}
@@ -179,6 +168,20 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mb-8 sm:mb-10">
+          <a
+            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
+              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black border border-white text-xs sm:text-sm font-mono tracking-wider uppercase font-bold shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <span>Get Sample Video &amp; 3D Design</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         <p className="text-center text-[10px] sm:text-[11px] font-sans text-mid-grey tracking-wide">

@@ -147,7 +147,7 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
           <div className="flex items-center justify-center space-x-3 mb-5">
             <div className="w-8 sm:w-10 h-[1px] bg-black/20" />
             <span className="text-[11px] font-sans font-medium tracking-[0.3em] uppercase text-[#777777]">
-              Our Projects
+              Our Services
             </span>
             <div className="w-8 sm:w-10 h-[1px] bg-black/20" />
           </div>

@@ -179,12 +179,7 @@ export const AboutSection: React.FC = () => {
                   Specialising in residential interior design and execution, including complete home interiors, modular and semi-modular solutions, customized furniture and end-to-end interior services — from concept to completion.
                 </p>
 
-                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p>{BRAND_INFO.residential.phoneFormatted}</p>
-                  <p className="break-all">{BRAND_INFO.residential.email}</p>
-                </div>
-
-                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
                   <span>Connect for Residential Interiors</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -206,11 +201,7 @@ export const AboutSection: React.FC = () => {
                 <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
                   Specialising in commercial and corporate interior design and execution, along with construction and infrastructure works — delivering complete solutions from design to execution.
                 </p>
-                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p className="break-all">{BRAND_INFO.commercial.email}</p>
-                </div>
-
-                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
                   <span>Connect for commercial interiors</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -233,12 +224,7 @@ export const AboutSection: React.FC = () => {
                   Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
                 </p>
 
-                <div className="hidden sm:block space-y-1.5 text-xs sm:text-sm font-sans text-[#5A5A5A] border-t border-black/10 pt-4 mb-4">
-                  <p>{BRAND_INFO.decora.phoneFormatted}</p>
-                  <p className="break-all">{BRAND_INFO.decora.email}</p>
-                </div>
-
-                <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
                   <span>Connect for decor solutions</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

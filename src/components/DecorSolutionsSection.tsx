@@ -77,9 +77,9 @@ export const DecorSolutionsSection: React.FC = () => {
           </div>
 
           <img
-            src="/images/20261111_220034.png"
+            src="/images/decora_logo_no_monogram.png"
             alt="DECORA — Wall, Window, Floor and Decor"
-            className="w-64 h-[180px] sm:w-72 sm:h-[200px] object-cover object-center mx-auto mb-2"
+            className="w-64 sm:w-80 h-auto object-contain mx-auto mb-2"
           />
           <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto mt-2">
             Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.

@@ -89,6 +89,9 @@ export const App: React.FC = () => {
         {/* 02. About SD Classic Interiors */}
         <AboutSection />
 
+        {/* 02b. Our Services — Project Categories (Bright Off-White) */}
+        <ProjectCategoryGrid onSelectCategory={handleSelectCategory} />
+
         {/* 03. Complete Brochure Services */}
         <ServicesSection />
 
@@ -97,9 +100,6 @@ export const App: React.FC = () => {
 
         {/* 05. Decor Solutions - DECORA */}
         <DecorSolutionsSection />
-
-        {/* 06. Project Categories (Bright Off-White) */}
-        <ProjectCategoryGrid onSelectCategory={handleSelectCategory} />
 
         {/* 07. Selected Work Portfolio Gallery with Lightbox */}
         <PortfolioGallery />
