@@ -71,7 +71,7 @@ export const AboutSection: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mb-4 sm:mb-6">
-              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution company, bringing together creative concepts, in-house design expertise, 3D visualisation, material selection and quality craftsmanship to deliver complete interior solutions — all under one roof.
+              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution company, bringing together creative concepts, in-house design expertise, 3D visualisation, carefully selected materials and quality craftsmanship to deliver complete interior solutions — all under one roof.
             </p>
 
             {/* Compact Brand Metrics */}
@@ -145,7 +145,7 @@ export const AboutSection: React.FC = () => {
                 Our Mission
               </span>
               <p className="relative text-base sm:text-lg font-sans font-light text-[#5A5A5A] leading-[1.7]">
-                From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.
+                To transform spaces into beautiful, functional and meaningful environments through innovative designs, quality craftsmanship and seamless execution. We are committed to delivering customized, reliable and value-driven interior solutions that bring our clients&apos; vision to life and create lasting satisfaction.
               </p>
             </div>
           </Reveal>
