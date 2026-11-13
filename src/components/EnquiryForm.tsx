@@ -11,7 +11,7 @@ import {
   MapPin,
   ChevronDown
 } from 'lucide-react';
-import { ALL_SERVICES, BRAND_INFO } from '../data/websiteData';
+import { ALL_SERVICES, BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 interface EnquiryFormProps {
   prefilledService?: string;
@@ -84,7 +84,8 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
   };
 
   const generateWhatsAppMessage = () => {
-    return `*New Interior Enquiry — SD Classic Interiors*
+    return `Hello SD Classic Interiors! Here's my project enquiry:
+*New Interior Enquiry — SD Classic Interiors*
 👤 *Name:* ${formData.fullName}
 📞 *Phone:* ${formData.phone}
 ✉️ *Email:* ${formData.email}
@@ -127,8 +128,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
     if (!validate()) return;
 
     const message = generateWhatsAppMessage();
-    const encoded = encodeURIComponent(message);
-    const whatsappUrl = `${BRAND_INFO.residential.whatsappUrl}?text=${encoded}`;
+    const whatsappUrl = createWhatsAppHref(BRAND_INFO.residential.whatsappUrl, message);
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setIsSuccess(true);
   };
@@ -169,7 +169,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(generateWhatsAppMessage())}`}
+                href={createWhatsAppHref(BRAND_INFO.residential.whatsappUrl, generateWhatsAppMessage())}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-6 py-3.5 bg-white text-pure-black text-xs font-sans tracking-[0.2em] uppercase font-semibold hover:bg-light-grey transition-colors"

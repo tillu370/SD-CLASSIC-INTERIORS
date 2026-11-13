@@ -38,15 +38,15 @@ export const App: React.FC = () => {
   };
 
   const handleOpenConsultation = () => {
-    openWhatsAppEnquiry('Hello SD Classic Interiors, I would like to book a consultation.');
+    openWhatsAppEnquiry("Hello SD Classic Interiors! I'd like to book a consultation for my project.");
   };
 
   const handleEnquireService = (serviceName: string) => {
-    openWhatsAppEnquiry(`Hello SD Classic Interiors, I am interested in enquiry for: ${serviceName}.`);
+    openWhatsAppEnquiry(`Hello SD Classic Interiors! I'm interested in your ${serviceName} service. Please share the details and next steps.`);
   };
 
   const handleSelectOffer = (offerKey: string) => {
-    openWhatsAppEnquiry(`Hello SD Classic Interiors, I am interested in the ${offerKey}.`);
+    openWhatsAppEnquiry(`Hello SD Classic Interiors! I'm interested in the ${offerKey} offer. Please share more details.`);
   };
 
   const handleExploreWork = () => {

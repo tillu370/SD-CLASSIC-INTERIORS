@@ -11,7 +11,7 @@ import {
   GUIDE_WORKFLOW,
   type GuideBlock,
 } from '../data/guideContent';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 const focusRing =
   'focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D5D2CC] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]';
@@ -47,9 +47,10 @@ export const GuidePage: React.FC = () => {
     };
   }, []);
 
-  const whatsappHref = `${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-    'Hello SD Classic Interiors, I have read the Project Process & Client Information Guide and would like to discuss my project.'
-  )}`;
+  const whatsappHref = createWhatsAppHref(
+    BRAND_INFO.residential.whatsappUrl,
+    "Hello SD Classic Interiors! I've read the Project Process & Client Information Guide and would like to discuss my project."
+  );
 
   return (
     <section className="bg-[#080808] text-[#F5F3EF] min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-24 relative">

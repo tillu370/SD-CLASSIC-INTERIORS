@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, MessageSquare } from 'lucide-react';
 import { Breadcrumb, Lightbox, focusRing } from './ProjectsPages';
 import { SERVICE_ITEMS, serviceGallery } from '../data/servicesData';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 import { type Route } from '../lib/useHashRoute';
 
 interface ServiceGalleryPageProps {
@@ -101,9 +101,10 @@ export const ServiceGalleryPage: React.FC<ServiceGalleryPageProps> = ({ route, o
                   ENQUIRE FOR THIS SERVICE
                 </button>
                 <a
-                  href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-                    `Hello SD Classic Interiors, I am interested in enquiry for: ${service.title}.`
-                  )}`}
+                  href={createWhatsAppHref(
+                    BRAND_INFO.residential.whatsappUrl,
+                    `Hello SD Classic Interiors! I'm interested in your ${service.title} service. Please share the details and next steps.`
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center justify-center space-x-2 px-6 py-3.5 border border-white/30 text-white hover:border-white hover:bg-white/10 text-xs tracking-widest uppercase transition-colors ${focusRing}`}

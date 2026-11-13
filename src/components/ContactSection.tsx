@@ -11,7 +11,7 @@ import {
   Clock,
   ChevronDown
 } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 export const ContactSection: React.FC = () => {
   const scrollToDivision = (id: string) => {
@@ -153,9 +153,10 @@ export const ContactSection: React.FC = () => {
                       <span>CALL US</span>
                     </a>
                     <a
-                      href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-                        'Hello SD Classic Interiors, I would like to book a residential interior consultation.'
-                      )}`}
+                      href={createWhatsAppHref(
+                        BRAND_INFO.residential.whatsappUrl,
+                        "Hello SD Classic Interiors! I'd like to book a consultation for a residential interior project."
+                      )}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
@@ -285,9 +286,10 @@ export const ContactSection: React.FC = () => {
                       <span>CALL US</span>
                     </a>
                     <a
-                      href={`${BRAND_INFO.commercial.whatsappUrl}?text=${encodeURIComponent(
-                        'Hello SD Constructions & Infra, I would like to discuss a commercial project / turnkey construction.'
-                      )}`}
+                      href={createWhatsAppHref(
+                        BRAND_INFO.commercial.whatsappUrl,
+                        "Hello SD Constructions & Infra! I'd like to discuss a commercial or turnkey project. Please share the next steps."
+                      )}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"
@@ -417,7 +419,10 @@ export const ContactSection: React.FC = () => {
                       <span>CALL US</span>
                     </a>
                     <a
-                      href={BRAND_INFO.decora.whatsappUrl}
+                      href={createWhatsAppHref(
+                        BRAND_INFO.decora.whatsappUrl,
+                        "Hello DECORA! I'm interested in your décor solutions. Please share more details."
+                      )}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center space-x-2 px-5 py-3 bg-charcoal text-white border border-graphite hover:border-white hover:bg-white hover:text-pure-black font-sans text-xs tracking-[0.2em] uppercase font-semibold rounded-sm transition-all shadow-md hover:-translate-y-0.5"

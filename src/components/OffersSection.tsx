@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
-import { BRAND_INFO, withDescription } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 interface OffersSectionProps {
   onSelectOffer: (offerTitle: string) => void;
@@ -145,9 +145,10 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
 
         <div className="text-center mb-8 sm:mb-10">
           <a
-            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-              withDescription('Hello SD Classic Interiors, I would like to get a sample video and 3D design.')
-            )}`}
+            href={createWhatsAppHref(
+              BRAND_INFO.residential.whatsappUrl,
+              "Hello SD Classic Interiors! I'd like to receive a sample video and 3D design. Please share the details."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black border border-white text-xs sm:text-sm font-mono tracking-wider uppercase font-bold shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-300"

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Phone, MessageSquare } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 interface NavbarProps {
   onOpenQuote: () => void;
@@ -262,7 +262,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
                 <span>{BRAND_INFO.residential.phone}</span>
               </a>
               <a
-                href={BRAND_INFO.residential.whatsappUrl}
+                href={createWhatsAppHref(
+                  BRAND_INFO.residential.whatsappUrl,
+                  "Hello SD Classic Interiors! I'd like to know more about your interior design services."
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-white"

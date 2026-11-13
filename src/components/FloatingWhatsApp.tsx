@@ -1,5 +1,5 @@
 import React from 'react';
-import { BRAND_INFO, withDescription } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -10,9 +10,10 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" 
 export const FloatingWhatsApp: React.FC = () => {
   return (
     <a
-      href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-        withDescription('Hello SD Classic Interiors, I would like to know more.')
-      )}`}
+      href={createWhatsAppHref(
+        BRAND_INFO.residential.whatsappUrl,
+        "Hello SD Classic Interiors! I'd like to know more about your services."
+      )}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"

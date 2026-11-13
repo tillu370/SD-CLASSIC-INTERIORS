@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Gem, IndianRupee, PenTool, ShieldCheck, Smile, BadgeCheck } from 'lucide-react';
-import { BRAND_INFO, withDescription } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 import { Reveal } from './ui/Reveal';
 
 const FEATURE_ICON_CLASS = "w-5 h-5 text-[#111111]";
@@ -253,9 +253,10 @@ export const AboutSection: React.FC = () => {
               Thoughtfully designed. Expertly crafted. Inspired by your vision.
             </p>
             <a
-              href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-                withDescription('Hello SD Classic Interiors, I would like to discuss my project.')
-              )}`}
+              href={createWhatsAppHref(
+                BRAND_INFO.residential.whatsappUrl,
+                "Hello SD Classic Interiors! I'd like to discuss an interior project. Please share how to get started."
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"

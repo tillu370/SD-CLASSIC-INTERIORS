@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { BRAND_INFO, withDescription } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 import { categoryPath } from '../lib/useHashRoute';
 import { galleryThumb } from '../data/projectsData';
 
@@ -178,7 +178,10 @@ export const DecorSolutionsSection: React.FC = () => {
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href={BRAND_INFO.decora.whatsappUrl}
+              href={createWhatsAppHref(
+                BRAND_INFO.decora.whatsappUrl,
+                "Hello DECORA! I'd like to visit your showroom. Please share the location and timings."
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-black text-xs font-mono tracking-wider uppercase font-semibold hover:bg-light-grey transition-all duration-300"
@@ -186,9 +189,10 @@ export const DecorSolutionsSection: React.FC = () => {
               <span>Visit Our Showroom</span>
             </a>
             <a
-              href={`${BRAND_INFO.decora.whatsappUrl}?text=${encodeURIComponent(
-                withDescription('Hello DECORA, I would like to book a home visit.')
-              )}`}
+              href={createWhatsAppHref(
+                BRAND_INFO.decora.whatsappUrl,
+                "Hello DECORA! I'd like to book a home visit for décor solutions. Please share the available timings."
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 text-white text-xs font-mono tracking-wider uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"

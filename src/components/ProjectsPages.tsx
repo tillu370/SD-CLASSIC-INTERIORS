@@ -13,7 +13,7 @@ import {
 } from '../data/projectsData';
 import { INSPIRATION } from '../data/inspirationData';
 import { categoryPath, projectPath, type Route } from '../lib/useHashRoute';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 const thumbOf = (cover: string) => (cover.endsWith('.webp') ? cover.replace('.webp', '-t.webp') : cover);
 
@@ -191,9 +191,10 @@ const InspirationView: React.FC<{ page: CategoryPage }> = ({ page }) => {
           similar spaces, not completed SD Classic projects. Our own work for this category is being added.
         </p>
         <a
-          href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-            'Hello SD Classic Interiors, I would like to discuss my space.'
-          )}`}
+          href={createWhatsAppHref(
+            BRAND_INFO.residential.whatsappUrl,
+            "Hello SD Classic Interiors! I'd like to discuss an interior project for my space. Please share how to get started."
+          )}
           target="_blank"
           rel="noopener noreferrer"
           className={`shrink-0 inline-flex items-center space-x-2 px-5 min-h-[44px] border border-[#D5D2CC]/60 text-xs font-sans tracking-[0.16em] uppercase hover:border-[#D5D2CC] hover:bg-white/5 transition-colors ${focusRing}`}
@@ -355,9 +356,10 @@ const CategoryView: React.FC<{ page: CategoryPage }> = ({ page }) => {
             We are preparing this collection. In the meantime, tell us about your space and we will share relevant work.
           </p>
           <a
-            href={`${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(
-              'Hello SD Classic Interiors, I would like to discuss my project.'
-            )}`}
+            href={createWhatsAppHref(
+              BRAND_INFO.residential.whatsappUrl,
+              "Hello SD Classic Interiors! I'd like to discuss my project. Please share the next steps."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center space-x-2 px-7 min-h-[44px] border border-[#D5D2CC]/60 text-xs font-sans tracking-[0.2em] uppercase hover:border-[#D5D2CC] hover:bg-white/5 transition-colors ${focusRing}`}

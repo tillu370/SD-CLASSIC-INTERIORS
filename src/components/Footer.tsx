@@ -12,7 +12,7 @@ import {
   Building2,
   Clock
 } from 'lucide-react';
-import { BRAND_INFO } from '../data/websiteData';
+import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
   <svg 
@@ -101,7 +101,10 @@ export const Footer: React.FC = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href={BRAND_INFO.residential.whatsappUrl}
+                href={createWhatsAppHref(
+                  BRAND_INFO.residential.whatsappUrl,
+                  "Hello SD Classic Interiors! I'd like to discuss an interior project. Please share the next steps."
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-5 py-3 border border-white/20 bg-white/5 hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-wider uppercase font-semibold transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] rounded-sm"
@@ -181,7 +184,10 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href={BRAND_INFO.residential.whatsappUrl}
+                href={createWhatsAppHref(
+                  BRAND_INFO.residential.whatsappUrl,
+                  "Hello SD Classic Interiors! I'd like to connect with your team about an interior project."
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-sm border border-white/15 bg-white/5 flex items-center justify-center text-white/80 hover:text-black hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(255,255,255,0.35)] transition-all duration-300"

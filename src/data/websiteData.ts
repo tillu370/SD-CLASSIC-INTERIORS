@@ -102,13 +102,11 @@ export const BRAND_INFO = {
   }
 };
 
-// Opens WhatsApp with a pre-filled enquiry message instead of routing to the Contact section.
-export const withDescription = (message: string) => `${message}
-
-${BRAND_INFO.description}`;
+export const createWhatsAppHref = (whatsappUrl: string, message: string) =>
+  `${whatsappUrl}?text=${encodeURIComponent(message.trim())}`;
 
 export const openWhatsAppEnquiry = (message: string) => {
-  const url = `${BRAND_INFO.residential.whatsappUrl}?text=${encodeURIComponent(withDescription(message))}`;
+  const url = createWhatsAppHref(BRAND_INFO.residential.whatsappUrl, message);
   window.open(url, '_blank', 'noopener,noreferrer');
 };
 
