@@ -66,7 +66,7 @@ export const ContactSection: React.FC = () => {
               className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-charcoal/80 border border-graphite hover:border-white hover:bg-white hover:text-pure-black text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
             >
               <Sparkles className="w-3.5 h-3.5 text-mid-grey group-hover:text-pure-black transition-colors" />
-              <span>03 · DECORA Solutions</span>
+              <span>03 · DECOR Solutions</span>
               <ChevronDown className="w-3 h-3 text-mid-grey group-hover:text-pure-black transition-colors" />
             </button>
           </div>
@@ -135,7 +135,7 @@ export const ContactSection: React.FC = () => {
               {/* Visiting Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
+                <span>Showroom Hours: <span className="inline-block align-top">Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday - By Appointment</span></span>
               </div>
             </div>
 
@@ -393,7 +393,7 @@ export const ContactSection: React.FC = () => {
               {/* Showroom Hours */}
               <div className="flex items-center space-x-2 text-xs font-mono text-mid-grey pt-1">
                 <Clock className="w-4 h-4 text-light-grey" />
-                <span>Showroom Hours: Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday By Appointment</span>
+                <span>Showroom Hours: <span className="inline-block align-top">Mon – Sat, 10:00 AM – 8:00 PM<br />Sunday - By Appointment</span></span>
               </div>
             </div>
 
