@@ -270,6 +270,11 @@ export const ContactSection: React.FC = () => {
                   <span className="text-base sm:text-lg font-serif text-white font-semibold">{BRAND_INFO.commercial.location}</span>
                 </div>
               </div>
+
+              <div className="sm:hidden p-3.5 bg-pure-black/80 border border-graphite/80 rounded-sm backdrop-blur-sm">
+                <span className="text-[10px] font-mono tracking-widest uppercase text-mid-grey block mb-0.5">LOCATION</span>
+                <span className="text-sm font-serif text-white font-semibold">{BRAND_INFO.commercial.location}</span>
+              </div>
             </div>
 
             {/* Right Column: Monochrome Corporate Console */}
