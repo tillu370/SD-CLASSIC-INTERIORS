@@ -81,7 +81,11 @@ export const AboutSection: React.FC = () => {
                   <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#5A5A5A] block mb-1">
                     {stat.label}
                   </span>
-                  <span className="text-sm sm:text-base font-serif text-[#111111] leading-snug">
+                  <span
+                    className={`font-serif text-[#111111] leading-snug ${
+                      stat.label === 'Established' ? 'text-lg sm:text-xl' : 'text-sm sm:text-base'
+                    }`}
+                  >
                     {stat.value}
                   </span>
                 </div>
