@@ -14,33 +14,33 @@ interface DecorCollection {
 const DECORA_COLLECTIONS: DecorCollection[] = [
   {
     title: "Wallpapers",
-    description: "An extensive selection of ready wallpaper designs, textures and patterns to give your walls a distinctive identity.",
+    description: "Explore our extensive collection of premium wallpapers, featuring elegant designs, textures and patterns that bring style, character and a distinctive identity to your walls.",
     categoryId: "decora-wallpapers",
     badge: "Most Requested",
   },
   {
     title: "Customized Wallpapers",
-    description: "Fully customized wallpaper creations tailored to bring your own ideas and designs to life.",
-    categoryId: "decora-wallpapers",
+    description: "Transform your ideas, nature-inspired concepts, photographs and creative references into personalized wallpaper designs, customized to complement your style and bring your vision to life.",
+    categoryId: "decora-customized-wallpapers",
   },
   {
     title: "Window Blinds",
-    description: "Create the perfect balance of light, privacy and style with window blinds designed to complement your interiors.",
+    description: "Explore our collection of ready-made and customized window blinds, available in a variety of styles, colours and designs to suit your preferences while enhancing privacy, light control and the overall elegance of your interiors.",
     categoryId: "decora-blinds",
   },
   {
     title: "Customized Curtains",
-    description: "Bring softness, elegance and warmth to your spaces with carefully selected, custom-made curtain fabrics, colours and styles.",
+    description: "Discover our collection of customized curtains, offering a wide selection of fabrics, colours, patterns and styles, tailored to your preferences to bring elegance, warmth and character to your interiors.",
     categoryId: "decora-curtains",
   },
   {
     title: "Flooring Solutions",
-    description: "Set the foundation for beautiful interiors with flooring options that combine design, durability and everyday practicality. Explore vinyl, PVC, wooden and SPC flooring.",
+    description: "Transform your spaces with our range of flooring solutions, including vinyl, PVC, wooden and SPC flooring, offering a variety of designs and finishes that combine style, durability and everyday practicality.",
     categoryId: "decora-flooring",
   },
   {
     title: "Decorative Solutions",
-    description: "Add the finishing touches that make a space feel complete. Discover decorative elements and finishes that enhance the overall character of your interiors.",
+    description: "Complete your interiors with thoughtfully selected decorative elements, stylish finishes and creative accents that add personality, enhance aesthetics and bring harmony to your spaces.",
     categoryId: "decora-decorative",
   },
 ];
@@ -131,9 +131,13 @@ export const DecorSolutionsSection: React.FC = () => {
                     {item.title}
                   </h4>
                 </div>
-                <p className="p-3 sm:p-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
+                <p className="px-3 pt-3 sm:px-4 sm:pt-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
                   {item.description}
                 </p>
+                <span className="flex items-center gap-1.5 px-3 pb-3 pt-2 sm:px-4 sm:pb-4 text-[10px] sm:text-[11px] font-mono tracking-[0.14em] uppercase text-[#B8A98C] group-hover:text-white transition-colors">
+                  <span>View Sample Video &amp; 3D Design</span>
+                  <ArrowUpRight className="w-3 h-3 shrink-0" />
+                </span>
               </a>
             ))}
           </div>

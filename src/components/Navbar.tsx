@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
       }
 
       // Active section spy
-      const sections = ['home', 'about', 'expertise', 'process', 'decor', 'services', 'portfolio', 'reviews', 'offers', 'contact'];
+      const sections = ['home', 'about', 'expertise', 'services', 'process', 'decor', 'portfolio', 'reviews', 'offers', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onProjectsPage = fa
   const navLinks = [
     { name: 'Home', short: 'Home', href: '#home', id: 'home' },
     { name: 'About Us', short: 'About', href: '#about', id: 'about' },
-    { name: 'Our Services', short: 'Services', href: '#services', id: 'services' },
+    { name: 'Our Services', short: 'Services', href: '#expertise', id: 'expertise' },
     { name: 'Our Process', short: 'Process', href: '#process', id: 'process' },
     { name: 'Decor Solutions', short: 'Decor', href: '#decor', id: 'decor' },
     { name: 'Projects', short: 'Projects', href: '#portfolio', id: 'portfolio' },

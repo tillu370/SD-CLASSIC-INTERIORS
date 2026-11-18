@@ -8,6 +8,8 @@ export interface ServiceCardDetail {
   image: string;
   features: string[];
   description: string;
+  /** Extra gallery images shown before the default set. */
+  extraGallery?: string[];
 }
 
 export const SERVICE_ITEMS: ServiceCardDetail[] = [
@@ -40,9 +42,18 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "Complete",
     line2: "Wood Works",
     group: "Woodwork & Furniture",
-    image: "/images/services/detail_wood_works.jpg",
+    image: "/images/services/gallery/complete-wood-works/wood-08.jpg",
     features: ["Bespoke Veneer & Polish", "Fluted Acoustic Wall Panels", "Solid Wood Door Jambs", "Master Craftsmanship"],
-    description: "Fine architectural carpentry including door portals, wood paneling, acoustic slatted partitions, and customized joinery."
+    description: "Fine architectural carpentry including door portals, wood paneling, acoustic slatted partitions, and customized joinery.",
+    extraGallery: [
+      "/images/services/gallery/complete-wood-works/wood-01.jpg",
+      "/images/services/gallery/complete-wood-works/wood-02.jpg",
+      "/images/services/gallery/complete-wood-works/wood-03.jpg",
+      "/images/services/gallery/complete-wood-works/wood-04.jpg",
+      "/images/services/gallery/complete-wood-works/wood-05.jpg",
+      "/images/services/gallery/complete-wood-works/wood-06.jpg",
+      "/images/services/gallery/complete-wood-works/wood-07.jpg",
+    ],
   },
   {
     id: "3d-designed-wallpapers",
@@ -128,9 +139,18 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "Artificial Grass",
     line2: "/ Sports Turf",
     group: "Landscape & Greens",
-    image: "/images/services/detail_artificial_grass.jpg",
+    image: "/images/services/gallery/artificial-grass-turf/turf-08.jpg",
     features: ["Natural Multi-tone Blades", "Self-draining Perforated Latex Backing", "UV Colorfastness Guarantee", "Child & Pet Safe"],
-    description: "High-density UV-stabilized synthetic turf for balconies, terrace gardens, putting greens, and courtyard relaxation areas."
+    description: "High-density UV-stabilized synthetic turf for balconies, terrace gardens, putting greens, rooftop sports courts, and courtyard relaxation areas.",
+    extraGallery: [
+      "/images/services/gallery/artificial-grass-turf/turf-01.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-02.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-03.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-04.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-05.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-06.jpg",
+      "/images/services/gallery/artificial-grass-turf/turf-07.jpg",
+    ],
   },
   {
     id: "vertical-garden",
@@ -139,9 +159,17 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "Vertical",
     line2: "Garden",
     group: "Landscape & Greens",
-    image: "/images/services/detail_vertical_garden.jpg",
+    image: "/images/services/gallery/vertical-garden/vg-07.jpg",
     features: ["Integrated Drip Irrigation (Live)", "Dense Architectural Foliage Mix", "Zero Maintenance Foliage Options", "Acoustic Noise Reduction"],
-    description: "Lush biophilic living walls and premium UV-rated artificial green foliage installations for indoor and outdoor facades."
+    description: "Lush biophilic living walls and premium UV-rated artificial green foliage installations for indoor and outdoor facades.",
+    extraGallery: [
+      "/images/services/gallery/vertical-garden/vg-01.jpg",
+      "/images/services/gallery/vertical-garden/vg-02.jpg",
+      "/images/services/gallery/vertical-garden/vg-03.jpg",
+      "/images/services/gallery/vertical-garden/vg-04.jpg",
+      "/images/services/gallery/vertical-garden/vg-05.jpg",
+      "/images/services/gallery/vertical-garden/vg-06.jpg",
+    ],
   },
   {
     id: "pvc-pu-panels",
@@ -161,9 +189,20 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "False",
     line2: "Ceiling",
     group: "Ceiling & Fabrication",
-    image: "/images/services/detail_false_ceiling.jpg",
+    image: "/images/services/gallery/false-ceiling/fc-10.jpg",
     features: ["GI Channel Structural Grid", "Concealed Ambient LED Coves", "Acoustic Gypsum Boards", "Seamless Shadow Gap Details"],
-    description: "Gypsum and metal grid false ceilings with recessed cove lighting, magnetic track lights, and architectural drop reveals."
+    description: "Gypsum and metal grid false ceilings with recessed cove lighting, magnetic track lights, and architectural drop reveals.",
+    extraGallery: [
+      "/images/services/gallery/false-ceiling/fc-01.jpg",
+      "/images/services/gallery/false-ceiling/fc-02.jpg",
+      "/images/services/gallery/false-ceiling/fc-03.jpg",
+      "/images/services/gallery/false-ceiling/fc-04.jpg",
+      "/images/services/gallery/false-ceiling/fc-05.jpg",
+      "/images/services/gallery/false-ceiling/fc-06.jpg",
+      "/images/services/gallery/false-ceiling/fc-07.jpg",
+      "/images/services/gallery/false-ceiling/fc-08.jpg",
+      "/images/services/gallery/false-ceiling/fc-09.jpg",
+    ],
   },
   {
     id: "paints-putty-works",
@@ -182,20 +221,33 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     title: "Fabrications",
     line1: "Fabrications",
     group: "Ceiling & Fabrication",
-    image: "/images/services/detail_fabrications.jpg",
+    image: "/images/services/gallery/fabrications/fab-07.jpg",
     features: ["Precision Laser Cutting", "Powder-coated Matte Black Finish", "Toughened Architectural Glass", "Heavy-gauge Structural Steel"],
-    description: "Structural steel frameworks, laser-cut CNC metal screens, glass railings, and bespoke architectural metalwork."
+    description: "Structural steel frameworks, laser-cut CNC metal screens, glass railings, and bespoke architectural metalwork.",
+    extraGallery: [
+      "/images/services/gallery/fabrications/fab-01.jpg",
+      "/images/services/gallery/fabrications/fab-02.jpg",
+      "/images/services/gallery/fabrications/fab-03.jpg",
+      "/images/services/gallery/fabrications/fab-04.jpg",
+      "/images/services/gallery/fabrications/fab-05.jpg",
+      "/images/services/gallery/fabrications/fab-06.jpg",
+    ],
   },
   {
     id: "aluminum-works",
     number: "17",
-    title: "Aluminum Works",
-    line1: "Aluminum",
-    line2: "Works",
+    title: "Aluminium Cupboards",
+    line1: "Aluminium",
+    line2: "Cupboards",
     group: "Kitchens & Storage",
-    image: "/images/services/detail_aluminum_works.jpg",
+    image: "/images/services/gallery/aluminum-works/cupboard-04.jpg",
     features: ["Powder-coated Profile Sections", "Precision CNC Fabrication", "Corrosion & Weather Resistant", "Slim Sightline Framing"],
-    description: "Custom aluminum fabrication including window and door frames, partitions, and architectural sections built for durability and a clean finish."
+    description: "Custom aluminium cupboards, kitchen cabinets and wardrobes, along with window and door frames, partitions, and architectural sections built for durability and a clean finish.",
+    extraGallery: [
+      "/images/services/gallery/aluminum-works/cupboard-01.jpg",
+      "/images/services/gallery/aluminum-works/cupboard-02.jpg",
+      "/images/services/gallery/aluminum-works/cupboard-03.jpg",
+    ],
   },
   {
     id: "artistic-paints-putty-works",
@@ -204,16 +256,46 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "Artistic Paints",
     line2: "and Putty Works",
     group: "Wall Finishes",
-    image: "/images/services/detail_artistic_paints_putty.jpg",
+    image: "/images/services/gallery/artistic-paints-putty-works/paint-07.jpg",
     features: ["Hand-crafted Textured Finishes", "Designer Wall Art & Murals", "Decorative Stencil & Stucco Work", "Premium Durable Coatings"],
-    description: "Artistic wall finishes including textured stucco, decorative murals, stencil art and designer surface treatments for distinctive interiors."
+    description: "Artistic wall finishes including textured stucco, decorative murals, stencil art and designer surface treatments for distinctive interiors.",
+    extraGallery: [
+      "/images/services/gallery/artistic-paints-putty-works/paint-01.jpg",
+      "/images/services/gallery/artistic-paints-putty-works/paint-02.jpg",
+      "/images/services/gallery/artistic-paints-putty-works/paint-03.jpg",
+      "/images/services/gallery/artistic-paints-putty-works/paint-04.jpg",
+      "/images/services/gallery/artistic-paints-putty-works/paint-05.jpg",
+      "/images/services/gallery/artistic-paints-putty-works/paint-06.jpg",
+    ],
+  },
+  {
+    id: "residential-furniture",
+    number: "19",
+    title: "Residential Furniture",
+    line1: "Residential",
+    line2: "Furniture",
+    group: "Woodwork & Furniture",
+    image: "/images/services/gallery/residential-furniture/furn-07.jpg",
+    features: ["Premium Leather & Fabric Upholstery", "Curated Sofas & Sectionals", "Designer Bedroom Furniture", "Tailored to Room Scale"],
+    description: "Curated sofas, sectionals and bedroom furniture selected and arranged to complement your interiors.",
+    extraGallery: [
+      "/images/services/gallery/residential-furniture/furn-01.jpg",
+      "/images/services/gallery/residential-furniture/furn-02.jpg",
+      "/images/services/gallery/residential-furniture/furn-03.jpg",
+      "/images/services/gallery/residential-furniture/furn-04.jpg",
+      "/images/services/gallery/residential-furniture/furn-05.jpg",
+      "/images/services/gallery/residential-furniture/furn-06.jpg",
+    ],
   }
 ];
 
-export const serviceGallery = (service: ServiceCardDetail): string[] => [
-  service.image,
-  `/images/services/gallery/${service.id}/02.jpg`,
-  `/images/services/gallery/${service.id}/03.jpg`,
-  `/images/services/gallery/${service.id}/04.jpg`,
-  `/images/services/gallery/${service.id}/05.jpg`,
-];
+export const serviceGallery = (service: ServiceCardDetail): string[] =>
+  service.extraGallery
+    ? [...service.extraGallery, service.image]
+    : [
+        service.image,
+        `/images/services/gallery/${service.id}/02.jpg`,
+        `/images/services/gallery/${service.id}/03.jpg`,
+        `/images/services/gallery/${service.id}/04.jpg`,
+        `/images/services/gallery/${service.id}/05.jpg`,
+      ];
