@@ -91,7 +91,7 @@ export const BRAND_INFO = {
     location: "#17-61/2, Ground Floor, Near Govt Hospital, BRTS Main Road, Pendurthi, Visakhapatnam - 531173, Andhra Pradesh, India.",
     area: "Pendurthi, Visakhapatnam",
     floor: "Ground Floor",
-    googleMapsUrl: "https://maps.google.com/?q=Pendurthi,Visakhapatnam,531173"
+    googleMapsUrl: "https://maps.google.com/?q=%2317-61%2F2%2C+First+Floor%2C+Near+Govt+Hospital%2C+BRTS+Main+Road%2C+Pendurthi%2C+Visakhapatnam+-+531173"
   },
   description: "From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.",
   groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
