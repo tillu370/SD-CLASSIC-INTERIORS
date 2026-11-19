@@ -99,7 +99,7 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "3D Designed",
     line2: "Wallpapers",
     group: "Wall Finishes",
-    image: "/images/services/detail_3d_wallpapers.jpg",
+    image: "/images/project-type/decora-wallpapers/01.webp",
     features: ["High-definition Textures", "Seamless Surface Installation", "Moisture-resistant Backing", "Non-reflective Matte Finish"],
     description: "Tactile textured wall coverings with geometric depth, fabric-backed finishes, and subtle architectural shadows.",
     decoraCategory: "decora-wallpapers"
@@ -111,10 +111,10 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "4D Customized",
     line2: "Wallpapers",
     group: "Wall Finishes",
-    image: "/images/services/detail_4d_wallpapers.jpg",
+    image: "/images/project-type/decora-customized-wallpapers/01.webp",
     features: ["Bespoke Wall Scaling", "Eco-friendly Odorless Inks", "Scratch-resistant Coating", "Artisan Level Detail"],
     description: "Panoramic custom murals and dimensional wall murals tailored to precise room elevations and lighting angles.",
-    decoraCategory: "decora-wallpapers"
+    decoraCategory: "decora-customized-wallpapers"
   },
   {
     id: "pvc-pu-panels",
@@ -213,7 +213,7 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     line1: "Customized",
     line2: "Window Blinds",
     group: "Windows & Soft Furnishings",
-    image: "/images/services/detail_custom_blinds.jpg",
+    image: "/images/project-type/decora-blinds/11.webp",
     features: ["Day & Night Light Modulation", "Genuine Basswood Options", "Minimalist Cordless Systems", "Custom Header Pelmets"],
     description: "Dual zebra blinds, wooden louver blinds, and bespoke printed privacy panels engineered for unique window dimensions.",
     decoraCategory: "decora-blinds"
