@@ -124,7 +124,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Existing spaces redesigned with improved layouts and upgraded finishes.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 5,
+    galleryImages: 4,
   },
   civil: {
     id: 'civil',
