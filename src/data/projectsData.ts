@@ -62,6 +62,8 @@ const PROJECT_META: Array<{ slug: string; title: string; location: string }> = [
   { slug: 'skypark-premchand', title: 'Sky Park Residence (Premchand)', location: 'Sky Park' },
   { slug: 'chodavaram-venkatesh', title: 'Chodavaram Residence (Venkatesh)', location: 'Chodavaram' },
   { slug: 'parawada-suribabu', title: 'Parawada Duplex Residence (Suribabu)', location: 'Parawada' },
+  { slug: 'budget-package-3bhk', title: 'Budget Package – 3BHK', location: 'Sample Design' },
+  { slug: 'budget-package-2bhk', title: 'Budget Package – 2BHK', location: 'Sample Design' },
 ];
 
 const mediaBase = (slug: string) => `/projects/${slug}`;
