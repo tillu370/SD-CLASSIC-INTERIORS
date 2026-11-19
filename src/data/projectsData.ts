@@ -48,6 +48,20 @@ const PROJECT_META: Array<{ slug: string; title: string; location: string }> = [
   { slug: 'mvv-green-field-ii', title: 'MVV Green Field Residence II', location: 'MVV Green Field' },
   { slug: 'skypark-b5', title: 'Sky Park Apartment B-5', location: 'Sky Park' },
   { slug: 'bheemili', title: 'Bheemili Residence', location: 'Bheemili' },
+  { slug: 'akkayapalem-dileep', title: 'Akkayapalem Residence', location: 'Akkayapalem' },
+  { slug: 'sujathanagar-karthik', title: 'Sujathanagar Residence', location: 'Sujathanagar' },
+  { slug: 'bheemili-akshay', title: 'Bheemili Residence (Akshay)', location: 'Bheemili' },
+  { slug: 'chodavaram-eswar-rao', title: 'Chodavaram Residence (Eswar Rao)', location: 'Chodavaram' },
+  { slug: 'shivajipalem-srinivas-rao', title: 'Shivaji Palem Residence', location: 'Shivaji Palem' },
+  { slug: 'parawada-lokesh', title: 'Parawada Residence (Lokesh)', location: 'Parawada' },
+  { slug: 'mvv-green-field-seetharam', title: 'MVV Green Field Residence (Seetharam)', location: 'MVV Green Field' },
+  { slug: 'vizianagaram-shankar', title: 'Vizianagaram Residence (Shankar)', location: 'Vizianagaram' },
+  { slug: 'mvv-green-field-sp-rao', title: 'MVV Green Field Residence (SP Rao)', location: 'MVV Green Field' },
+  { slug: 'yendada-gayathri-devi', title: 'Yendada Residence (Gayathri Devi)', location: 'Yendada' },
+  { slug: 'madhurawada-naveen-reddy', title: 'Madhurawada Residence (Naveen Reddy)', location: 'Madhurawada' },
+  { slug: 'skypark-premchand', title: 'Sky Park Residence (Premchand)', location: 'Sky Park' },
+  { slug: 'chodavaram-venkatesh', title: 'Chodavaram Residence (Venkatesh)', location: 'Chodavaram' },
+  { slug: 'parawada-suribabu', title: 'Parawada Duplex Residence (Suribabu)', location: 'Parawada' },
 ];
 
 const mediaBase = (slug: string) => `/projects/${slug}`;
@@ -197,6 +211,6 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Partitions, false ceilings, vertical gardens, textured and wall panels — the finishing touches that complete the character of a space.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 10,
+    galleryImages: 16,
   },
 };
