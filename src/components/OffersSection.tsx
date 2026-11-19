@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
 import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
+import { categoryPath } from '../lib/useHashRoute';
 
 interface OffersSectionProps {
   onSelectOffer: (offerTitle: string) => void;
@@ -143,7 +144,7 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
           ))}
         </div>
 
-        <div className="text-center mb-8 sm:mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
           <a
             href={createWhatsAppHref(
               BRAND_INFO.residential.whatsappUrl,
@@ -154,6 +155,13 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectOffer }) =
             className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black border border-white text-xs sm:text-sm font-mono tracking-wider uppercase font-bold shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-300"
           >
             <span>Get Sample Video &amp; 3D Design</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
+          <a
+            href={categoryPath('visualizations')}
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white border border-white/30 text-xs sm:text-sm font-mono tracking-wider uppercase font-bold hover:bg-white hover:text-black hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <span>View Sample Video &amp; 3D Design</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { SERVICE_ITEMS, type ServiceCardDetail } from '../data/servicesData';
-import { servicePath } from '../lib/useHashRoute';
+import { categoryPath, servicePath } from '../lib/useHashRoute';
 
 export const ServicesSection: React.FC = () => {
   // Group services by discipline in catalogue order, preserving first-seen group order
@@ -18,7 +18,7 @@ export const ServicesSection: React.FC = () => {
   const renderCard = (service: ServiceCardDetail) => (
     <a
       key={service.id}
-      href={servicePath(service.id)}
+      href={service.decoraCategory ? categoryPath(service.decoraCategory) : servicePath(service.id)}
       aria-label={`View ${service.title} photo gallery`}
       className="group relative block cursor-pointer overflow-hidden bg-[#0d0d0d] aspect-[4/3] shadow-[0_6px_18px_-8px_rgba(0,0,0,0.3)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
     >
@@ -88,7 +88,7 @@ export const ServicesSection: React.FC = () => {
 
           {/* Centered Badge: 16+ SPECIALIZED DISCIPLINES */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-white/[0.04] border border-graphite text-[10px] font-mono tracking-[0.25em] uppercase text-light-grey/80">
-            <span>18 Specialized Disciplines</span>
+            <span>19 Specialized Disciplines</span>
           </div>
         </div>
 

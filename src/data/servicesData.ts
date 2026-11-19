@@ -10,6 +10,8 @@ export interface ServiceCardDetail {
   description: string;
   /** Extra gallery images shown before the default set. */
   extraGallery?: string[];
+  /** When set, the card links to this DECORA category page instead of the service detail page. */
+  decoraCategory?: string;
 }
 
 export const SERVICE_ITEMS: ServiceCardDetail[] = [
@@ -64,7 +66,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Wall Finishes",
     image: "/images/services/detail_3d_wallpapers.jpg",
     features: ["High-definition Textures", "Seamless Surface Installation", "Moisture-resistant Backing", "Non-reflective Matte Finish"],
-    description: "Tactile textured wall coverings with geometric depth, fabric-backed finishes, and subtle architectural shadows."
+    description: "Tactile textured wall coverings with geometric depth, fabric-backed finishes, and subtle architectural shadows.",
+    decoraCategory: "decora-wallpapers"
   },
   {
     id: "4d-customized-wallpapers",
@@ -75,7 +78,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Wall Finishes",
     image: "/images/services/detail_4d_wallpapers.jpg",
     features: ["Bespoke Wall Scaling", "Eco-friendly Odorless Inks", "Scratch-resistant Coating", "Artisan Level Detail"],
-    description: "Panoramic custom murals and dimensional wall murals tailored to precise room elevations and lighting angles."
+    description: "Panoramic custom murals and dimensional wall murals tailored to precise room elevations and lighting angles.",
+    decoraCategory: "decora-wallpapers"
   },
   {
     id: "vinyl-pvc-flooring",
@@ -86,7 +90,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Flooring",
     image: "/images/services/detail_vinyl_flooring.jpg",
     features: ["Acoustic Sound Dampening", "Waterproof Core", "High Scratch Resistance", "Warm Underfoot Comfort"],
-    description: "Resilient luxury vinyl tiles and acoustic planks engineered for high foot traffic and effortless maintenance."
+    description: "Resilient luxury vinyl tiles and acoustic planks engineered for high foot traffic and effortless maintenance.",
+    decoraCategory: "decora-flooring"
   },
   {
     id: "wooden-spc-flooring",
@@ -97,7 +102,20 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Flooring",
     image: "/images/services/detail_wooden_flooring.jpg",
     features: ["Limestone Rigid Core", "Zero Expansion in Humid Coastal Climate", "Natural Wood Grain Relief", "UV Protected Wear Layer"],
-    description: "Stone Plastic Composite (SPC) and real hardwood engineered flooring in classic herringbone and wide-plank patterns."
+    description: "Stone Plastic Composite (SPC) and real hardwood engineered flooring in classic herringbone and wide-plank patterns.",
+    decoraCategory: "decora-flooring"
+  },
+  {
+    id: "wall-to-wall-carpets",
+    number: "20",
+    title: "Wall to Wall Carpets",
+    line1: "Wall to Wall",
+    line2: "Carpets",
+    group: "Flooring",
+    image: "/images/project-type/decora-flooring/17.webp",
+    features: ["Soft Underfoot Comfort", "Sound & Heat Insulation", "Wide Range of Textures & Tones", "Seamless Wall-to-wall Installation"],
+    description: "Plush wall-to-wall carpeting that adds warmth, comfort and a refined finish to bedrooms, living areas and commercial interiors.",
+    decoraCategory: "decora-flooring"
   },
   {
     id: "window-blinds",
@@ -108,7 +126,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Windows & Soft Furnishings",
     image: "/images/services/detail_window_blinds.jpg",
     features: ["Solar UV Heat Filtering", "Motorized Automation Ready", "Custom Architectural Cassettes", "Dust-repellent Fabric Treatments"],
-    description: "Motorized and manual roller blinds, Venetian blinds, and blackout solar control shades with precision hardware."
+    description: "Motorized and manual roller blinds, Venetian blinds, and blackout solar control shades with precision hardware.",
+    decoraCategory: "decora-blinds"
   },
   {
     id: "customized-window-blinds",
@@ -119,7 +138,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Windows & Soft Furnishings",
     image: "/images/services/detail_custom_blinds.jpg",
     features: ["Day & Night Light Modulation", "Genuine Basswood Options", "Minimalist Cordless Systems", "Custom Header Pelmets"],
-    description: "Dual zebra blinds, wooden louver blinds, and bespoke printed privacy panels engineered for unique window dimensions."
+    description: "Dual zebra blinds, wooden louver blinds, and bespoke printed privacy panels engineered for unique window dimensions.",
+    decoraCategory: "decora-blinds"
   },
   {
     id: "customized-curtains",
@@ -130,7 +150,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Windows & Soft Furnishings",
     image: "/images/services/detail_custom_curtains.jpg",
     features: ["Ripplefold Wave Heading", "100% Thermal Blackout Interlining", "Hand-tailored Hemming", "Concealed Motorized Tracks"],
-    description: "Floor-to-ceiling wave fold drapery, sheer Belgian linens, blackout linings, and concealed ceiling track systems."
+    description: "Floor-to-ceiling wave fold drapery, sheer Belgian linens, blackout linings, and concealed ceiling track systems.",
+    decoraCategory: "decora-curtains"
   },
   {
     id: "artificial-grass-turf",
@@ -180,7 +201,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Wall Finishes",
     image: "/images/services/detail_pvc_pu_panels.jpg",
     features: ["100% Termite & Waterproof", "Interlocking Concealed Joins", "Realistic Wood & Stone Textures", "Minimal Maintenance"],
-    description: "Contemporary fluted wall panels, charcoal louvers, and lightweight architectural cladding for dramatic feature walls."
+    description: "Contemporary fluted wall panels, charcoal louvers, and lightweight architectural cladding for dramatic feature walls.",
+    decoraCategory: "decora-decorative"
   },
   {
     id: "false-ceiling",

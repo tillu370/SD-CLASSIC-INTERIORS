@@ -13,7 +13,7 @@ interface DecorCollection {
 
 const DECORA_COLLECTIONS: DecorCollection[] = [
   {
-    title: "Wallpapers",
+    title: "Designed Wallpapers",
     description: "Explore our extensive collection of premium wallpapers, featuring elegant designs, textures and patterns that bring style, character and a distinctive identity to your walls.",
     categoryId: "decora-wallpapers",
     badge: "Most Requested",
@@ -131,13 +131,9 @@ export const DecorSolutionsSection: React.FC = () => {
                     {item.title}
                   </h4>
                 </div>
-                <p className="px-3 pt-3 sm:px-4 sm:pt-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
+                <p className="px-3 pt-3 pb-3 sm:px-4 sm:pt-4 sm:pb-4 text-[11px] sm:text-xs font-sans text-light-grey/80 leading-relaxed">
                   {item.description}
                 </p>
-                <span className="flex items-center gap-1.5 px-3 pb-3 pt-2 sm:px-4 sm:pb-4 text-[10px] sm:text-[11px] font-mono tracking-[0.14em] uppercase text-[#B8A98C] group-hover:text-white transition-colors">
-                  <span>View Sample Video &amp; 3D Design</span>
-                  <ArrowUpRight className="w-3 h-3 shrink-0" />
-                </span>
               </a>
             ))}
           </div>
@@ -182,10 +178,7 @@ export const DecorSolutionsSection: React.FC = () => {
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href={createWhatsAppHref(
-                BRAND_INFO.decora.whatsappUrl,
-                "Hello DECORA! I'd like to visit your showroom. Please share the location and timings."
-              )}
+              href={BRAND_INFO.decora.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-black text-xs font-mono tracking-wider uppercase font-semibold hover:bg-light-grey transition-all duration-300"

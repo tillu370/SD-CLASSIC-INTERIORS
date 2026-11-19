@@ -147,7 +147,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
   },
   'decora-wallpapers': {
     id: 'decora-wallpapers',
-    title: 'Wallpapers',
+    title: 'Designed Wallpapers',
     eyebrow: 'DECORA · The Art of Beautiful Details',
     description: 'An extensive collection of premium wallpapers, featuring elegant designs, textures and patterns.',
     sections: ['renders', 'walkthrough', 'completed'],
