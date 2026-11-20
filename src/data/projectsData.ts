@@ -94,7 +94,11 @@ export const renderSrc = (slug: string, n: number) =>
 export const renderThumb = (slug: string, n: number) =>
   `${mediaBase(slug)}/renders/${String(n).padStart(2, '0')}-t.webp`;
 
-const ALL_SLUGS = PROJECTS.map((p) => p.slug);
+export const SAMPLE_PROJECT_SLUGS = ['budget-package-2bhk', 'budget-package-3bhk'];
+export const SAMPLE_PROJECTS = PROJECTS.filter((project) => SAMPLE_PROJECT_SLUGS.includes(project.slug));
+const PROJECT_SLUGS = PROJECTS
+  .filter((project) => !SAMPLE_PROJECT_SLUGS.includes(project.slug))
+  .map((project) => project.slug);
 
 export const CATEGORY_PAGES: Record<string, CategoryPage> = {
   residential: {
@@ -104,7 +108,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description:
       'Homes and apartments planned around the way our clients live, from 3D design to the finished space.',
     sections: ['renders', 'walkthrough', 'completed'],
-    projectSlugs: ALL_SLUGS,
+    projectSlugs: PROJECT_SLUGS,
   },
   visualizations: {
     id: 'visualizations',
@@ -113,7 +117,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description:
       'Realistic 3D renders and walkthroughs that let you experience a space before execution begins.',
     sections: ['renders', 'walkthrough'],
-    projectSlugs: ALL_SLUGS,
+    projectSlugs: PROJECT_SLUGS,
   },
   commercial: {
     id: 'commercial',

@@ -16,7 +16,8 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ProjectsPage } from './components/ProjectsPages';
 import { ServiceGalleryPage } from './components/ServiceGalleryPage';
 import { GuidePage } from './components/GuidePage';
-import { categoryPath, parseHash, useHashRoute } from './lib/useHashRoute';
+import { SampleDesignsPage } from './components/SampleDesignsPage';
+import { categoryPath, parseHash, sampleDesignPath, useHashRoute } from './lib/useHashRoute';
 import { openWhatsAppEnquiry } from './data/websiteData';
 
 export const App: React.FC = () => {
@@ -32,6 +33,11 @@ export const App: React.FC = () => {
     const el = document.getElementById(id);
     if (el) requestAnimationFrame(() => el.scrollIntoView());
   }, [route.name]);
+
+  useEffect(() => {
+    if (route.name !== 'sample' || !window.location.hash.startsWith('#/projects/')) return;
+    window.location.hash = sampleDesignPath(route.slug);
+  }, [route]);
 
   const handleSelectCategory = (categoryId: string) => {
     window.location.hash = categoryPath(categoryId);
@@ -64,9 +70,13 @@ export const App: React.FC = () => {
       )}
 
       {/* Global Navigation */}
-      <Navbar onOpenQuote={handleOpenConsultation} onProjectsPage={route.name !== 'home'} />
+      <Navbar onOpenQuote={handleOpenConsultation} onProjectsPage={route.name === 'category' || route.name === 'project'} />
 
-      {route.name === 'guide' ? (
+      {route.name === 'samples' || route.name === 'sample' ? (
+        <main>
+          <SampleDesignsPage route={route} />
+        </main>
+      ) : route.name === 'guide' ? (
         <main>
           <GuidePage />
         </main>
