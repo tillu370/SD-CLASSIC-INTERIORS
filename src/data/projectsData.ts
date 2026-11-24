@@ -190,7 +190,7 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'The perfect balance of light, privacy and style, designed to complement your interiors.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 15,
+    galleryImages: 14,
   },
   'decora-curtains': {
     id: 'decora-curtains',
@@ -217,6 +217,6 @@ export const CATEGORY_PAGES: Record<string, CategoryPage> = {
     description: 'Partitions, false ceilings, vertical gardens, textured and wall panels — the finishing touches that complete the character of a space.',
     sections: ['renders', 'walkthrough', 'completed'],
     projectSlugs: [],
-    galleryImages: 16,
+    galleryImages: 15,
   },
 };

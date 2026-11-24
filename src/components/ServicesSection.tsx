@@ -66,11 +66,11 @@ export const ServicesSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Centered Editorial Header as requested by user */}
         <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-20">
-          {/* Eyebrow: —— 06 / WHAT WE DO —— */}
+          {/* Eyebrow: —— WHAT WE DO —— */}
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.28em] uppercase text-mid-grey">
-              06 / WHAT WE DO
+              WHAT WE DO
             </span>
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>

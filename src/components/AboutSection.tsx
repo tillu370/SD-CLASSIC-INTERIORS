@@ -44,13 +44,16 @@ export const AboutSection: React.FC = () => {
             whileInView={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, clipPath: 'inset(0% round 2px)' }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[#0a0a0a] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
+            className="relative w-full max-w-[520px] mx-auto lg:max-w-none aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/4.2] overflow-hidden bg-[radial-gradient(circle_at_30%_20%,#1a1a1a,#0a0a0a_65%)] border border-black/10 shadow-[0_35px_90px_-25px_rgba(0,0,0,0.25)]"
           >
+            {/* Subtle gold corner accent */}
+            <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-[#B8A98C]/40 m-4 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r border-[#B8A98C]/40 m-4 pointer-events-none" />
             <div className="w-full h-full flex items-center justify-center p-10 sm:p-14">
               <img
                 src="/images/20261111_214919.png"
                 alt="SD Classic Interiors monogram"
-                className="max-h-full max-w-[70%] w-auto h-auto object-contain invert"
+                className="max-h-full max-w-[70%] w-auto h-auto object-contain invert drop-shadow-[0_0_40px_rgba(184,169,140,0.15)]"
                 loading="lazy"
               />
             </div>
@@ -75,7 +78,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             {/* Compact Brand Metrics */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-black/10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-[#B8A98C]/50">
               {STATS.map((stat) => (
                 <div key={stat.label} className="py-3 pr-4 sm:pl-5 sm:first:pl-0 border-b sm:border-b-0 sm:border-r border-black/10 last:border-0 flex sm:block items-baseline justify-between sm:justify-start gap-4">
                   <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#5A5A5A] block mb-1">
@@ -104,10 +107,11 @@ export const AboutSection: React.FC = () => {
             {FEATURES.map((feat) => (
               <div
                 key={feat.title}
-                className="group relative p-3 sm:p-5 border-r border-b border-black/10 flex items-center gap-2.5 sm:gap-3 transition-colors duration-300 hover:bg-black/5"
+                className="group relative p-3 sm:p-5 border-r border-b border-black/10 flex items-center gap-2.5 sm:gap-3 transition-colors duration-300 hover:bg-white"
               >
+                <span className="absolute top-0 left-0 right-0 h-[2px] bg-[#B8A98C] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
                 <div className="flex items-center justify-between gap-2 shrink-0">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 shrink-0 border border-black/10 bg-black/[0.03] flex items-center justify-center text-[#111111] group-hover:border-[#B8A98C] transition-colors duration-300">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 shrink-0 border border-black/10 bg-black/[0.03] flex items-center justify-center text-[#111111] group-hover:border-[#B8A98C] group-hover:bg-[#B8A98C]/10 transition-colors duration-300">
                     {feat.icon}
                   </div>
                   <span className="hidden sm:inline text-[10px] font-sans tracking-widest text-[#5A5A5A]">
@@ -129,7 +133,8 @@ export const AboutSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-8 sm:py-12 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
           <Reveal>
-            <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
+            <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-all duration-300 hover:border-[#B8A98C]/50 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)]">
+              <span className="absolute top-0 left-0 w-10 h-[2px] bg-[#B8A98C]" />
               <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Vision
               </span>
@@ -140,7 +145,8 @@ export const AboutSection: React.FC = () => {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-colors duration-300 hover:border-[#D5D2CC]/40">
+            <div className="relative h-full bg-white border border-black/10 p-5 sm:p-7 overflow-hidden transition-all duration-300 hover:border-[#B8A98C]/50 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)]">
+              <span className="absolute top-0 left-0 w-10 h-[2px] bg-[#B8A98C]" />
               <span className="relative text-xs sm:text-sm font-sans tracking-[0.28em] uppercase text-[#5A5A5A] font-medium mb-2 block">
                 Our Mission
               </span>
@@ -171,7 +177,7 @@ export const AboutSection: React.FC = () => {
             <Reveal>
               <a
                 href="#division-residential"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
                 <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 01 · Residential Interiors
@@ -194,7 +200,7 @@ export const AboutSection: React.FC = () => {
             <Reveal delay={0.1}>
               <a
                 href="#division-commercial"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
                 <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-[9px] md:text-[11px] lg:text-[12px] xl:text-[10px] 2xl:text-[11px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 02 · Commercial, Corporate &amp; Infrastructure
@@ -216,7 +222,7 @@ export const AboutSection: React.FC = () => {
             <Reveal delay={0.2}>
               <a
                 href="#division-decora"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-colors duration-300 hover:border-[#B8A98C] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
                 <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 03 · Décor Solutions
@@ -259,7 +265,7 @@ export const AboutSection: React.FC = () => {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
+              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#B8A98C] hover:text-white hover:shadow-[0_12px_30px_-10px_rgba(184,169,140,0.5)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
             >
               <span>Discuss Your Project</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
