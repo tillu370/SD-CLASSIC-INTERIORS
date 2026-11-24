@@ -177,19 +177,19 @@ export const AboutSection: React.FC = () => {
             <Reveal>
               <a
                 href="#division-residential"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-[#111111] border border-white/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.4)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#B8A98C] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 01 · Residential Interiors
                 </span>
-                <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
+                <h4 className="text-lg sm:text-xl font-serif text-white mb-2">
                   {BRAND_INFO.residential.company}
                 </h4>
-                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-4 max-w-sm">
+                <p className="text-xs sm:text-sm font-sans font-light text-white/60 leading-[1.6] mb-4 max-w-sm">
                   Specialising in residential interior design and execution, including complete home interiors, modular and semi-modular solutions, customized furniture and end-to-end interior services — from concept to completion.
                 </p>
 
-                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-white">
                   <span>Connect for Residential Interiors</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -200,18 +200,18 @@ export const AboutSection: React.FC = () => {
             <Reveal delay={0.1}>
               <a
                 href="#division-commercial"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-[#111111] border border-white/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.4)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-[9px] md:text-[11px] lg:text-[12px] xl:text-[10px] 2xl:text-[11px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-[9px] md:text-[11px] lg:text-[12px] xl:text-[10px] 2xl:text-[11px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#B8A98C] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 02 · Commercial, Corporate &amp; Infrastructure
                 </span>
-                <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
+                <h4 className="text-lg sm:text-xl font-serif text-white mb-2">
                   {BRAND_INFO.commercial.company}
                 </h4>
-                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
+                <p className="text-xs sm:text-sm font-sans font-light text-white/60 leading-[1.6] mb-3 max-w-sm">
                   Specialising in commercial and corporate interior design and execution, along with construction and infrastructure works — delivering complete solutions from design to execution.
                 </p>
-                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-white">
                   <span>Connect for commercial interiors</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -222,19 +222,19 @@ export const AboutSection: React.FC = () => {
             <Reveal delay={0.2}>
               <a
                 href="#division-decora"
-                className="group block h-full bg-white border border-black/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.18)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+                className="group block h-full bg-[#111111] border border-white/10 p-5 sm:p-7 transition-all duration-300 hover:border-[#B8A98C] hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.4)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
               >
-                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#5A5A5A] font-medium block mb-3 leading-relaxed whitespace-nowrap">
+                <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] font-sans tracking-[0.01em] lg:tracking-[0.03em] uppercase text-[#B8A98C] font-medium block mb-3 leading-relaxed whitespace-nowrap">
                   Division 03 · Décor Solutions
                 </span>
-                <h4 className="text-lg sm:text-xl font-serif text-[#111111] mb-2">
+                <h4 className="text-lg sm:text-xl font-serif text-white mb-2">
                   {BRAND_INFO.decora.brand}
                 </h4>
-                <p className="text-xs sm:text-sm font-sans font-light text-[#5A5A5A] leading-[1.6] mb-3 max-w-sm">
+                <p className="text-xs sm:text-sm font-sans font-light text-white/60 leading-[1.6] mb-3 max-w-sm">
                   Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
                 </p>
 
-                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-[#111111]">
+                 <span className="inline-flex items-center space-x-2 text-xs font-sans tracking-[0.15em] uppercase text-white">
                   <span>Connect for decor solutions</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -245,17 +245,33 @@ export const AboutSection: React.FC = () => {
       </div>
 
       {/* ───────────────────────────────────────────────────────────
-          SECTION FOUR — BRAND STATEMENT
+          SECTION FOUR — BRAND STATEMENT (video banner)
       ─────────────────────────────────────────────────────────── */}
-      <div className="relative py-10 sm:py-14 border-t border-black/10">
-        <div className="max-w-[1000px] mx-auto px-5 sm:px-8 lg:px-12 text-center relative z-10">
+      <div className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden border-t border-black/10">
+        {/* Showroom video background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/videos/brand-statement.mp4"
+          poster="/videos/brand-statement-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/50" />
+
+        <div className="max-w-[1000px] mx-auto px-5 sm:px-8 lg:px-12 text-center relative z-10 py-16 sm:py-20">
           <Reveal>
             <img
               src="/images/Imagine Every Inch Calligraphy.png"
               alt="Imagine Every Inch"
-              className="h-auto w-full max-w-md mx-auto -my-4 sm:-my-6"
+              className="h-auto w-full max-w-md mx-auto -my-4 sm:-my-6 brightness-0 invert drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
             />
-            <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-3xl mx-auto mb-5 sm:mb-6">
+            <p className="text-sm sm:text-base font-sans font-light text-white/85 leading-[1.7] max-w-3xl mx-auto mb-5 sm:mb-6">
               Thoughtfully designed. Expertly crafted. Inspired by your vision.
             </p>
             <a
@@ -265,7 +281,7 @@ export const AboutSection: React.FC = () => {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#B8A98C] hover:text-white hover:shadow-[0_12px_30px_-10px_rgba(184,169,140,0.5)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F2]"
+              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-white font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#B8A98C] hover:text-[#111111] hover:shadow-[0_12px_30px_-10px_rgba(184,169,140,0.5)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <span>Discuss Your Project</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

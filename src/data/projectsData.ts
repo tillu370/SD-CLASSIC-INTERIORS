@@ -47,7 +47,6 @@ const PROJECT_META: Array<{ slug: string; title: string; location: string }> = [
   { slug: 'mvv-green-field-i', title: 'MVV Green Field Residence I', location: 'MVV Green Field' },
   { slug: 'mvv-green-field-ii', title: 'MVV Green Field Residence II', location: 'MVV Green Field' },
   { slug: 'skypark-b5', title: 'Sky Park Apartment B-5', location: 'Sky Park' },
-  { slug: 'bheemili', title: 'Bheemili Residence', location: 'Bheemili' },
   { slug: 'akkayapalem-dileep', title: 'Akkayapalem Residence', location: 'Akkayapalem' },
   { slug: 'sujathanagar-karthik', title: 'Sujathanagar Residence', location: 'Sujathanagar' },
   { slug: 'bheemili-akshay', title: 'Bheemili Residence (Akshay)', location: 'Bheemili' },
