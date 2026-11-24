@@ -283,7 +283,7 @@ export const AboutSection: React.FC = () => {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#B8A98C] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#B8A98C] hover:text-[#111111] hover:shadow-[0_12px_30px_-10px_rgba(184,169,140,0.5)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B8A98C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
+              className="group inline-flex items-center space-x-2.5 px-7 py-3 border border-[#111111] text-[#111111] font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#111111] hover:text-white hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.4)] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#111111] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EFEDE8]"
             >
               <span>Discuss Your Project</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
