@@ -254,7 +254,7 @@ export const AboutSection: React.FC = () => {
             <img
               src="/images/Imagine Every Inch Calligraphy.png"
               alt="Imagine Every Inch"
-              className="h-auto w-full max-w-xs sm:max-w-md mx-auto mb-2 sm:mb-3 brightness-0"
+              className="h-auto w-full max-w-xs sm:max-w-md mx-auto -mb-1 sm:mb-0 brightness-0"
             />
 
             {/* Showroom video: autoplay, muted, looping, no controls */}
