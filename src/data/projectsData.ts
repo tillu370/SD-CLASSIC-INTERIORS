@@ -42,8 +42,6 @@ export const galleryThumb = (categoryId: string, n: number) =>
   `/images/project-type/${categoryId}/${String(n).padStart(2, '0')}-t.webp`;
 
 const PROJECT_META: Array<{ slug: string; title: string; location: string }> = [
-  { slug: 'mvv-green-field-i', title: 'MVV Green Field Residence I', location: 'MVV Green Field' },
-  { slug: 'skypark-b5', title: 'Sky Park Apartment B-5', location: 'Sky Park' },
   { slug: 'akkayapalem-dileep', title: 'Akkayapalem Residence', location: 'Akkayapalem' },
   { slug: 'sujathanagar-karthik', title: 'Sujathanagar Residence', location: 'Sujathanagar' },
   { slug: 'bheemili-akshay', title: 'Bheemili Residence (Akshay)', location: 'Bheemili' },
