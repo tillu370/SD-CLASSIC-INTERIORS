@@ -12,6 +12,8 @@ export interface ServiceCardDetail {
   extraGallery?: string[];
   /** When set, the card links to this DECORA category page instead of the service detail page. */
   decoraCategory?: string;
+  /** Primary local-SEO keyword phrase this service should rank for (used in <title> and meta description). */
+  seoKeyword?: string;
 }
 
 export const SERVICE_ITEMS: ServiceCardDetail[] = [
@@ -24,7 +26,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     group: "Kitchens & Storage",
     image: "/images/services/detail_modular_kitchen.jpg",
     features: ["German Soft-close Hardware", "Waterproof Ply/HDF Carcass", "Quartz / Granite Waterfall Counters", "Concealed LED Task Lighting"],
-    description: "Ergonomic culinary architecture engineered with German hardware, moisture-resistant carcasses, and bespoke finishes."
+    description: "Ergonomic culinary architecture engineered with German hardware, moisture-resistant carcasses, and bespoke finishes.",
+    seoKeyword: "Complete Home Interiors in Visakhapatnam"
   },
   {
     id: "wardrobes-cupboards",
@@ -102,7 +105,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/project-type/decora-wallpapers/01.webp",
     features: ["High-definition Textures", "Seamless Surface Installation", "Moisture-resistant Backing", "Non-reflective Matte Finish"],
     description: "Tactile textured wall coverings with geometric depth, fabric-backed finishes, and subtle architectural shadows.",
-    decoraCategory: "decora-wallpapers"
+    decoraCategory: "decora-wallpapers",
+    seoKeyword: "Best Wallpapers in Visakhapatnam"
   },
   {
     id: "4d-customized-wallpapers",
@@ -114,7 +118,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/project-type/decora-customized-wallpapers/01.webp",
     features: ["Bespoke Wall Scaling", "Eco-friendly Odorless Inks", "Scratch-resistant Coating", "Artisan Level Detail"],
     description: "Panoramic custom murals and dimensional wall murals tailored to precise room elevations and lighting angles.",
-    decoraCategory: "decora-customized-wallpapers"
+    decoraCategory: "decora-customized-wallpapers",
+    seoKeyword: "Premium Wallpapers in Vizag"
   },
   {
     id: "pvc-pu-panels",
@@ -126,7 +131,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_pvc_pu_panels.jpg",
     features: ["100% Termite & Waterproof", "Interlocking Concealed Joins", "Realistic Wood & Stone Textures", "Minimal Maintenance"],
     description: "Contemporary fluted wall panels, charcoal louvers, and lightweight architectural cladding for dramatic feature walls.",
-    decoraCategory: "decora-decorative"
+    decoraCategory: "decora-decorative",
+    seoKeyword: "PVC Wall Panels in Vizag"
   },
   {
     id: "paints-putty-works",
@@ -168,7 +174,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_vinyl_flooring.jpg",
     features: ["Acoustic Sound Dampening", "Waterproof Core", "High Scratch Resistance", "Warm Underfoot Comfort"],
     description: "Resilient luxury vinyl tiles and acoustic planks engineered for high foot traffic and effortless maintenance.",
-    decoraCategory: "decora-flooring"
+    decoraCategory: "decora-flooring",
+    seoKeyword: "Flooring Solutions in Visakhapatnam"
   },
   {
     id: "wooden-spc-flooring",
@@ -180,7 +187,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_wooden_flooring.jpg",
     features: ["Limestone Rigid Core", "Zero Expansion in Humid Coastal Climate", "Natural Wood Grain Relief", "UV Protected Wear Layer"],
     description: "Stone Plastic Composite (SPC) and real hardwood engineered flooring in classic herringbone and wide-plank patterns.",
-    decoraCategory: "decora-flooring"
+    decoraCategory: "decora-flooring",
+    seoKeyword: "Flooring Solutions in Visakhapatnam"
   },
   {
     id: "wall-to-wall-carpets",
@@ -192,7 +200,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/project-type/decora-flooring/17.webp",
     features: ["Soft Underfoot Comfort", "Sound & Heat Insulation", "Wide Range of Textures & Tones", "Seamless Wall-to-wall Installation"],
     description: "Plush wall-to-wall carpeting that adds warmth, comfort and a refined finish to bedrooms, living areas and commercial interiors.",
-    decoraCategory: "decora-flooring"
+    decoraCategory: "decora-flooring",
+    seoKeyword: "Flooring Solutions in Visakhapatnam"
   },
   {
     id: "window-blinds",
@@ -204,7 +213,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_window_blinds.jpg",
     features: ["Solar UV Heat Filtering", "Motorized Automation Ready", "Custom Architectural Cassettes", "Dust-repellent Fabric Treatments"],
     description: "Motorized and manual roller blinds, Venetian blinds, and blackout solar control shades with precision hardware.",
-    decoraCategory: "decora-blinds"
+    decoraCategory: "decora-blinds",
+    seoKeyword: "Window Blinds in Vizag"
   },
   {
     id: "customized-window-blinds",
@@ -216,7 +226,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/project-type/decora-blinds/11.webp",
     features: ["Day & Night Light Modulation", "Genuine Basswood Options", "Minimalist Cordless Systems", "Custom Header Pelmets"],
     description: "Dual zebra blinds, wooden louver blinds, and bespoke printed privacy panels engineered for unique window dimensions.",
-    decoraCategory: "decora-blinds"
+    decoraCategory: "decora-blinds",
+    seoKeyword: "Window Blinds in Vizag"
   },
   {
     id: "customized-curtains",
@@ -228,7 +239,8 @@ export const SERVICE_ITEMS: ServiceCardDetail[] = [
     image: "/images/services/detail_custom_curtains.jpg",
     features: ["Ripplefold Wave Heading", "100% Thermal Blackout Interlining", "Hand-tailored Hemming", "Concealed Motorized Tracks"],
     description: "Floor-to-ceiling wave fold drapery, sheer Belgian linens, blackout linings, and concealed ceiling track systems.",
-    decoraCategory: "decora-curtains"
+    decoraCategory: "decora-curtains",
+    seoKeyword: "Curtains Shop in Visakhapatnam"
   },
   {
     id: "artificial-grass-turf",

@@ -113,7 +113,7 @@ export const ContactSection: React.FC = () => {
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                We provide end-to-end residential interior solutions, bringing together creative design, customised concepts, material selection and expert execution to transform houses into beautiful, functional homes.
+                As trusted residential interior designers in Vizag, we provide end-to-end home interior solutions for Pendurthi, Madhurawada, Gajuwaka and across Visakhapatnam, bringing together creative design, customised concepts, material selection and expert execution to transform houses into beautiful, functional homes.
               </p>
 
               {/* Monochrome Badges */}
@@ -246,7 +246,7 @@ export const ContactSection: React.FC = () => {
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                We provide end-to-end commercial, corporate and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
+                As commercial interior designers in Visakhapatnam and office interior designers in Vizag, we provide end-to-end corporate interiors and infrastructure solutions, covering design, planning, construction and execution with a focus on quality and efficient project delivery.
               </p>
 
               {/* GSTIN */}
@@ -384,7 +384,7 @@ export const ContactSection: React.FC = () => {
               />
 
               <p className="text-xs sm:text-base font-sans font-light text-light-grey/90 leading-relaxed max-w-xl">
-                We offer thoughtfully selected décor solutions, including wallpapers, customised wallpapers, blinds, curtains and flooring, adding style and character to every space.
+                Home to the best wallpapers in Visakhapatnam, window blinds in Vizag, a dedicated curtains shop and flooring solutions — our décor studio adds style and character to every space.
               </p>
 
               {/* Monochrome Badges */}

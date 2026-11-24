@@ -14,6 +14,7 @@ import {
 import { INSPIRATION } from '../data/inspirationData';
 import { categoryPath, projectPath, type Route } from '../lib/useHashRoute';
 import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
+import { useDocumentMeta } from '../lib/useDocumentMeta';
 
 const thumbOf = (cover: string) => (cover.endsWith('.webp') ? cover.replace('.webp', '-t.webp') : cover);
 
@@ -586,15 +587,11 @@ export const ProjectsPage: React.FC<{ route: Extract<Route, { name: 'category' |
   const page = CATEGORY_PAGES[route.category];
   const project = route.name === 'project' ? PROJECTS.find((p) => p.slug === route.slug) : undefined;
 
-  useEffect(() => {
-    const previous = document.title;
-    const label = project ? project.title : page ? page.title : 'Projects';
-    document.title = `${label} | SD Classic Interiors`;
-    window.scrollTo(0, 0);
-    return () => {
-      document.title = previous;
-    };
-  }, [project, page]);
+  const label = project ? project.title : page ? page.title : 'Projects';
+  const metaDescription = project
+    ? `${project.title} in ${project.location} by SD Classic Interiors — interior designers in Visakhapatnam.`
+    : page?.description;
+  useDocumentMeta(`${label} | SD Classic Interiors`, metaDescription);
 
   return (
     <section className="bg-[#080808] text-[#F5F3EF] min-h-screen pt-28 sm:pt-32 pb-14 sm:pb-20 relative">

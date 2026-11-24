@@ -219,6 +219,16 @@ export const Footer: React.FC = () => {
                 <Globe className="w-4 h-4" />
               </a>
             </div>
+
+            {/* Areas We Serve */}
+            <div className="mt-6 pt-5 border-t border-white/10">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/60 block mb-2">
+                Areas We Serve
+              </span>
+              <p className="text-[11px] font-sans text-light-grey/60 leading-relaxed max-w-sm">
+                {BRAND_INFO.serviceAreas.join(' · ')}
+              </p>
+            </div>
           </div>
 
           {/* Col 2: Navigation Links (lg: 2 cols) */}

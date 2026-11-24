@@ -93,8 +93,9 @@ export const BRAND_INFO = {
     floor: "Ground Floor",
     googleMapsUrl: "https://maps.google.com/?q=%2317-61%2F2%2C+First+Floor%2C+Near+Govt+Hospital%2C+BRTS+Main+Road%2C+Pendurthi%2C+Visakhapatnam+-+531173"
   },
-  description: "From concept to completion, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.",
-  groupStatement: "Bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality. Proudly rooted in Visakhapatnam.",
+  description: "As one of the best interior designers in Visakhapatnam and Pendurthi, we transform spaces through thoughtful design, creative vision and exceptional craftsmanship — creating interiors that seamlessly blend aesthetics, functionality and quality, while bringing your vision to life.",
+  groupStatement: "One of the best interior designers in Visakhapatnam and Pendurthi, bringing together residential interiors, commercial and infrastructure projects, and specialised décor solutions — united by one vision and driven by thoughtful design, expert execution and uncompromising quality.",
+  serviceAreas: ["Pendurthi", "Sujatha Nagar", "Vepagunta", "Gopalapatnam", "NAD Junction", "Simhachalam", "Madhurawada", "Gajuwaka"],
   social: {
     instagram: "https://www.instagram.com/sd.classicinteriors/",
     youtube: "https://youtube.com/@sdclassicinteriors634?si=0oC1kzap9fVT16zP",

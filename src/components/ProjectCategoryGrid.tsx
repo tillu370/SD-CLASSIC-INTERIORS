@@ -91,7 +91,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ cat, onSelectCategory, featur
     {/* Photograph — primary visual focus */}
     <img
       src={cat.photoUrl}
-      alt=""
+      alt={`${cat.title} by SD Classic Interiors — interior designers in Visakhapatnam`}
       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none group-hover:scale-[1.03]"
       loading="lazy"
     />
@@ -157,7 +157,7 @@ export const ProjectCategoryGrid: React.FC<ProjectCategoryGridProps> = ({ onSele
           </h2>
 
           <p className="text-sm sm:text-[15px] font-sans font-normal text-[#555555] leading-relaxed max-w-md mx-auto">
-            From concept to completion, browse the kind of space you're planning to transform.
+            From concept to completion, browse the kind of space you're planning to transform with Visakhapatnam's trusted residential and commercial interior designers.
           </p>
         </div>
 

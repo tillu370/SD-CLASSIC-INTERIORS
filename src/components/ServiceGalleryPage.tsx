@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, MessageSquare } from 'lucide-react';
 import { Breadcrumb, Lightbox, focusRing } from './ProjectsPages';
 import { SERVICE_ITEMS, serviceGallery } from '../data/servicesData';
 import { BRAND_INFO, createWhatsAppHref } from '../data/websiteData';
 import { type Route } from '../lib/useHashRoute';
+import { useDocumentMeta } from '../lib/useDocumentMeta';
 
 interface ServiceGalleryPageProps {
   route: Extract<Route, { name: 'service' }>;
@@ -15,14 +16,11 @@ export const ServiceGalleryPage: React.FC<ServiceGalleryPageProps> = ({ route, o
   const [lightbox, setLightbox] = useState<number | null>(null);
   const gallery = service ? serviceGallery(service) : [];
 
-  useEffect(() => {
-    const previous = document.title;
-    document.title = `${service ? service.title : 'Service'} | SD Classic Interiors`;
-    window.scrollTo(0, 0);
-    return () => {
-      document.title = previous;
-    };
-  }, [service]);
+  const titleSuffix = service?.seoKeyword ? ` — ${service.seoKeyword}` : '';
+  useDocumentMeta(
+    `${service ? service.title : 'Service'}${titleSuffix} | SD Classic Interiors`,
+    service ? `${service.description} Serving Visakhapatnam, Pendurthi and surrounding areas.` : undefined
+  );
 
   return (
     <section className="bg-[#080808] text-[#F5F3EF] min-h-screen pt-28 sm:pt-32 pb-14 sm:pb-20 relative">
@@ -59,6 +57,11 @@ export const ServiceGalleryPage: React.FC<ServiceGalleryPageProps> = ({ route, o
               <p className="text-sm sm:text-base font-sans font-light text-[#A5A5A5] leading-[1.7]">
                 {service.description}
               </p>
+              {service.seoKeyword && (
+                <p className="text-[11px] sm:text-xs font-sans tracking-[0.1em] uppercase text-[#7A7A7A] mt-3">
+                  {service.seoKeyword}
+                </p>
+              )}
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4">
@@ -71,7 +74,7 @@ export const ServiceGalleryPage: React.FC<ServiceGalleryPageProps> = ({ route, o
                 >
                   <img
                     src={src}
-                    alt={`${service.title} – photo ${i + 1}`}
+                    alt={`${service.title} in Visakhapatnam – photo ${i + 1}`}
                     className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.04] motion-reduce:transition-none"
                     loading="lazy"
                     decoding="async"

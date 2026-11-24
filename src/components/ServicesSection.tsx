@@ -25,7 +25,7 @@ export const ServicesSection: React.FC = () => {
       {/* Background photograph — primary focus */}
       <img
         src={service.image}
-        alt=""
+        alt={`${service.title} — SD Classic Interiors, interior designers in Visakhapatnam`}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none group-hover:scale-[1.03]"
         loading="lazy"
       />
@@ -83,7 +83,7 @@ export const ServicesSection: React.FC = () => {
 
           {/* Centered Supporting Paragraph */}
           <p className="text-xs sm:text-sm md:text-base font-sans font-light text-light-grey/85 leading-relaxed max-w-2xl mx-auto mb-6">
-            Every detail matters. Explore our interior design, material, furniture and turnkey execution solutions curated under one roof.
+            Every detail matters. As a trusted interior design company in Vizag, we curate interior design, material, furniture and turnkey execution solutions under one roof.
           </p>
 
           {/* Centered Badge: 16+ SPECIALIZED DISCIPLINES */}

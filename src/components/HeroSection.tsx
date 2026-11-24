@@ -73,9 +73,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="mb-6"
           >
+            <span className="sr-only">
+              Best Interior Designers in Visakhapatnam &amp; Pendurthi — SD Classic Interiors
+            </span>
             <img
               src="/images/logo_text_white.png"
-              alt="SD Classic Interiors — Imagine Every Inch"
+              alt="SD Classic Interiors — Imagine Every Inch — Best Interior Designers in Visakhapatnam & Pendurthi"
               className="w-full h-auto"
             />
           </motion.h1>

@@ -14,33 +14,33 @@ interface DecorCollection {
 const DECORA_COLLECTIONS: DecorCollection[] = [
   {
     title: "Designed Wallpapers",
-    description: "Explore our extensive collection of premium wallpapers, featuring elegant designs, textures and patterns that bring style, character and a distinctive identity to your walls.",
+    description: "Browse the best wallpapers in Visakhapatnam — an extensive collection of premium designs, textures and patterns that bring style, character and a distinctive identity to your walls.",
     categoryId: "decora-wallpapers",
     badge: "Most Requested",
   },
   {
     title: "Customized Wallpapers",
-    description: "Transform your ideas, nature-inspired concepts, photographs and creative references into personalized wallpaper designs, customized to complement your style and bring your vision to life.",
+    description: "Our Vizag wallpaper shop turns your ideas, nature-inspired concepts, photographs and creative references into personalized wallpaper designs, customized to complement your style.",
     categoryId: "decora-customized-wallpapers",
   },
   {
     title: "Window Blinds",
-    description: "Explore our collection of ready-made and customized window blinds, available in a variety of styles, colours and designs to suit your preferences while enhancing privacy, light control and the overall elegance of your interiors.",
+    description: "Shop window blinds in Vizag — ready-made and customized, in a variety of styles, colours and designs to enhance privacy, light control and the overall elegance of your interiors.",
     categoryId: "decora-blinds",
   },
   {
     title: "Customized Curtains",
-    description: "Discover our collection of customized curtains, offering a wide selection of fabrics, colours, patterns and styles, tailored to your preferences to bring elegance, warmth and character to your interiors.",
+    description: "Visit our curtains shop in Visakhapatnam for a wide selection of fabrics, colours, patterns and styles, tailored to your preferences to bring elegance, warmth and character to your interiors.",
     categoryId: "decora-curtains",
   },
   {
     title: "Flooring Solutions",
-    description: "Transform your spaces with our range of flooring solutions, including vinyl, PVC, wooden and SPC flooring, offering a variety of designs and finishes that combine style, durability and everyday practicality.",
+    description: "Reliable flooring solutions in Visakhapatnam, including vinyl, PVC, wooden and SPC flooring, offering a variety of designs and finishes that combine style, durability and everyday practicality.",
     categoryId: "decora-flooring",
   },
   {
     title: "Decorative Solutions",
-    description: "Complete your interiors with thoughtfully selected decorative elements, stylish finishes and creative accents that add personality, enhance aesthetics and bring harmony to your spaces.",
+    description: "Complete interior decoration services in Vizag, from PVC wall panels to thoughtfully selected decorative elements and finishes that add personality and bring harmony to your spaces.",
     categoryId: "decora-decorative",
   },
 ];
@@ -76,13 +76,16 @@ export const DecorSolutionsSection: React.FC = () => {
             <div className="w-8 sm:w-12 h-[1px] bg-white/20" />
           </div>
 
+          <h2 className="sr-only">
+            DECORA Décor Solutions — Best Wallpapers, Window Blinds, Curtains &amp; Flooring Solutions in Visakhapatnam
+          </h2>
           <img
             src="/images/decora_logo_no_monogram.png"
             alt="DECORA — Wall, Window, Floor and Decor"
             className="w-64 sm:w-80 h-auto object-contain mx-auto mb-2"
           />
           <p className="text-xs sm:text-sm font-sans font-normal text-light-grey/85 leading-relaxed max-w-xl mx-auto mt-2">
-            Offering specialised décor solutions, including wallpapers, customized wallpapers, window blinds, curtains, flooring and a wide range of décor products — adding style and character to every space.
+            Visakhapatnam's destination for premium wallpapers, customized wallpapers, window blinds, curtains and flooring solutions — adding style and character to every space.
           </p>
         </div>
 
@@ -117,7 +120,7 @@ export const DecorSolutionsSection: React.FC = () => {
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={galleryThumb(item.categoryId, 1)}
-                    alt=""
+                    alt={`${item.title} — DECORA, Visakhapatnam`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     loading="lazy"
                   />

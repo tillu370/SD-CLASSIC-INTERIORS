@@ -52,7 +52,7 @@ export const AboutSection: React.FC = () => {
             <div className="w-full h-full flex items-center justify-center p-10 sm:p-14">
               <img
                 src="/images/20261111_214919.png"
-                alt="SD Classic Interiors monogram"
+                alt="SD Classic Interiors monogram — Interior Designers in Visakhapatnam"
                 className="max-h-full max-w-[70%] w-auto h-auto object-contain invert drop-shadow-[0_0_40px_rgba(184,169,140,0.15)]"
                 loading="lazy"
               />
@@ -66,15 +66,16 @@ export const AboutSection: React.FC = () => {
             </span>
 
             <h2 className="mb-2 sm:mb-4 w-full max-w-[340px] sm:max-w-[420px]">
+              <span className="sr-only">About SD Classic Interiors — Best Interior Designers in Visakhapatnam</span>
               <img
                 src="/images/logo_text_black_no_tagline.png"
-                alt="SD Classic Interiors"
+                alt="SD Classic Interiors — Interior Design Company in Visakhapatnam"
                 className="w-full h-auto"
               />
             </h2>
 
             <p className="text-sm sm:text-base font-sans font-light text-[#5A5A5A] leading-[1.7] max-w-xl mb-4 sm:mb-6">
-              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design and execution company, bringing together creative concepts, in-house design expertise, 3D visualisation, carefully selected materials and quality craftsmanship to deliver complete interior solutions — all under one roof.
+              Established in {BRAND_INFO.founded}, SD Classic Interiors is a Visakhapatnam-based interior design company and one of the best interior designers in Pendurthi, bringing together creative concepts, in-house design expertise, 3D visualisation, carefully selected materials and quality craftsmanship to deliver complete home interiors — all under one roof.
             </p>
 
             {/* Compact Brand Metrics */}
