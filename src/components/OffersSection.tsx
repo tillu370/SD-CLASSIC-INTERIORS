@@ -20,14 +20,14 @@ const BUDGET_PACKAGES: BudgetPackage[] = [
     id: '2bhk',
     bhk: '2BHK',
     label: 'Complete Interiors',
-    price: '3,49,999',
+    price: '3,99,999',
     offerKey: '2BHK Complete Interiors Package',
   },
   {
     id: '3bhk',
     bhk: '3BHK',
     label: 'Complete Interiors',
-    price: '3,99,999',
+    price: '4,49,999',
     offerKey: '3BHK Complete Interiors Package',
   },
 ];

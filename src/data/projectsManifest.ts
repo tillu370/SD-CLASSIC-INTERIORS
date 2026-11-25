@@ -54,7 +54,7 @@ export const PROJECT_MEDIA: Record<string, ProjectMedia> = {
     ],
   },
   'sujathanagar-karthik': {
-    walkthrough: true,
+    walkthrough: false,
     completed: true,
     renders: [
       { n: 1, caption: 'Entrance', w: 1600, h: 900, tw: 640, th: 360 },
